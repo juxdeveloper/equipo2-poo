@@ -4,7 +4,7 @@ public class Resta {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresa el primer entero a operar => ");
         int x = scanner.nextInt();
-        System.out.println("Ingresa el primer entero a operar => ");
+        System.out.println("Ingresa el segundo entero a operar => ");
         int y = scanner.nextInt();
         System.out.println("Ingresa la operacion a realizar => (1) num 1 - num 2 / (2) num 2 - num 1");
         int opc = scanner.nextInt();
