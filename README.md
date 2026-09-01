@@ -48,8 +48,8 @@ Este repositorio es desarrollado de manera colaborativa por el **Equipo 2**.
 | Integrante |          Nombre           |
 | ---------- | ---------                 |
 | 1          | Cardoso Jaramillo Hanniel |
-| 2          | Pendiente |
-| 3          | Pendiente |
+| 2          | Yescas Ortega Alan |
+| 3          | López Tagle Yohsel Zoe |
 | 4          | Pendiente |
 | 5          | Pendiente |
 | 6          | Pendiente |
