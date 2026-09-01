@@ -41,85 +41,13 @@ Además de las prácticas, el repositorio podrá incluir ejercicios y el proyect
 
 ---
 
-## Flujo de trabajo con Git
-
-Antes de comenzar a trabajar, es recomendable actualizar el repositorio local:
-
-```bash
-git pull
-```
-
-Después de realizar cambios:
-
-```bash
-git status
-git add .
-git commit -m "Descripción breve de los cambios"
-git push
-```
-
-Se recomienda utilizar mensajes de commit claros y relacionados con el trabajo realizado.
-
-Ejemplos:
-
-```bash
-git commit -m "Agrega solución de la práctica 1"
-git commit -m "Corrige validación de números positivos"
-git commit -m "Actualiza reporte de la práctica 2"
-```
-
----
-
-## Organización de las prácticas
-
-Cada práctica deberá mantenerse dentro de su propia carpeta para evitar mezclar archivos de distintas entregas.
-
-Una estructura posible dentro de cada práctica es:
-
-```text
-practica_01/
-├── src/
-│   └── Programa.java
-├── reporte/
-│   ├── reporte.tex
-│   └── imagenes/
-└── README.md
-```
-
-La estructura interna puede variar dependiendo de los requisitos específicos de cada práctica.
-
----
-
-## Compilación y ejecución
-
-Para compilar un archivo Java desde la terminal:
-
-```bash
-javac NombreArchivo.java
-```
-
-Para ejecutarlo:
-
-```bash
-java NombreArchivo
-```
-
-Por ejemplo:
-
-```bash
-javac HolaMundo.java
-java HolaMundo
-```
-
----
-
 ## Colaboradores
 
 Este repositorio es desarrollado de manera colaborativa por el **Equipo 2**.
 
-| Integrante | Nombre    |
-| ---------- | --------- |
-| 1          | Pendiente |
+| Integrante |          Nombre           |
+| ---------- | ---------                 |
+| 1          | Cardoso Jaramillo Hanniel |
 | 2          | Pendiente |
 | 3          | Pendiente |
 | 4          | Pendiente |
