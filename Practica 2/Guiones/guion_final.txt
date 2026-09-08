@@ -1,0 +1,77 @@
+Guion TikTok — Práctica 2 (Java: ciclos, condicionales y Math.abs)
+
+Duración total: 4:30 min Equipo: 6 personas — 1 Presentador/a (habla más, hilo conductor) + 5 compañeros (2 textos cada uno) Formato: cada texto = un audio/clip independiente, 15-20 s. Se puede grabar por separado y editar en orden.
+
+Reparto sugerido
+Rol	Encargado de
+🎤 Presentador/a	Hook, transiciones y conclusión (5 intervenciones)
+Persona 2	Estructuras de control (teoría)
+Persona 3	Ejercicio 1: control de aprobaciones
+Persona 4	Ejercicio 2: número mayor + Math.abs
+Persona 5	Ejercicio 3: tabla de proyección
+Persona 6	Resultados / evidencia de pruebas
+TEXTO 1 — Presentador/a (Hook) · ~20 s
+
+"¿Sabías que con solo TRES variables puedes encontrar el número más grande de una lista, sin importar si hay negativos? Hoy te explicamos cómo lo resolvimos en Java, con ciclos, condicionales y un truco clave: Math.abs(). Quédate porque esto te va a servir en tu próxima práctica."
+
+TEXTO 2 — Persona 2 (Estructuras iterativas) · ~15 s
+
+"Primero lo básico: los ciclos. El for se usa cuando ya sabes cuántas veces vas a repetir algo, como diez estudiantes. El while y el do-while en cambio dependen de una condición, y el do-while siempre ejecuta el bloque al menos una vez antes de preguntar."
+
+TEXTO 3 — Persona 2 (Estructuras condicionales) · ~20 s
+
+"Después están las condicionales. Con if y else el programa decide qué camino tomar según una condición lógica, y esas rutas nunca se cruzan. En nuestros programas las usamos para filtrar datos inválidos y para actualizar contadores según el resultado que se ingresó."
+
+TEXTO 4 — Presentador/a (Transición) · ~15 s
+
+"Con eso claro, armamos tres programas: uno que controla aprobados y reprobados, otro que busca el número mayor con memoria limitada, y uno que genera una tabla de multiplicaciones. Vamos con el primero."
+
+TEXTO 5 — Persona 3 (Ejercicio 1, explicación) · ~20 s
+
+"En el primer ejercicio registramos diez calificaciones, donde 1 es aprobado y 2 es reprobado. Cada vez que el usuario mete un valor distinto de esos dos números, un ciclo interno lo rechaza y vuelve a pedirlo. Así nos aseguramos de que nunca entre un dato basura."
+
+TEXTO 6 — Persona 3 (Ejercicio 1, prueba) · ~20 s
+
+"Para probarlo, metimos valores inválidos a propósito al inicio y confirmamos que el programa los rechazaba sin romperse. Luego capturamos nueve aprobados y un reprobado, y como los aprobados llegaron a nueve, el programa mostró automáticamente el mensaje de bonificación al profesor."
+
+TEXTO 7 — Presentador/a (Transición) · ~15 s
+
+"Ahora el reto más interesante: encontrar el número más grande de una lista usando solo TRES variables. Nada de arreglos ni listas extra. Aquí es donde entra Math.abs()."
+
+TEXTO 8 — Persona 4 (Ejercicio 2, explicación) · ~20 s
+
+"Usamos solo un contador, una variable para leer el número y otra para guardar el mayor. Cada número que entra se le aplica Math.abs(), que convierte cualquier negativo en positivo. Así comparamos magnitudes sin importar el signo, y en la primera vuelta ese valor se guarda directo como el mayor."
+
+TEXTO 9 — Persona 4 (Ejercicio 2, prueba) · ~20 s
+
+"Probamos con una lista mezclada de positivos y negativos, algunos bien grandes en magnitud. El programa fue comparando cada entrada contra el mayor guardado y, si la superaba, la reemplazaba. Al final imprimió correctamente el valor con más magnitud de toda la lista."
+
+TEXTO 10 — Presentador/a (Transición) · ~15 s
+
+"Por último, un ejercicio más tranquilo: generar una tabla con potencias de diez. Te explicamos cómo quedó."
+
+TEXTO 11 — Persona 5 (Ejercicio 3, explicación) · ~20 s
+
+"Aquí armamos una tabla para los números del uno al cinco. El programa imprime primero los encabezados, y luego en un ciclo de cinco vueltas calcula el número multiplicado por diez, por cien y por mil, separando todo con tabulaciones para que las columnas queden alineadas."
+
+TEXTO 12 — Persona 5 (Ejercicio 3, prueba) · ~15 s
+
+"Al ejecutarlo en consola comprobamos que salieran exactamente cinco filas, con las cuatro columnas bien alineadas y los cálculos correctos para cada número, del uno al cinco."
+
+TEXTO 13 — Persona 6 (Resultados generales) · ~20 s
+
+"En resumen, los tres programas pasaron todas sus pruebas: el control de aprobados filtró bien las entradas inválidas y activó la bonificación, el buscador del mayor manejó negativos sin problema gracias a Math.abs(), y la tabla salió perfectamente alineada."
+
+TEXTO 14 — Persona 6 (Cierre técnico) · ~15 s
+
+"Todo esto lo apoyamos investigando con un modelo de lenguaje para entender mejor la lógica de cada ejercicio antes de programarlo, y luego lo comprobamos nosotros mismos corriendo el código en consola."
+
+TEXTO 15 — Presentador/a (Conclusión) · ~20 s
+
+"Y así vimos cómo combinar ciclos, condicionales y validación de datos resuelve problemas reales con pocos recursos: sin arreglos, sin variables de más, solo lógica bien pensada. Si te sirvió, síguenos para más prácticas de Java explicadas fácil."
+
+Notas para grabar
+Cada texto es un clip aparte: pueden grabarse en cualquier orden y editarse después.
+El Presentador/a debe grabarse en el mismo lugar/fondo para las 5 intervenciones (da continuidad visual).
+Si algún texto queda muy justo de tiempo al hablarlo, se puede recortar una frase sin perder la idea principal — prioridad: que no supere los 20 s.
+Se pueden usar las capturas de pantalla del reporte (Figuras 4.1, 4.3, 4.4) como B-roll mientras habla cada persona de su ejercicio.
