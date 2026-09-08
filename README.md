@@ -50,7 +50,7 @@ Este repositorio es desarrollado de manera colaborativa por el **Equipo 2**.
 | 1          | Cardoso Jaramillo Hanniel |
 | 2          | Yescas Ortega Alan |
 | 3          | López Tagle Yohsel Zoe |
-| 4          | Pendiente |
+| 4          | Anzaldúa Díaz Alexander |
 | 5          | Pendiente |
 | 6          | Pendiente |
 
