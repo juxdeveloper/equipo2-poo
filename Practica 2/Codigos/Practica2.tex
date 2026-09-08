@@ -1,0 +1,191 @@
+\begin{filecontents*}{\jobname.bib}
+@book{deitel2016,
+  author    = {Paul J. Deitel and Harvey M. Deitel},
+  title     = {C{\'o}mo programar en Java},
+  edition   = {10},
+  publisher = {Pearson Educaci{\'o}n},
+  address   = {M{\'e}xico},
+  year      = {2016}
+}
+
+@book{joyanes2008,
+  author    = {Luis Joyanes Aguilar},
+  title     = {Fundamentos de programaci{\'o}n: algoritmos, estructuras de datos y objetos},
+  edition   = {4},
+  publisher = {McGraw-Hill Interamericana},
+  address   = {Madrid},
+  year      = {2008}
+}
+
+@book{joyanes2011,
+  author    = {Luis Joyanes Aguilar and Ignacio Zahonero Mart{\'i}nez},
+  title     = {Programaci{\'o}n en Java 6: algoritmos, estructuras de datos y objetos},
+  publisher = {McGraw-Hill Interamericana},
+  address   = {M{\'e}xico},
+  year      = {2011}
+}
+\end{filecontents*}
+
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\usepackage{setspace}
+\usepackage{chngcntr}
+
+\addbibresource{\jobname.bib}
+\graphicspath{{./figs/}}
+\counterwithin{figure}{section}
+
+\newcommand{\insertarfigura}[3]{%
+  \begin{figure}[htbp]
+    \centering
+    \IfFileExists{figs/#1.png}{%
+      \includegraphics[width=#2\textwidth]{#1}%
+    }{%
+      \IfFileExists{figs/#1.pdf}{%
+        \includegraphics[width=#2\textwidth]{#1}%
+      }{%
+        \setlength{\fboxsep}{12pt}%
+        \fbox{%
+          \parbox[c][3.8cm][c]{0.85\textwidth}{%
+            \centering \textbf{Espacio reservado para la figura: #1}\\[0.5em]
+            \small Deposite el archivo \texttt{#1.png} o \texttt{#1.pdf} en el directorio \texttt{figs/}%
+          }%
+        }%
+      }%
+    }%
+    \caption{#3}
+    \label{fig:#1}
+  \end{figure}
+}
+
+\begin{document}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+El procesamiento de flujos de datos discretos requiere mecanismos que garanticen la integridad en la captura, la delimitación estricta de variables en memoria y la generación estructurada de salidas numéricas. En esta práctica se resuelven tres problemas algorítmicos fundamentales: el conteo y validación de calificaciones, la búsqueda del valor numérico con mayor magnitud en una secuencia fija bajo la restricción estricta de utilizar únicamente tres variables de control y almacenamiento, y la producción de una tabla formateada que proyecta múltiplos decimales sucesivos a partir de una variable de control iterativa.
+
+El dominio riguroso de las estructuras de control iterativas y condicionales constituye la base para el diseño de algoritmos eficientes en la programación estructurada y orientada a objetos. Es por eso que desarrollar código que intercepte entradas inválidas y que restrinja el consumo de variables auxiliares fomenta la optimización de recursos computacionales, previniendo comportamientos indefinidos y garantizando que el flujo de ejecución responda con precisión.
+
+\subsection{Objetivos}
+
+\begin{itemize}
+    \item Investigar con el LLM la implementación de un programa que resuelva la clasificación de calificaciones con validación interactiva bajo ciertas condiciones.
+    
+    \item Creación de un programa que implemente la determinación del valor absoluto máximo en una secuencia de enteros con memoria acotada.
+    
+    \item Desarrollar un programa que realice la proyección tabular de potencias de diez, verificando el comportamiento del flujo de control mediante pruebas de ejecución iterativas.
+    
+\end{itemize}
+
+\section{Marco Teórico}
+
+\subsection{Estructuras de control iterativas}
+Las estructuras de control iterativas permiten ejecutar de manera repetitiva un bloque de instrucciones en función del valor de verdad de una expresión booleana \cite{deitel2016}. Los ciclos con contador como \texttt{for} se emplean preferentemente cuando el número total de iteraciones se encuentra definido desde el inicio del proceso, mientras que estructuras como \texttt{while} y \texttt{do-while} condicionan la continuidad de la ejecución a evaluaciones dinámicas, garantizando esta última al menos una evaluación del ciclo antes de verificar la condición de permanencia.
+
+\subsection{Estructuras condicionales}
+La toma de decisiones en un algoritmo se gestiona a través de instrucciones de selección que evalúan condiciones lógicas y bifurcan el flujo hacia ramas de ejecución mutuamente excluyentes \cite{joyanes2008}. El uso de condiciones como\texttt{if} o \texttt{if-else}permiten canalizar el tratamiento de variables según criterios numéricos específicos, posibilitando la actualización selectiva de contadores o la emisión de mensajes de estado al usuario.
+
+\subsection{Validación de datos de entrada}
+La validación de entradas consiste en verificar que los datos suministrados al programa se ajusten estrictamente a las restricciones del dominio del problema antes de permitir que alteren el estado de las variables internas \cite{joyanes2011}. La combinación de ciclos de repetición con comprobaciones booleanas establece un filtro donde cualquier valor fuera de rango es rechazado, solicitando de forma continua una nueva captura hasta asegurar la coherencia del dato ingresado.
+
+\subsection{Normalización de magnitudes y valor absoluto}
+El cálculo del valor absoluto permite obtener la magnitud escalar de un número real independientemente de su signo algebraico \cite{joyanes2008}. En algoritmos de comparación y búsqueda de valores extremos, la aplicación del valor absoluto estandariza el análisis de secuencias numéricas, permitiendo comparar la distancia de los números respecto al origen sin alterar la estructura fundamental del flujo de control.
+
+\section{Desarrollo}
+
+\subsection{Control de aprobaciones.}
+La primera aplicación gestiona el registro de diez estudiantes evaluados bajo una escala binaria fija donde la calificación uno representa aprobación y la dos indica reprobación. El algoritmo inicializa dos acumuladores en cero y ejecuta un ciclo de diez iteraciones. En cada ciclo, una estructura de repetición interna captura la entrada del usuario y evalúa si coincide con las opciones válidas; de no ser así, reitera la solicitud de captura hasta obtener un valor admitido. Una vez validada la entrada, una estructura condicional incrementa el contador de aprobados o el de reprobados. Al finalizar el ciclo principal, se imprime el resumen general y, si el total de aprobados es igual o superior a nueve, se emite un mensaje indicando la bonificación al instructor. El flujo lógico correspondiente se ilustra en la Figura~\ref{fig:diagramaejercicio1}.
+
+Para verificar el comportamiento de este módulo, se diseñó una prueba donde se ingresaron deliberadamente valores no válidos durante la captura de las primeras evaluaciones, seguidos de nueve aprobaciones y una reprobación, confirmando la activación del filtro de validación y la correcta emisión de la bonificación final.
+
+\insertarfigura{diagramaejercicio1}{0.65}{Diagrama de flujo para la determinación del entero mayor utilizando tres variables.}
+
+\clearpage
+
+\subsection{Búsqueda del número mayor con restricción de variables}
+El segundo programa procesa una secuencia de diez números enteros introducidos por el usuario para identificar cuál de ellos posee la magnitud más alta, por diseño algorítmico, el sistema opera exclusivamente con tres variables: un contador de repeticiones, una variable para recibir la entrada actual y una variable para almacenar el mayor valor encontrado. 
+
+En cada una de las diez iteraciones del ciclo principal, se captura el número ingresado y se calcula de inmediato su valor absoluto, durante la primera iteración, dicha magnitud se asigna directamente a la variable de almacenamiento mayor; en las iteraciones consecutivas, se compara la entrada con el valor registrado y, si la supera, se actualiza la variable para que al término de las lecturas, se imprime el valor máximo alcanzado. 
+La estructura del algoritmo se presenta en la Figura~\ref{fig:DiagramaE2}.
+
+\insertarfigura{DiagramaE2}{0.65}{Diagrama de flujo para la determinación del entero mayor utilizando tres variables.}
+
+\clearpage
+
+La prueba realizada consistió en introducir una lista mixta de diez números enteros positivos y negativos con magnitudes dispersas, comprobando que la función de valor absoluto normalizara los signos negativos y que la variable conservara con éxito la mayor magnitud registrada.
+
+\subsection{Análisis del uso y ejecución de \texttt{Math.abs()}}
+
+En el diseño del algoritmo para la búsqueda del número mayor (Ejercicio 2), se integró el método estático \texttt{Math.abs()} de la clase \texttt{java.lang.Math}. Esta función es crítica para el cumplimiento de los objetivos de normalización de datos y optimización de memoria.
+
+\subsubsection{Funcionamiento técnico}
+El método \texttt{Math.abs()} recibe como parámetro un valor numérico y devuelve su valor absoluto, definido matemáticamente como la magnitud del número sin tener en cuenta su signo, en la ejecución del programa, este proceso se realiza inmediatamente después de la captura del dato:
+
+\begin{verbatim}
+numero = leer.nextInt();
+numero = Math.abs(numero);
+\end{verbatim}
+
+Esta secuencia transforma cualquier entrada negativa en su equivalente positivo (por ejemplo, $-50$ se convierte en $50$), mientras que los valores positivos permanecen intactos. 
+
+\subsubsection{Justificación algorítmica}
+El uso de esta función responde a dos necesidades fundamentales del problema planteado:
+
+\begin{itemize}
+    \item \textbf{Criterio de Magnitud:} Al procesar una secuencia de números enteros, la aplicación del valor absoluto permite comparar la magnitud de los números, esto asegura que el programa identifique el valor con mayor valor escalar.
+    \item \textbf{Optimización de Variables:} Dado que el problema restringe el uso a solo tres variables, \texttt{Math.abs()} permite pre-procesar la entrada en la misma variable de lectura (\texttt{numero}). Esto simplifica la lógica de la estructura condicional \texttt{if(numero > mayor)}, evitando comparaciones anidadas complejas para manejar casos negativos y positivos por separado.
+\end{itemize}
+
+En conclusión, la ejecución de \texttt{Math.abs()} actúa como un filtro de normalización en el flujo de datos, garantizando que la variable \texttt{mayor} almacene la magnitud máxima encontrada en las iteraciones.
+
+\subsection{Proyección tabular}
+El tercer ejercicio genera una tabla de múltiplos decimales para los primeros cinco enteros positivos, el algoritmo imprime inicialmente una línea de encabezados tabulados y posteriormente ejecuta un ciclo de conteo de cinco iteraciones. 
+
+En cada paso del ciclo, se toma el valor del índice incrementado en uno y se calculan simultáneamente sus productos por diez, cien y mil, dichos valores se envían a la salida estándar separados por tabulaciones para garantizar una alineación en columnas uniforme. El esquema de este proceso se detalla en la Figura~\ref{fig:DiagramaE3}.
+
+\insertarfigura{DiagramaE3}{0.55}{Diagrama de flujo de la generación tabular de progresiones numéricas.}
+
+La evaluación de este módulo consistió en la ejecución directa de la rutina en consola, verificando que la salida presentara exactamente cinco filas con las cuatro columnas debidamente alineadas y con los cálculos aritméticos correspondientes.
+
+\section{Resultados}
+
+Los programas implementados fueron ejecutados en un entorno de desarrollo para evaluar su desempeño ante los casos de prueba establecidos, en el primer ejercicio, el sistema solicitó sucesivamente las diez evaluaciones; tras ingresar entradas inválidas son rechazadas por el ciclo de validación, introduciendose nueve calificaciones aprobatorias y una reprobatoria, produciéndose el resumen total y la leyenda de bonificación al docente, tal como se documenta en la Figura~\ref{fig:EjecucionE1}.
+
+
+\insertarfigura{EjecucionE1}{0.75}{Captura de pantalla de la ejecución del control de aprobados, reprobados y bonificación.}
+
+\insertarfigura{Evidencia_LLM}{0.75}{Evidencia de respuesta del LLM.}
+
+\clearpage
+
+En el segundo ejercicio, se introdujo una secuencia de diez valores enteros que incluyó números negativos, el programa procesó cada entrada a través del cálculo de valor absoluto y mantuvo actualizado el registro máximo empleando únicamente las tres variables permitidas, imprimiendo satisfactoriamente el valor mayor al término de la secuencia, como se observa en la Figura~\ref{fig:EjecucionE2}.
+
+\insertarfigura{EjecucionE2}{0.75}{Captura de pantalla de la determinación del número mayor en consola.}
+
+En el tercer ejercicio, la rutina iterativa produjo de manera inmediata la salida estructurada en columnas para los valores del uno al cinco junto con sus potencias decimales asociadas, verificándose la correcta alineación y precisión de los productos calculados, tal como se aprecia en la Figura~\ref{fig:EjecucionE3}.
+
+\insertarfigura{EjecucionE3}{0.75}{Captura de pantalla de la tabla de potencias decimales calculadas.}
+
+\section{Conclusiones}
+
+El análisis de las pruebas de ejecución demuestra que la aplicación de estructuras iterativas y de condicionales permite resolver problemas de forma estructurada, la implementación del ciclo de validación en el control de calificaciones confirmó que la verificación de condiciones en las entradas previene los contadores acumulativos, garantizando la confiabilidad de las decisiones lógicas posteriores como el otorgamiento de incentivos docentes.
+
+
+Por otra parte, la resolución de la búsqueda del valor extremo evidenció que es posible optimizar el consumo de recursos de memoria manteniendo la claridad algorítmica, la combinación del valor absoluto con una actualización condicional permitió procesar flujos de datos numéricos con signo sin requerir arreglos ni estructuras de almacenamiento complejas, cumpliendo estrictamente con la restricción de emplear un número estático de variables.
+
+
+Finalmente, la generación tabular comprobó la eficacia de los ciclos con contador para proyectar matrices de datos, en conjunto, los tres programas cumplieron la totalidad de los objetivos planteados al articular los conceptos teóricos de control de flujo, validación interactiva y operaciones aritméticas dentro de soluciones computacionales eficientes.
+
+\printbibliography
+
+\end{document}
