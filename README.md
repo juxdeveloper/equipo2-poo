@@ -51,7 +51,7 @@ Este repositorio es desarrollado de manera colaborativa por el **Equipo 2**.
 | 2          | Yescas Ortega Alan |
 | 3          | López Tagle Yohsel Zoe |
 | 4          | Anzaldúa Díaz Alexander |
-| 5          | Pendiente |
+| 5          | Mondragon Zuñiga Luis Ricardo |
 | 6          | Pendiente |
 
 ---
