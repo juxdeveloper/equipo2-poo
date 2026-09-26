@@ -15,7 +15,7 @@ class Sistema {
 	ArrayList<Paciente> p = new ArrayList<>();
 
 	// Atributo extra para almacenar las especialidades
-    public Map<Integer, String> ESPECIALIDADES = new LinkedHashMap<>();
+	public Map<Integer, String> ESPECIALIDADES = new LinkedHashMap<>();
 
 	// Atributo extra para llevar un contador de especialidades
 	public int contadorEspecialidades = 0;
@@ -78,6 +78,5 @@ class Sistema {
 
 	boolean asignarPaciente(Paciente paciente, Enfermero enfermero){
 		return enfermero.darTratamiento(paciente, paciente.tratamiento);
-	}
-	
+	}	
 }

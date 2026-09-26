@@ -1,6 +1,4 @@
-import java.text.Collator;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class Enfermero {
 	// ATRIBUTOS

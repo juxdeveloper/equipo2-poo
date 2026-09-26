@@ -1,6 +1,4 @@
-import java.text.Collator;
-import java.util.ArrayList;
-import java.util.Locale;
+import java.util.TreeSet;
 
 class Medico {
 	// ATRIBUTOS
@@ -10,7 +8,7 @@ class Medico {
 	int noPacientes = 0;
 
 	// Atributo para almacenar la lista de pacientes asignados al médico
-	ArrayList<Paciente> p = new ArrayList<>();
+	TreeSet<String> p = new TreeSet<>();
 
 	// Atributo para saber si está p_atendido a un paciente o no
 	Paciente p_atendido = null;
@@ -61,16 +59,7 @@ class Medico {
 	}
 
 	public void verListaPacientes(){
-		ArrayList<Paciente> Copia_Ordenada = new ArrayList<>(p);
-		
-		Collator comparadorEspañol = Collator.getInstance(Locale.of("es"));
-    	comparadorEspañol.setStrength(Collator.PRIMARY);
-
-		Copia_Ordenada.sort((a, b) -> comparadorEspañol.compare(b.nombre, a.nombre));
-
 		System.out.println("El médico " + nombre + " tiene los siguientes pacientes asignados:");
-		for(Paciente p : Copia_Ordenada){
-			System.out.println("- " + p.nombre + " | Especialidad: " + p.especialidadAtencion);
-		}
+		System.out.println(p);
 	}
 }
