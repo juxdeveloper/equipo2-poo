@@ -303,7 +303,7 @@ public class Main {
 						Enfermero enf = enfermeros.get(i);
 						System.out.println("\nEnfermero: " + enf.getNombre() + " | Cedula: " + enf.getCedula() + " | Esp: " + enf.getEspecialidad() + " | Pacientes: " + enf.getNoPacientes());
 						System.out.println("Pacientes hospitalizados a cargo (A-Z por apellido):");
-						if (enf.p.size() == 0) {
+						if (enf.getNoPacientes() == 0) {
 							System.out.println("  (Sin pacientes hospitalizados)");
 						} else {
 							enf.verListaPacientes();
