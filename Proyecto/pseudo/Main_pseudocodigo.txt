@@ -1,0 +1,29 @@
+Clase Main
+    Función Principal():
+        hospital = Nulo
+        opcion = -1
+
+        Mientras opcion != 0 Hacer:
+            Mostrar menú interactivo (Opciones 0 al 13)
+            Leer opcion
+
+            Segun opcion Hacer:
+                Caso 1: Cargar datos demo (3 especialidades, 3 médicos, 3 enfermeros, 3 pacientes)
+                Caso 2: hospital = Nuevo Sistema(leerNombre())
+                Caso 3..6: 
+                    Validar que exista hospital y especialidades registradas
+                    Instanciar Medico / Enfermero / Paciente y dar de alta con registroEnSistema()
+                Caso 7: 
+                    Seleccionar médico disponible -> medico.solicitarPaciente(hospital)
+                Caso 8: 
+                    Seleccionar paciente en espera -> paciente.solicitarConsulta()
+                Caso 9: 
+                    Seleccionar médico con paciente activo -> medico.darTratamiento(paciente, leerPrescripcion())
+                Caso 10..13: 
+                    Desplegar listados generales de Especialidades, Médicos, Enfermeros y Pacientes 
+                    invocando verListaPacientes() en orden alfabético
+                Caso 0: 
+                    Imprimir "Saliendo del sistema..."
+            FinSegun
+        FinMientras
+FinClase

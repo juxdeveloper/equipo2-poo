@@ -1,0 +1,43 @@
+Clase Sistema
+    Atributos:
+        nombreHospital: Cadena
+        noMedicos, noEnfermeros, noPacientes: Entero
+        medicos: Lista de Medico
+        enfermeros: Lista de Enfermero
+        pacientes: Lista de Paciente
+        especialidades: Diccionario Ordenado (ID -> Nombre)
+
+    Constructor(nombreHospital):
+        Inicializar contadores en 0 y colecciones vacías
+
+    Método registroMedico(med): Agregar med a medicos; noMedicos++
+    Método registroEnfermero(enf): Agregar enf a enfermeros; noEnfermeros++
+
+    Método registroPaciente(pac, esp) -> Booleano:
+        Para cada med En medicos Hacer:
+            Si med.especialidad == esp Y med.noPacientes < 10 Entonces:
+                Agregar pac a pacientes; noPacientes++
+                Retornar Verdadero
+            FinSi
+        FinPara
+        Retornar Falso
+
+    // Sobrecarga 1: Búsqueda de paciente para médico
+    Método asignarPaciente(medico, esp) -> Paciente:
+        Para cada pac En pacientes Hacer:
+            Si pac.especialidad == esp Y pac.estado == EN_ESPERA Y pac.medico == Nulo Entonces:
+                Retornar pac
+            FinSi
+        FinPara
+        Retornar Nulo
+
+    // Sobrecarga 2: Derivación a enfermero para hospitalización
+    Método asignarPaciente(paciente, medico, esp, prescripcion) -> Booleano:
+        Para cada enf En enfermeros Hacer:
+            Si paciente.estado == EN_CONSULTA Y enf.puedeAtender(esp) Entonces:
+                enf.darTratamiento(paciente, prescripcion)
+                Retornar Verdadero
+            FinSi
+        FinPara
+        Retornar Falso
+FinClase

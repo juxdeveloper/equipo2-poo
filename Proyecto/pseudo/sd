@@ -1,0 +1,205 @@
+#!/bin/bash
+
+echo "Generando archivos de pseudocódigo..."
+
+# 1. Paciente
+cat << 'EOF' > Paciente_pseudocodigo.txt
+Clase Paciente
+    Atributos:
+        nombre, apellido: Cadena
+        especialidadAtencion: Entero
+        tratamiento: Cadena ("Sin tratamiento")
+        medico: Medico (Nulo)
+        enfermero: Enfermero (Nulo)
+        estado: Estado (EN_ESPERA)   // Enum: EN_ESPERA, EN_CONSULTA, EN_HOSPITAL
+
+    Constructor(nombre, apellido, especialidad):
+        Asignar atributos iniciales
+
+    Método registroEnSistema(sistema) -> Booleano:
+        Retornar sistema.registroPaciente(estePaciente, especialidadAtencion)
+
+    Método solicitarConsulta() -> Booleano:
+        Si medico != Nulo Y medico.darConsulta(estePaciente) Entonces:
+            estado = EN_CONSULTA
+            Retornar Verdadero
+        FinSi
+        Retornar Falso
+
+    Método verTratamiento():
+        Imprimir tratamiento
+FinClase
+EOF
+
+# 2. Medico
+cat << 'EOF' > Medico_pseudocodigo.txt
+Clase Medico
+    Atributos:
+        nombre: Cadena
+        cedula, especialidad, noPacientes: Entero
+        atendiendo: Paciente (Nulo)
+        sis: Sistema (Nulo)
+        pacientesAsignados: Lista de Paciente
+
+    Constructor(nombre, cedula, especialidad):
+        Asignar atributos iniciales con noPacientes = 0
+
+    Método registroEnSistema(sistema):
+        sis = sistema
+        sistema.registroMedico(esteMedico)
+
+    Método solicitarPaciente(sistema) -> Booleano:
+        Si noPacientes < 10 Entonces:
+            p = sistema.asignarPaciente(esteMedico, especialidad)
+            Si p != Nulo Entonces:
+                Agregar p a pacientesAsignados
+                p.setMedico(esteMedico)
+                noPacientes = noPacientes + 1
+                Retornar Verdadero
+            FinSi
+        FinSi
+        Retornar Falso
+
+    Método darConsulta(paciente) -> Booleano:
+        Si paciente está en pacientesAsignados Y atendiendo == Nulo Entonces:
+            atendiendo = paciente
+            paciente.setEstado(EN_CONSULTA)
+            Retornar Verdadero
+        FinSi
+        Retornar Falso
+
+    Método darTratamiento(paciente, prescripcion) -> Booleano:
+        Si paciente == atendiendo Y sis.asignarPaciente(paciente, esteMedico, especialidad, prescripcion) Entonces:
+            atendiendo = Nulo
+            paciente.setTratamiento(prescripcion)
+            paciente.setEstado(EN_HOSPITAL)
+            Retornar Verdadero
+        FinSi
+        Retornar Falso
+
+    Método verListaPacientes():
+        Ordenar pacientesAsignados por apellido de forma A-Z
+        Para cada p En pacientesAsignados Hacer:
+            Imprimir p.apellido + " " + p.nombre + " - Especialidad: " + p.especialidad
+FinClase
+EOF
+
+# 3. Enfermero
+cat << 'EOF' > Enfermero_pseudocodigo.txt
+Clase Enfermero
+    Atributos:
+        nombre: Cadena
+        cedula, especialidad, noPacientes: Entero
+        pacientesACargo: Lista de Paciente
+        sis: Sistema (Nulo)
+
+    Constructor(nombre, cedula, especialidad):
+        Asignar atributos iniciales con noPacientes = 0
+
+    Método registroEnSistema(sistema):
+        sis = sistema
+        sistema.registroEnfermero(esteEnfermero)
+
+    Método puedeAtender(espRequerida) -> Booleano:
+        Retornar (noPacientes < 3 Y especialidad == espRequerida)
+
+    Método darTratamiento(paciente, prescripcion) -> Booleano:
+        Si paciente está en pacientesACargo O noPacientes >= 3 Entonces:
+            Retornar Falso
+        FinSi
+        Agregar paciente a pacientesACargo
+        paciente.setEnfermero(esteEnfermero)
+        paciente.setTratamiento(prescripcion)
+        paciente.setEstado(EN_HOSPITAL)
+        noPacientes = noPacientes + 1
+        Retornar Verdadero
+
+    Método verListaPacientes():
+        Ordenar pacientesACargo por apellido de forma A-Z
+        Para cada p En pacientesACargo Hacer:
+            Imprimir p.apellido + " " + p.nombre + " - Especialidad: " + p.especialidad
+FinClase
+EOF
+
+# 4. Sistema
+cat << 'EOF' > Sistema_pseudocodigo.txt
+Clase Sistema
+    Atributos:
+        nombreHospital: Cadena
+        noMedicos, noEnfermeros, noPacientes: Entero
+        medicos: Lista de Medico
+        enfermeros: Lista de Enfermero
+        pacientes: Lista de Paciente
+        especialidades: Diccionario Ordenado (ID -> Nombre)
+
+    Constructor(nombreHospital):
+        Inicializar contadores en 0 y colecciones vacías
+
+    Método registroMedico(med): Agregar med a medicos; noMedicos++
+    Método registroEnfermero(enf): Agregar enf a enfermeros; noEnfermeros++
+
+    Método registroPaciente(pac, esp) -> Booleano:
+        Para cada med En medicos Hacer:
+            Si med.especialidad == esp Y med.noPacientes < 10 Entonces:
+                Agregar pac a pacientes; noPacientes++
+                Retornar Verdadero
+            FinSi
+        FinPara
+        Retornar Falso
+
+    // Sobrecarga 1: Búsqueda de paciente para médico
+    Método asignarPaciente(medico, esp) -> Paciente:
+        Para cada pac En pacientes Hacer:
+            Si pac.especialidad == esp Y pac.estado == EN_ESPERA Y pac.medico == Nulo Entonces:
+                Retornar pac
+            FinSi
+        FinPara
+        Retornar Nulo
+
+    // Sobrecarga 2: Derivación a enfermero para hospitalización
+    Método asignarPaciente(paciente, medico, esp, prescripcion) -> Booleano:
+        Para cada enf En enfermeros Hacer:
+            Si paciente.estado == EN_CONSULTA Y enf.puedeAtender(esp) Entonces:
+                enf.darTratamiento(paciente, prescripcion)
+                Retornar Verdadero
+            FinSi
+        FinPara
+        Retornar Falso
+FinClase
+EOF
+
+# 5. Main
+cat << 'EOF' > Main_pseudocodigo.txt
+Clase Main
+    Función Principal():
+        hospital = Nulo
+        opcion = -1
+
+        Mientras opcion != 0 Hacer:
+            Mostrar menú interactivo (Opciones 0 al 13)
+            Leer opcion
+
+            Segun opcion Hacer:
+                Caso 1: Cargar datos demo (3 especialidades, 3 médicos, 3 enfermeros, 3 pacientes)
+                Caso 2: hospital = Nuevo Sistema(leerNombre())
+                Caso 3..6: 
+                    Validar que exista hospital y especialidades registradas
+                    Instanciar Medico / Enfermero / Paciente y dar de alta con registroEnSistema()
+                Caso 7: 
+                    Seleccionar médico disponible -> medico.solicitarPaciente(hospital)
+                Caso 8: 
+                    Seleccionar paciente en espera -> paciente.solicitarConsulta()
+                Caso 9: 
+                    Seleccionar médico con paciente activo -> medico.darTratamiento(paciente, leerPrescripcion())
+                Caso 10..13: 
+                    Desplegar listados generales de Especialidades, Médicos, Enfermeros y Pacientes 
+                    invocando verListaPacientes() en orden alfabético
+                Caso 0: 
+                    Imprimir "Saliendo del sistema..."
+            FinSegun
+        FinMientras
+FinClase
+EOF
+
+echo "¡Listo! Se crearon los 5 archivos:"
+ls -lh *_pseudocodigo.txt
