@@ -23,13 +23,6 @@ public class Medico {
 		this.cedula = cedula;
 		this.especialidad = especialidad;
 	}
-
-	Medico(String nombre, int cedula, int especialidad, Sistema sis){
-		this.nombre = nombre;
-		this.cedula = cedula;
-		this.especialidad = especialidad;
-		this.sis = sis;
-	}
 	
 	// MÉTODOS
 	//
