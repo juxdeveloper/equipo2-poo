@@ -1,7 +1,19 @@
 INICIO
+    CREAR entrada PARA LEER DESDE EL TECLADO
 
-    CREAR fecha CON mes 9, dia 29 Y anio 2026
+    MOSTRAR "Mes:"
+    LEER mes COMO ENTERO
 
-    LLAMAR mostrarFecha()
+    MOSTRAR "Dia:"
+    LEER dia COMO ENTERO
 
+    MOSTRAR "Anio:"
+    LEER anio COMO ENTERO
+
+    CREAR fecha CON mes, dia, anio
+
+    MOSTRAR "Fecha ingresada (mes/dia/anio):"
+    LLAMAR fecha.mostrarFecha()
+
+    CERRAR entrada
 FIN
