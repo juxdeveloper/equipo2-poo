@@ -1,0 +1,7 @@
+INICIO
+
+    CREAR fecha CON mes 9, dia 29 Y anio 2026
+
+    LLAMAR mostrarFecha()
+
+FIN
