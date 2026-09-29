@@ -1,24 +1,38 @@
 INICIO
+    CREAR entrada PARA LEER DESDE EL TECLADO
 
-    CREAR empleado1 CON nombre "Juan", apellido "Perez" Y salario 10000
-    CREAR empleado2 CON nombre "Ana", apellido "Lopez" Y salario 12000
+    MOSTRAR "Datos del primer empleado:"
+    PEDIR Y LEER nombre1 COMO CADENA
+    PEDIR Y LEER apellido1 COMO CADENA
+    PEDIR salario mensual CON PUNTO DECIMAL
+    LEER UNA LÍNEA Y CONVERTIR A REAL: salario1
 
-    salarioAnual1 = salarioMensual de empleado1 * 12
-    salarioAnual2 = salarioMensual de empleado2 * 12
+    MOSTRAR "Datos del segundo empleado:"
+    PEDIR Y LEER nombre2 COMO CADENA
+    PEDIR Y LEER apellido2 COMO CADENA
+    PEDIR salario mensual CON PUNTO DECIMAL
+    LEER UNA LÍNEA Y CONVERTIR A REAL: salario2
 
-    MOSTRAR salario anual de empleado1
-    MOSTRAR salario anual de empleado2
+    CREAR empleado1 CON nombre1, apellido1, salario1
+    CREAR empleado2 CON nombre2, apellido2, salario2
 
-    nuevoSalario1 = salarioMensual de empleado1 * 1.10
-    nuevoSalario2 = salarioMensual de empleado2 * 1.10
+    salarioAnual1 = empleado1.getSalarioMensual() * 12
+    salarioAnual2 = empleado2.getSalarioMensual() * 12
 
-    ASIGNAR nuevoSalario1 A empleado1
-    ASIGNAR nuevoSalario2 A empleado2
+    MOSTRAR nombre de empleado1 Y salarioAnual1
+    MOSTRAR nombre de empleado2 Y salarioAnual2
 
-    salarioAnual1 = salarioMensual de empleado1 * 12
-    salarioAnual2 = salarioMensual de empleado2 * 12
+    nuevoSalario1 = empleado1.getSalarioMensual() * 1.10
+    nuevoSalario2 = empleado2.getSalarioMensual() * 1.10
 
-    MOSTRAR salario anual de empleado1 con aumento
-    MOSTRAR salario anual de empleado2 con aumento
+    LLAMAR empleado1.setSalarioMensual(nuevoSalario1)
+    LLAMAR empleado2.setSalarioMensual(nuevoSalario2)
 
+    salarioAnual1 = empleado1.getSalarioMensual() * 12
+    salarioAnual2 = empleado2.getSalarioMensual() * 12
+
+    MOSTRAR nombre de empleado1 Y salarioAnual1 con aumento
+    MOSTRAR nombre de empleado2 Y salarioAnual2 con aumento
+
+    CERRAR entrada
 FIN
