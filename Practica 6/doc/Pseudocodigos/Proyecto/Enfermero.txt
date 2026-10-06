@@ -1,0 +1,33 @@
+Clase Enfermero
+    Atributos:
+        nombre: Cadena
+        cedula, especialidad, noPacientes: Entero
+        pacientesACargo: Lista de Paciente
+        sis: Sistema (Nulo)
+
+    Constructor(nombre, cedula, especialidad):
+        Asignar atributos iniciales con noPacientes = 0
+
+    Método registroEnSistema(sistema):
+        sis = sistema
+        sistema.registroEnfermero(esteEnfermero)
+
+    Método puedeAtender(espRequerida) -> Booleano:
+        Retornar (noPacientes < 3 Y especialidad == espRequerida)
+
+    Método darTratamiento(paciente, prescripcion) -> Booleano:
+        Si paciente está en pacientesACargo O noPacientes >= 3 Entonces:
+            Retornar Falso
+        FinSi
+        Agregar paciente a pacientesACargo
+        paciente.setEnfermero(esteEnfermero)
+        paciente.setTratamiento(prescripcion)
+        paciente.setEstado(EN_HOSPITAL)
+        noPacientes = noPacientes + 1
+        Retornar Verdadero
+
+    Método verListaPacientes():
+        Ordenar pacientesACargo por apellido de forma A-Z
+        Para cada p En pacientesACargo Hacer:
+            Imprimir p.apellido + " " + p.nombre + " - Especialidad: " + p.especialidad
+FinClase

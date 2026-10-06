@@ -1,0 +1,19 @@
+INICIO
+    CREAR entrada PARA LEER DESDE EL TECLADO
+
+    MOSTRAR "Mes:"
+    LEER mes COMO ENTERO
+
+    MOSTRAR "Dia:"
+    LEER dia COMO ENTERO
+
+    MOSTRAR "Anio:"
+    LEER anio COMO ENTERO
+
+    CREAR fecha CON mes, dia, anio
+
+    MOSTRAR "Fecha ingresada (mes/dia/anio):"
+    LLAMAR fecha.mostrarFecha()
+
+    CERRAR entrada
+FIN

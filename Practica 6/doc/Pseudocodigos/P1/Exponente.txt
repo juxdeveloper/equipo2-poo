@@ -1,0 +1,14 @@
+ALGORITMO Exponente_main
+ENTRADA: base y exponente exp leidos por consola
+SALIDA: potencia impresa
+INICIO
+    LEER base
+    LEER exp
+    res <- 1
+    SI exp <> 0 ENTONCES
+        PARA i <- 1 HASTA exp HACER
+            res <- res * base
+        FIN PARA
+    FIN SI
+    ESCRIBIR res
+FIN

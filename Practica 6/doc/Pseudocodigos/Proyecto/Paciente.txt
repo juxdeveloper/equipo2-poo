@@ -1,0 +1,25 @@
+Clase Paciente
+    Atributos:
+        nombre, apellido: Cadena
+        especialidadAtencion: Entero
+        tratamiento: Cadena ("Sin tratamiento")
+        medico: Medico (Nulo)
+        enfermero: Enfermero (Nulo)
+        estado: Estado (EN_ESPERA)   // Enum: EN_ESPERA, EN_CONSULTA, EN_HOSPITAL
+
+    Constructor(nombre, apellido, especialidad):
+        Asignar atributos iniciales
+
+    Método registroEnSistema(sistema) -> Booleano:
+        Retornar sistema.registroPaciente(estePaciente, especialidadAtencion)
+
+    Método solicitarConsulta() -> Booleano:
+        Si medico != Nulo Y medico.darConsulta(estePaciente) Entonces:
+            estado = EN_CONSULTA
+            Retornar Verdadero
+        FinSi
+        Retornar Falso
+
+    Método verTratamiento():
+        Imprimir tratamiento
+FinClase

@@ -1,0 +1,9 @@
+ALGORITMO Suma_main
+ENTRADA: dos enteros a y b leidos por consola
+SALIDA: suma impresa en consola
+INICIO
+    LEER a
+    LEER b
+    suma <- a + b
+    ESCRIBIR suma
+FIN

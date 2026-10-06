@@ -1,0 +1,14 @@
+ALGORITMO CanvasPanel_deshacer
+ENTRADA: historial de listas de figuras
+SALIDA: VERDADERO si deshace, FALSO si historial vacio
+INICIO
+    SI historial vacio ENTONCES
+        RETORNAR FALSO
+    SINO
+        LIMPIAR figuras
+        COPIAR cima de historial a figuras
+        RETIRAR cima de historial
+        REPINTAR lienzo
+        RETORNAR VERDADERO
+    FIN SI
+FIN

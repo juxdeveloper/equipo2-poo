@@ -1,0 +1,17 @@
+ALGORITMO Raiz_main
+ENTRADA: radical y radicando enteros leidos por consola
+SALIDA: raiz impresa o mensaje de error
+INICIO
+    LEER radical
+    LEER radicando
+    SI radical = 0 Y radicando = 0 ENTONCES
+        ESCRIBIR "Indeterminacion"
+    SINO SI radicando = 0 ENTONCES
+        ESCRIBIR 0.0
+    SINO SI radical = 0 ENTONCES
+        ESCRIBIR "El radical no puede ser 0"
+    SINO
+        resultado <- radicando ^ (1 / radical)
+        ESCRIBIR resultado
+    FIN SI
+FIN

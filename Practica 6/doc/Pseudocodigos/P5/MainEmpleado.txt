@@ -1,0 +1,38 @@
+INICIO
+    CREAR entrada PARA LEER DESDE EL TECLADO
+
+    MOSTRAR "Datos del primer empleado:"
+    PEDIR Y LEER nombre1 COMO CADENA
+    PEDIR Y LEER apellido1 COMO CADENA
+    PEDIR salario mensual CON PUNTO DECIMAL
+    LEER UNA LÍNEA Y CONVERTIR A REAL: salario1
+
+    MOSTRAR "Datos del segundo empleado:"
+    PEDIR Y LEER nombre2 COMO CADENA
+    PEDIR Y LEER apellido2 COMO CADENA
+    PEDIR salario mensual CON PUNTO DECIMAL
+    LEER UNA LÍNEA Y CONVERTIR A REAL: salario2
+
+    CREAR empleado1 CON nombre1, apellido1, salario1
+    CREAR empleado2 CON nombre2, apellido2, salario2
+
+    salarioAnual1 = empleado1.getSalarioMensual() * 12
+    salarioAnual2 = empleado2.getSalarioMensual() * 12
+
+    MOSTRAR nombre de empleado1 Y salarioAnual1
+    MOSTRAR nombre de empleado2 Y salarioAnual2
+
+    nuevoSalario1 = empleado1.getSalarioMensual() * 1.10
+    nuevoSalario2 = empleado2.getSalarioMensual() * 1.10
+
+    LLAMAR empleado1.setSalarioMensual(nuevoSalario1)
+    LLAMAR empleado2.setSalarioMensual(nuevoSalario2)
+
+    salarioAnual1 = empleado1.getSalarioMensual() * 12
+    salarioAnual2 = empleado2.getSalarioMensual() * 12
+
+    MOSTRAR nombre de empleado1 Y salarioAnual1 con aumento
+    MOSTRAR nombre de empleado2 Y salarioAnual2 con aumento
+
+    CERRAR entrada
+FIN

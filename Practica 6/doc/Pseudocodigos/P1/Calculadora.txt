@@ -1,0 +1,17 @@
+ALGORITMO Calculadora_main
+ENTRADA: opcion op y operandos segun operacion
+SALIDA: resultado de la operacion elegida o mensaje de error
+INICIO
+    MOSTRAR menu de 7 operaciones
+    LEER op
+    SEGUN op HACER
+        1: LEER a, b; ESCRIBIR a + b
+        2: LEER a, b; ESCRIBIR a - b
+        3: LEER n1, n2; ESCRIBIR n1 * n2
+        4: LEER n1, n2; SI n2 = 0 ENTONCES ESCRIBIR error SINO ESCRIBIR n1 / n2
+        5: LEER a, b; SI b = 0 ENTONCES ESCRIBIR error SINO ESCRIBIR cociente y resto
+        6: LEER base, exp; CALCULAR potencia con ciclo; ESCRIBIR resultado
+        7: LEER n1; SI n1 < 0 ENTONCES ESCRIBIR error SINO ESCRIBIR raiz(n1)
+        OTRO: ESCRIBIR "Opcion no valida"
+    FIN SEGUN
+FIN
