@@ -1,0 +1,29 @@
+CLASE Fecha
+
+    DEFINIR mes COMO ENTERO
+    DEFINIR dia COMO ENTERO
+    DEFINIR anio COMO ENTERO
+
+    CONSTRUCTOR Fecha(mes, dia, anio)
+        ASIGNAR mes recibido A mes
+        ASIGNAR dia recibido A dia
+        ASIGNAR anio recibido A anio
+    FIN CONSTRUCTOR
+
+    MÉTODO setMes(mes)
+        ASIGNAR mes recibido A mes
+    FIN MÉTODO
+
+    MÉTODO setDia(dia)
+        ASIGNAR dia recibido A dia
+    FIN MÉTODO
+
+    MÉTODO setAnio(anio)
+        ASIGNAR anio recibido A anio
+    FIN MÉTODO
+
+    MÉTODO mostrarFecha()
+        MOSTRAR mes + "/" + dia + "/" + anio
+    FIN MÉTODO
+
+FIN CLASE

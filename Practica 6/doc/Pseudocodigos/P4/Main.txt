@@ -1,0 +1,10 @@
+ALGORITMO MainP4_ejecutar
+ENTRADA: oracion leida por consola
+SALIDA: numero de duplicadas y lista ordenada con frecuencias
+INICIO
+    LEER oracion
+    CREAR analizador con oracion
+    LLAMAR contarPalabras
+    ESCRIBIR obtenerNumeroDuplicadas
+    LLAMAR mostrarDuplicadas(ordenado = VERDADERO)
+FIN

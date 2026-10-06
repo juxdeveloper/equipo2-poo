@@ -1,0 +1,15 @@
+ALGORITMO Ejercicio1_contarVotos
+ENTRADA: 10 respuestas (1 = aprobo, 2 = reprobo)
+SALIDA: totales y mensaje de bonificacion si aprobados >= 9
+INICIO
+    aprobados <- 0; reprobados <- 0
+    PARA estudiante <- 1 HASTA 10 HACER
+        REPETIR
+            LEER resultado
+        HASTA QUE resultado = 1 O resultado = 2
+        SI resultado = 1 ENTONCES aprobados <- aprobados + 1
+        SINO reprobados <- reprobados + 1
+    FIN PARA
+    ESCRIBIR aprobados y reprobados
+    SI aprobados >= 9 ENTONCES ESCRIBIR "Se bonifica al instructor"
+FIN

@@ -1,0 +1,10 @@
+ALGORITMO Ejercicio3_tablaMultiplos
+ENTRADA: ninguna
+SALIDA: tabla de n, 10*n, 100*n y 1000*n para n = 1..5
+INICIO
+    ESCRIBIR encabezado
+    PARA i <- 0 HASTA 4 HACER
+        n <- i + 1
+        ESCRIBIR n, 10*n, 100*n, 1000*n
+    FIN PARA
+FIN

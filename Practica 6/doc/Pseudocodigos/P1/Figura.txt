@@ -1,0 +1,13 @@
+ALGORITMO Figura_dibujar
+ENTRADA: contexto grafico g y atributos de la figura
+SALIDA: figura trazada sobre el lienzo
+INICIO
+    FIJAR color en g
+    CALCULAR x, y, ancho y alto normalizados
+    SEGUN tipo HACER
+        RECTANGULO: SI rellena ENTONCES rellenar rectangulo SINO trazar borde
+        OVALO: SI rellena ENTONCES rellenar ovalo SINO trazar borde
+        TRIANGULO: CONSTRUIR poligono; SI rellena ENTONCES rellenar SINO trazar
+        LINEA: TRAZAR linea de inicio a fin
+    FIN SEGUN
+FIN

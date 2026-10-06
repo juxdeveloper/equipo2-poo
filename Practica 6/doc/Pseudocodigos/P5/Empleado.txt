@@ -1,0 +1,39 @@
+CLASE Empleado
+
+    DEFINIR nombre COMO CADENA
+    DEFINIR apellido COMO CADENA
+    DEFINIR salarioMensual COMO REAL
+
+    CONSTRUCTOR Empleado(nombre, apellido, salarioMensual)
+        ASIGNAR nombre recibido A nombre
+        ASIGNAR apellido recibido A apellido
+        LLAMAR setSalarioMensual(salarioMensual)
+    FIN CONSTRUCTOR
+
+    MÉTODO getNombre()
+        RETORNAR nombre
+    FIN MÉTODO
+
+    MÉTODO setNombre(nombre)
+        ASIGNAR nombre recibido A nombre
+    FIN MÉTODO
+
+    MÉTODO getApellido()
+        RETORNAR apellido
+    FIN MÉTODO
+
+    MÉTODO setApellido(apellido)
+        ASIGNAR apellido recibido A apellido
+    FIN MÉTODO
+
+    MÉTODO getSalarioMensual()
+        RETORNAR salarioMensual
+    FIN MÉTODO
+
+    MÉTODO setSalarioMensual(salarioMensual)
+        SI salarioMensual > 0 ENTONCES
+            ASIGNAR salarioMensual recibido A salarioMensual
+        FIN SI
+    FIN MÉTODO
+
+FIN CLASE

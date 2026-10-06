@@ -1,0 +1,13 @@
+ALGORITMO Palindromo_verificar
+ENTRADA: entero de cinco digitos leido con validacion
+SALIDA: mensaje indica si es palindromo
+INICIO
+    REPETIR
+        LEER numero
+        SI numero no entero O fuera de [10000, 99999] ENTONCES MOSTRAR error
+    HASTA QUE numero valido
+    d1 <- numero / 10000; d2 <- (numero / 1000) % 10
+    d4 <- (numero / 10) % 10; d5 <- numero % 10
+    SI d1 = d5 Y d2 = d4 ENTONCES ESCRIBIR "es palindromo"
+    SINO ESCRIBIR "no es palindromo"
+FIN

@@ -1,0 +1,16 @@
+ALGORITMO EditorFrame_exportarImagen
+ENTRADA: archivo destino elegido por el usuario
+SALIDA: PNG guardado o mensaje de error
+INICIO
+    MOSTRAR dialogo para elegir archivo PNG
+    SI usuario cancela ENTONCES
+        TERMINAR
+    FIN SI
+    SI archivo existe ENTONCES
+        PEDIR confirmacion de reemplazo
+        SI no confirma ENTONCES TERMINAR
+    FIN SI
+    INTENTAR exportar lienzo a PNG
+    SI exito ENTONCES MOSTRAR confirmacion
+    SINO MOSTRAR error
+FIN

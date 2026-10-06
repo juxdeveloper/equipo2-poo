@@ -1,0 +1,9 @@
+ALGORITMO Multiplicacion_main
+ENTRADA: enteros n1 y n2 leidos por consola
+SALIDA: producto impreso
+INICIO
+    LEER n1
+    LEER n2
+    mult <- n1 * n2
+    ESCRIBIR mult
+FIN

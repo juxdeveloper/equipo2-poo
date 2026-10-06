@@ -1,0 +1,14 @@
+ALGORITMO Resta_main
+ENTRADA: enteros x, y y opcion opc leidos por consola
+SALIDA: resta impresa segun orden elegido
+INICIO
+    LEER x
+    LEER y
+    LEER opc
+    SI opc = 1 ENTONCES
+        resultado <- x - y
+    SINO
+        resultado <- y - x
+    FIN SI
+    ESCRIBIR resultado
+FIN

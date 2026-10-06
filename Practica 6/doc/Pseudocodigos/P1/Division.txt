@@ -1,0 +1,13 @@
+ALGORITMO Division_main
+ENTRADA: decimales x, y leidos por consola
+SALIDA: division impresa o mensaje de error si y = 0
+INICIO
+    LEER x
+    LEER y
+    SI y = 0 ENTONCES
+        ESCRIBIR "No es posible hacer la division"
+    SINO
+        resultado <- x / y
+        ESCRIBIR resultado
+    FIN SI
+FIN

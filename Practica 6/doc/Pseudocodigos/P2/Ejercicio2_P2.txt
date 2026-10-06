@@ -1,0 +1,14 @@
+ALGORITMO Ejercicio2_mayorDeDiez
+ENTRADA: 10 numeros enteros
+SALIDA: numero mayor en valor absoluto
+INICIO
+    contador <- 0; mayor <- 0
+    MIENTRAS contador < 10 HACER
+        LEER numero
+        numero <- valorAbsoluto(numero)
+        SI contador = 0 ENTONCES mayor <- numero
+        SINO SI numero > mayor ENTONCES mayor <- numero
+        contador <- contador + 1
+    FIN MIENTRAS
+    ESCRIBIR mayor
+FIN

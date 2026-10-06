@@ -1,0 +1,16 @@
+ALGORITMO Analizador_contarPalabras
+ENTRADA: oracion de texto
+SALIDA: frecuencias por palabra en diccionario
+INICIO
+    LIMPIAR frecuencias
+    palabra <- ""
+    PARA i <- 0 HASTA longitud(oracion) HACER
+        SI caracter es letra o digito ENTONCES
+            AGREGAR minuscula a palabra
+        SINO SI palabra no vacia ENTONCES
+            SI palabra existe ENTONCES incrementar conteo
+            SINO registrar palabra con 1
+            palabra <- ""
+        FIN SI
+    FIN PARA
+FIN
