@@ -1,0 +1,102 @@
+package mx.unam.fi.die.poo.g7.p1.editor;
+
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Polygon;
+
+/** Una figura inmutable colocada sobre el lienzo.
+ *
+ * <p>Registro perteneciente al recopilatorio de practicas y proyecto.</p>
+ *
+ * @param tipo tipo de figura geometrica.
+ * @param xInicial coordenada inicial en equis.
+ * @param yInicial coordenada inicial en ye.
+ * @param xFinal coordenada final en equis.
+ * @param yFinal coordenada final en ye.
+ * @param color color de la figura.
+ * @param rellena indica si la figura va rellena.
+ * @author Equipo 2
+ */
+public record Figura(
+        Tipo tipo,
+        int xInicial,
+        int yInicial,
+        int xFinal,
+        int yFinal,
+        Color color,
+        boolean rellena
+) {
+    /**
+     * Enumeracion de tipos de figura disponibles.
+     *
+     * @author Equipo 2
+     */
+    public enum Tipo {
+        /** Tipo rectangulo. */
+        RECTANGULO("Rectángulo"),
+        /** Tipo ovalo. */
+        OVALO("Óvalo"),
+        /** Tipo triangulo. */
+        TRIANGULO("Triángulo"),
+        /** Tipo linea. */
+        LINEA("Línea");
+
+        /**
+         * Atributo {@code nombre} de la enumeracion.
+         */
+        private final String nombre;
+
+        /**
+         * Constructor de la enumeracion.
+         *
+         * @param nombre nombre descriptivo del tipo.
+         */
+        Tipo(String nombre) {
+            this.nombre = nombre;
+        }
+
+        /**
+         * Obtiene el nombre descriptivo del tipo.
+         *
+         * @return nombre del tipo de figura.
+         */
+        @Override
+        public String toString() {
+            return nombre;
+        }
+    }
+
+    /**
+     * Metodo {@code dibujar} de la clase {@code Figura}.
+     * @param g argumento del metodo.
+     */
+    public void dibujar(Graphics2D g) {
+        g.setColor(color);
+
+        int x = Math.min(xInicial, xFinal);
+        int y = Math.min(yInicial, yFinal);
+        int ancho = Math.abs(xFinal - xInicial);
+        int alto = Math.abs(yFinal - yInicial);
+
+        switch (tipo) {
+            case RECTANGULO -> {
+                if (rellena) g.fillRect(x, y, ancho, alto);
+                else g.drawRect(x, y, ancho, alto);
+            }
+            case OVALO -> {
+                if (rellena) g.fillOval(x, y, ancho, alto);
+                else g.drawOval(x, y, ancho, alto);
+            }
+            case TRIANGULO -> {
+                Polygon triangulo = new Polygon(
+                        new int[]{x + ancho / 2, x, x + ancho},
+                        new int[]{y, y + alto, y + alto},
+                        3
+                );
+                if (rellena) g.fillPolygon(triangulo);
+                else g.drawPolygon(triangulo);
+            }
+            case LINEA -> g.drawLine(xInicial, yInicial, xFinal, yFinal);
+        }
+    }
+}
