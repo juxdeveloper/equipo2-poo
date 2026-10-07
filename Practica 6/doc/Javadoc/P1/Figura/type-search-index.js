@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"mx.unam.fi.die.poo.g7.p1.editor","l":"Figura","k":"11"},{"p":"mx.unam.fi.die.poo.g7.p1.editor","l":"Figura.Tipo","k":"9"}];updateSearchResults();

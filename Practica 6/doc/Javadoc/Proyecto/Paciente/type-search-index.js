@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"mx.unam.fi.die.poo.g7.proyecto","l":"Paciente.Estado","k":"9"},{"p":"mx.unam.fi.die.poo.g7.proyecto","l":"Paciente"}];updateSearchResults();
