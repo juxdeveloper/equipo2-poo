@@ -1,0 +1,214 @@
+GUION TECNICO DE PRODUCCION AUDIOVISUAL
+PRACTICA 6: EMPAQUETADO JAR, JAVADOC Y MODULARIZACION
+ASIGNATURA: PROGRAMACION ORIENTADA A OBJETOS (GRUPO 7)
+EQUIPO 2
+
+================================================================================
+ESTRUCTURA GENERAL DEL VIDEO
+Duración Total: 05:00 min (300 segundos)
+- 00:00 - 00:42 (42 s): Introducción externa institucional (sin diálogo redactado).
+- 00:42 - 04:42 (240 s): Diálogo continuo estructurado en 11 bloques alternados (457 palabras).
+- 04:42 - 05:00 (18 s): Cierre visual con créditos y enlaces (sin diálogo).
+
+REPARTO DE INTEGRANTES, AVATARES Y COLORES:
+- Hanniel: Cubo de Geometry Dash (#5941A9) - Conductor principal (80 s totales)
+- Alan: CJ de GTA (#166A8F) (32 s)
+- Zoé: Snoopy (#A52F64) (32 s)
+- Luis: Rabbit (#9A4C16) (32 s)
+- Joseph: Rick Sanchez (#197349) (32 s)
+- Alex: Phineas (#67531C) (32 s)
+
+================================================================================
+BLOQUE 1
+Número Global: 1
+Hablante: Hanniel (Cubo de Geometry Dash, #5941A9)
+Referencia Audio: 1.mp3
+Intervalo / Duración: 00:42 - 00:56 (14 s)
+Transición e Imagen: Transición de cortinilla suave; animación de una caja digital con el logotipo de Java sellándose.
+Tono: Entusiasta y acogedor.
+Sustento Técnico: Sección 1 (Introducción y planteamiento del empaquetado modular).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| ¡Hola a todos! Bienvenidos. Hoy les contamos cómo ordenamos todos nuestros  |
+| programas de Java del semestre usando empaquetado JAR y documentación con    |
+| Javadoc. Alan, ¿por qué era indispensable este cambio?                       |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 2
+Número Global: 2
+Hablante: Alan (CJ de GTA, #166A8F)
+Referencia Audio: 2.mp3
+Intervalo / Duración: 00:56 - 01:28 (32 s)
+Transición e Imagen: Corte directo; diagrama de múltiples clases compiladas dispersas agrupándose dentro de un archivo .jar.
+Tono: Claro, explicativo y reflexivo.
+Sustento Técnico: Sección 2.1 (Concepto, estructura y distribución de archivos JAR).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Antes teníamos decenas de archivos sueltos por todas partes. Si querías      |
+| compartir un ejercicio o probarlo en otra máquina, era fácil olvidar una     |
+| clase o perder la estructura. El archivo JAR resuelve esto empaquetando todo |
+| el proyecto en un único contenedor listo para ejecutarse, simplificando la   |
+| distribución y garantizando que ningún archivo esencial quede fuera del      |
+| sistema final.                                                               |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 3
+Número Global: 3
+Hablante: Hanniel (Cubo de Geometry Dash, #5941A9)
+Referencia Audio: 3.mp3
+Intervalo / Duración: 01:28 - 01:42 (14 s)
+Transición e Imagen: Paneó dinámico hacia visualización de árbol de directorios con nombres de paquetes formales.
+Tono: Dinámico y conectivo.
+Sustento Técnico: Sección 3.2 (Organización modular bajo mx.unam.fi.die.poo.g7).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Exacto, Alan. Un JAR es como una caja de envíos sellada: reúne todo el       |
+| código para que viaje y funcione sin desarmarse. Para mantener el orden      |
+| interno, Zoé, ¿cómo organizamos los paquetes?                                |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 4
+Número Global: 4
+Hablante: Zoé (Snoopy, #A52F64)
+Referencia Audio: 4.mp3
+Intervalo / Duración: 01:42 - 02:14 (32 s)
+Transición e Imagen: Gráfico ilustrado de casilleros identificados con p1 hasta p5 y proyecto, resaltando el espacio de nombres institucional.
+Tono: Didáctico, amable y seguro.
+Sustento Técnico: Sección 2.3 y 3.2 (Convención institucional de nombres y jerarquía de paquetes).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Para que no se mezclen los programas, creamos paquetes con el formato        |
+| oficial de la facultad. Es como asignarle a cada práctica un casillero       |
+| único: p1 para la calculadora, hasta p5 para empleados y el proyecto del     |
+| hospital. Así evitamos nombres repetidos y logramos que cada módulo viva en  |
+| su propio espacio bien identificado y protegido.                             |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 5
+Número Global: 5
+Hablante: Hanniel (Cubo de Geometry Dash, #5941A9)
+Referencia Audio: 5.mp3
+Intervalo / Duración: 02:14 - 02:27 (13 s)
+Transición e Imagen: Zoom digital hacia un libro de especificaciones abriéndose sobre una pantalla de computadora.
+Tono: Interesado y motivador.
+Sustento Técnico: Sección 2.2 (Propósito de la documentación con Javadoc).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Así es, Zoé. Cada práctica tiene su casillero institucional. Pero además del |
+| orden, necesitábamos que cualquiera entienda el funcionamiento de cada       |
+| pieza. Luis, ¿cómo nos ayuda Javadoc en esta tarea?                          |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 6
+Número Global: 6
+Hablante: Luis (Rabbit, #9A4C16)
+Referencia Audio: 6.mp3
+Intervalo / Duración: 02:27 - 02:59 (32 s)
+Transición e Imagen: Transición lateral; gráfico analógico contrastando un aparato sin manual frente a una guía técnica estructurada.
+Tono: Amigable, analítico y pedagógico.
+Sustento Técnico: Sección 2.2 (Documentación técnica y lenguaje natural con etiquetas Javadoc).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Imagina que compras un electrodoméstico sin manual de instrucciones. Sería   |
+| un desastre entenderlo. Javadoc es justamente ese manual técnico para        |
+| programadores: explica en lenguaje natural qué hace cada función, qué datos  |
+| necesita y qué resultados produce. Al estandarizar los comentarios,          |
+| transformamos líneas de código abstracto en una guía de consulta clara y     |
+| navegable para cualquier desarrollador.                                      |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 7
+Número Global: 7
+Hablante: Hanniel (Cubo de Geometry Dash, #5941A9)
+Referencia Audio: 7.mp3
+Intervalo / Duración: 02:59 - 03:12 (13 s)
+Transición e Imagen: Animación de etiquetas doclet transformándose automáticamente en páginas web HTML locales.
+Tono: Enfocado y entusiasta.
+Sustento Técnico: Sección 3.1 (Investigación técnica sobre la generación óptima de Javadoc).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Gran analogía, Luis. Javadoc convierte los comentarios estructurados en un   |
+| manual web interactivo para desarrolladores. Joseph, tú que analizaste las   |
+| herramientas, ¿cuál es la mejor forma técnica de generarlo?                  |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 8
+Número Global: 8
+Hablante: Joseph (Rick Sanchez, #197349)
+Referencia Audio: 8.mp3
+Intervalo / Duración: 03:12 - 03:44 (32 s)
+Transición e Imagen: Gráfico de consola ejecutando la herramienta javadoc con UTF-8 y generando carpetas individuales sin errores.
+Tono: Técnico, directo y pragmático.
+Sustento Técnico: Sección 3.1 y 4 (Generación determinista en consola, classpath y sourcepath).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| La mejor manera es invocar la herramienta oficial javadoc desde la consola   |
+| de comandos, especificando codificación universal UTF-8 y aislando cada      |
+| clase. Aunque los entornos visuales ofrecen botones rápidos, la terminal     |
+| garantiza un control estricto de rutas y dependencias. De este modo,         |
+| generamos documentación determinista y libre de advertencias en las carpetas |
+| destinadas para cada componente.                                             |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 9
+Número Global: 9
+Hablante: Hanniel (Cubo de Geometry Dash, #5941A9)
+Referencia Audio: 9.mp3
+Intervalo / Duración: 03:44 - 03:57 (13 s)
+Transición e Imagen: Transición circular; diagrama global conectando las cinco prácticas hacia el núcleo del proyecto de hospital.
+Tono: Conector y propositivo.
+Sustento Técnico: Sección 3.3 (Integración de modularidad y avance del proyecto hospitalario).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Totalmente, Joseph. La consola garantiza control absoluto de codificación y   |
+| dependencias. Y para concluir este recorrido, Alex, ¿cómo se conecta todo    |
+| este trabajo con nuestro proyecto final?                                     |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 10
+Número Global: 10
+Hablante: Alex (Phineas, #67531C)
+Referencia Audio: 10.mp3
+Intervalo / Duración: 03:57 - 04:29 (32 s)
+Transición e Imagen: Diagrama del sistema hospitalario integrando médicos, enfermeros y pacientes bajo su paquete y ejecutable propio.
+Tono: Concluyente, optimista y profesional.
+Sustento Técnico: Sección 3.3 (Impacto en la arquitectura y mantenibilidad del sistema hospitalario).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Esto transforma por completo nuestro sistema hospitalario. Ahora los         |
+| módulos de médicos, enfermeros y pacientes están perfectamente organizados   |
+| en paquetes, documentados a fondo y empaquetados en un único archivo         |
+| ejecutable. Esto nos permite seguir escalando el sistema médico con total     |
+| confianza, sabiendo que cada clase cumple con estándares de ingeniería de    |
+| software limpios y fáciles de mantener.                                      |
++------------------------------------------------------------------------------+
+
+================================================================================
+BLOQUE 11
+Número Global: 11
+Hablante: Hanniel (Cubo de Geometry Dash, #5941A9)
+Referencia Audio: 11.mp3
+Intervalo / Duración: 04:29 - 04:42 (13 s)
+Transición e Imagen: Gráficos de cierre con el repositorio institucional de GitHub y miembros del equipo despidiéndose.
+Tono: Cálido, enérgico y cordial.
+Sustento Técnico: Sección 5 (Conclusiones generales de la práctica).
+Locución Definitiva:
++------------------------------------------------------------------------------+
+| Excelente, Alex. Con paquetes formales, ejecutables portátiles y             |
+| documentación clara, tenemos una base sólida para seguir creciendo. ¡Muchas  |
+| gracias por acompañarnos y hasta la próxima entrega!                         |
++------------------------------------------------------------------------------+
+
+================================================================================
+CIERRE VISUAL
+Intervalo / Duración: 04:42 - 05:00 (18 s)
+Visual: Pantalla final animada con créditos oficiales del Equipo 2, Grupo 7 de POO, enlace al repositorio en GitHub y temas musicales de cierre. Sin diálogo.
