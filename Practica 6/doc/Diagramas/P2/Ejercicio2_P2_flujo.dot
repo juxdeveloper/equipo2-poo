@@ -1,0 +1,19 @@
+digraph Flujo {
+  rankdir=TB;
+  node [fontname="DejaVu Sans", fontsize=11];
+  edge [fontname="DejaVu Sans", fontsize=10];
+  a [label="Inicio", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00", fontsize=11, fontname="DejaVu Sans"];
+  b [label="Inicializar mayor", shape=box, style=filled, fillcolor="#D5E8D4", color="#82B366", fontsize=11, fontname="DejaVu Sans"];
+  c [label="Leer numero", shape=parallelogram, style=filled, fillcolor="#D5E8D4", color="#82B366", fontsize=11, fontname="DejaVu Sans"];
+  d [label="Actualizar mayor", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF", fontsize=11, fontname="DejaVu Sans"];
+  e [label="contador < 10?", shape=diamond, style=filled, fillcolor="#E1D5E7", color="#9673A6", fontsize=11, fontname="DejaVu Sans"];
+  f [label="Mostrar mayor", shape=parallelogram, style=filled, fillcolor="#F8CECC", color="#B85450", fontsize=11, fontname="DejaVu Sans"];
+  g [label="Fin", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00", fontsize=11, fontname="DejaVu Sans"];
+  a -> b;
+  b -> c;
+  c -> d;
+  d -> e;
+  e -> c [label="Sí"];
+  e -> f [label="No"];
+  f -> g;
+}

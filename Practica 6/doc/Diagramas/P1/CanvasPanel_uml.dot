@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  CanvasPanel [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>CanvasPanel</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">- figuras : List&lt;Figura&gt; {readOnly}<BR/>- historial : Deque&lt;List&lt;Figura&gt;&gt; {readOnly}<BR/>- tipoActual : Figura.Tipo<BR/>- colorActual : Color<BR/>- rellena : boolean<BR/>- vistaPrevia : Figura</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ CanvasPanel()<BR/>- crearFigura(x1 : int, y1 : int, x2 : int, y2 : int) : Figura<BR/>- esVisible(figura : Figura) : boolean<BR/># paintComponent(g : Graphics) : void<BR/>- prepararGraficos(g : Graphics) : Graphics2D<BR/>- dibujarFiguras(g2 : Graphics2D) : void<BR/>- guardarEstado() : void<BR/>+ deshacer() : boolean<BR/>+ borrarTodo() : boolean<BR/>+ exportarPng(archivo : File) : void<BR/>+ setTipoActual(tipoActual : Figura.Tipo) : void<BR/>+ setColorActual(colorActual : Color) : void<BR/>+ setRellena(rellena : boolean) : void</TD></TR>
+    </TABLE>
+  >];
+}

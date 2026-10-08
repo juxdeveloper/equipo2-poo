@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  Main [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>Main</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT"><I>sin atributos</I></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Main()<BR/><U>+ main(args : String[]) : void</U></TD></TR>
+    </TABLE>
+  >];
+}

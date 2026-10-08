@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  Fecha [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>Fecha</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">- mes : int<BR/>- dia : int<BR/>- anio : int</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Fecha(mes : int, dia : int, anio : int)<BR/>+ setMes(mes : int) : void<BR/>+ setDia(dia : int) : void<BR/>+ setAnio(anio : int) : void<BR/>+ mostrarFecha() : void</TD></TR>
+    </TABLE>
+  >];
+}

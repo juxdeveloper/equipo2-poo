@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  Sistema [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>Sistema</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">~ nombreHospital : String<BR/>~ noMedicos : int<BR/>~ noEnfermeros : int<BR/>~ noPacientes : int<BR/>~ m : ArrayList&lt;Medico&gt;<BR/>~ e : ArrayList&lt;Enfermero&gt;<BR/>~ p : ArrayList&lt;Paciente&gt;<BR/>~ spec : TreeMap&lt;Integer,String&gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Sistema(nombreHospital : String)<BR/>+ registroMedico(med : Medico) : void<BR/>+ registroEnfermero(enf : Enfermero) : void<BR/>+ registroPaciente(pac : Paciente, especialidad : int) : boolean<BR/>+ asignarPaciente(medico : Medico, especialidad : int) : Paciente<BR/>+ asignarPaciente(paciente : Paciente, medico : Medico, especialidad : int, prescripcion : String) : boolean<BR/>+ setEspecialidad(nombre : String) : void<BR/>+ getEspecialidad() : void<BR/>+ getNumeroEspecialidades() : int<BR/>+ getNombreHospital() : String<BR/>+ getMedicos() : ArrayList&lt;Medico&gt;<BR/>+ getEnfermeros() : ArrayList&lt;Enfermero&gt;<BR/>+ getPacientes() : ArrayList&lt;Paciente&gt;</TD></TR>
+    </TABLE>
+  >];
+}

@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  Figura [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>Figura</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">~ tipo : Tipo<BR/>~ xInicial : int<BR/>~ yInicial : int<BR/>~ xFinal : int<BR/>~ yFinal : int<BR/>~ color : Color<BR/>~ rellena : boolean</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Figura(tipo : Tipo, xInicial : int, yInicial : int, xFinal : int, yFinal : int, color : Color, rellena : boolean)<BR/>+ dibujar(g : Graphics2D) : void</TD></TR>
+    </TABLE>
+  >];
+}

@@ -1,0 +1,19 @@
+digraph Flujo {
+  rankdir=TB;
+  node [fontname="DejaVu Sans", fontsize=11];
+  edge [fontname="DejaVu Sans", fontsize=10];
+  a [label="Inicio", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00", fontsize=11, fontname="DejaVu Sans"];
+  b [label="Recibir paciente y esp", shape=parallelogram, style=filled, fillcolor="#D5E8D4", color="#82B366", fontsize=11, fontname="DejaVu Sans"];
+  c [label="Buscar medico libre", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF", fontsize=11, fontname="DejaVu Sans"];
+  d [label="Encontro?", shape=diamond, style=filled, fillcolor="#E1D5E7", color="#9673A6", fontsize=11, fontname="DejaVu Sans"];
+  e [label="Registrar y retornar V", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF", fontsize=11, fontname="DejaVu Sans"];
+  f [label="Retornar F", shape=box, style=filled, fillcolor="#F8CECC", color="#B85450", fontsize=11, fontname="DejaVu Sans"];
+  g [label="Fin", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00", fontsize=11, fontname="DejaVu Sans"];
+  a -> b;
+  b -> c;
+  c -> d;
+  d -> e [label="Sí"];
+  d -> f [label="No"];
+  e -> g;
+  f -> g;
+}
