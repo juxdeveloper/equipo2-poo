@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  Empleado [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>Empleado</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">- nombre : String<BR/>- apellido : String<BR/>- salarioMensual : double</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Empleado(nombre : String, apellido : String, salarioMensual : double)<BR/>+ getNombre() : String<BR/>+ setNombre(nombre : String) : void<BR/>+ getApellido() : String<BR/>+ setApellido(apellido : String) : void<BR/>+ getSalarioMensual() : double<BR/>+ setSalarioMensual(salarioMensual : double) : void</TD></TR>
+    </TABLE>
+  >];
+}

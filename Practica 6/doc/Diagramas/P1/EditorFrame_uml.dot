@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  EditorFrame [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>EditorFrame</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">- canvas : CanvasPanel {readOnly}<BR/>- botonColor : JButton {readOnly}<BR/>- colorActual : Color</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ EditorFrame()<BR/>- configurarVentana() : void<BR/>- crearBarraHerramientas() : JPanel<BR/>- elegirColor() : void<BR/>- actualizarBotonColor() : void<BR/>- exportarImagen() : void<BR/><U>+ main(args : String[]) : void</U></TD></TR>
+    </TABLE>
+  >];
+}

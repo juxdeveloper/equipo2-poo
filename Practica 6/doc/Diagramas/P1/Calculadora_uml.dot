@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  Calculadora [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>Calculadora</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT"><I>sin atributos</I></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Calculadora()<BR/><U>+ main(args : String[]) : void</U></TD></TR>
+    </TABLE>
+  >];
+}

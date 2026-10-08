@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  AnalizadorPalabras [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>AnalizadorPalabras</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ oracion : String<BR/>+ frecuencias : Map&lt;String, Integer&gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ AnalizadorPalabras(nuevaOracion : String)<BR/>+ contarPalabras() : void<BR/>+ obtenerNumeroDuplicadas() : int<BR/>+ mostrarDuplicadas(ordenar : boolean) : void</TD></TR>
+    </TABLE>
+  >];
+}

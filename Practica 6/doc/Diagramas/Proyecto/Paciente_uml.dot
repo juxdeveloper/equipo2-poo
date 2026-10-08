@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=11, fontname="DejaVu Sans"];
+  Paciente [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="6">
+      <TR><TD ALIGN="CENTER"><B>Paciente</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">~ nombre : String<BR/>~ apellido : String<BR/>~ especialidadAtencion : int<BR/>~ tratamiento : String<BR/>~ medico : Medico<BR/>~ enfermero : Enfermero<BR/>~ e : Estado</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Paciente(nombre : String, apellido : String, especialidadAtencion : int)<BR/>+ registroEnSistema(s : Sistema) : boolean<BR/>+ solicitarConsulta() : boolean<BR/>+ verTratamiento() : void<BR/>+ getEspecialidad() : int<BR/>+ getEstado() : Estado<BR/>+ setEstado(e : Estado) : void<BR/>+ setMedico(medico : Medico) : void<BR/>+ getMedico() : Medico<BR/>+ setEnfermero(enfermero : Enfermero) : void<BR/>+ getEnfermero() : Enfermero<BR/>+ setTratamiento(tratamiento : String) : void<BR/>+ getTratamiento() : String<BR/>+ getNombre() : String<BR/>+ getApellido() : String</TD></TR>
+    </TABLE>
+  >];
+}
