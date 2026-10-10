@@ -46,7 +46,13 @@ En el curso de programaci\'on orientada a objetos se acumularon cinco pr\'actica
 La industria del software distribuye componentes como unidades portables y autodocumentadas para reducir errores de integraci\'on y facilitar el mantenimiento \cite{deitel}. El uso de paquetes con dominio inverso garantiza trazabilidad acad\'emica y separa espacios de nombres por pr\'actica y proyecto \cite{oracle}. El empaquetado en un \'unico archivo con manifiesto ejecutable simplifica el despliegue sin manipular clases sueltas, mientras que la documentaci\'on generada con la herramienta oficial convierte comentarios estructurados en manuales navegables \cite{joyanes}. Reunir las cinco pr\'acticas y el proyecto en un recopilatorio homog\'eneo permite verificar que la compilaci\'on, la ejecuci\'on por classpath y la ejecuci\'on por JAR producen el mismo comportamiento.
 
 \subsection{Objetivos}
-El objetivo principal consiste en recopilar las cinco pr\'acticas y el primer avance del proyecto bajo la jerarqu\'ia \texttt{mx.unam.fi.die.poo.g7}, organizar la estructura com\'un de directorios y demostrar con el ejemplo base del sistema hospitalario c\'omo se compilan los archivos empaquetados, c\'omo se ejecutan por classpath, c\'omo se crea un JAR y c\'omo se ejecuta. De forma complementaria se documenta cada clase con Javadoc independiente, se estandarizan los diagramas UML y de flujo de todas las clases y se verifica el JAR del hospital con entradas deterministas.
+\begin{itemize}
+\item El objetivo principal consiste en recopilar las cinco pr\'acticas y el primer avance del proyecto bajo la jerarqu\'ia \texttt{mx.unam.fi.die.poo.g7}.
+\item Organizar la estructura com\'un de directorios.
+\item Aprender c\'omo se compilan los archivos empaquetados.
+\item Entender c\'omo se crea un JAR y c\'omo se ejecuta.
+\item De forma complementaria se debe documentar cada clase con Javadoc independiente, se estandarizan los diagramas UML y de flujo de todas las clases.
+\end{itemize}
 
 \section{Marco Te\'orico}
 
@@ -71,17 +77,17 @@ Un archivo con declaraci\'on \texttt{package} debe compilarse con destino expl\'
 Se formul\'o una consulta com\'un de 90 palabras conservada en \texttt{doc/Capturas/query.txt} sobre mejores pr\'acticas de JAR, generaci\'on de Javadoc y estructura \texttt{src}, \texttt{test} y \texttt{doc}. Cada integrante la plante\'o a un modelo de lenguaje para recabar criterios profesionales.
 
 En la figura~\ref{fig:invalan} se reserva la evidencia de Alan.
-\figura{../Capturas/1.png}{Consulta de investigaci\'on sobre JAR y Javadoc por Alan.}{fig:invalan}
+\figura{../Capturas/alan.jpeg}{Consulta de investigaci\'on sobre JAR y Javadoc por Alan.}{fig:invalan}
 En la figura~\ref{fig:invzoe} se reserva la evidencia de Zo\'e.
-\figura{../Capturas/2.png}{Consulta de investigaci\'on sobre JAR y Javadoc por Zo\'e.}{fig:invzoe}
+\figura{../Capturas/zoe.jpeg}{Consulta de investigaci\'on sobre JAR y Javadoc por Zo\'e.}{fig:invzoe}
 En la figura~\ref{fig:invluis} se reserva la evidencia de Luis.
-\figura{../Capturas/3.png}{Consulta de investigaci\'on sobre JAR y Javadoc por Luis.}{fig:invluis}
+\figura{../Capturas/luis.jpeg}{Consulta de investigaci\'on sobre JAR y Javadoc por Luis.}{fig:invluis}
 En la figura~\ref{fig:invjoseph} se reserva la evidencia de Joseph.
-\figura{../Capturas/4.png}{Consulta de investigaci\'on sobre JAR y Javadoc por Joseph.}{fig:invjoseph}
+\figura{../Capturas/joseph.jpeg}{Consulta de investigaci\'on sobre JAR y Javadoc por Joseph.}{fig:invjoseph}
 En la figura~\ref{fig:invhanniel} se reserva la evidencia de Hanniel.
-\figura{../Capturas/5.png}{Consulta de investigaci\'on sobre JAR y Javadoc por Hanniel.}{fig:invhanniel}
-En la figura~\ref{fig:invalex} se reserva la evidencia de Alex.
-\figura{../Capturas/6.png}{Consulta de investigaci\'on sobre JAR y Javadoc por Alex.}{fig:invalex}
+\figura{../Capturas/hanniel.jpeg}{Consulta de investigaci\'on sobre JAR y Javadoc por Hanniel.}{fig:invhanniel}
+
+\paragraph{Discusi\'on.} Al realizar una comparaci\'on de cada una de las respuestas llegamos a la conclusi\'on de que para trabajar de forma profesional con Java, es fundamental mantener un orden riguroso: los archivos JAR deben estar correctamente organizados y tener un manifiesto bien configurado. Por su parte, el Javadoc debe enfocarse en explicar qu\'e hace cada m\'etodo y c\'omo usarlo, usando etiquetas est\'andar como \texttt{@param} y \texttt{@return} en lugar de describir detalles t\'ecnicos internos. La mejor manera de trabajar es automatizar siempre la generaci\'on de la documentaci\'on a trav\'es de estas herramientas de construcci\'on, asegurando as\'i que el c\'odigo y su manual t\'ecnico est\'en siempre actualizados y listos para ser utilizados por otros desarrolladores.
 
 La s\'intesis confirma que la mejor manera de generar Javadoc es invocar la herramienta oficial desde consola con UTF-8 en entrada, salida y charset, con classpath compilado y sourcepath vac\'io, una clase por invocaci\'on y salida aislada por clase. El JAR debe contener solo clases verificadas con manifiesto preciso. La estructura homog\'enea separa fuentes, binarios, biblioteca y documentaci\'on para garantizar mantenibilidad y portabilidad.
 
