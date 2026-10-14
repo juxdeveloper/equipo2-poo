@@ -1,0 +1,21 @@
+CLASE Paralelogramo HEREDA DE Trapezoide
+
+    CONSTRUCTOR Paralelogramo(p1, p2, p3, p4)
+        LLAMAR A SUPER(p1, p2, p3, p4)
+    FIN CONSTRUCTOR
+
+    MÉTODO getBase()
+        RETORNAR getBaseMayor()
+    FIN MÉTODO
+
+    MÉTODO calcularArea()
+        DEFINIR b COMO getBase()
+        DEFINIR h COMO getAltura()
+        RETORNAR b * h
+    FIN MÉTODO
+
+    MÉTODO toString()
+        RETORNAR CADENA CON VÉRTICES, BASE, ALTURA Y ÁREA CALCULADA
+    FIN MÉTODO
+
+FIN CLASE

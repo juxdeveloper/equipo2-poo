@@ -1,0 +1,51 @@
+CLASE Cuadrilatero
+
+    DEFINIR p1 COMO Punto
+    DEFINIR p2 COMO Punto
+    DEFINIR p3 COMO Punto
+    DEFINIR p4 COMO Punto
+
+    CONSTRUCTOR Cuadrilatero(p1, p2, p3, p4)
+        ASIGNAR p1 recibido A p1
+        ASIGNAR p2 recibido A p2
+        ASIGNAR p3 recibido A p3
+        ASIGNAR p4 recibido A p4
+    FIN CONSTRUCTOR
+
+    MÉTODO getP1()
+        RETORNAR p1
+    FIN MÉTODO
+
+    MÉTODO setP1(p1)
+        ASIGNAR p1 recibido A p1
+    FIN MÉTODO
+
+    MÉTODO getP2()
+        RETORNAR p2
+    FIN MÉTODO
+
+    MÉTODO setP2(p2)
+        ASIGNAR p2 recibido A p2
+    FIN MÉTODO
+
+    MÉTODO getP3()
+        RETORNAR p3
+    FIN MÉTODO
+
+    MÉTODO setP3(p3)
+        ASIGNAR p3 recibido A p3
+    FIN MÉTODO
+
+    MÉTODO getP4()
+        RETORNAR p4
+    FIN MÉTODO
+
+    MÉTODO setP4(p4)
+        ASIGNAR p4 recibido A p4
+    FIN MÉTODO
+
+    MÉTODO toString()
+        RETORNAR DESCRIPCIÓN DE VÉRTICES p1, p2, p3, p4
+    FIN MÉTODO
+
+FIN CLASE

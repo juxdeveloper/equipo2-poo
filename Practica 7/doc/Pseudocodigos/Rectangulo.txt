@@ -1,0 +1,25 @@
+CLASE Rectangulo HEREDA DE Paralelogramo
+
+    CONSTRUCTOR Rectangulo(p1, p2, p3, p4)
+        LLAMAR A SUPER(p1, p2, p3, p4)
+    FIN CONSTRUCTOR
+
+    MÉTODO getLongitud()
+        RETORNAR getBase()
+    FIN MÉTODO
+
+    MÉTODO getAncho()
+        RETORNAR getAltura()
+    FIN MÉTODO
+
+    MÉTODO calcularArea()
+        DEFINIR longitud COMO getLongitud()
+        DEFINIR ancho COMO getAncho()
+        RETORNAR longitud * ancho
+    FIN MÉTODO
+
+    MÉTODO toString()
+        RETORNAR CADENA CON VÉRTICES, LONGITUD, ANCHO Y ÁREA CALCULADA
+    FIN MÉTODO
+
+FIN CLASE
