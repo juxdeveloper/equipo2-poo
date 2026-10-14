@@ -1,0 +1,36 @@
+CLASE Punto
+
+    DEFINIR x COMO REAL
+    DEFINIR y COMO REAL
+
+    CONSTRUCTOR Punto()
+        ASIGNAR 0.0 A x
+        ASIGNAR 0.0 A y
+    FIN CONSTRUCTOR
+
+    CONSTRUCTOR Punto(x, y)
+        ASIGNAR x recibido A x
+        ASIGNAR y recibido A y
+    FIN CONSTRUCTOR
+
+    MÉTODO getX()
+        RETORNAR x
+    FIN MÉTODO
+
+    MÉTODO setX(x)
+        ASIGNAR x recibido A x
+    FIN MÉTODO
+
+    MÉTODO getY()
+        RETORNAR y
+    FIN MÉTODO
+
+    MÉTODO setY(y)
+        ASIGNAR y recibido A y
+    FIN MÉTODO
+
+    MÉTODO toString()
+        RETORNAR CADENA CON FORMATO "(x, y)"
+    FIN MÉTODO
+
+FIN CLASE

@@ -1,0 +1,20 @@
+CLASE Cuadrado HEREDA DE Rectangulo
+
+    CONSTRUCTOR Cuadrado(p1, p2, p3, p4)
+        LLAMAR A SUPER(p1, p2, p3, p4)
+    FIN CONSTRUCTOR
+
+    MÉTODO getLado()
+        RETORNAR getLongitud()
+    FIN MÉTODO
+
+    MÉTODO calcularArea()
+        DEFINIR lado COMO getLado()
+        RETORNAR lado * lado
+    FIN MÉTODO
+
+    MÉTODO toString()
+        RETORNAR CADENA CON VÉRTICES, LADO Y ÁREA CALCULADA
+    FIN MÉTODO
+
+FIN CLASE

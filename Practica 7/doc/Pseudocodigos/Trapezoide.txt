@@ -1,0 +1,30 @@
+CLASE Trapezoide HEREDA DE Cuadrilatero
+
+    CONSTRUCTOR Trapezoide(p1, p2, p3, p4)
+        LLAMAR A SUPER(p1, p2, p3, p4)
+    FIN CONSTRUCTOR
+
+    MÉTODO getBaseMayor()
+        RETORNAR VALOR ABSOLUTO DE (p2.x - p1.x)
+    FIN MÉTODO
+
+    MÉTODO getBaseMenor()
+        RETORNAR VALOR ABSOLUTO DE (p3.x - p4.x)
+    FIN MÉTODO
+
+    MÉTODO getAltura()
+        RETORNAR VALOR ABSOLUTO DE (p4.y - p1.y)
+    FIN MÉTODO
+
+    MÉTODO calcularArea()
+        DEFINIR B COMO getBaseMayor()
+        DEFINIR b COMO getBaseMenor()
+        DEFINIR h COMO getAltura()
+        RETORNAR ((B + b) * h) / 2.0
+    FIN MÉTODO
+
+    MÉTODO toString()
+        RETORNAR CADENA CON VÉRTICES, BASES, ALTURA Y ÁREA CALCULADA
+    FIN MÉTODO
+
+FIN CLASE

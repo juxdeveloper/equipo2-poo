@@ -1,0 +1,33 @@
+CLASE Main
+
+    MÉTODO main(argumentos)
+        IMPRIMIR "Encabezado de Práctica 7"
+
+        INSTANCIAR cuadrilatero CON VÉRTICES (1,1), (5,1), (4,4), (2,3)
+        IMPRIMIR cuadrilatero
+        IMPRIMIR "La superclase no calcula área"
+
+        INSTANCIAR trapezoide CON VÉRTICES (0,0), (8,0), (6,4), (2,4)
+        IMPRIMIR trapezoide
+        IMPRIMIR "Área calculada: ", trapezoide.calcularArea()
+
+        INSTANCIAR paralelogramo CON VÉRTICES (0,0), (6,0), (8,4), (2,4)
+        IMPRIMIR paralelogramo
+        IMPRIMIR "Área calculada: ", paralelogramo.calcularArea()
+
+        INSTANCIAR rectangulo CON VÉRTICES (0,0), (6,0), (6,4), (0,4)
+        IMPRIMIR rectangulo
+        IMPRIMIR "Área calculada: ", rectangulo.calcularArea()
+
+        INSTANCIAR cuadrado CON VÉRTICES (0,0), (5,0), (5,5), (0,5)
+        IMPRIMIR cuadrado
+        IMPRIMIR "Área calculada: ", cuadrado.calcularArea()
+
+        INSTANCIAR cuadradoUnitario CON VÉRTICES (0,0), (1,0), (1,1), (0,1)
+        IMPRIMIR cuadradoUnitario
+        IMPRIMIR "Área calculada: ", cuadradoUnitario.calcularArea()
+
+        IMPRIMIR "Fin de la ejecución"
+    FIN MÉTODO
+
+FIN CLASE
