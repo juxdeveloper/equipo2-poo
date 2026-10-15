@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=12, fontname="DejaVu Sans"];
+  Cuadrado [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD ALIGN="CENTER"><B>Cuadrado</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT"></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Cuadrado(p1 : Punto, p2 : Punto, p3 : Punto, p4 : Punto)<BR/>+ getLado() : double<BR/>+ calcularArea() : double<BR/>+ toString() : String</TD></TR>
+    </TABLE>
+  >];
+}
