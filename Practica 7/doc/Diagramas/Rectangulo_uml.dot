@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=12, fontname="DejaVu Sans"];
+  Rectangulo [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD ALIGN="CENTER"><B>Rectangulo</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT"></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Rectangulo(p1 : Punto, p2 : Punto, p3 : Punto, p4 : Punto)<BR/>+ getLongitud() : double<BR/>+ getAncho() : double<BR/>+ calcularArea() : double<BR/>+ toString() : String</TD></TR>
+    </TABLE>
+  >];
+}

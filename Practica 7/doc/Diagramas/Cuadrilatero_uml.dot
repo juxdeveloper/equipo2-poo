@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=12, fontname="DejaVu Sans"];
+  Cuadrilatero [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD ALIGN="CENTER"><B>Cuadrilatero</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">- p1 : Punto<BR/>- p2 : Punto<BR/>- p3 : Punto<BR/>- p4 : Punto</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Cuadrilatero(p1 : Punto, p2 : Punto, p3 : Punto, p4 : Punto)<BR/>+ getP1() : Punto<BR/>+ setP1(p1 : Punto) : void<BR/>+ getP2() : Punto<BR/>+ setP2(p2 : Punto) : void<BR/>+ getP3() : Punto<BR/>+ setP3(p3 : Punto) : void<BR/>+ getP4() : Punto<BR/>+ setP4(p4 : Punto) : void<BR/>+ toString() : String</TD></TR>
+    </TABLE>
+  >];
+}

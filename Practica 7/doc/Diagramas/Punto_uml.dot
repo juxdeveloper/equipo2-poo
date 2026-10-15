@@ -1,0 +1,11 @@
+digraph UML {
+  rankdir=TB;
+  node [shape=plaintext, fontsize=12, fontname="DejaVu Sans"];
+  Punto [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD ALIGN="CENTER"><B>Punto</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">- x : double<BR/>- y : double</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Punto()<BR/>+ Punto(x : double, y : double)<BR/>+ getX() : double<BR/>+ setX(x : double) : void<BR/>+ getY() : double<BR/>+ setY(y : double) : void<BR/>+ toString() : String</TD></TR>
+    </TABLE>
+  >];
+}
