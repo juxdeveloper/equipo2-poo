@@ -1,0 +1,22 @@
+digraph Flujo {
+  rankdir=TB;
+  node [fontname="DejaVu Sans", fontsize=11];
+  edge [fontname="DejaVu Sans", fontsize=10];
+  
+  a [label="Inicio main()", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  b [label="Crear Cuadrilatero y mostrar vértices", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  c [label="Crear Trapezoide y calcular área (24.0)", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  d [label="Crear Paralelogramo y calcular área (24.0)", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  e [label="Crear Rectángulo y calcular área (24.0)", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  f [label="Crear Cuadrado y calcular área (25.0)", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  g [label="Ejecutar caso frontera unitario (1.0)", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  h [label="Fin", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  
+  a -> b;
+  b -> c;
+  c -> d;
+  d -> e;
+  e -> f;
+  f -> g;
+  g -> h;
+}
