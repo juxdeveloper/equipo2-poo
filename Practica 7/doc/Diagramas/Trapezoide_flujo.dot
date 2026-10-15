@@ -1,0 +1,18 @@
+digraph Flujo {
+  rankdir=TB;
+  node [fontname="DejaVu Sans", fontsize=11];
+  edge [fontname="DejaVu Sans", fontsize=10];
+  
+  a [label="Inicio calcularArea()", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  b [label="B = |p2.x - p1.x|\nb = |p3.x - p4.x|", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  c [label="h = |p4.y - p1.y|", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  d [label="area = ((B + b) * h) / 2", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  e [label="Retornar area", shape=parallelogram, style=filled, fillcolor="#F8CECC", color="#B85450"];
+  f [label="Fin", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  
+  a -> b;
+  b -> c;
+  c -> d;
+  d -> e;
+  e -> f;
+}

@@ -1,0 +1,16 @@
+digraph Flujo {
+  rankdir=TB;
+  node [fontname="DejaVu Sans", fontsize=11];
+  edge [fontname="DejaVu Sans", fontsize=10];
+  
+  a [label="Inicio", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  b [label="Recibir vértices p1, p2, p3, p4", shape=parallelogram, style=filled, fillcolor="#D5E8D4", color="#82B366"];
+  c [label="Asignar this.p1 = p1\nAsignar this.p2 = p2", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  d [label="Asignar this.p3 = p3\nAsignar this.p4 = p4", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  e [label="Fin", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  
+  a -> b;
+  b -> c;
+  c -> d;
+  d -> e;
+}
