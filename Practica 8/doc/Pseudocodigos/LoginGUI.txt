@@ -1,0 +1,33 @@
+CLASE LoginGUI IMPLEMENTA ActionListener
+
+    ATRIBUTOS
+        campoUsuario
+        campoContrasena
+        botonIngresar
+        mensaje
+
+    CONSTRUCTOR LoginGUI()
+        configurar la ventana
+        crear y agregar el formulario
+    FIN CONSTRUCTOR
+
+    MÉTODO actionPerformed(evento)
+        si validarAcceso() es verdadero
+            mostrar "Acceso correcto"
+        en otro caso
+            mostrar "Usuario o contraseña incorrectos"
+        fin si
+    FIN MÉTODO
+
+    MÉTODO validarAcceso()
+        leer usuario y contraseña
+        comparar con las credenciales de demostración
+        DEVOLVER si ambas coinciden
+    FIN MÉTODO
+
+    MÉTODO main(argumentos)
+        crear la ventana LoginGUI
+        hacer visible la ventana
+    FIN MÉTODO
+
+FIN CLASE

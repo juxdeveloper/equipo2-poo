@@ -1,0 +1,19 @@
+CLASE Main
+
+    MÉTODO main(argumentos)
+        crear un Edificio con consumo anual y factor eléctrico
+        crear un Auto con distancia, rendimiento y factor de gasolina
+        crear una Bicicleta con su tipo y distancia
+        crear un Edificio frontera con consumo cero
+
+        crear una lista de referencias HuellaCarbono
+        agregar las cuatro instancias a la lista
+
+        PARA cada huella de la lista
+            mostrar la descripción del objeto
+            invocar getHuellaCarbono de forma polimórfica
+            mostrar el resultado en kg CO2e
+        FIN PARA
+    FIN MÉTODO
+
+FIN CLASE

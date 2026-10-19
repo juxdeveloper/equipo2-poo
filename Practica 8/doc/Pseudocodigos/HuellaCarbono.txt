@@ -1,0 +1,7 @@
+INTERFAZ HuellaCarbono
+
+    OPERACIÓN getHuellaCarbono()
+        DEVOLVER la huella de carbono calculada por la clase concreta
+    FIN OPERACIÓN
+
+FIN INTERFAZ

@@ -1,0 +1,17 @@
+CLASE Edificio IMPLEMENTA HuellaCarbono
+
+    ATRIBUTOS
+        nombre
+        consumoAnualKwh
+        factorElectricidad
+
+    CONSTRUCTOR Edificio(nombre, consumoAnualKwh, factorElectricidad)
+        ASIGNAR los tres datos recibidos a los atributos
+    FIN CONSTRUCTOR
+
+    MÉTODO getHuellaCarbono()
+        multiplicar consumoAnualKwh por factorElectricidad
+        DEVOLVER el producto en kg CO2e
+    FIN MÉTODO
+
+FIN CLASE

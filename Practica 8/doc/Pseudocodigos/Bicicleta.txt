@@ -1,0 +1,18 @@
+CLASE Bicicleta IMPLEMENTA HuellaCarbono
+
+    ATRIBUTOS
+        tipo
+        kilometrosRecorridos
+        factorEmisionOperativa
+
+    CONSTRUCTOR Bicicleta(tipo, kilometrosRecorridos)
+        asignar tipo y kilometrosRecorridos
+        asignar cero al factorEmisionOperativa
+    FIN CONSTRUCTOR
+
+    MÉTODO getHuellaCarbono()
+        multiplicar kilometrosRecorridos por factorEmisionOperativa
+        DEVOLVER el resultado en kg CO2e
+    FIN MÉTODO
+
+FIN CLASE

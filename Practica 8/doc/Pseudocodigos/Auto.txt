@@ -1,0 +1,25 @@
+CLASE Auto IMPLEMENTA HuellaCarbono
+
+    ATRIBUTOS
+        modelo
+        kilometrosRecorridos
+        litrosCada100Kilometros
+        factorGasolina
+
+    CONSTRUCTOR Auto(modelo, kilometrosRecorridos,
+                     litrosCada100Kilometros, factorGasolina)
+        ASIGNAR los datos recibidos a los atributos
+    FIN CONSTRUCTOR
+
+    MÉTODO getLitrosConsumidos()
+        calcular kilometrosRecorridos por litrosCada100Kilometros dividido entre 100
+        DEVOLVER los litros consumidos
+    FIN MÉTODO
+
+    MÉTODO getHuellaCarbono()
+        obtener los litros consumidos
+        multiplicar los litros por factorGasolina
+        DEVOLVER el resultado en kg CO2e
+    FIN MÉTODO
+
+FIN CLASE
