@@ -1,0 +1,10 @@
+digraph UML {
+  node [shape=plaintext, fontname="DejaVu Sans", fontsize=18];
+  HuellaCarbono [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD ALIGN="CENTER"><I>&lt;&lt;interface&gt;&gt;</I><BR/><B>HuellaCarbono</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT"></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ getHuellaCarbono() : double</TD></TR>
+    </TABLE>
+  >];
+}

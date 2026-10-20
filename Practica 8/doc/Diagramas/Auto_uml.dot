@@ -1,0 +1,10 @@
+digraph UML {
+  node [shape=plaintext, fontname="DejaVu Sans", fontsize=18];
+  Auto [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD ALIGN="CENTER"><B>Auto</B></TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">- modelo : String<BR/>- kilometrosRecorridos : double<BR/>- litrosCada100Kilometros : double<BR/>- factorGasolina : double</TD></TR>
+      <TR><TD ALIGN="LEFT" BALIGN="LEFT">+ Auto(modelo : String, kilometrosRecorridos : double,<BR/>  litrosCada100Kilometros : double, factorGasolina : double)<BR/>+ getModelo() : String<BR/>+ getKilometrosRecorridos() : double<BR/>+ getLitrosCada100Kilometros() : double<BR/>+ getLitrosConsumidos() : double<BR/>+ getFactorGasolina() : double<BR/>+ getHuellaCarbono() : double<BR/>+ toString() : String</TD></TR>
+    </TABLE>
+  >];
+}
