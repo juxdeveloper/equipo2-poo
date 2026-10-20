@@ -1,0 +1,13 @@
+digraph Flujo {
+  rankdir=TB;
+  node [fontname="DejaVu Sans", fontsize=18];
+  edge [fontname="DejaVu Sans", fontsize=15];
+  inicio [label="Inicio main()", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  objetos [label="Crear tres objetos y caso frontera", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  lista [label="Agregar referencias a ArrayList", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  ciclo [label="Recorrer cada HuellaCarbono", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  invocar [label="Invocar getHuellaCarbono()", shape=box, style="rounded,filled", fillcolor="#DAE8FC", color="#6C8EBF"];
+  mostrar [label="Mostrar objeto y resultado", shape=parallelogram, style=filled, fillcolor="#F8CECC", color="#B85450"];
+  fin [label="Fin", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  inicio -> objetos -> lista -> ciclo -> invocar -> mostrar -> fin;
+}

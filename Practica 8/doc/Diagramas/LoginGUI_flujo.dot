@@ -1,0 +1,17 @@
+digraph Flujo {
+  rankdir=TB;
+  node [fontname="DejaVu Sans", fontsize=18];
+  edge [fontname="DejaVu Sans", fontsize=15];
+  inicio [label="Inicio LoginGUI", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  crear [label="Crear ventana y formulario", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  entrada [label="Capturar usuario y contraseña", shape=parallelogram, style=filled, fillcolor="#D5E8D4", color="#82B366"];
+  validar [label="¿Credenciales válidas?", shape=diamond, style=filled, fillcolor="#E1D5E7", color="#9673A6"];
+  correcto [label="Mostrar acceso correcto", shape=parallelogram, style=filled, fillcolor="#F8CECC", color="#B85450"];
+  error [label="Mostrar acceso incorrecto", shape=box, style=filled, fillcolor="#F8CECC", color="#B85450"];
+  fin [label="Fin del intento", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  inicio -> crear -> entrada -> validar;
+  validar -> correcto [label="Sí"];
+  validar -> error [label="No"];
+  correcto -> fin;
+  error -> fin;
+}

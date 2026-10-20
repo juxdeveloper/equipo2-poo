@@ -1,0 +1,11 @@
+digraph Flujo {
+  rankdir=TB;
+  node [fontname="DejaVu Sans", fontsize=18];
+  edge [fontname="DejaVu Sans", fontsize=15];
+  inicio [label="Inicio getHuellaCarbono()", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  datos [label="Leer distancia y factor directo", shape=parallelogram, style=filled, fillcolor="#D5E8D4", color="#82B366"];
+  calculo [label="Multiplicar distancia por factor cero", shape=box, style=filled, fillcolor="#DAE8FC", color="#6C8EBF"];
+  salida [label="Devolver kg CO2e", shape=parallelogram, style=filled, fillcolor="#F8CECC", color="#B85450"];
+  fin [label="Fin", shape=box, style="rounded,filled", fillcolor="#FFE6CC", color="#D79B00"];
+  inicio -> datos -> calculo -> salida -> fin;
+}
