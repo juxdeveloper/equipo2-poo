@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guion Práctica 8</title>
+<style>
+@page {
+    size: letter portrait;
+    margin: 0.5in 0.2in;
+}
+body {
+    background: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.2in;
+}
+h1 {
+    text-align: center;
+    color: #77206D;
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+}
+.audio-block {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 22px;
+}
+hr.divider {
+    border: 0;
+    border-top: 1px solid #000000;
+    width: 100%;
+    margin: 0 0 8px 0;
+}
+h2.audio-header {
+    color: #0F4761;
+    font-size: 14pt;
+    font-weight: normal;
+    margin: 0 0 6px 0;
+}
+p.audio-body {
+    margin: 0 0 6px 0;
+    text-align: justify;
+}
+</style>
+</head>
+<body>
+<h1>Guion Práctica 8</h1>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 1 – HANNIEL</h2>
+<p class="audio-body">Hola. En esta práctica conectamos una interfaz gráfica sencilla con un problema ambiental: representar edificios, autos y bicicletas para estimar su huella de carbono mediante un contrato común.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 2 – ALAN</h2>
+<p class="audio-body">La idea central es separar lo que todas las entidades deben ofrecer de la forma particular en que lo calculan. El edificio relaciona consumo eléctrico con un factor de emisión; el auto convierte distancia y rendimiento en gasolina; la bicicleta no quema combustible durante el recorrido. Las tres clases comparten una operación, pero conservan datos y fórmulas diferentes. La parte principal recorre la lista sin confundir esos objetos.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 3 – HANNIEL</h2>
+<p class="audio-body">La interfaz HuellaCarbono funciona como un acuerdo sencillo: cada clase debe saber responder cuánto representa su operación. Así, el programa puede tratar objetos distintos con una referencia común.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 4 – ZOÉ</h2>
+<p class="audio-body">En el edificio usamos kilowatt-hora y un factor eléctrico. Dos mil cuatrocientos por cero punto cuarenta producen novecientos sesenta kilogramos de dióxido de carbono equivalente. El número es didáctico, no representa todas las emisiones de una construcción. El nombre del inmueble acompaña la cifra para que una persona pueda interpretarla y compararla. La unidad se explica con claridad.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 5 – HANNIEL</h2>
+<p class="audio-body">Con el auto cambia la ruta del cálculo. Primero obtenemos combustible a partir de kilómetros y rendimiento; después aplicamos el factor de gasolina para convertir litros en emisiones.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 6 – LUIS</h2>
+<p class="audio-body">Para el sedán usamos cuatrocientos ochenta kilómetros y siete litros por cada cien kilómetros. El recorrido consume treinta y tres punto sesenta litros; al multiplicarlos por dos punto treinta y uno obtenemos setenta y siete punto sesenta y dos kilogramos de dióxido de carbono equivalente. La bicicleta tiene factor operativo cero: doce kilómetros producen cero emisiones directas. El alcance no incluye fabricación ni mantenimiento.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 7 – HANNIEL</h2>
+<p class="audio-body">La lista reúne las referencias y el ciclo las recorre sin preguntar qué clase concreta contiene cada posición. Esa es la parte visible del polimorfismo.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 8 – JOSEPH</h2>
+<p class="audio-body">La clase principal crea un edificio, un auto, una bicicleta y un edificio sin consumo como caso frontera. Después guarda las referencias en un ArrayList de HuellaCarbono. Java dirige la llamada al comportamiento correspondiente de cada objeto. La salida identifica cada elemento y muestra su resultado. Así se evitan decisiones especiales para cada transporte o inmueble y cada fórmula permanece cerca de sus datos.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 9 – HANNIEL</h2>
+<p class="audio-body">La ventana de login aplica la misma idea de claridad: recibe datos, valida una combinación de demostración y comunica si el acceso es correcto o incorrecto.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 10 – ALEX</h2>
+<p class="audio-body">La GUI usa una ventana, una etiqueta, un campo de usuario, un campo protegido para la contraseña y un botón de ingreso. La comprobación es académica, no un sistema de seguridad real. La documentación distingue atributos, constructores, métodos y flujos. La compilación, el JAR y la consola permiten comparar el valor esperado con el observado, revisando la interacción visual y la implementación polimórfica.</p>
+</div>
+
+<div class="audio-block">
+<hr class="divider">
+<h2 class="audio-header">AUDIO 11 – HANNIEL</h2>
+<p class="audio-body">En conjunto, la práctica muestra que una interfaz pequeña puede conectar objetos distintos sin perder claridad. También recuerda que calcular una huella exige declarar el alcance y los factores usados. Gracias por acompañarnos.</p>
+</div>
+</body>
+</html>
