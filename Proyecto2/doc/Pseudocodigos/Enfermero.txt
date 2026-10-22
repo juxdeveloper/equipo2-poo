@@ -1,0 +1,10 @@
+ALGORITMO Enfermero
+RECIBIR TRATAMIENTO
+
+  Comprobar hospital, especialidad y consulta activa
+  Revisar cupo de 3 y necesidad de medicamento
+  ¿Hay cupo y autorización si se necesita?
+  Asignar enfermero y pasar a EN_TRATAMIENTO
+  Guardar tratamiento; conservar turno del enfermero
+  Si no se cumplen las condiciones: Seguir en consulta sin enfermero
+FIN

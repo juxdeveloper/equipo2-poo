@@ -1,0 +1,10 @@
+ALGORITMO Medico
+CONSULTA Y TRATAMIENTO
+
+  Recibir paciente asignado de la misma especialidad
+  Comprobar cupo de 10 y una sola consulta activa
+  ¿Paciente en espera y médico libre?
+  Iniciar consulta; solicitar enfermero para tratamiento
+  Si recibe tratamiento, liberar la consulta
+  Si no se cumplen las condiciones: No cambiar consulta ni estado
+FIN

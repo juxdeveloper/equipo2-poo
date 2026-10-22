@@ -1,0 +1,10 @@
+ALGORITMO MedicoEspecialista
+ATENCIÓN ESPECIALIZADA
+
+  Obtener ID de especialidad del médico
+  Solicitar paciente de la misma especialidad
+  ¿Tipo e ID coinciden?
+  Aplicar validaciones de Medico.darConsulta
+  Atender y solicitar enfermero del mismo ID
+  Si no se cumplen las condiciones: Rechazar especialidad incompatible
+FIN

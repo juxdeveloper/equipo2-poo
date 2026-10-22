@@ -1,0 +1,10 @@
+ALGORITMO Main
+MENÚ INTERACTIVO
+
+  Mostrar hospital y paciente activos
+  Leer opción: 0 salir; H/P cambiar; D demo
+  ¿La opción y sus datos son válidos?
+  Registrar, atender, consultar o supervisar
+  Esperar Enter; limpiar pantalla y volver al menú
+  Si no se cumplen las condiciones: Cancelar con 0 sin guardar
+FIN

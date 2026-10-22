@@ -1,0 +1,10 @@
+ALGORITMO PacienteEspecialidad
+BUSCAR ESPECIALISTA
+
+  Leer nombre e ID registrado entre 2 y 99
+  Consultar el nombre de especialidad por ID
+  ¿Existe especialista compatible con cupo?
+  Sistema.asignarPaciente(PacienteEspecialidad)
+  Solicitar la consulta del especialista
+  Si no se cumplen las condiciones: Esperar disponibilidad
+FIN

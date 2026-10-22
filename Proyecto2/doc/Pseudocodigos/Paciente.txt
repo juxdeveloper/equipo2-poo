@@ -1,0 +1,10 @@
+ALGORITMO Paciente
+SOLICITAR CONSULTA
+
+  Comprobar hospital y estado EN_ESPERA
+  Conservar médico asignado o buscar uno compatible
+  ¿El médico puede iniciar consulta?
+  Guardar médico y pasar a EN_CONSULTA
+  Consultar estado y tratamiento
+  Si no se cumplen las condiciones: Continuar EN_ESPERA
+FIN

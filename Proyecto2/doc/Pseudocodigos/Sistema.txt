@@ -1,0 +1,18 @@
+ALGORITMO Sistema
+ASIGNAR ATENCIÓN
+
+  Recibir paciente o solicitud del personal
+  Buscar especialidad en Map<Integer, String>
+  ¿Registro, tipo y cupo son compatibles?
+  Asignar médico o pedir tratamiento al enfermero
+  Conservar asociaciones y actualizar el registro
+  Si no se cumplen las condiciones: Rechazar sin cambiar estado
+FIN
+
+REGISTRAR ESPECIALIDAD
+  Validar ID entre 2 y 99 y nombre no vacío ni repetido.
+  Guardar ID y nombre en Map. El ID 1 corresponde a medicina general.
+
+REGISTRAR JEFE
+  Contar solamente los jefes de su especialidad en este hospital.
+  Rechazar si ya hay dos; en otro caso registrar.

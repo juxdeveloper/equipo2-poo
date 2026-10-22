@@ -1,0 +1,10 @@
+ALGORITMO MedicoGeneral
+ATENCIÓN GENERAL
+
+  Obtener servicio: Consulta general
+  Solicitar paciente con sobrecarga MedicoGeneral
+  ¿El paciente es PacienteGeneral?
+  Aplicar validaciones de Medico.darConsulta
+  Atender y solicitar tratamiento de medicina general
+  Si no se cumplen las condiciones: Rechazar tipo incompatible
+FIN

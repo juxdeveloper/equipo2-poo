@@ -1,0 +1,23 @@
+ALGORITMO JefeEnfermeria
+SUPERVISAR ESPECIALIDAD
+
+  Elegir jefe y enfermero o paciente
+  Comprobar mismo hospital y área; excluir otros jefes
+  ¿La operación cumple especialidad, estado y cupo?
+  Cambiar turno, trasladar paciente o autorizar medicamento
+  Mostrar equipo del área; máximo dos jefes por ID
+  Si no se cumplen las condiciones: Conservar turno y asignación
+FIN
+
+CAMBIAR ENFERMERO
+  Validar supervisor, hospital, especialidad, paciente y cupo destino menor que 3.
+  Si falla, conservar ambas listas y la asociación del paciente.
+  Si cumple, retirar del actual, agregar al nuevo y actualizar el paciente.
+
+AUTORIZAR MEDICAMENTO
+  Si el paciente lo necesita y pertenece al área, autorizar siempre.
+  Si falta un supervisor compatible, no iniciar el tratamiento.
+
+CAMBIAR TURNO
+  Verificar que el enfermero sea del área y no sea supervisor.
+  Guardar false para matutino o true para vespertino.

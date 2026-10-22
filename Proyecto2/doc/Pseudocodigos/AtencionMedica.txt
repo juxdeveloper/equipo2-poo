@@ -1,0 +1,10 @@
+ALGORITMO AtencionMedica
+CONTRATO DE TRATAMIENTO
+
+  Recibir una referencia AtencionMedica
+  Invocar darTratamiento(Paciente)
+  ¿La implementación acepta al paciente?
+  Médico coordina o enfermero recibe el tratamiento
+  Devolver true al completar la operación
+  Si no se cumplen las condiciones: Devolver false sin completar
+FIN

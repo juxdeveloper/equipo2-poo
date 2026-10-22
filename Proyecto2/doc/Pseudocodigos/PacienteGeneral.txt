@@ -1,0 +1,10 @@
+ALGORITMO PacienteGeneral
+BUSCAR MEDICINA GENERAL
+
+  Leer nombre y motivo de consulta
+  Usar el ID 1: Medicina general
+  ¿Existe médico general libre con cupo?
+  Sistema.asignarPaciente(PacienteGeneral)
+  Solicitar la consulta del médico
+  Si no se cumplen las condiciones: Esperar disponibilidad
+FIN

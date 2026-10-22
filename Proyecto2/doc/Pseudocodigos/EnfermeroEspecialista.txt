@@ -1,0 +1,10 @@
+ALGORITMO EnfermeroEspecialista
+VALIDAR ATENCIÓN DEL ÁREA
+
+  Consultar especialidad y turno del enfermero
+  Comparar hospital e ID del paciente
+  ¿Coinciden hospital y especialidad?
+  Delegar cupo y autorización en Enfermero
+  Recibir paciente compatible, incluida medicina general
+  Si no se cumplen las condiciones: Rechazar atención incompatible
+FIN
