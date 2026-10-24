@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\begin{document}
+\section*{Guion de demostración — Sistema hospitalario}
+\subsection*{Inicio}
+Presentar las tres jerarquías: pacientes, médicos y enfermeros. Las clases base son abstractas. \texttt{AtencionMedica} permite tratar mediante una referencia común; se entrega también en un JAR propio.
+
+\subsection*{Registro}
+Crear hospital, especialidades, médicos, enfermeros y pacientes con las opciones 1 a 5. Mostrar el catálogo por ID. El ID 1 es medicina general; los demás pueden ser no consecutivos. Cada hospital conserva sus registros. Cero cancela cualquier captura y no guarda registros incompletos.
+
+\subsection*{Demo en vivo}
+Ejecutar \texttt{java -jar lib/hospital-fase2.jar} y elegir D. Quedan seis pacientes en espera, tres médicos, seis enfermeros y tres supervisores, repartidos entre las áreas 1, 2 y 7.
+
+Con 6 iniciar consulta y con 7 escribir tratamiento. Usar 14 para mostrar estado, enfermero, necesidad de medicamento y autorización. Si el medicamento es necesario, el enfermero solicita aprobación a un supervisor del área; se autoriza automáticamente. Si no hace falta, se omite esa solicitud.
+
+Con 16 elegir el primer supervisor y el primer enfermero para cambiar su turno. Usar 15 para comprobarlo. Con 17 elegir ese supervisor y el segundo enfermero del equipo para trasladar al paciente. La opción 14 muestra el nuevo responsable.
+
+H cambia hospital y P cambia paciente. Después de cada operación se presiona Enter y vuelve el menú.
+
+\subsection*{Restricciones y diseño}
+Cada médico: máximo diez pacientes y una consulta a la vez. Cada enfermero: máximo tres pacientes de una misma especialidad. Cada área: máximo dos jefes. El jefe coordina; no se cuenta dentro de su equipo ni proporciona el tratamiento directo.
+
+El traslado valida especialidad, hospital, estado y cupo antes de cambiar las listas. Cuando una operación falla se conserva la situación anterior. Las listas se muestran por apellidos de Z a A. Las cédulas y especialidades profesionales no tienen setter; los nombres y turnos sí pueden cambiar.
+
+Explicar sobrecarga con \texttt{Sistema.asignarPaciente} y sobrescritura con \texttt{buscarMedico}, \texttt{darConsulta} y \texttt{darTratamiento}. La aplicación usa una sola lista de clase base por jerarquía y un Map por hospital.
+
+\subsection*{Cierre}
+Ejecutar \texttt{java -cp test PruebasHospital}: 74 comprobaciones correctas. Mostrar los dos JAR, el Javadoc completo y los diagramas editables. Abrir el reporte y la presentación, que documentan la misma versión.
+
+\end{document}
