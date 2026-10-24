@@ -1,0 +1,195 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{lmodern,microtype,graphicx,caption,booktabs,longtable,verbatim}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\newcommand{\figura}[3]{\begin{figure}[htbp]\centering\includegraphics[width=0.96\textwidth,height=0.74\textheight,keepaspectratio]{#1}\caption{#2}\label{#3}\end{figure}}
+\title{Simulador de Sistema Hospitalario\\Proyecto: Etapa 2}
+\author{Equipo 2\\Programación Orientada a Objetos, Grupo 7\\Universidad Nacional Autónoma de México}
+\date{26 de octubre de 2026}
+\begin{document}
+\maketitle\thispagestyle{empty}\clearpage
+\tableofcontents\clearpage
+\section{Introducción}
+El sistema representa el registro y la atención de pacientes en hospitales independientes. Conserva las reglas de la primera etapa: hasta diez pacientes por médico, una consulta activa por médico y hasta tres pacientes de la misma especialidad por enfermero. La segunda etapa organiza estas responsabilidades mediante paquetes, encapsulamiento, herencia, clases abstractas, una interfaz y polimorfismo.
+
+El programa se utiliza desde un menú. Primero se crea el hospital, después sus especialidades y por último el personal y los pacientes. Siempre se muestran el hospital y el paciente activos. También se pueden precargar datos de demostración y cambiar de hospital sin mezclar sus registros. En cualquier captura, cero cancela la operación sin guardar datos incompletos; en el menú principal, cero sale. Al finalizar una opción se presiona Enter y se limpia la pantalla.
+
+\subsection{Objetivos}
+Registrar personas y especialidades por identificador, asignar atención compatible, realizar consultas y tratamientos, consultar listas descendentes y coordinar enfermería por área. La demostración debe permitir explicar las tres jerarquías y las reglas que protegen su estado.
+
+\section{Marco teórico}
+El encapsulamiento mantiene los atributos privados y concentra las validaciones en constructores y métodos. Las listas públicas se entregan como copias no modificables y el catálogo como un mapa no modificable. Las cédulas y especialidades asignadas al personal son finales: no se modifican después de construir el objeto, porque cambiarían su identidad profesional o la compatibilidad de sus pacientes. Los nombres, el motivo de consulta, el turno y el tratamiento sí pueden actualizarse mediante métodos. Los contadores no tienen setters y solo cambian con registros aceptados.
+
+Las clases abstractas \texttt{Paciente}, \texttt{Medico} y \texttt{Enfermero} contienen la información compartida. Sus subclases utilizan \texttt{super} y sobrescriben las operaciones que dependen del tipo real. Cada subclase incorpora un dato propio: motivo de consulta, servicio general, especialidad o área de supervisión. La interfaz \texttt{AtencionMedica} declara \texttt{darTratamiento(Paciente)} y es implementada por médicos y enfermeros.
+
+El polimorfismo estático aparece en las sobrecargas de \texttt{Sistema.asignarPaciente}. La llamada con \texttt{PacienteGeneral} o \texttt{PacienteEspecialidad} busca un médico; la llamada con \texttt{MedicoGeneral} o \texttt{MedicoEspecialista} busca un paciente. La referencia base \texttt{Paciente} selecciona la sobrecarga que busca enfermería. El polimorfismo dinámico aparece en \texttt{buscarMedico}, \texttt{darConsulta}, \texttt{getEspecialidad} y \texttt{darTratamiento}: una referencia base ejecuta el comportamiento del objeto real. Los jefes rechazan el tratamiento directo porque su función es coordinar.
+
+\section{Desarrollo}
+\subsection{Paquetes y estructuras}
+La fuente principal está en \texttt{src/hospital}. Se separan los paquetes \path{hospital.sistema}, \path{hospital.personal}, \path{hospital.pacientes} y \path{hospital.interfaces}. \texttt{Main} pertenece a \texttt{hospital}. Los imports conectan las clases y el menú emplea el nombre completo \path{hospital.interfaces.AtencionMedica} al proporcionar tratamiento.
+
+Cada hospital conserva una sola lista por jerarquía: \texttt{List<Medico>}, \texttt{List<Enfermero>} y \texttt{List<Paciente>}. Las listas pueden contener las distintas subclases. El catálogo es \texttt{Map<Integer, String>}, implementado con \texttt{LinkedHashMap} para mantener el orden de registro. No se utiliza una lista de listas. El ID 1 identifica medicina general; los IDs 2 a 99 se eligen al crear especialidades y pueden no ser consecutivos. Cada selección muestra el ID y su nombre y rechaza números que no existan.
+
+\subsection{Registro y atención}
+Los registros verifican nombres, cédulas, hospital de pertenencia y especialidades del catálogo. Las cédulas no se repiten dentro del hospital, incluso entre médicos y enfermeros. Un objeto no se registra en dos hospitales distintos.
+
+El paciente inicia en \texttt{EN\_ESPERA}. Al solicitar consulta se utiliza su médico asignado o se busca uno compatible con cupo y sin consulta activa. El médico valida que el paciente esté en su lista y libre para consulta; entonces cambia a \texttt{EN\_CONSULTA}. Un segundo paciente no puede ocupar la misma consulta.
+
+El tratamiento busca un enfermero de la misma especialidad con menos de tres pacientes. Si el paciente necesita medicamento controlado, el enfermero solicita autorización al supervisor de su área. Solamente cuando se cumplen estas condiciones se asigna enfermero, se guarda tratamiento, se cambia a \texttt{EN\_TRATAMIENTO} y se libera la consulta médica. Si falta cupo o supervisor, se conserva la consulta y no se pierde la asignación. La atención general utiliza un enfermero especialista del área 1.
+
+Los métodos \texttt{verListaPacientes} ordenan una copia por nombre completo de Z a A y muestran especialidad. El menú solicita escribir apellidos antes de los nombres para que el orden corresponda a lo requerido.
+
+\subsection{Turnos y supervisión}
+Cada enfermero tiene un turno booleano: \texttt{false} significa matutino y \texttt{true}, vespertino. Cada jefe pertenece a una especialidad y solo supervisa enfermeros especialistas de esa área y hospital. El equipo no incluye al propio jefe ni a otros supervisores. Se permiten como máximo dos jefes por especialidad y hospital.
+
+El jefe puede ver los turnos, cambiar el turno de su equipo y trasladar un paciente entre dos enfermeros de su área. Antes del traslado se verifica que el paciente esté en tratamiento, que pertenezca al enfermero actual y que el destino sea distinto, compatible y tenga cupo. Si alguna condición falla, no cambia ninguna lista. Si todas se cumplen, el paciente sale de la lista anterior, entra a la nueva y actualiza su enfermero.
+
+Cada paciente recibe al construirse el booleano \texttt{necesitaMedicamento} mediante \texttt{Math.random() < 0.5}. La necesidad se muestra en pantalla y no cambia al consultar el menú. El enfermero comunica este requerimiento al supervisor; en esta simulación toda solicitud válida del área se autoriza. El programa conserva por separado el requerimiento y la autorización. Si no se necesita medicamento, no se solicita autorización. Esta regla representa el comportamiento académico solicitado.
+
+\subsection{Algoritmos y diagramas}
+El flujo central es: seleccionar hospital, registrar o elegir paciente, buscar atención compatible, validar consulta, solicitar enfermería y autorizar medicamento si corresponde. La Figura~\ref{fig:general} reúne las tres jerarquías, sus clases abstractas y la interfaz. Los diagramas individuales y flujos se incluyen en el anexo; cada imagen tiene su archivo editable DrawIO.
+\figura{../Diagramas/UML_General.png}{Jerarquías y estructuras del sistema hospitalario.}{fig:general}
+
+Los doce pseudocódigos se encuentran en \texttt{doc/Pseudocodigos}; se incorporan al anexo para documentar los algoritmos junto a sus diagramas.
+
+\section{Compilación y extra}
+Se utiliza Java 17 o posterior, sin dependencias externas al JDK. Desde \texttt{Proyecto2/}:
+\begin{verbatim}
+./compilar.sh
+java -jar lib/hospital-fase2.jar
+\end{verbatim}
+El script compila los paquetes, construye \texttt{lib/atencion-medica.jar}, recompila la aplicación usando ese JAR en el classpath y produce el ejecutable \texttt{lib/hospital-fase2.jar}. El ejecutable incluye también la interfaz para funcionar por sí solo. Los archivos compilados quedan en \texttt{test/hospital}. El JAR separado de la interfaz cubre el extra indicado en la segunda etapa.
+
+La documentación conjunta se abre en \texttt{doc/Javadoc/General/index.html}; se conservan también las páginas individuales de cada clase. Para repetir las pruebas:
+\begin{verbatim}
+java -cp test PruebasHospital
+\end{verbatim}
+
+\section{Resultados}
+\subsection{Demostración interactiva}
+La opción D crea un hospital nuevo con medicina general (ID 1), cardiología (ID 2) y neurología (ID 7). Registra tres médicos, seis enfermeros especialistas, tres supervisores y seis pacientes en espera. Cada área tiene un enfermero matutino, uno vespertino y un supervisor. La paciente activa inicial es María López García, registrada como \texttt{López García, María}.
+
+La secuencia de demostración consiste en solicitar consulta con 6, indicar tratamiento con 7, consultar el detalle con 14, cambiar turno con 16 y trasladar al paciente con 17. La necesidad de medicamento puede variar entre ejecuciones, pero el supervisor del área autoriza automáticamente cuando hace falta. El resultado es un paciente en tratamiento con la indicación capturada, un turno actualizado y una asignación de enfermería coherente.
+\figura{../Capturas/ejecucion-main.png}{Salida real del menú y detalle del paciente durante la demostración.}{fig:ejecucion}
+El transcript completo de la ejecución está en \texttt{doc/Capturas/ejecucion-main.txt}.
+
+\subsection{Validación}
+La prueba \texttt{test/PruebasHospital.java} realiza 74 comprobaciones reproducibles. Fija la necesidad de medicamento antes de las consultas para comprobar ambos caminos sin depender del azar. Verifica registros duplicados, especialidades inexistentes, separación de hospitales, cupos de 10 y 3, una consulta activa, dos supervisores como máximo, cambios de turno, traslado válido e inválido y rechazo de modificaciones externas a las colecciones.
+
+Se comprueba que un paciente que requiere medicamento siga en consulta si falta supervisor y pase a tratamiento después de registrar uno compatible. También se verifica que un paciente que no lo requiere pueda recibir tratamiento sin autorización. El resultado de las pruebas está en \texttt{doc/Capturas/pruebas.txt}.
+
+Las pruebas del menú recorren tanto la demo como un registro manual con ID 23, cambian de hospital y paciente, modifican turnos, trasladan pacientes y cancelan capturas de personal y pacientes sin dejar registros parciales.
+
+\section{Conclusiones}
+Las reglas se mantienen en los objetos y el menú se limita a capturar datos e invocar operaciones. El mapa permite conservar una identidad explícita para cada especialidad, mientras las listas de clases base muestran el uso de herencia y polimorfismo. La supervisión tiene funciones concretas: administrar turnos, coordinar asignaciones y autorizar medicamentos dentro del área correspondiente.
+
+Las pruebas confirman que los rechazos conservan los estados y asociaciones previos. La distribución incluye fuente, clases compiladas, JAR ejecutable, JAR de interfaz, Javadoc, diagramas, pseudocódigos y presentación de la misma implementación.
+
+\begin{thebibliography}{3}
+\bibitem{etapa1} Programación Orientada a Objetos, Grupo 7. \textit{Proyecto -- Etapa 1: Simulador de Sistema Hospitalario}. Especificaciones del curso, 2026. Archivo \texttt{doc/etapa-1.pdf}.
+\bibitem{etapa2} Programación Orientada a Objetos, Grupo 7. \textit{Proyecto -- Etapa 2: Simulador de Sistema Hospitalario}. Especificaciones del curso, 2026. Archivo \texttt{doc/etapa-2.pdf}.
+\bibitem{java} Oracle. \textit{Java Platform, Standard Edition 17: API Specification}. \url{https://docs.oracle.com/en/java/javase/17/docs/api/}.
+\end{thebibliography}
+\clearpage\appendix
+\section{Diagramas y pseudocódigos por clase}
+\clearpage
+\subsection{Main}
+\figura{../Diagramas/UML_Main.png}{Diagrama de clase Main.}{fig:umlMain}
+\clearpage
+\figura{../Diagramas/Flujo_Main.png}{Flujo principal de Main.}{fig:flujoMain}
+\clearpage
+\subsubsection*{Pseudocódigo de Main}
+{\footnotesize\verbatiminput{../Pseudocodigos/Main.txt}}
+\clearpage
+\subsection{Sistema}
+\figura{../Diagramas/UML_Sistema.png}{Diagrama de clase Sistema.}{fig:umlSistema}
+\clearpage
+\figura{../Diagramas/Flujo_Sistema.png}{Flujo principal de Sistema.}{fig:flujoSistema}
+\clearpage
+\subsubsection*{Pseudocódigo de Sistema}
+{\footnotesize\verbatiminput{../Pseudocodigos/Sistema.txt}}
+\clearpage
+\subsection{AtencionMedica}
+\figura{../Diagramas/UML_AtencionMedica.png}{Diagrama de clase AtencionMedica.}{fig:umlAtencionMedica}
+\clearpage
+\figura{../Diagramas/Flujo_AtencionMedica.png}{Flujo principal de AtencionMedica.}{fig:flujoAtencionMedica}
+\clearpage
+\subsubsection*{Pseudocódigo de AtencionMedica}
+{\footnotesize\verbatiminput{../Pseudocodigos/AtencionMedica.txt}}
+\clearpage
+\subsection{Paciente}
+\figura{../Diagramas/UML_Paciente.png}{Diagrama de clase Paciente.}{fig:umlPaciente}
+\clearpage
+\figura{../Diagramas/Flujo_Paciente.png}{Flujo principal de Paciente.}{fig:flujoPaciente}
+\clearpage
+\subsubsection*{Pseudocódigo de Paciente}
+{\footnotesize\verbatiminput{../Pseudocodigos/Paciente.txt}}
+\clearpage
+\subsection{PacienteGeneral}
+\figura{../Diagramas/UML_PacienteGeneral.png}{Diagrama de clase PacienteGeneral.}{fig:umlPacienteGeneral}
+\clearpage
+\figura{../Diagramas/Flujo_PacienteGeneral.png}{Flujo principal de PacienteGeneral.}{fig:flujoPacienteGeneral}
+\clearpage
+\subsubsection*{Pseudocódigo de PacienteGeneral}
+{\footnotesize\verbatiminput{../Pseudocodigos/PacienteGeneral.txt}}
+\clearpage
+\subsection{PacienteEspecialidad}
+\figura{../Diagramas/UML_PacienteEspecialidad.png}{Diagrama de clase PacienteEspecialidad.}{fig:umlPacienteEspecialidad}
+\clearpage
+\figura{../Diagramas/Flujo_PacienteEspecialidad.png}{Flujo principal de PacienteEspecialidad.}{fig:flujoPacienteEspecialidad}
+\clearpage
+\subsubsection*{Pseudocódigo de PacienteEspecialidad}
+{\footnotesize\verbatiminput{../Pseudocodigos/PacienteEspecialidad.txt}}
+\clearpage
+\subsection{Medico}
+\figura{../Diagramas/UML_Medico.png}{Diagrama de clase Medico.}{fig:umlMedico}
+\clearpage
+\figura{../Diagramas/Flujo_Medico.png}{Flujo principal de Medico.}{fig:flujoMedico}
+\clearpage
+\subsubsection*{Pseudocódigo de Medico}
+{\footnotesize\verbatiminput{../Pseudocodigos/Medico.txt}}
+\clearpage
+\subsection{MedicoGeneral}
+\figura{../Diagramas/UML_MedicoGeneral.png}{Diagrama de clase MedicoGeneral.}{fig:umlMedicoGeneral}
+\clearpage
+\figura{../Diagramas/Flujo_MedicoGeneral.png}{Flujo principal de MedicoGeneral.}{fig:flujoMedicoGeneral}
+\clearpage
+\subsubsection*{Pseudocódigo de MedicoGeneral}
+{\footnotesize\verbatiminput{../Pseudocodigos/MedicoGeneral.txt}}
+\clearpage
+\subsection{MedicoEspecialista}
+\figura{../Diagramas/UML_MedicoEspecialista.png}{Diagrama de clase MedicoEspecialista.}{fig:umlMedicoEspecialista}
+\clearpage
+\figura{../Diagramas/Flujo_MedicoEspecialista.png}{Flujo principal de MedicoEspecialista.}{fig:flujoMedicoEspecialista}
+\clearpage
+\subsubsection*{Pseudocódigo de MedicoEspecialista}
+{\footnotesize\verbatiminput{../Pseudocodigos/MedicoEspecialista.txt}}
+\clearpage
+\subsection{Enfermero}
+\figura{../Diagramas/UML_Enfermero.png}{Diagrama de clase Enfermero.}{fig:umlEnfermero}
+\clearpage
+\figura{../Diagramas/Flujo_Enfermero.png}{Flujo principal de Enfermero.}{fig:flujoEnfermero}
+\clearpage
+\subsubsection*{Pseudocódigo de Enfermero}
+{\footnotesize\verbatiminput{../Pseudocodigos/Enfermero.txt}}
+\clearpage
+\subsection{EnfermeroEspecialista}
+\figura{../Diagramas/UML_EnfermeroEspecialista.png}{Diagrama de clase EnfermeroEspecialista.}{fig:umlEnfermeroEspecialista}
+\clearpage
+\figura{../Diagramas/Flujo_EnfermeroEspecialista.png}{Flujo principal de EnfermeroEspecialista.}{fig:flujoEnfermeroEspecialista}
+\clearpage
+\subsubsection*{Pseudocódigo de EnfermeroEspecialista}
+{\footnotesize\verbatiminput{../Pseudocodigos/EnfermeroEspecialista.txt}}
+\clearpage
+\subsection{JefeEnfermeria}
+\figura{../Diagramas/UML_JefeEnfermeria.png}{Diagrama de clase JefeEnfermeria.}{fig:umlJefeEnfermeria}
+\clearpage
+\figura{../Diagramas/Flujo_JefeEnfermeria.png}{Flujo principal de JefeEnfermeria.}{fig:flujoJefeEnfermeria}
+\clearpage
+\subsubsection*{Pseudocódigo de JefeEnfermeria}
+{\footnotesize\verbatiminput{../Pseudocodigos/JefeEnfermeria.txt}}
+\end{document}
