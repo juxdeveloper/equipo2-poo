@@ -1,0 +1,46 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="460" pageHeight="460" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="f1" value="Inicio" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="30" width="140" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2" value="Entrada: salarioMensual" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="105" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="f3" value="¿salarioMensual &gt; 0?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="130" y="185" width="180" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="f4" value="this.salarioMensual =&lt;br/&gt;salarioMensual" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="160" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="f5" value="Ignorar asignación&lt;br/&gt;(mantiene valor anterior)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="290" width="160" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="f6" value="Fin" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="380" width="140" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="fe1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="f1" target="f2">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fe2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="f2" target="f3">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fe3" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="f3" target="f4">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fe4" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="f3" target="f5">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fe5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="f4" target="f6">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fe6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="f5" target="f6">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
