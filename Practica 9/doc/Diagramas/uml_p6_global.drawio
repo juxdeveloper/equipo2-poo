@@ -1,0 +1,64 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="500" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="g6_sis_h" value="&lt;b&gt;Sistema&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="320" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_sis_a" value="~ nombreHospital: String&lt;br/&gt;~ m: ArrayList&lt;Medico&gt;&lt;br/&gt;~ p: ArrayList&lt;Paciente&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="72" width="320" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_sis_m" value="~ Sistema(nombreHospital: String)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="142" width="320" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_med_h" value="&lt;b&gt;Medico&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="320" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_med_a" value="~ nombre: String&lt;br/&gt;~ cedula: int&lt;br/&gt;~ especialidad: int" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="440" y="72" width="320" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_med_m" value="~ Medico(nombre: String, cedula: int, esp: int)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="440" y="142" width="320" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_ap_h" value="&lt;b&gt;AnalizadorPalabras&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="320" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_ap_a" value="+ oracion: String&lt;br/&gt;+ frecuencias: Map&lt;String, Integer&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="302" width="320" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_ap_m" value="+ AnalizadorPalabras(oracion: String)&lt;br/&gt;+ contarPalabras(): void" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="352" width="320" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_pac_h" value="&lt;b&gt;Paciente&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="440" y="270" width="320" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_pac_a" value="~ nombre: String&lt;br/&gt;~ tratamiento: String&lt;br/&gt;~ e: Estado" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="440" y="302" width="320" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="g6_pac_m" value="~ Paciente(nombre: String, apellido: String, esp: int)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="440" y="372" width="320" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="ge1" value="gestiona" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamond;startFill=0;startSize=14;endArrow=none;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="g6_sis_h" target="g6_med_h">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="ge1_ms" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="ge1">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="ge1_mt" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="ge1">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="ge2" value="atiende" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=open;endSize=10;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="g6_med_m" target="g6_pac_h">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="ge2_ms" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="ge2">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="ge2_mt" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="ge2">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

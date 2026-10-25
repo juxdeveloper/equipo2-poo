@@ -1,0 +1,82 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="840" pageHeight="660" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="h_sis_h" value="&lt;b&gt;Sistema&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="340" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_sis_a" value="~ nombreHospital: String&lt;br/&gt;~ noMedicos: int&lt;br/&gt;~ noEnfermeros: int&lt;br/&gt;~ noPacientes: int&lt;br/&gt;~ m: ArrayList&lt;Medico&gt;&lt;br/&gt;~ e: ArrayList&lt;Enfermero&gt;&lt;br/&gt;~ p: ArrayList&lt;Paciente&gt;&lt;br/&gt;~ spec: TreeMap&lt;Integer, String&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="72" width="340" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_sis_m" value="~ Sistema(nombreHospital: String)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="242" width="340" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_med_h" value="&lt;b&gt;Medico&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="460" y="40" width="340" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_med_a" value="~ nombre: String&lt;br/&gt;~ cedula: int&lt;br/&gt;~ especialidad: int&lt;br/&gt;~ noPacientes: int&lt;br/&gt;~ atendiendo: Paciente&lt;br/&gt;~ sis: Sistema&lt;br/&gt;~ p: ArrayList&lt;Paciente&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="460" y="72" width="340" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_med_m" value="~ Medico(nombre: String, cedula: int, especialidad: int)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="460" y="222" width="340" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_enf_h" value="&lt;b&gt;Enfermero&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="340" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_enf_a" value="~ nombre: String&lt;br/&gt;~ cedula: int&lt;br/&gt;~ especialidad: int&lt;br/&gt;~ noPacientes: int&lt;br/&gt;~ p: ArrayList&lt;Paciente&gt;&lt;br/&gt;~ sis: Sistema" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="402" width="340" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_enf_m" value="~ Enfermero(nombre: String, cedula: int, especialidad: int)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="532" width="340" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_pac_h" value="&lt;b&gt;Paciente&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="460" y="370" width="340" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_pac_a" value="~ nombre: String&lt;br/&gt;~ apellido: String&lt;br/&gt;~ especialidadAtencion: int&lt;br/&gt;~ tratamiento: String&lt;br/&gt;~ medico: Medico&lt;br/&gt;~ enfermero: Enfermero&lt;br/&gt;~ e: Estado" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="460" y="402" width="340" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_pac_m" value="~ Paciente(nombre: String, apellido: String, esp: int)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="460" y="552" width="340" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="h_e1" value="gestiona" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamond;startFill=0;startSize=14;endArrow=none;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="h_sis_h" target="h_med_h">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e1_ms" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="h_e1">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e1_mt" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="h_e1">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e2" value="gestiona" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamond;startFill=0;startSize=14;endArrow=none;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="h_sis_m" target="h_enf_h">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e2_ms" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="h_e2">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e2_mt" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="h_e2">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e3" value="atiende" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=open;endSize=10;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="h_med_m" target="h_pac_h">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e3_ms" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="h_e3">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e3_mt" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="h_e3">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e4" value="cuida" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=open;endSize=10;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="h_enf_h" target="h_pac_h">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e4_ms" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="h_e4">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="h_e4_mt" value="*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontFamily=Liberation Sans;fontSize=11;" vertex="1" connectable="0" parent="h_e4">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-12" as="offset"/></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
