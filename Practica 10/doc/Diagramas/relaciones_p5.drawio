@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="uml" name="Práctica 5 · Clases y relaciones">
+    <mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" value="&lt;b&gt;Práctica 5 · Clases y relaciones&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=22;">
+          <mxGeometry x="30.0" y="35.0" width="1100.0" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c0" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;group;strokeColor=none;fillColor=none;">
+          <mxGeometry x="30" y="100" width="470" height="139" as="geometry" />
+        </mxCell>
+        <mxCell id="sec2" value="" vertex="1" parent="c0" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="0" width="470" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="mem3" value="«Control»&lt;br&gt;&lt;b&gt;MainEmpleado&lt;/b&gt;" vertex="1" parent="c0" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="4" width="456" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="sec4" value="" vertex="1" parent="c0" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="54" width="470" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="mem5" value="" vertex="1" parent="c0" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="58" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="sec6" value="" vertex="1" parent="c0" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="85" width="470" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="mem7" value="&lt;u&gt;+ main(args : String[]) : void&lt;/u&gt;" vertex="1" parent="c0" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="89" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem8" value="+ MainEmpleado()" vertex="1" parent="c0" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="112" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;group;strokeColor=none;fillColor=none;">
+          <mxGeometry x="620" y="100" width="470" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="sec9" value="" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="0" width="470" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="mem10" value="«Objeto de negocio»&lt;br&gt;&lt;b&gt;Empleado&lt;/b&gt;" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="4" width="456" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="sec11" value="" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="54" width="470" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="mem12" value="- nombre : String" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="58" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem13" value="- apellido : String" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="81" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem14" value="- salarioMensual : double" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="104" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="sec15" value="" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="131" width="470" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="mem16" value="+ Empleado(nombre : String, apellido : String, salarioMensual :&lt;br&gt;double)" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="135" width="456" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="mem17" value="+ getNombre() : String" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="181" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem18" value="+ setNombre(nombre : String) : void" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="204" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem19" value="+ getApellido() : String" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="227" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem20" value="+ setApellido(apellido : String) : void" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="250" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem21" value="+ getSalarioMensual() : double" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="273" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem22" value="+ setSalarioMensual(salarioMensual : double) : void" vertex="1" parent="c2" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="296" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;group;strokeColor=none;fillColor=none;">
+          <mxGeometry x="30" y="560" width="470" height="139" as="geometry" />
+        </mxCell>
+        <mxCell id="sec23" value="" vertex="1" parent="c1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="0" width="470" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="mem24" value="«Control»&lt;br&gt;&lt;b&gt;MainFecha&lt;/b&gt;" vertex="1" parent="c1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="4" width="456" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="sec25" value="" vertex="1" parent="c1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="54" width="470" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="mem26" value="" vertex="1" parent="c1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="58" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="sec27" value="" vertex="1" parent="c1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="85" width="470" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="mem28" value="&lt;u&gt;+ main(args : String[]) : void&lt;/u&gt;" vertex="1" parent="c1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="89" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem29" value="+ MainFecha()" vertex="1" parent="c1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="112" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;group;strokeColor=none;fillColor=none;">
+          <mxGeometry x="620" y="560" width="470" height="254" as="geometry" />
+        </mxCell>
+        <mxCell id="sec30" value="" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="0" width="470" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="mem31" value="«Objeto de negocio»&lt;br&gt;&lt;b&gt;Fecha&lt;/b&gt;" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="4" width="456" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="sec32" value="" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="54" width="470" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="mem33" value="- mes : int" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="58" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem34" value="- dia : int" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="81" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem35" value="- anio : int" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="104" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="sec36" value="" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=0;">
+          <mxGeometry x="0" y="131" width="470" height="123" as="geometry" />
+        </mxCell>
+        <mxCell id="mem37" value="+ Fecha(mes : int, dia : int, anio : int)" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="135" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem38" value="+ setMes(mes : int) : void" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="158" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem39" value="+ setDia(dia : int) : void" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="181" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem40" value="+ setAnio(anio : int) : void" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="204" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mem41" value="+ mostrarFecha() : void" vertex="1" parent="c3" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;">
+          <mxGeometry x="7" y="227" width="456" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="edge42" value="crea dos&lt;br&gt;objetos" edge="1" parent="1" source="c0" target="c2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge43" value="crea un&lt;br&gt;objeto" edge="1" parent="1" source="c1" target="c3" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t44" value="Dependencias de creación: los dos ejercicios no mantienen asociaciones entre sí." vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=16;">
+          <mxGeometry x="30" y="980" width="1100" height="36" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
