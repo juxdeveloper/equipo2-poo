@@ -1,0 +1,58 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="460" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="pkg_p1" value="&lt;b&gt;g7.p1&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="220" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p1_txt" value="&bull; Calculadora&lt;br/&gt;&bull; Operaciones b&aacute;sicas&lt;br/&gt;&bull; Editor gr&aacute;fico" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="pkg_p1">
+          <mxGeometry y="25" width="220" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p2" value="&lt;b&gt;g7.p2&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="290" y="40" width="220" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p2_txt" value="&bull; Ejercicio1_P2&lt;br/&gt;&bull; Ejercicio2_P2&lt;br/&gt;&bull; Ejercicio3_P2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="pkg_p2">
+          <mxGeometry y="25" width="220" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p3" value="&lt;b&gt;g7.p3&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="540" y="40" width="220" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p3_txt" value="&bull; Palindromo&lt;br/&gt;&bull; Evaluaci&oacute;n de cadenas" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="pkg_p3">
+          <mxGeometry y="25" width="220" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p4" value="&lt;b&gt;g7.p4&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="220" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p4_txt" value="&bull; AnalizadorPalabras&lt;br/&gt;&bull; Main (Conteo de frecuencia)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="pkg_p4">
+          <mxGeometry y="25" width="220" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p5" value="&lt;b&gt;g7.p5&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="290" y="200" width="220" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_p5_txt" value="&bull; Empleado&lt;br/&gt;&bull; Fecha&lt;br/&gt;&bull; MainEmpleado / MainFecha" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="pkg_p5">
+          <mxGeometry y="25" width="220" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_proy" value="&lt;b&gt;g7.proyecto&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="540" y="200" width="220" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="pkg_proy_txt" value="&bull; Sistema&lt;br/&gt;&bull; Medico / Paciente / Enfermero&lt;br/&gt;&bull; Main (Gesti&oacute;n hospitalaria)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="pkg_proy">
+          <mxGeometry y="25" width="220" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="p6_jar" value="Empaquetado: Practica6.jar&lt;br/&gt;(Manifiesto + Todas las clases)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="270" y="370" width="260" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="pe1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.15;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pkg_p4" target="p6_jar">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="pe2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pkg_p5" target="p6_jar">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="pe3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pkg_proy" target="p6_jar">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

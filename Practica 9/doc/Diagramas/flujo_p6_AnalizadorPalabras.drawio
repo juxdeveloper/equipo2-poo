@@ -1,0 +1,61 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="620" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="fl6_1" value="Inicio contarPalabras" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="20" width="160" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl6_2" value="frecuencias.clear()&lt;br/&gt;palabra = &#x27;&#x27; ; i = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="210" y="95" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl6_3" value="¿i &lt; oracion.length?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="210" y="185" width="200" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl6_end" value="Fin" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="200" width="110" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl6_4" value="¿char es letra o dígito?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="210" y="295" width="200" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl6_add" value="palabra += c" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="410" width="170" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl6_map" value="if (!palabra.isEmpty())&lt;br/&gt;  frecuencias[palabra]++&lt;br/&gt;palabra = &#x27;&#x27;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="290" y="405" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl6_inc" value="i++" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="510" width="140" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="f6e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="fl6_1" target="fl6_2">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="f6e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="fl6_2" target="fl6_3">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="f6e3" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl6_3" target="fl6_end">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="f6e4" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl6_3" target="fl6_4">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="f6e5" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl6_4" target="fl6_add">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="f6e6" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl6_4" target="fl6_map">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="f6e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl6_add" target="fl6_inc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="f6e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl6_map" target="fl6_inc">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="f6e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl6_inc" target="fl6_3">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="20" y="532"/><mxPoint x="20" y="222"/></Array></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

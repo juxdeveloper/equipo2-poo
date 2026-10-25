@@ -1,0 +1,19 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="520" pageHeight="240" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="c_ap_h" value="&lt;b&gt;AnalizadorPalabras&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="420" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_ap_a" value="+ oracion: String&lt;br/&gt;+ frecuencias: Map&lt;String, Integer&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="72" width="420" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_ap_m" value="+ AnalizadorPalabras(nuevaOracion: String)&lt;br/&gt;+ contarPalabras(): void&lt;br/&gt;+ obtenerNumeroDuplicadas(): int&lt;br/&gt;+ mostrarDuplicadas(ordenar: boolean): void" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="122" width="420" height="90" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
