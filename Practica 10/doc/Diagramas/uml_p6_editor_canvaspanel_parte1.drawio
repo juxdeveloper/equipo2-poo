@@ -1,0 +1,120 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="modelo" name="Practica 6 · CanvasPanel (1/2)">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" page="0" pageScale="1" pageWidth="816" pageHeight="1056" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v1" value="&lt;b&gt;Practica 6 · CanvasPanel (1/2)&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=17;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="8" width="530" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="20" y="55" width="530" height="417" as="geometry" />
+        </mxCell>
+        <mxCell id="v2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c20">
+          <mxGeometry x="0" y="0" width="530" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v3" value="&lt;b&gt;CanvasPanel&lt;/b&gt;&lt;br&gt;{leaf}" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="4" width="518" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="v4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c20">
+          <mxGeometry x="0" y="56" width="530" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="v5" value="- figuras : List&amp;lt;Figura&amp;gt; {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="60" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v6" value="- historial : Deque&amp;lt;List&amp;lt;Figura&amp;gt;&amp;gt; {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="83" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v7" value="- tipoActual : Figura.Tipo" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="106" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v8" value="- colorActual : Color" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="129" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v9" value="- rellena : boolean" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="152" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v10" value="- vistaPrevia : Figura" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="175" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v11" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c20">
+          <mxGeometry x="0" y="202" width="530" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="v12" value="+ CanvasPanel()" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="206" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v13" value="- crearFigura(x1 : int, y1 : int, x2 : int, y2 : int) : Figura" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="229" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v14" value="- esVisible(figura : Figura) : boolean" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="252" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v15" value="# paintComponent(g : Graphics) : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="275" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v16" value="- prepararGraficos(g : Graphics) : Graphics2D" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="298" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v17" value="- dibujarFiguras(g2 : Graphics2D) : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="321" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v18" value="- guardarEstado() : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="344" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v19" value="+ deshacer() : boolean" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="367" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v20" value="+ borrarTodo() : boolean" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c20">
+          <mxGeometry x="6" y="390" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="20" y="597" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v21" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c22">
+          <mxGeometry x="0" y="0" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v22" value="«record»&lt;br&gt;&lt;b&gt;Figura&lt;/b&gt;&lt;br&gt;{leaf}" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="4" width="148" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="205" y="597" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c23">
+          <mxGeometry x="0" y="0" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v24" value="«enumeration»&lt;br&gt;&lt;b&gt;Figura.Tipo&lt;/b&gt;&lt;br&gt;{leaf}" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c23">
+          <mxGeometry x="6" y="4" width="148" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="ext0" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="390" y="597" width="160" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v25" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="ext0">
+          <mxGeometry x="0" y="0" width="160" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v26" value="&lt;b&gt;JPanel (JDK)&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="ext0">
+          <mxGeometry x="6" y="4" width="148" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;exitX=0.8490566037735849;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="c20" target="ext0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e28" value="figuras [0..*],&lt;br&gt;historial [0..*],&lt;br&gt;vistaPrevia [0..1]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0.1509433962264151;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="c20" target="c22" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e29" value="tipoActual" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="c20" target="c23" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e29n" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" vertex="1" connectable="0" parent="e29">
+          <mxGeometry x="0.8" y="-12" relative="1" as="geometry">
+            <mxPoint x="0" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v30" value="Extremos inferiores: referencias; sus miembros se desarrollan en vistas propias." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="707" width="530" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="v31" value="Número junto al extremo: multiplicidad del rol.&lt;br&gt;Extremo inverso no restringido por esa declaración." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="752" width="530" height="43" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

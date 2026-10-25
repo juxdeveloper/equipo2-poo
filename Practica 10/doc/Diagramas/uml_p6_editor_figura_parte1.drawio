@@ -1,0 +1,105 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="modelo" name="Practica 6 · Figura (1/2)">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" page="0" pageScale="1" pageWidth="816" pageHeight="1056" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v1" value="&lt;b&gt;Practica 6 · Figura (1/2)&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=17;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="8" width="530" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="20" y="55" width="530" height="437" as="geometry" />
+        </mxCell>
+        <mxCell id="v2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c22">
+          <mxGeometry x="0" y="0" width="530" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v3" value="«record»&lt;br&gt;&lt;b&gt;Figura&lt;/b&gt;&lt;br&gt;{leaf}" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="4" width="518" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="v4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c22">
+          <mxGeometry x="0" y="80" width="530" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="v5" value="- tipo : Tipo {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="84" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v6" value="- xInicial : int {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="107" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v7" value="- yInicial : int {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="130" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v8" value="- xFinal : int {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="153" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v9" value="- yFinal : int {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="176" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v10" value="- color : Color {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="199" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v11" value="- rellena : boolean {readOnly}" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="222" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c22">
+          <mxGeometry x="0" y="249" width="530" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="v13" value="+ dibujar(g : Graphics2D) : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="253" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v14" value="+ Figura(tipo : Tipo, xInicial : int, yInicial : int, xFinal : int, yFinal : int, color : Color,&lt;br&gt;rellena : boolean)" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="276" width="518" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="v15" value="+ tipo() : Tipo" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="318" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v16" value="+ xInicial() : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="341" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v17" value="+ yInicial() : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="364" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v18" value="+ xFinal() : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="387" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v19" value="+ yFinal() : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c22">
+          <mxGeometry x="6" y="410" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="20" y="557" width="245" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c23">
+          <mxGeometry x="0" y="0" width="245" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v21" value="«enumeration»&lt;br&gt;&lt;b&gt;Figura.Tipo&lt;/b&gt;&lt;br&gt;{leaf}" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c23">
+          <mxGeometry x="6" y="4" width="233" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="ext0" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="305" y="557" width="245" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="ext0">
+          <mxGeometry x="0" y="0" width="245" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v23" value="&lt;b&gt;Record (JDK)&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="ext0">
+          <mxGeometry x="6" y="4" width="233" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;exitX=0.7688679245283019;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="c22" target="ext0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e25" value="tipo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0.23113207547169812;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="c22" target="c23" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e25n" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" vertex="1" connectable="0" parent="e25">
+          <mxGeometry x="0.8" y="-12" relative="1" as="geometry">
+            <mxPoint x="0" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v26" value="Extremos inferiores: referencias; sus miembros se desarrollan en vistas propias." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="667" width="530" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="v27" value="Número junto al extremo: multiplicidad del rol.&lt;br&gt;Extremo inverso no restringido por esa declaración." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="712" width="530" height="43" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
