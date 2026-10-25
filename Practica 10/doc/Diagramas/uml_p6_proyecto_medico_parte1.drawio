@@ -1,0 +1,108 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="modelo" name="Practica 6 · Medico (1/2)">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" page="0" pageScale="1" pageWidth="816" pageHeight="1056" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v1" value="&lt;b&gt;Practica 6 · Medico (1/2)&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=17;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="8" width="530" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="20" y="55" width="530" height="393" as="geometry" />
+        </mxCell>
+        <mxCell id="v2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c11">
+          <mxGeometry x="0" y="0" width="530" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v3" value="&lt;b&gt;Medico&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="4" width="518" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="v4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c11">
+          <mxGeometry x="0" y="32" width="530" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="v5" value="~ nombre : String" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="36" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v6" value="~ cedula : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="59" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v7" value="~ especialidad : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="82" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v8" value="~ noPacientes : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="105" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v9" value="~ atendiendo : Paciente" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="128" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v10" value="~ sis : Sistema" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="151" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v11" value="~ p : ArrayList&amp;lt;Paciente&amp;gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="174" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c11">
+          <mxGeometry x="0" y="201" width="530" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="v13" value="~ Medico(nombre : String, cedula : int, especialidad : int)" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="205" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v14" value="+ registroEnSistema(s : Sistema) : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="228" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v15" value="+ solicitarPaciente(s : Sistema) : boolean" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="251" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v16" value="+ darConsulta(paciente : Paciente) : boolean" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="274" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v17" value="+ darTratamiento(paciente : Paciente, tratamiento : String) : boolean" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="297" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v18" value="+ verListaPacientes() : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="320" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v19" value="+ getEspecialidad() : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="343" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v20" value="+ getNoPacientes() : int" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c11">
+          <mxGeometry x="6" y="366" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="20" y="573" width="245" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v21" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c12">
+          <mxGeometry x="0" y="0" width="245" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v22" value="&lt;b&gt;Paciente&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c12">
+          <mxGeometry x="6" y="4" width="233" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="305" y="573" width="245" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c10">
+          <mxGeometry x="0" y="0" width="245" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v24" value="&lt;b&gt;Sistema&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c10">
+          <mxGeometry x="6" y="4" width="233" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="e25" value="atendiendo [0..1],&lt;br&gt;p [0..*]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0.23113207547169812;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="c11" target="c12" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" value="sis" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0.7688679245283019;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="c11" target="c10" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e26n" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" vertex="1" connectable="0" parent="e26">
+          <mxGeometry x="0.8" y="-12" relative="1" as="geometry">
+            <mxPoint x="0" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v27" value="Extremos inferiores: referencias; sus miembros se desarrollan en vistas propias." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="635" width="530" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="v28" value="Número junto al extremo: multiplicidad del rol.&lt;br&gt;Extremo inverso no restringido por esa declaración." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="680" width="530" height="43" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
