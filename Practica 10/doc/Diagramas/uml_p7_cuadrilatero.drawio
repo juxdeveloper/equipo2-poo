@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="modelo" name="Practica 7 · Cuadrilatero">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" page="0" pageScale="1" pageWidth="816" pageHeight="1056" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v1" value="&lt;b&gt;Practica 7 · Cuadrilatero&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=17;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="8" width="530" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="c32" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="20" y="55" width="530" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="v2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c32">
+          <mxGeometry x="0" y="0" width="530" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v3" value="&lt;b&gt;Cuadrilatero&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="4" width="518" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="v4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c32">
+          <mxGeometry x="0" y="32" width="530" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="v5" value="- p1 : Punto" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="36" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v6" value="- p2 : Punto" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="59" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v7" value="- p3 : Punto" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="82" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v8" value="- p4 : Punto" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="105" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c32">
+          <mxGeometry x="0" y="132" width="530" height="238" as="geometry" />
+        </mxCell>
+        <mxCell id="v10" value="+ Cuadrilatero(p1 : Punto, p2 : Punto, p3 : Punto, p4 : Punto)" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="136" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v11" value="+ getP1() : Punto" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="159" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v12" value="+ setP1(p1 : Punto) : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="182" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v13" value="+ getP2() : Punto" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="205" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v14" value="+ setP2(p2 : Punto) : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="228" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v15" value="+ getP3() : Punto" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="251" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v16" value="+ setP3(p3 : Punto) : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="274" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v17" value="+ getP4() : Punto" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="297" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v18" value="+ setP4(p4 : Punto) : void" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="320" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="v19" value="+ toString() : String" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c32">
+          <mxGeometry x="6" y="343" width="518" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="c37" value="" style="group;" vertex="1" parent="1">
+          <mxGeometry x="20" y="550" width="245" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="c37">
+          <mxGeometry x="0" y="0" width="245" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="v21" value="&lt;b&gt;Punto&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" vertex="1" parent="c37">
+          <mxGeometry x="6" y="4" width="233" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" value="p1 [0..1],&lt;br&gt;p2 [0..1],&lt;br&gt;p3 [0..1],&lt;br&gt;p4 [0..1]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0.23113207547169812;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" source="c32" target="c37" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v23" value="Extremos inferiores: referencias; sus miembros se desarrollan en vistas propias." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="612" width="530" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="v24" value="Número junto al extremo: multiplicidad del rol.&lt;br&gt;Extremo inverso no restringido por esa declaración." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="657" width="530" height="43" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
