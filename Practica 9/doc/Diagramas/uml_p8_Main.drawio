@@ -1,0 +1,19 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="420" pageHeight="180" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="c_m8_h" value="&lt;b&gt;Main&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="40" width="300" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_m8_a" value="&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="72" width="300" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="c_m8_m" value="+ Main()&lt;br/&gt;+ main(args: String[]): void" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="98" width="300" height="50" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
