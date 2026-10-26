@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="uml" name="Práctica 8 · Flujo de los dos programas independientes">
+    <mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" value="&lt;b&gt;Práctica 8 · Flujo de los dos programas independientes&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=22;">
+          <mxGeometry x="30.0" y="10.0" width="1710.0" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="&lt;b&gt;Huellas de carbono&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=18;">
+          <mxGeometry x="30" y="75" width="650" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="&lt;b&gt;Inicio de sesión&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=18;">
+          <mxGeometry x="900" y="75" width="720" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h0" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#000000;">
+          <mxGeometry x="320" y="125" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="h1" value="Crear Edificio, Auto, Bicicleta y Edificio sin consumo" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="190" width="600" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="Añadir los cuatro objetos a ArrayList&amp;lt;HuellaCarbono&amp;gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="320" width="600" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="¿Quedan objetos en la lista?" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rhombus;align=center;verticalAlign=middle;">
+          <mxGeometry x="150" y="450" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h4" value="Mostrar objeto y getHuellaCarbono() con dos decimales" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="650" width="600" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="h5" value="Mostrar cierre del recorrido polimórfico" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="820" width="600" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="hf" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#FFFFFF;strokeWidth=1.5;">
+          <mxGeometry x="320" y="960" width="27" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="l0" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#000000;">
+          <mxGeometry x="1220" y="125" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="Crear LoginGUI, ventana, campos y botón; setVisible(true)" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="930" y="190" width="620" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" value="Esperar evento de la ventana" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="1050" y="320" width="380" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" value="¿Se cierra la ventana?" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rhombus;align=center;verticalAlign=middle;">
+          <mxGeometry x="1060" y="450" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lf" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#FFFFFF;strokeWidth=1.5;">
+          <mxGeometry x="1710" y="485" width="27" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" value="¿Se pulsa Ingresar?" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rhombus;align=center;verticalAlign=middle;">
+          <mxGeometry x="1060" y="620" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" value="Leer campos y validarAcceso(): usuario / poo8" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="960" y="790" width="570" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="l6" value="¿Credenciales correctas?" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rhombus;align=center;verticalAlign=middle;">
+          <mxGeometry x="1060" y="930" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="l7" value="Mostrar «Acceso correcto»" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="820" y="1130" width="360" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="l8" value="Mostrar «Usuario o contraseña incorrectos»" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="1320" y="1130" width="420" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="lmerge" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rhombus;align=center;verticalAlign=middle;">
+          <mxGeometry x="1230" y="1310" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="" edge="1" parent="1" source="h0" target="h1" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="" edge="1" parent="1" source="h1" target="h2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" value="" edge="1" parent="1" source="h2" target="h3" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" value="Sí" edge="1" parent="1" source="h3" target="h4" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" value="Siguiente objeto" edge="1" parent="1" source="h4" target="h3" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;exitX=1;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="740" y="687" /><mxPoint x="740" y="500" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="edge9" value="No" edge="1" parent="1" source="h3" target="h5" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="0" y="500" /><mxPoint x="0" y="857" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="edge10" value="" edge="1" parent="1" source="h5" target="hf" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" value="" edge="1" parent="1" source="l0" target="l1" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" value="" edge="1" parent="1" source="l1" target="l2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" value="" edge="1" parent="1" source="l2" target="l3" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" value="Sí" edge="1" parent="1" source="l3" target="lf" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" value="No" edge="1" parent="1" source="l3" target="l4" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge16" value="No" edge="1" parent="1" source="l4" target="l2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="860" y="670" /><mxPoint x="860" y="355" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="edge17" value="Sí" edge="1" parent="1" source="l4" target="l5" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge18" value="" edge="1" parent="1" source="l5" target="l6" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge19" value="Sí" edge="1" parent="1" source="l6" target="l7" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge20" value="No" edge="1" parent="1" source="l6" target="l8" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge21" value="" edge="1" parent="1" source="l7" target="lmerge" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge22" value="" edge="1" parent="1" source="l8" target="lmerge" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge23" value="" edge="1" parent="1" source="lmerge" target="l2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;exitX=1;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1840" y="1330" /><mxPoint x="1840" y="355" /></Array></mxGeometry>
+        </mxCell>
+      <mxCell id="hfinner" value="" vertex="1" parent="hf" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;"><mxGeometry x="5" y="5" width="17.0" height="17.0" as="geometry" /></mxCell><mxCell id="lfinner" value="" vertex="1" parent="lf" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;"><mxGeometry x="5" y="5" width="17.0" height="17.0" as="geometry" /></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
