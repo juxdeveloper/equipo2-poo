@@ -1,0 +1,1371 @@
+<mxfile host="Electron">
+  <diagram id="modelo" name="Proyecto2 — UML global completo">
+    <mxGraphModel grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="0" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v1" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=18;fontColor=#000000;" value="&lt;b&gt;Proyecto2 · UML global completo&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="1600" x="3937.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c45" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="808" width="600" x="1041" y="585.62" as="geometry" />
+        </mxCell>
+        <mxCell id="v2" parent="c45" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v3" parent="c45" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;b&gt;Sistema&lt;/b&gt;&lt;br&gt;hospital.sistema" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v4" parent="c45" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="192" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v5" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- nombreHospital : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v6" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- noMedicos : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="83" as="geometry" />
+        </mxCell>
+        <mxCell id="v7" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- noEnfermeros : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="v8" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- noPacientes : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="v9" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- especialidades : Map&amp;lt;Integer, String&amp;gt; {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="v10" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- medicos : List&amp;lt;Medico&amp;gt; {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="v11" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- enfermeros : List&amp;lt;Enfermero&amp;gt; {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="v12" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- pacientes : List&amp;lt;Paciente&amp;gt; {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="221" as="geometry" />
+        </mxCell>
+        <mxCell id="v13" parent="c45" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="560" width="600" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="v14" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ Sistema(nombre : String)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="v15" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNombreHospital() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="v16" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setNombreHospital(nombre : String) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="v17" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNoMedicos() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="v18" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNoEnfermeros() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="v19" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNoPacientes() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="367" as="geometry" />
+        </mxCell>
+        <mxCell id="v20" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getMedicos() : List&amp;lt;Medico&amp;gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="v21" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEnfermeros() : List&amp;lt;Enfermero&amp;gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="v22" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getPacientes() : List&amp;lt;Paciente&amp;gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="436" as="geometry" />
+        </mxCell>
+        <mxCell id="v23" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEspecialidades() : Map&amp;lt;Integer, String&amp;gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="v24" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ nombreEspecialidad(id : int) : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="482" as="geometry" />
+        </mxCell>
+        <mxCell id="v25" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ registroEspecialidad(id : int, nombre : String) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="v26" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ cedulaDisponible(cedula : int) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="v27" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ registroMedico(medico : Medico) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="551" as="geometry" />
+        </mxCell>
+        <mxCell id="v28" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ registroEnfermero(enfermero : Enfermero) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="v29" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ registroPaciente(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="597" as="geometry" />
+        </mxCell>
+        <mxCell id="v30" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- buscarMedico(paciente : Paciente) : Medico" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="v31" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ asignarPaciente(paciente : PacienteGeneral) : Medico" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="643" as="geometry" />
+        </mxCell>
+        <mxCell id="v32" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ asignarPaciente(paciente : PacienteEspecialidad) : Medico" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="666" as="geometry" />
+        </mxCell>
+        <mxCell id="v33" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- buscarPaciente(medico : Medico) : Paciente" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="689" as="geometry" />
+        </mxCell>
+        <mxCell id="v34" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ asignarPaciente(medico : MedicoGeneral) : Paciente" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="712" as="geometry" />
+        </mxCell>
+        <mxCell id="v35" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ asignarPaciente(medico : MedicoEspecialista) : Paciente" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="v36" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ asignarPaciente(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="758" as="geometry" />
+        </mxCell>
+        <mxCell id="v37" parent="c45" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ buscarJefe(especialidad : int) : JefeEnfermeria" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="781" as="geometry" />
+        </mxCell>
+        <mxCell id="c46" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="139" width="600" x="4866" y="1569.95" as="geometry" />
+        </mxCell>
+        <mxCell id="v38" parent="c46" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="80" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v39" parent="c46" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="«interface»&lt;br&gt;&lt;i&gt;&lt;b&gt;AtencionMedica&lt;/b&gt;&lt;/i&gt;&lt;br&gt;hospital.interfaces" vertex="1">
+          <mxGeometry height="72" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v40" parent="c46" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="28" width="600" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="v41" parent="c46" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="" vertex="1">
+          <mxGeometry height="20" width="588" x="6" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="v42" parent="c46" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="31" width="600" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="v43" parent="c46" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;+ darTratamiento(paciente : Paciente) : boolean&lt;/i&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="c47" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="785" width="600" x="5855" y="414.5" as="geometry" />
+        </mxCell>
+        <mxCell id="v44" parent="c47" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v45" parent="c47" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;&lt;b&gt;Paciente&lt;/b&gt;&lt;/i&gt;&lt;br&gt;hospital.pacientes" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v46" parent="c47" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="192" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v47" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- nombre : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v48" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- tratamiento : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="83" as="geometry" />
+        </mxCell>
+        <mxCell id="v49" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- estado : Estado" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="v50" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- sistema : Sistema" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="v51" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- medico : Medico" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="v52" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- enfermero : Enfermero" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="v53" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- necesitaMedicamento : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="v54" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- medicamentoAutorizado : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="221" as="geometry" />
+        </mxCell>
+        <mxCell id="v55" parent="c47" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="537" width="600" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="v56" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ Paciente(nombre : String)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="v57" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNombre() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="v58" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setNombre(nombre : String) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="v59" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getTratamiento() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="v60" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setTratamiento(tratamiento : String) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="v61" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ verTratamiento() : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="367" as="geometry" />
+        </mxCell>
+        <mxCell id="v62" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEstado() : Estado" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="v63" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setEstado(estado : Estado) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="v64" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getSistema() : Sistema" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="436" as="geometry" />
+        </mxCell>
+        <mxCell id="v65" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setSistema(sistema : Sistema) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="v66" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getMedico() : Medico" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="482" as="geometry" />
+        </mxCell>
+        <mxCell id="v67" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setMedico(medico : Medico) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="v68" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEnfermero() : Enfermero" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="v69" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setEnfermero(enfermero : Enfermero) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="551" as="geometry" />
+        </mxCell>
+        <mxCell id="v70" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNecesitaMedicamento() : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="v71" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setNecesitaMedicamento(necesita : boolean) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="597" as="geometry" />
+        </mxCell>
+        <mxCell id="v72" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getMedicamentoAutorizado() : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="v73" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ autorizarMedicamento(jefe : JefeEnfermeria) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="643" as="geometry" />
+        </mxCell>
+        <mxCell id="v74" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;+ getEspecialidad() : int&lt;/i&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="666" as="geometry" />
+        </mxCell>
+        <mxCell id="v75" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;# buscarMedico() : Medico&lt;/i&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="689" as="geometry" />
+        </mxCell>
+        <mxCell id="v76" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ registroEnSistema(sistema : Sistema) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="712" as="geometry" />
+        </mxCell>
+        <mxCell id="v77" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ solicitarConsulta() : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="v78" parent="c47" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ toString() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="758" as="geometry" />
+        </mxCell>
+        <mxCell id="c48" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="258" width="600" x="7874" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="v79" parent="c48" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="104" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v80" parent="c48" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="«enumeration»&lt;br&gt;&lt;b&gt;Paciente.Estado&lt;/b&gt;&lt;br&gt;hospital.pacientes&lt;br&gt;{leaf}" vertex="1">
+          <mxGeometry height="96" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v81" parent="c48" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="77" width="600" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="v82" parent="c48" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;+ EN_ESPERA : Estado {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="v83" parent="c48" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;+ EN_CONSULTA : Estado {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="131" as="geometry" />
+        </mxCell>
+        <mxCell id="v84" parent="c48" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;+ EN_TRATAMIENTO : Estado {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="v85" parent="c48" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="77" width="600" y="181" as="geometry" />
+        </mxCell>
+        <mxCell id="v86" parent="c48" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- Estado()" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="v87" parent="c48" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;+ values() : Estado[]&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="v88" parent="c48" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;+ valueOf(name : String) : Estado&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="231" as="geometry" />
+        </mxCell>
+        <mxCell id="c49" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="187" width="600" x="3049" y="566" as="geometry" />
+        </mxCell>
+        <mxCell id="v89" parent="c49" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v90" parent="c49" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;b&gt;PacienteEspecialidad&lt;/b&gt;&lt;br&gt;hospital.pacientes" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v91" parent="c49" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="31" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v92" parent="c49" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- especialidad : int {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v93" parent="c49" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="100" width="600" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="v94" parent="c49" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ PacienteEspecialidad(nombre : String, especialidad : int)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="v95" parent="c49" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEspecialidad() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="v96" parent="c49" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ consultarEspecialidad() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="v97" parent="c49" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="# buscarMedico() : Medico" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="c50" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="233" width="600" x="3049" y="1403.12" as="geometry" />
+        </mxCell>
+        <mxCell id="v98" parent="c50" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v99" parent="c50" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;b&gt;PacienteGeneral&lt;/b&gt;&lt;br&gt;hospital.pacientes" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v100" parent="c50" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="31" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v101" parent="c50" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- motivoConsulta : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v102" parent="c50" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="146" width="600" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="v103" parent="c50" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ PacienteGeneral(nombre : String)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="v104" parent="c50" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ PacienteGeneral(nombre : String, motivo : String)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="v105" parent="c50" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getMotivoConsulta() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="v106" parent="c50" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setMotivoConsulta(motivo : String) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="v107" parent="c50" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEspecialidad() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="v108" parent="c50" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="# buscarMedico() : Medico" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="c51" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="187" width="600" x="8863" y="689.9" as="geometry" />
+        </mxCell>
+        <mxCell id="v109" parent="c51" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v110" parent="c51" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;b&gt;EnfermeroEspecialista&lt;/b&gt;&lt;br&gt;hospital.personal" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v111" parent="c51" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="31" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v112" parent="c51" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- especialidad : int {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v113" parent="c51" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="100" width="600" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="v114" parent="c51" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ EnfermeroEspecialista(nombre : String, cedula : int, especialidad : int)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="v115" parent="c51" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEspecialidad() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="v116" parent="c51" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ consultarEspecialidad() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="v117" parent="c51" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="# puedeAtender(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="c52" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="624" width="600" x="4086" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="v118" parent="c52" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v119" parent="c52" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;&lt;b&gt;Medico&lt;/b&gt;&lt;/i&gt;&lt;br&gt;hospital.personal" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v120" parent="c52" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="123" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v121" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- nombre : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v122" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- cedula : int {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="83" as="geometry" />
+        </mxCell>
+        <mxCell id="v123" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- sistema : Sistema" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="v124" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- enConsulta : Paciente" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="v125" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- pacientes : List&amp;lt;Paciente&amp;gt; {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="v126" parent="c52" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="445" width="600" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="v127" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ Medico(nombre : String, cedula : int)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="v128" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNombre() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="v129" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setNombre(nombre : String) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="229" as="geometry" />
+        </mxCell>
+        <mxCell id="v130" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getCedula() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="v131" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNoPacientes() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="v132" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getPacientes() : List&amp;lt;Paciente&amp;gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="v133" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getPaciente(i : int) : Paciente" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="v134" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getSistema() : Sistema" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="v135" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setSistema(sistema : Sistema) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="367" as="geometry" />
+        </mxCell>
+        <mxCell id="v136" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEnConsulta() : Paciente" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="v137" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;+ getEspecialidad() : int&lt;/i&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="v138" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ registroEnSistema(sistema : Sistema) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="436" as="geometry" />
+        </mxCell>
+        <mxCell id="v139" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ addPaciente(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="v140" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ tienePaciente(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="482" as="geometry" />
+        </mxCell>
+        <mxCell id="v141" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;# solicitarPaciente() : Paciente&lt;/i&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="v142" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ solicitarPacienteDisponible() : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="v143" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ darConsulta(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="551" as="geometry" />
+        </mxCell>
+        <mxCell id="v144" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ darTratamiento(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="v145" parent="c52" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ verListaPacientes() : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="597" as="geometry" />
+        </mxCell>
+        <mxCell id="c53" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="210" width="600" x="2030" y="1414.62" as="geometry" />
+        </mxCell>
+        <mxCell id="v146" parent="c53" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v147" parent="c53" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;b&gt;MedicoGeneral&lt;/b&gt;&lt;br&gt;hospital.personal" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v148" parent="c53" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="31" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v149" parent="c53" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- servicio : String {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v150" parent="c53" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="123" width="600" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="v151" parent="c53" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ MedicoGeneral(nombre : String, cedula : int)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="v152" parent="c53" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getServicio() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="v153" parent="c53" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEspecialidad() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="v154" parent="c53" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="# solicitarPaciente() : Paciente" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="v155" parent="c53" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ darConsulta(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="c54" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="348" width="600" x="7874" y="1635.81" as="geometry" />
+        </mxCell>
+        <mxCell id="v156" parent="c54" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v157" parent="c54" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;b&gt;JefeEnfermeria&lt;/b&gt;&lt;br&gt;hospital.personal" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v158" parent="c54" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="31" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v159" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- areaEspecialidad : int {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v160" parent="c54" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="261" width="600" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="v161" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ JefeEnfermeria(nombre : String, cedula : int, areaEspecialidad : int)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="v162" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getAreaEspecialidad() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="v163" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEspecialidad() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="v164" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="# puedeAtender(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="v165" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ darTratamiento(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="v166" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ supervisa(enfermero : Enfermero) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="v167" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ verEquipo() : List&amp;lt;Enfermero&amp;gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="229" as="geometry" />
+        </mxCell>
+        <mxCell id="v168" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ supervisarEquipo() : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="v169" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ cambiarTurno(enfermero : Enfermero, turno : boolean) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="v170" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ cambiarEnfermero(actual : Enfermero, nuevo : Enfermero, paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="v171" parent="c54" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ autorizarMedicamentos(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="c55" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="601" width="600" x="6885" y="561.7" as="geometry" />
+        </mxCell>
+        <mxCell id="v172" parent="c55" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v173" parent="c55" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;&lt;b&gt;Enfermero&lt;/b&gt;&lt;/i&gt;&lt;br&gt;hospital.personal" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v174" parent="c55" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="123" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v175" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- nombre : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v176" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- cedula : int {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="83" as="geometry" />
+        </mxCell>
+        <mxCell id="v177" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- turno : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="v178" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- sistema : Sistema" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="v179" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- pacientes : List&amp;lt;Paciente&amp;gt; {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="v180" parent="c55" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="422" width="600" y="179" as="geometry" />
+        </mxCell>
+        <mxCell id="v181" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ Enfermero(nombre : String, cedula : int)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="v182" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNombre() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="v183" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setNombre(nombre : String) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="229" as="geometry" />
+        </mxCell>
+        <mxCell id="v184" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getCedula() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="v185" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getTurno() : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="v186" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setTurno(turno : boolean) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="v187" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ nombreTurno() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="v188" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getNoPacientes() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="v189" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getPacientes() : List&amp;lt;Paciente&amp;gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="367" as="geometry" />
+        </mxCell>
+        <mxCell id="v190" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getSistema() : Sistema" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="v191" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ setSistema(sistema : Sistema) : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="v192" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;+ getEspecialidad() : int&lt;/i&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="436" as="geometry" />
+        </mxCell>
+        <mxCell id="v193" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;i&gt;# puedeAtender(paciente : Paciente) : boolean&lt;/i&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="v194" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ registroEnSistema(sistema : Sistema) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="482" as="geometry" />
+        </mxCell>
+        <mxCell id="v195" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ solicitarAutorizacion(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="v196" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ darTratamiento(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="v197" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ trasladarPaciente(paciente : Paciente, nuevo : Enfermero, jefe : JefeEnfermeria) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="551" as="geometry" />
+        </mxCell>
+        <mxCell id="v198" parent="c55" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ verListaPacientes() : void" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="c56" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="210" width="600" x="2030" y="818" as="geometry" />
+        </mxCell>
+        <mxCell id="v199" parent="c56" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v200" parent="c56" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;b&gt;MedicoEspecialista&lt;/b&gt;&lt;br&gt;hospital.personal" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v201" parent="c56" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="31" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v202" parent="c56" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="- especialidad : int {readOnly}" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v203" parent="c56" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="123" width="600" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="v204" parent="c56" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ MedicoEspecialista(nombre : String, cedula : int, especialidad : int)" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="v205" parent="c56" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ getEspecialidad() : int" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="v206" parent="c56" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ consultarEspecialidad() : String" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="v207" parent="c56" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="# solicitarPaciente() : Paciente" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="v208" parent="c56" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ darConsulta(paciente : Paciente) : boolean" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="c57" parent="1" style="group;" value="" vertex="1">
+          <mxGeometry height="624" width="600" x="12" y="1310.23" as="geometry" />
+        </mxCell>
+        <mxCell id="v209" parent="c57" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="56" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="v210" parent="c57" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;b&gt;Main&lt;/b&gt;&lt;br&gt;hospital" vertex="1">
+          <mxGeometry height="48" width="588" x="6" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="v211" parent="c57" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="100" width="600" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="v212" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- entrada : Scanner {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v213" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- hospitales : List&amp;lt;Sistema&amp;gt; {readOnly}&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="83" as="geometry" />
+        </mxCell>
+        <mxCell id="v214" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- hospital : Sistema&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="v215" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- paciente : Paciente&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="v216" parent="c57" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="468" width="600" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="v217" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;+ main(args : String[]) : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="v218" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- texto(campo : String) : String&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="v219" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- numero(campo : String, minimo : int, maximo : int) : Integer&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="v220" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- &amp;lt;T&amp;gt; elegir(lista : List&amp;lt;T&amp;gt;, campo : String) : T&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="229" as="geometry" />
+        </mxCell>
+        <mxCell id="v221" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- verEspecialidades() : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="v222" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- especialidad() : Integer&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="v223" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- cedula() : Integer&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="v224" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- crearHospital(nombre : String) : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="321" as="geometry" />
+        </mxCell>
+        <mxCell id="v225" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- registrarMedico() : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="v226" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- registrarEnfermero() : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="367" as="geometry" />
+        </mxCell>
+        <mxCell id="v227" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- registrarPaciente() : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="v228" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- activo() : Paciente&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="v229" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- jefe() : JefeEnfermeria&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="436" as="geometry" />
+        </mxCell>
+        <mxCell id="v230" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- tratar() : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="v231" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- informar(correcto : boolean) : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="482" as="geometry" />
+        </mxCell>
+        <mxCell id="v232" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- descripcion(objeto : Object) : String&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="v233" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- verPaciente(actual : Paciente) : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="528" as="geometry" />
+        </mxCell>
+        <mxCell id="v234" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- listar(pacientes : List&amp;lt;Paciente&amp;gt;) : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="551" as="geometry" />
+        </mxCell>
+        <mxCell id="v235" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="&lt;u&gt;- demo() : void&lt;/u&gt;" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="v236" parent="c57" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Liberation Sans;fontSize=14;fontColor=#000000;spacing=0;" value="+ Main()" vertex="1">
+          <mxGeometry height="23" width="588" x="6" y="597" as="geometry" />
+        </mxCell>
+        <mxCell id="e237" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.4615;entryX=0;entryY=0.375;edgeStyle=orthogonalEdgeStyle;" target="c52" value="medicos">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="56.77" as="offset" />
+            <Array as="points">
+              <mxPoint x="1707" y="958.54" />
+              <mxPoint x="1707" y="763" />
+              <mxPoint x="3922" y="763" />
+              <mxPoint x="3922" y="729" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e237n" connectable="0" parent="e237" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e238" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.1538;entryX=0;entryY=0.2857;edgeStyle=orthogonalEdgeStyle;" target="c55" value="enfermeros">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-407.24" as="offset" />
+            <Array as="points">
+              <mxPoint x="1667" y="709.92" />
+              <mxPoint x="1667" y="373" />
+              <mxPoint x="6721" y="373" />
+              <mxPoint x="6721" y="733.41" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e238n" connectable="0" parent="e238" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e239" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.2308;entryX=0;entryY=0.1667;edgeStyle=orthogonalEdgeStyle;" target="c47" value="pacientes">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-285.62" as="offset" />
+            <Array as="points">
+              <mxPoint x="1677" y="772.08" />
+              <mxPoint x="1677" y="429" />
+              <mxPoint x="5711" y="429" />
+              <mxPoint x="5711" y="545.33" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e239n" connectable="0" parent="e239" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e240" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.0769;entryX=0;entryY=0.2857;edgeStyle=orthogonalEdgeStyle;" target="c48" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-135.19" as="offset" />
+            <Array as="points">
+              <mxPoint x="1657" y="647.77" />
+              <mxPoint x="1657" y="157.43" />
+              <mxPoint x="7710" y="157.43" />
+              <mxPoint x="7710" y="139.70999999999998" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e241" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.3846;entryX=0;entryY=0.5;edgeStyle=orthogonalEdgeStyle;" target="c49" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="103.44" as="offset" />
+            <Array as="points">
+              <mxPoint x="1697" y="896.38" />
+              <mxPoint x="1697" y="659.5" />
+              <mxPoint x="2839.5" y="659.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e242" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.6923;entryX=0;entryY=0.25;edgeStyle=orthogonalEdgeStyle;" target="c50" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-173.18" as="offset" />
+            <Array as="points">
+              <mxPoint x="1835.5" y="1145" />
+              <mxPoint x="2885" y="1145" />
+              <mxPoint x="2885" y="1461.37" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e243" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.7692;entryX=0;entryY=0.3333;edgeStyle=orthogonalEdgeStyle;" target="c53" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-30.5" y="-108.23" as="offset" />
+            <Array as="points">
+              <mxPoint x="1866" y="1207.15" />
+              <mxPoint x="1866" y="1484.62" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e244" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.9231;entryX=0;entryY=0.7143;edgeStyle=orthogonalEdgeStyle;" target="c54" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-117.76" as="offset" />
+            <Array as="points">
+              <mxPoint x="1657" y="1331.46" />
+              <mxPoint x="1657" y="1861.66" />
+              <mxPoint x="7720" y="1861.66" />
+              <mxPoint x="7720" y="1884.38" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e245" edge="1" parent="1" source="c45" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.6154;entryX=0;entryY=0.3333;edgeStyle=orthogonalEdgeStyle;" target="c56" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="54.42" as="offset" />
+            <Array as="points">
+              <mxPoint x="1727" y="1082.85" />
+              <mxPoint x="1727" y="931" />
+              <mxPoint x="1866" y="931" />
+              <mxPoint x="1866" y="888" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e246" edge="1" parent="1" source="c46" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.3333;entryX=0;entryY=0.75;edgeStyle=orthogonalEdgeStyle;" target="c47" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-40.5" y="181.19" as="offset" />
+            <Array as="points">
+              <mxPoint x="5482" y="1616.28" />
+              <mxPoint x="5482" y="1531.45" />
+              <mxPoint x="5701" y="1531.45" />
+              <mxPoint x="5701" y="1003.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e247" edge="1" parent="1" source="c47" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.125;entryX=0;entryY=0.5714;edgeStyle=orthogonalEdgeStyle;" target="c48" value="estado">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170.1" as="offset" />
+            <Array as="points">
+              <mxPoint x="6471" y="512.63" />
+              <mxPoint x="6471" y="213.43" />
+              <mxPoint x="7679.5" y="213.43" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e247n" connectable="0" parent="e247" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e248" edge="1" parent="1" source="c47" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0;exitY=0.25;entryX=1;entryY=0.3077;edgeStyle=orthogonalEdgeStyle;" target="c45" value="sistema">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-287.26" as="offset" />
+            <Array as="points">
+              <mxPoint x="5701" y="610.75" />
+              <mxPoint x="5701" y="473" />
+              <mxPoint x="1687" y="473" />
+              <mxPoint x="1687" y="834.23" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e248n" connectable="0" parent="e248" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e249" edge="1" parent="1" source="c47" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0;exitY=0.4167;entryX=1;entryY=0.3333;edgeStyle=orthogonalEdgeStyle;" target="c52" value="medico">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-123.79" as="offset" />
+            <Array as="points">
+              <mxPoint x="5691" y="741.58" />
+              <mxPoint x="5691" y="703" />
+              <mxPoint x="5660.5" y="703" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e249n" connectable="0" parent="e249" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e250" edge="1" parent="1" source="c47" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.5;entryX=0;entryY=0.4286;edgeStyle=orthogonalEdgeStyle;" target="c55" value="enfermero">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-6.14" as="offset" />
+            <Array as="points">
+              <mxPoint x="6721" y="807" />
+              <mxPoint x="6721" y="819.27" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e250n" connectable="0" parent="e250" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e251" edge="1" parent="1" source="c47" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.75;entryX=0;entryY=0.4286;edgeStyle=orthogonalEdgeStyle;" target="c54" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="411.35" as="offset" />
+            <Array as="points">
+              <mxPoint x="6481" y="1003.25" />
+              <mxPoint x="6481" y="1784.95" />
+              <mxPoint x="7679.5" y="1784.95" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e253" edge="1" parent="1" source="c49" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;exitX=1;exitY=0.3333;entryX=0;entryY=0.3333;edgeStyle=orthogonalEdgeStyle;" target="c47" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3665" y="628.33" />
+              <mxPoint x="3665" y="484" />
+              <mxPoint x="5691" y="484" />
+              <mxPoint x="5691" y="676.17" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e254" edge="1" parent="1" source="c49" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.6667;entryX=0;entryY=0.25;edgeStyle=orthogonalEdgeStyle;" target="c52" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-19.84" as="offset" />
+            <Array as="points">
+              <mxPoint x="3922" y="690.67" />
+              <mxPoint x="3922" y="651" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e255" edge="1" parent="1" source="c50" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;exitX=1;exitY=0.6667;entryX=0;entryY=0.8333;edgeStyle=orthogonalEdgeStyle;" target="c47" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3867.5" y="1558.45" />
+              <mxPoint x="5711" y="1558.45" />
+              <mxPoint x="5711" y="1068.67" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e256" edge="1" parent="1" source="c50" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.3333;entryX=0;entryY=0.75;edgeStyle=orthogonalEdgeStyle;" target="c52" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="114.89" as="offset" />
+            <Array as="points">
+              <mxPoint x="3665" y="1480.78" />
+              <mxPoint x="3665" y="1107" />
+              <mxPoint x="3922" y="1107" />
+              <mxPoint x="3922" y="963" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e257" edge="1" parent="1" source="c51" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;exitX=0;exitY=0.6;entryX=1;entryY=0.4;edgeStyle=orthogonalEdgeStyle;" target="c55" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="8668.5" y="802.1" />
+              <mxPoint x="7679.5" y="802.1" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e258" edge="1" parent="1" source="c51" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=0;exitY=0.4;entryX=1;entryY=0.375;edgeStyle=orthogonalEdgeStyle;" target="c47" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-7.41" as="offset" />
+            <Array as="points">
+              <mxPoint x="8699" y="764.7" />
+              <mxPoint x="8699" y="334" />
+              <mxPoint x="6491" y="334" />
+              <mxPoint x="6491" y="708.88" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e259" edge="1" parent="1" source="c52" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;dashed=1;exitX=1;exitY=0.8333;entryX=0;entryY=0.3333;edgeStyle=orthogonalEdgeStyle;" target="c46" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4702" y="1015" />
+              <mxPoint x="4702" y="1616.28" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e260" edge="1" parent="1" source="c52" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5385;edgeStyle=orthogonalEdgeStyle;" target="c45" value="sistema">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="82.85" as="offset" />
+            <Array as="points">
+              <mxPoint x="3867.5" y="807" />
+              <mxPoint x="1717" y="807" />
+              <mxPoint x="1717" y="1020.69" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e260n" connectable="0" parent="e260" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e261" edge="1" parent="1" source="c52" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;edgeStyle=orthogonalEdgeStyle;" target="c47" value="enConsulta">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-104.5" as="offset" />
+            <Array as="points">
+              <mxPoint x="5660.5" y="807" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e261n" connectable="0" parent="e261" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e262" edge="1" parent="1" source="c52" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.6667;entryX=0;entryY=0.5833;edgeStyle=orthogonalEdgeStyle;" target="c47" value="pacientes">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-123.79" as="offset" />
+            <Array as="points">
+              <mxPoint x="5660.5" y="911" />
+              <mxPoint x="5691" y="911" />
+              <mxPoint x="5691" y="872.42" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e262n" connectable="0" parent="e262" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..10" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e263" edge="1" parent="1" source="c52" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.1667;entryX=0;entryY=0.4286;edgeStyle=orthogonalEdgeStyle;" target="c48" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="77.35" as="offset" />
+            <Array as="points">
+              <mxPoint x="4702" y="599" />
+              <mxPoint x="4702" y="185.43" />
+              <mxPoint x="7710" y="185.43" />
+              <mxPoint x="7710" y="176.57" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e264" edge="1" parent="1" source="c53" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;exitX=1;exitY=0.25;entryX=0;entryY=0.875;edgeStyle=orthogonalEdgeStyle;" target="c52" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2646" y="1467.12" />
+              <mxPoint x="2646" y="1134" />
+              <mxPoint x="3932" y="1134" />
+              <mxPoint x="3932" y="1041" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e265" edge="1" parent="1" source="c53" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.75;entryX=0;entryY=0.9167;edgeStyle=orthogonalEdgeStyle;" target="c47" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-594.02" as="offset" />
+            <Array as="points">
+              <mxPoint x="2646" y="1572.12" />
+              <mxPoint x="2646" y="1718.95" />
+              <mxPoint x="5721" y="1718.95" />
+              <mxPoint x="5721" y="1134.08" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e266" edge="1" parent="1" source="c53" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;edgeStyle=orthogonalEdgeStyle;" target="c50" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2839.5" y="1519.62" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e267" edge="1" parent="1" source="c54" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;exitX=0;exitY=0.1428;entryX=1;entryY=0.6;edgeStyle=orthogonalEdgeStyle;" target="c55" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="7720" y="1685.52" />
+              <mxPoint x="7720" y="922.3" />
+              <mxPoint x="7679.5" y="922.3" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e268" edge="1" parent="1" source="c54" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=0;exitY=0.5714;entryX=1;entryY=0.875;edgeStyle=orthogonalEdgeStyle;" target="c47" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="387.14" as="offset" />
+            <Array as="points">
+              <mxPoint x="7679.5" y="1834.66" />
+              <mxPoint x="6471" y="1834.66" />
+              <mxPoint x="6471" y="1101.38" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e269" edge="1" parent="1" source="c54" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.8;edgeStyle=orthogonalEdgeStyle;" target="c51" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-30.5" y="454.66" as="offset" />
+            <Array as="points">
+              <mxPoint x="8699" y="1809.81" />
+              <mxPoint x="8699" y="839.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e270" edge="1" parent="1" source="c55" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;dashed=1;exitX=0;exitY=0.8571;entryX=1;entryY=0.6667;edgeStyle=orthogonalEdgeStyle;" target="c46" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6731" y="1076.84" />
+              <mxPoint x="6731" y="1773.95" />
+              <mxPoint x="5482" y="1773.95" />
+              <mxPoint x="5482" y="1662.62" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e271" edge="1" parent="1" source="c55" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0;exitY=0.7143;entryX=1;entryY=0.8462;edgeStyle=orthogonalEdgeStyle;" target="c45" value="sistema">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-534.66" as="offset" />
+            <Array as="points">
+              <mxPoint x="6721" y="990.98" />
+              <mxPoint x="6721" y="1762.95" />
+              <mxPoint x="1747" y="1762.95" />
+              <mxPoint x="1747" y="1269.31" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e271n" connectable="0" parent="e271" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e272" edge="1" parent="1" source="c55" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=0;exitY=0.5714;entryX=1;entryY=0.625;edgeStyle=orthogonalEdgeStyle;" target="c47" value="pacientes">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="6670" y="905.13" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e272n" connectable="0" parent="e272" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..3" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e273" edge="1" parent="1" source="c55" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.2;entryX=0;entryY=0.8571;edgeStyle=orthogonalEdgeStyle;" target="c48" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="178.5" y="-16.02" as="offset" />
+            <Array as="points">
+              <mxPoint x="7501" y="681.9" />
+              <mxPoint x="7501" y="290" />
+              <mxPoint x="7710" y="290" />
+              <mxPoint x="7710" y="287.14" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e274" edge="1" parent="1" source="c55" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.8;entryX=0;entryY=0.2857;edgeStyle=orthogonalEdgeStyle;" target="c54" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-30.5" y="-315.86" as="offset" />
+            <Array as="points">
+              <mxPoint x="7710" y="1042.5" />
+              <mxPoint x="7710" y="1735.23" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e275" edge="1" parent="1" source="c56" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=block;endFill=0;exitX=1;exitY=0.5;entryX=0;entryY=0.625;edgeStyle=orthogonalEdgeStyle;" target="c52" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2839.5" y="923" />
+              <mxPoint x="3922" y="923" />
+              <mxPoint x="3922" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e276" edge="1" parent="1" source="c56" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.75;entryX=0;entryY=0.6667;edgeStyle=orthogonalEdgeStyle;" target="c47" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-245.66" as="offset" />
+            <Array as="points">
+              <mxPoint x="2656" y="975.5" />
+              <mxPoint x="2656" y="1651.62" />
+              <mxPoint x="3665" y="1651.62" />
+              <mxPoint x="3665" y="1503.45" />
+              <mxPoint x="5691" y="1503.45" />
+              <mxPoint x="5691" y="937.83" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e277" edge="1" parent="1" source="c56" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.25;entryX=0;entryY=0.75;edgeStyle=orthogonalEdgeStyle;" target="c49" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69.38" as="offset" />
+            <Array as="points">
+              <mxPoint x="2646" y="870.5" />
+              <mxPoint x="2646" y="719" />
+              <mxPoint x="2885" y="719" />
+              <mxPoint x="2885" y="706.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e278" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.5714;entryX=0;entryY=0.6667;edgeStyle=orthogonalEdgeStyle;" target="c45" value="hospitales">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="128.5" y="-142.77" as="offset" />
+            <Array as="points">
+              <mxPoint x="698" y="1666.81" />
+              <mxPoint x="698" y="1124.28" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e278n" connectable="0" parent="e278" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e279" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.5;entryX=0;entryY=0.3333;edgeStyle=orthogonalEdgeStyle;" target="c45" value="hospital">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="138.5" y="-19.81" as="offset" />
+            <Array as="points">
+              <mxPoint x="688" y="1622.23" />
+              <mxPoint x="688" y="1080.28" />
+              <mxPoint x="877" y="1080.28" />
+              <mxPoint x="877" y="854.95" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e279n" connectable="0" parent="e279" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e280" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;exitX=1;exitY=0.2857;entryX=0;entryY=0.0833;edgeStyle=orthogonalEdgeStyle;" target="c47" value="paciente">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110.3" as="offset" />
+            <Array as="points">
+              <mxPoint x="658" y="1488.52" />
+              <mxPoint x="658" y="401" />
+              <mxPoint x="5721" y="401" />
+              <mxPoint x="5721" y="479.92" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e280n" connectable="0" parent="e280" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-12" as="geometry">
+            <mxPoint y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e281" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.8571;entryX=0;entryY=0.6667;edgeStyle=orthogonalEdgeStyle;" target="c46" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-317.77" as="offset" />
+            <Array as="points">
+              <mxPoint x="738" y="1845.09" />
+              <mxPoint x="738" y="1662.62" />
+              <mxPoint x="4386" y="1662.62" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e282" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.1429;entryX=0;entryY=0.1429;edgeStyle=orthogonalEdgeStyle;" target="c48" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="246.19" as="offset" />
+            <Array as="points">
+              <mxPoint x="638" y="1399.38" />
+              <mxPoint x="638" y="129.43" />
+              <mxPoint x="7710" y="129.43" />
+              <mxPoint x="7710" y="102.86" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e283" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.4286;entryX=0;entryY=0.25;edgeStyle=orthogonalEdgeStyle;" target="c49" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="487.45" as="offset" />
+            <Array as="points">
+              <mxPoint x="678" y="1577.66" />
+              <mxPoint x="678" y="574.62" />
+              <mxPoint x="2885" y="574.62" />
+              <mxPoint x="2885" y="612.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e284" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.7857;entryX=0;entryY=0.75;edgeStyle=orthogonalEdgeStyle;" target="c50" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.58" as="offset" />
+            <Array as="points">
+              <mxPoint x="728" y="1800.52" />
+              <mxPoint x="728" y="1634.62" />
+              <mxPoint x="2885" y="1634.62" />
+              <mxPoint x="2885" y="1577.87" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e285" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.0714;entryX=0;entryY=0.2;edgeStyle=orthogonalEdgeStyle;" target="c51" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-37.74" as="offset" />
+            <Array as="points">
+              <mxPoint x="628" y="1354.81" />
+              <mxPoint x="628" y="55" />
+              <mxPoint x="8709" y="55" />
+              <mxPoint x="8709" y="727.3" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e286" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.3571;entryX=0;entryY=0.125;edgeStyle=orthogonalEdgeStyle;" target="c52" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="461.05" as="offset" />
+            <Array as="points">
+              <mxPoint x="668" y="1533.09" />
+              <mxPoint x="668" y="546.62" />
+              <mxPoint x="3922" y="546.62" />
+              <mxPoint x="3922" y="573" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e287" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.7143;entryX=0;entryY=0.6667;edgeStyle=orthogonalEdgeStyle;" target="c53" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120.66" as="offset" />
+            <Array as="points">
+              <mxPoint x="718" y="1755.95" />
+              <mxPoint x="718" y="1554.62" />
+              <mxPoint x="1835.5" y="1554.62" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e288" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.9286;entryX=0;entryY=0.8571;edgeStyle=orthogonalEdgeStyle;" target="c54" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-397.72" as="offset" />
+            <Array as="points">
+              <mxPoint x="826.5" y="1889.66" />
+              <mxPoint x="7710" y="1889.66" />
+              <mxPoint x="7710" y="1934.09" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e289" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.2143;entryX=0;entryY=0.1428;edgeStyle=orthogonalEdgeStyle;" target="c55" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1.3" as="offset" />
+            <Array as="points">
+              <mxPoint x="648" y="1443.95" />
+              <mxPoint x="648" y="345" />
+              <mxPoint x="6731" y="345" />
+              <mxPoint x="6731" y="647.55" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e290" edge="1" parent="1" source="c57" style="rounded=0;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=14;labelBackgroundColor=#FFFFFF;labelWidth=245;whiteSpace=wrap;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.6429;entryX=0;entryY=0.6667;edgeStyle=orthogonalEdgeStyle;" target="c56" value="usa">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-155.93" as="offset" />
+            <Array as="points">
+              <mxPoint x="708" y="1711.38" />
+              <mxPoint x="708" y="1510.62" />
+              <mxPoint x="1737" y="1510.62" />
+              <mxPoint x="1737" y="958" />
+              <mxPoint x="1835.5" y="958" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
