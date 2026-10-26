@@ -1,0 +1,79 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="840" pageHeight="500" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="sq8_m" value=":Main" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="110" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="sq8_l" value="huellas:List" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="30" width="130" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="sq8_e" value="edif:Edificio" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="30" width="120" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="sq8_a" value="auto:Auto" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="30" width="120" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="sq8_b" value="bici:Bicicleta" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="30" width="120" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="sm8_1" value="1. add(edificio)" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="95" y="90" as="sourcePoint"/>
+            <mxPoint x="255" y="90" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sm8_2" value="2. add(auto)" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="95" y="130" as="sourcePoint"/>
+            <mxPoint x="255" y="130" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sm8_3" value="3. add(bicicleta)" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="95" y="170" as="sourcePoint"/>
+            <mxPoint x="255" y="170" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sm8_4" value="4. getHuellaCarbono()" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="95" y="220" as="sourcePoint"/>
+            <mxPoint x="420" y="220" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sm8_5" value="5. 960.0 kg CO2e" style="edgeStyle=none;html=1;endArrow=open;dashed=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="420" y="250" as="sourcePoint"/>
+            <mxPoint x="95" y="250" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sm8_6" value="6. getHuellaCarbono()" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="95" y="290" as="sourcePoint"/>
+            <mxPoint x="580" y="290" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sm8_7" value="7. 77.62 kg CO2e" style="edgeStyle=none;html=1;endArrow=open;dashed=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="580" y="320" as="sourcePoint"/>
+            <mxPoint x="95" y="320" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sm8_8" value="8. getHuellaCarbono()" style="edgeStyle=none;html=1;endArrow=block;endFill=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="95" y="360" as="sourcePoint"/>
+            <mxPoint x="740" y="360" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sm8_9" value="9. 0.00 kg CO2e" style="edgeStyle=none;html=1;endArrow=open;dashed=1;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="740" y="390" as="sourcePoint"/>
+            <mxPoint x="95" y="390" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

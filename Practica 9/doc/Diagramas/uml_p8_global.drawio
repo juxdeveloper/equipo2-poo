@@ -1,0 +1,85 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1080" pageHeight="660" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="g8_hc_h" value="&laquo;interface&raquo;&lt;br/&gt;&lt;i&gt;&lt;b&gt;HuellaCarbono&lt;/b&gt;&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#DAE8FC;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="400" y="30" width="280" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_hc_a" value="&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="400" y="72" width="280" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_hc_m" value="+ getHuellaCarbono(): double" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="400" y="98" width="280" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_edif_h" value="&lt;b&gt;Edificio&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="300" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_edif_a" value="- nombre: String&lt;br/&gt;- consumoAnualKwh: double&lt;br/&gt;- factorElectricidad: double" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="222" width="300" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_edif_m" value="+ getHuellaCarbono(): double&lt;br/&gt;+ toString(): String" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="292" width="300" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_auto_h" value="&lt;b&gt;Auto&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="390" y="190" width="300" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_auto_a" value="- modelo: String&lt;br/&gt;- kilometrosRecorridos: double&lt;br/&gt;- factorGasolina: double" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="390" y="222" width="300" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_auto_m" value="+ getHuellaCarbono(): double&lt;br/&gt;+ toString(): String" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="390" y="292" width="300" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_bici_h" value="&lt;b&gt;Bicicleta&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="740" y="190" width="300" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_bici_a" value="- tipo: String&lt;br/&gt;- kilometrosRecorridos: double&lt;br/&gt;- factorEmisionOperativa: double" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="740" y="222" width="300" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_bici_m" value="+ getHuellaCarbono(): double&lt;br/&gt;+ toString(): String" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="740" y="292" width="300" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_lgui_h" value="&lt;b&gt;LoginGUI&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="300" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_lgui_a" value="- campoUsuario: JTextField&lt;br/&gt;- campoContrasena: JPasswordField" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="472" width="300" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_lgui_m" value="+ LoginGUI()&lt;br/&gt;+ actionPerformed(e): void" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="522" width="300" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_main_h" value="&lt;b&gt;Main&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="390" y="440" width="300" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_main_a" value="&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="390" y="472" width="300" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_main_m" value="+ main(args: String[]): void" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;spacingTop=4;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="390" y="498" width="300" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="g8_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;startArrow=none;endArrow=block;endFill=0;endSize=12;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="g8_auto_h" target="g8_hc_m">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="g8_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;startArrow=none;endArrow=block;endFill=0;endSize=12;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.15;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="g8_edif_h" target="g8_hc_m">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="g8_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;startArrow=none;endArrow=block;endFill=0;endSize=12;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.85;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="g8_bici_h" target="g8_hc_m">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="g8_e4" value="«instancia»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;startArrow=none;endArrow=open;endSize=10;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="g8_main_h" target="g8_auto_m">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="g8_e5" value="«demuestra»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;startArrow=none;endArrow=open;endSize=10;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="g8_main_h" target="g8_lgui_h">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="g8_e6" value="«instancia»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;startArrow=none;endArrow=open;endSize=10;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="g8_main_h" target="g8_edif_m">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="g8_e7" value="«instancia»" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;startArrow=none;endArrow=open;endSize=10;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#FFFFFF;spacingBottom=2;" edge="1" parent="1" source="g8_main_h" target="g8_bici_m">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
