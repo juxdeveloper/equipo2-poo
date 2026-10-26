@@ -1,0 +1,61 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="720" pageHeight="580" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="fl7_1" value="Inicio calcularArea" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="20" width="180" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl7_2" value="Entrada: vértices p1, p2, p3, p4" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#D5E8D4;strokeColor=#82B366;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="95" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl7_3" value="¿Tipo de figura?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="175" width="220" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl7_trap" value="Trapezoide:&lt;br/&gt;area = ((B + b) * h) / 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="190" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl7_para" value="Paralelo / Rect:&lt;br/&gt;area = base * altura" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="260" y="290" width="200" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl7_cuad" value="Cuadrado:&lt;br/&gt;area = lado * lado" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="490" y="290" width="190" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl7_out" value="Salida: return area" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="250" y="395" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl7_end" value="Fin" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="485" width="140" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="fl7e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="fl7_1" target="fl7_2">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fl7e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;" edge="1" parent="1" source="fl7_2" target="fl7_3">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fl7e3" value="Trapezoide" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl7_3" target="fl7_trap">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fl7e4" value="Paralelo/Rect" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl7_3" target="fl7_para">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fl7e5" value="Cuadrado" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl7_3" target="fl7_cuad">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fl7e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl7_trap" target="fl7_out">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fl7e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl7_para" target="fl7_out">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fl7e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl7_cuad" target="fl7_out">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="fl7e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fl7_out" target="fl7_end">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
