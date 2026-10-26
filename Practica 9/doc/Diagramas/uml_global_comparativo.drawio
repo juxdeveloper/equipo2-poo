@@ -1,0 +1,49 @@
+<mxfile host="drawio" modified="2026-10-27T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="gc_p5" value="&lt;b&gt;Práctica 5: Encapsulamiento&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="320" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="gc_p5_txt" value="&bull; Clases con atributos privados&lt;br/&gt;&bull; Getters y Setters con validaci&oacute;n&lt;br/&gt;&bull; Clases Empleado y Fecha&lt;br/&gt;&bull; Constructores parametrizados" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="gc_p5">
+          <mxGeometry y="25" width="320" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="gc_p6" value="&lt;b&gt;Práctica 6: Modularidad y Paquetes&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="400" y="40" width="320" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="gc_p6_txt" value="&bull; Paquetes Java (mx.unam.fi.die.poo.g7.*)&lt;br/&gt;&bull; Colecciones (Map, ArrayList, TreeMap)&lt;br/&gt;&bull; Empaquetado distribuible JAR&lt;br/&gt;&bull; Documentaci&oacute;n integral con Javadoc" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="gc_p6">
+          <mxGeometry y="25" width="320" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="gc_p7" value="&lt;b&gt;Práctica 7: Herencia Profunda&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="320" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="gc_p7_txt" value="&bull; Jerarqu&iacute;a extensible de 5 niveles&lt;br/&gt;&bull; Cuadrilatero &rarr; Trapezoide &rarr; Paralelogramo &rarr; Rectangulo &rarr; Cuadrado&lt;br/&gt;&bull; Agregaci&oacute;n con clase Punto&lt;br/&gt;&bull; Sobreescritura de calcularArea()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="gc_p7">
+          <mxGeometry y="25" width="320" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="gc_p8" value="&lt;b&gt;Práctica 8: Interfaces y Polimorfismo&lt;/b&gt;" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=25;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="400" y="270" width="320" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="gc_p8_txt" value="&bull; Contrato &laquo;interface&raquo; HuellaCarbono&lt;br/&gt;&bull; Despacho din&aacute;mico de m&eacute;todos&lt;br/&gt;&bull; Clases no relacionadas: Edificio, Auto, Bici&lt;br/&gt;&bull; Interfaz gr&aacute;fica LoginGUI (Swing)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=10;spacingTop=8;spacingBottom=8;whiteSpace=wrap;html=1;fontFamily=Liberation Sans;fontSize=11;" vertex="1" parent="gc_p8">
+          <mxGeometry y="25" width="320" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="gc_p9" value="Práctica 9: Modelado Integral en UML&lt;br/&gt;Unificación en Diagramas de Clases, Paquetes,&lt;br/&gt;Secuencia y Actividades con Draw.io" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="180" y="500" width="400" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="gce1" value="Evolución" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gc_p5" target="gc_p7">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="gce2" value="Evolución" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gc_p6" target="gc_p8">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="gce3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gc_p7" target="gc_p9">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+        <mxCell id="gce4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#333333;strokeWidth=1.5;fontFamily=Liberation Sans;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gc_p8" target="gc_p9">
+          <mxGeometry relative="1" as="geometry"></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
