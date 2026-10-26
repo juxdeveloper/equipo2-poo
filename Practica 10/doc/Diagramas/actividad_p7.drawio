@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="uml" name="Práctica 7 · Flujo completo de cuadriláteros">
+    <mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" value="&lt;b&gt;Práctica 7 · Flujo completo de cuadriláteros&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=22;">
+          <mxGeometry x="30.0" y="25.0" width="570.0" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ini" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#000000;">
+          <mxGeometry x="300" y="90" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="paso0" value="Crear Cuadrilatero con cuatro Punto y mostrar sus vértices" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="160" width="570" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" value="" edge="1" parent="1" source="ini" target="paso0" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="paso1" value="Crear Trapezoide; mostrar vértices y área 24.00" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="285" width="570" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" value="" edge="1" parent="1" source="paso0" target="paso1" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="paso2" value="Crear Paralelogramo; mostrar vértices y área 24.00" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="410" width="570" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="" edge="1" parent="1" source="paso1" target="paso2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="paso3" value="Crear Rectangulo; mostrar vértices y área 24.00" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="535" width="570" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="" edge="1" parent="1" source="paso2" target="paso3" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="paso4" value="Crear Cuadrado; mostrar vértices y área 25.00" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="660" width="570" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" value="" edge="1" parent="1" source="paso3" target="paso4" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="paso5" value="Crear cuadrado unitario; mostrar vértices y área 1.00" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="785" width="570" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" value="" edge="1" parent="1" source="paso4" target="paso5" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="paso6" value="Mostrar fin de la ejecución" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="30" y="910" width="570" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" value="" edge="1" parent="1" source="paso5" target="paso6" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#FFFFFF;strokeWidth=1.5;">
+          <mxGeometry x="300" y="1055" width="27" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" value="" edge="1" parent="1" source="paso6" target="fin" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      <mxCell id="fininner" value="" vertex="1" parent="fin" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;"><mxGeometry x="5" y="5" width="17.0" height="17.0" as="geometry" /></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
