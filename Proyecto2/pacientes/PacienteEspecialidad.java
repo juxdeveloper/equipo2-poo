@@ -6,7 +6,6 @@ public class PacienteEspecialidad extends Paciente {
     /** Crea un paciente de especialidad con sus datos iniciales. */
     public PacienteEspecialidad(String nombre, int especialidad) {
         super(nombre);
-        if (especialidad < 2 || especialidad > 99) throw new IllegalArgumentException("Especialidad inválida.");
         this.especialidad = especialidad;
     }
     @Override public int getEspecialidad() { return especialidad; }

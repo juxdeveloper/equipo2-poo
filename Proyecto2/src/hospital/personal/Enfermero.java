@@ -13,16 +13,16 @@ public abstract class Enfermero implements AtencionMedica {
     private final List<Paciente> pacientes = new ArrayList<>();
     /** Crea un enfermero con sus datos iniciales. */
     public Enfermero(String nombre, int cedula) {
-        setNombre(nombre);
-        if (cedula < 100000) throw new IllegalArgumentException("La cédula debe tener al menos seis dígitos.");
+        this.nombre = (nombre != null && !nombre.isBlank()) ? nombre.trim() : "Enfermero";
         this.cedula = cedula;
     }
     /** Obtiene nombre. */
     public String getNombre() { return nombre; }
     /** Actualiza nombre. */
     public void setNombre(String nombre) {
-        if (nombre == null || nombre.isBlank()) throw new IllegalArgumentException("El nombre está vacío.");
-        this.nombre = nombre.trim();
+        if (nombre != null && !nombre.isBlank()) {
+            this.nombre = nombre.trim();
+        }
     }
     /** Obtiene cedula. */
     public int getCedula() { return cedula; }
@@ -40,8 +40,9 @@ public abstract class Enfermero implements AtencionMedica {
     public Sistema getSistema() { return sistema; }
     /** Actualiza sistema. */
     public void setSistema(Sistema sistema) {
-        if (sistema == null || this.sistema != null && this.sistema != sistema) throw new IllegalArgumentException("Hospital incompatible.");
-        this.sistema = sistema;
+        if (sistema != null && (this.sistema == null || this.sistema == sistema)) {
+            this.sistema = sistema;
+        }
     }
     /** Obtiene especialidad. */
     public abstract int getEspecialidad();

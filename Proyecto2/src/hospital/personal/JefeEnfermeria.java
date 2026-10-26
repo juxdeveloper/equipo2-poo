@@ -8,7 +8,6 @@ public class JefeEnfermeria extends Enfermero {
     /** Crea un supervisor con sus datos iniciales. */
     public JefeEnfermeria(String nombre, int cedula, int areaEspecialidad) {
         super(nombre, cedula);
-        if (areaEspecialidad < 1 || areaEspecialidad > 99) throw new IllegalArgumentException("Área inválida.");
         this.areaEspecialidad = areaEspecialidad;
     }
     /** Obtiene el ID del área supervisada. */

@@ -16,13 +16,17 @@ public class Sistema {
     private final List<Enfermero> enfermeros = new ArrayList<>();
     private final List<Paciente> pacientes = new ArrayList<>();
     /** Crea un hospital con sus datos iniciales. */
-    public Sistema(String nombre) { setNombreHospital(nombre); especialidades.put(1, "Medicina general"); }
+    public Sistema(String nombre) {
+        this.nombreHospital = (nombre != null && !nombre.isBlank()) ? nombre.trim() : "Hospital";
+        especialidades.put(1, "Medicina general");
+    }
     /** Obtiene el nombre del hospital. */
     public String getNombreHospital() { return nombreHospital; }
     /** Actualiza nombre hospital. */
     public void setNombreHospital(String nombre) {
-        if (nombre == null || nombre.isBlank()) throw new IllegalArgumentException("El nombre está vacío.");
-        nombreHospital = nombre.trim();
+        if (nombre != null && !nombre.isBlank()) {
+            nombreHospital = nombre.trim();
+        }
     }
     /** Obtiene el número de médicos. */
     public int getNoMedicos() { return noMedicos; }

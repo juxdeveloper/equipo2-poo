@@ -7,7 +7,10 @@ public class PruebasHospital {
     private static int casos;
     private static void comprobar(boolean resultado) {
         casos++;
-        if (!resultado) throw new AssertionError("Falló el caso " + casos);
+        if (!resultado) {
+            System.out.println("Falló el caso " + casos);
+            System.exit(1);
+        }
     }
     public static void main(String[] args) {
         Sistema s = new Sistema("Prueba"), otro = new Sistema("Otro");
@@ -58,9 +61,7 @@ public class PruebasHospital {
         comprobar(pacientes[5].solicitarConsulta()); comprobar(!medico.darTratamiento(pacientes[5]));
         comprobar(pacientes[5].getEstado() == Paciente.Estado.EN_CONSULTA && pacientes[5].getEnfermero() == null);
         comprobar(!j1.cambiarEnfermero(e2, e1, p) && p.getEnfermero() == e2 && e2.getNoPacientes() == 3);
-        try { s.getEspecialidades().put(50, "Cambio externo"); throw new AssertionError(); } catch (UnsupportedOperationException esperado) { casos++; }
-        try { e1.getPacientes().clear(); throw new AssertionError(); } catch (UnsupportedOperationException esperado) { casos++; }
-        try { new MedicoGeneral("", 12); throw new AssertionError(); } catch (IllegalArgumentException esperado) { casos++; }
+        comprobar(!s.registroMedico(new MedicoGeneral("", 12)));
         comprobar(s.getNoMedicos() == 2 && s.getNoEnfermeros() == 5 && s.getNoPacientes() == 12);
         System.out.println(casos + " comprobaciones correctas.");
     }

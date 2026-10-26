@@ -3,7 +3,6 @@ package hospital;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 import hospital.pacientes.*;
 import hospital.personal.*;
@@ -16,79 +15,128 @@ public class Main {
     private static Sistema hospital;
     private static Paciente paciente;
 
-    /** Cancela una captura sin guardar datos incompletos. */
-    private static class Cancelar extends RuntimeException {}
-
     /**
      * Ejecuta el menú hasta salir o cerrar la consola.
      * @param args argumentos de consola, no utilizados
      */
     public static void main(String[] args) {
-        try {
-            while (true) {
-                System.out.print("\033[H\033[2J");
-                System.out.flush();
-                System.out.println("Hospital activo: " + (hospital == null ? "Sin seleccionar" : hospital.getNombreHospital()));
-                System.out.println("Paciente activo: " + (paciente == null ? "Sin seleccionar" : paciente.getNombre()));
-                System.out.println("---------\nH. Cambiar hospital activo\nP. Cambiar paciente activo\n---------\nD. Precargar datos demo");
-                System.out.println("---------\n1. Crear hospital\n2. Crear especialidad\n3. Registrar médico\n4. Registrar enfermero\n5. Registrar paciente");
-                System.out.println("---------\n6. Solicitar consulta\n7. Dar tratamiento\n8. Solicitar paciente para un médico");
-                System.out.println("---------\n9. Ver hospitales\n10. Ver especialidades\n11. Ver médicos y pacientes\n12. Ver enfermeros y pacientes\n13. Ver pacientes\n14. Ver paciente activo y tratamiento");
-                System.out.println("---------\n15. Ver equipo y turnos de un jefe\n16. Cambiar turno de un enfermero\n17. Cambiar enfermero del paciente activo\n18. Autorizar medicamento controlado");
-                System.out.println("---------\n19. Cambiar nombre del hospital\n20. Cambiar nombre del paciente\n---------\n0. Salir");
-                System.out.print("Opción: ");
-                String opcion = entrada.nextLine().trim().toUpperCase();
-                if (opcion.equals("0")) return;
-                try {
-                    if (hospital == null && !List.of("1", "H", "D", "9").contains(opcion))
-                        System.out.println("Primero crea o selecciona un hospital.");
-                    else switch (opcion) {
-                        case "H": hospital = elegir(hospitales, "Hospital"); paciente = null; break;
-                        case "P": paciente = elegir(hospital.getPacientes(), "Paciente"); break;
-                        case "D": demo(); break;
-                        case "1": crearHospital(texto("Nombre del hospital")); break;
-                        case "2": informar(hospital.registroEspecialidad(numero("ID de especialidad (2 a 99)", 2, 99), texto("Nombre de la especialidad"))); break;
-                        case "3": registrarMedico(); break;
-                        case "4": registrarEnfermero(); break;
-                        case "5": registrarPaciente(); break;
-                        case "6": informar(activo().solicitarConsulta()); break;
-                        case "7": tratar(); break;
-                        case "8": informar(elegir(hospital.getMedicos(), "Médico").solicitarPacienteDisponible()); break;
-                        case "9": for (Sistema actual : hospitales) System.out.println(descripcion(actual)); break;
-                        case "10": verEspecialidades(); break;
-                        case "11":
-                            for (Medico medico : hospital.getMedicos()) { System.out.println(descripcion(medico)); medico.verListaPacientes(); }
-                            break;
-                        case "12":
-                            for (Enfermero enfermero : hospital.getEnfermeros()) { System.out.println(descripcion(enfermero)); enfermero.verListaPacientes(); }
-                            break;
-                        case "13": listar(hospital.getPacientes()); break;
-                        case "14": verPaciente(activo()); break;
-                        case "15": jefe().supervisarEquipo(); break;
-                        case "16":
-                            JefeEnfermeria supervisor = jefe();
-                            Enfermero enfermero = elegir(supervisor.verEquipo(), "Enfermero");
-                            informar(supervisor.cambiarTurno(enfermero, numero("1. Matutino\n2. Vespertino\nTurno", 1, 2) == 2));
-                            break;
-                        case "17":
-                            Paciente actual = activo();
-                            JefeEnfermeria responsable = jefe();
-                            informar(responsable.cambiarEnfermero(actual.getEnfermero(), elegir(responsable.verEquipo(), "Nuevo enfermero"), actual));
-                            break;
-                        case "18": informar(jefe().autorizarMedicamentos(activo())); break;
-                        case "19": hospital.setNombreHospital(texto("Nuevo nombre del hospital")); break;
-                        case "20": activo().setNombre(texto("Apellidos y nombres")); break;
-                        default: System.out.println("Opción no válida.");
-                    }
-                } catch (Cancelar cancelado) {
-                    // Regresa sin guardar una captura incompleta.
-                } catch (IllegalArgumentException error) {
-                    System.out.println(error.getMessage());
+        while (true) {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+            System.out.println("Hospital activo: " + (hospital == null ? "Sin seleccionar" : hospital.getNombreHospital()));
+            System.out.println("Paciente activo: " + (paciente == null ? "Sin seleccionar" : paciente.getNombre()));
+            System.out.println("---------\nH. Cambiar hospital activo\nP. Cambiar paciente activo\n---------\nD. Precargar datos demo");
+            System.out.println("---------\n1. Crear hospital\n2. Crear especialidad\n3. Registrar médico\n4. Registrar enfermero\n5. Registrar paciente");
+            System.out.println("---------\n6. Solicitar consulta\n7. Dar tratamiento\n8. Solicitar paciente para un médico");
+            System.out.println("---------\n9. Ver hospitales\n10. Ver especialidades\n11. Ver médicos y pacientes\n12. Ver enfermeros y pacientes\n13. Ver pacientes\n14. Ver paciente activo y tratamiento");
+            System.out.println("---------\n15. Ver equipo y turnos de un jefe\n16. Cambiar turno de un enfermero\n17. Cambiar enfermero del paciente activo\n18. Autorizar medicamento controlado");
+            System.out.println("---------\n19. Cambiar nombre del hospital\n20. Cambiar nombre del paciente\n---------\n0. Salir");
+            System.out.print("Opción: ");
+            if (!entrada.hasNextLine()) return;
+            String opcion = entrada.nextLine().trim().toUpperCase();
+            if (opcion.equals("0")) return;
+            if (hospital == null && !List.of("1", "H", "D", "9").contains(opcion))
+                System.out.println("Primero crea o selecciona un hospital.");
+            else switch (opcion) {
+                case "H": {
+                    Sistema sel = elegir(hospitales, "Hospital");
+                    if (sel != null) { hospital = sel; paciente = null; }
+                    break;
                 }
-                entrada.nextLine();
+                case "P": {
+                    Paciente sel = elegir(hospital.getPacientes(), "Paciente");
+                    if (sel != null) paciente = sel;
+                    break;
+                }
+                case "D": demo(); break;
+                case "1": crearHospital(texto("Nombre del hospital")); break;
+                case "2": {
+                    Integer idEsp = numero("ID de especialidad (2 a 99)", 2, 99);
+                    if (idEsp != null) {
+                        String nomEsp = texto("Nombre de la especialidad");
+                        if (nomEsp != null) informar(hospital.registroEspecialidad(idEsp, nomEsp));
+                    }
+                    break;
+                }
+                case "3": registrarMedico(); break;
+                case "4": registrarEnfermero(); break;
+                case "5": registrarPaciente(); break;
+                case "6": {
+                    Paciente act = activo();
+                    if (act != null) informar(act.solicitarConsulta());
+                    break;
+                }
+                case "7": tratar(); break;
+                case "8": {
+                    Medico m = elegir(hospital.getMedicos(), "Médico");
+                    if (m != null) informar(m.solicitarPacienteDisponible());
+                    break;
+                }
+                case "9": for (Sistema actual : hospitales) System.out.println(descripcion(actual)); break;
+                case "10": verEspecialidades(); break;
+                case "11":
+                    for (Medico medico : hospital.getMedicos()) { System.out.println(descripcion(medico)); medico.verListaPacientes(); }
+                    break;
+                case "12":
+                    for (Enfermero enfermero : hospital.getEnfermeros()) { System.out.println(descripcion(enfermero)); enfermero.verListaPacientes(); }
+                    break;
+                case "13": listar(hospital.getPacientes()); break;
+                case "14": {
+                    Paciente act = activo();
+                    if (act != null) verPaciente(act);
+                    break;
+                }
+                case "15": {
+                    JefeEnfermeria j = jefe();
+                    if (j != null) j.supervisarEquipo();
+                    break;
+                }
+                case "16": {
+                    JefeEnfermeria supervisor = jefe();
+                    if (supervisor != null) {
+                        Enfermero enfermero = elegir(supervisor.verEquipo(), "Enfermero");
+                        if (enfermero != null) {
+                            Integer turnoOpc = numero("1. Matutino\n2. Vespertino\nTurno", 1, 2);
+                            if (turnoOpc != null) informar(supervisor.cambiarTurno(enfermero, turnoOpc == 2));
+                        }
+                    }
+                    break;
+                }
+                case "17": {
+                    Paciente actual = activo();
+                    if (actual != null) {
+                        JefeEnfermeria responsable = jefe();
+                        if (responsable != null) {
+                            Enfermero nuevoEnf = elegir(responsable.verEquipo(), "Nuevo enfermero");
+                            if (nuevoEnf != null) informar(responsable.cambiarEnfermero(actual.getEnfermero(), nuevoEnf, actual));
+                        }
+                    }
+                    break;
+                }
+                case "18": {
+                    Paciente act = activo();
+                    if (act != null) {
+                        JefeEnfermeria j = jefe();
+                        if (j != null) informar(j.autorizarMedicamentos(act));
+                    }
+                    break;
+                }
+                case "19": {
+                    String nuevoNom = texto("Nuevo nombre del hospital");
+                    if (nuevoNom != null) hospital.setNombreHospital(nuevoNom);
+                    break;
+                }
+                case "20": {
+                    Paciente act = activo();
+                    if (act != null) {
+                        String nuevoNom = texto("Apellidos y nombres");
+                        if (nuevoNom != null) act.setNombre(nuevoNom);
+                    }
+                    break;
+                }
+                default: System.out.println("Opción no válida.");
             }
-        } catch (NoSuchElementException fin) {
-            // La consola también puede cerrarse con Ctrl+D.
+            if (entrada.hasNextLine()) entrada.nextLine();
         }
     }
 
@@ -96,21 +144,37 @@ public class Main {
     private static String texto(String campo) {
         while (true) {
             System.out.print(campo + " (0 cancelar): ");
+            if (!entrada.hasNextLine()) return null;
             String valor = entrada.nextLine().trim();
-            if (valor.equals("0")) throw new Cancelar();
+            if (valor.equals("0")) return null;
             if (!valor.isEmpty()) return valor;
             System.out.println("Escribe un valor.");
         }
     }
 
     /** Pide un número válido y permite cancelar con cero. */
-    private static int numero(String campo, int minimo, int maximo) {
+    private static Integer numero(String campo, int minimo, int maximo) {
         while (true) {
-            try {
-                int valor = Integer.parseInt(texto(campo));
-                if (valor >= minimo && valor <= maximo) return valor;
-            } catch (NumberFormatException error) {
-                // Vuelve a pedir la entrada.
+            String textoLeido = texto(campo);
+            if (textoLeido == null) return null;
+            boolean esNumero = true;
+            for (int i = 0; i < textoLeido.length(); i++) {
+                if (textoLeido.charAt(i) < '0' || textoLeido.charAt(i) > '9') {
+                    esNumero = false;
+                    break;
+                }
+            }
+            if (esNumero && !textoLeido.isEmpty()) {
+                long valor = 0;
+                boolean desborde = false;
+                for (int i = 0; i < textoLeido.length(); i++) {
+                    valor = valor * 10 + (textoLeido.charAt(i) - '0');
+                    if (valor > Integer.MAX_VALUE) {
+                        desborde = true;
+                        break;
+                    }
+                }
+                if (!desborde && valor >= minimo && valor <= maximo) return (int) valor;
             }
             System.out.println("Ingresa un número entre " + minimo + " y " + maximo + ".");
         }
@@ -118,36 +182,47 @@ public class Main {
 
     /** Selecciona una persona u hospital de una lista numerada. */
     private static <T> T elegir(List<T> lista, String campo) {
-        if (lista.isEmpty()) throw new IllegalArgumentException("No hay registros disponibles.");
+        if (lista == null || lista.isEmpty()) {
+            System.out.println("No hay registros disponibles.");
+            return null;
+        }
         for (int i = 0; i < lista.size(); i++) System.out.println((i + 1) + ". " + descripcion(lista.get(i)));
-        return lista.get(numero(campo, 1, lista.size()) - 1);
+        Integer sel = numero(campo, 1, lista.size());
+        if (sel == null) return null;
+        return lista.get(sel - 1);
     }
 
     /** Muestra el catálogo con sus identificadores reales. */
     private static void verEspecialidades() {
+        if (hospital == null) return;
         for (Map.Entry<Integer, String> entrada : hospital.getEspecialidades().entrySet())
             System.out.println(entrada.getKey() + ". " + entrada.getValue());
     }
 
     /** Elige un ID existente, aunque los números no sean consecutivos. */
-    private static int especialidad() {
+    private static Integer especialidad() {
+        if (hospital == null) return null;
         verEspecialidades();
         while (true) {
-            int id = numero("ID de especialidad", 1, 99);
+            Integer id = numero("ID de especialidad", 1, 99);
+            if (id == null) return null;
             if (hospital.getEspecialidades().containsKey(id)) return id;
             System.out.println("Ese ID no está registrado.");
         }
     }
 
-    private static int cedula() {
+    private static Integer cedula() {
+        if (hospital == null) return null;
         while (true) {
-            int valor = numero("Cédula (mínimo seis dígitos)", 100000, Integer.MAX_VALUE);
+            Integer valor = numero("Cédula (mínimo seis dígitos)", 100000, Integer.MAX_VALUE);
+            if (valor == null) return null;
             if (hospital.cedulaDisponible(valor)) return valor;
             System.out.println("La cédula ya está registrada.");
         }
     }
 
     private static void crearHospital(String nombre) {
+        if (nombre == null) return;
         hospital = new Sistema(nombre);
         hospitales.add(hospital);
         paciente = null;
@@ -155,16 +230,27 @@ public class Main {
 
     private static void registrarMedico() {
         String nombre = texto("Nombre completo del médico");
-        int cedula = cedula(), id = especialidad();
+        if (nombre == null) return;
+        Integer cedula = cedula();
+        if (cedula == null) return;
+        Integer id = especialidad();
+        if (id == null) return;
         Medico medico = id == 1 ? new MedicoGeneral(nombre, cedula) : new MedicoEspecialista(nombre, cedula, id);
         informar(medico.registroEnSistema(hospital));
     }
 
     private static void registrarEnfermero() {
-        int tipo = numero("1. Enfermero especialista\n2. Jefe de enfermería\nTipo", 1, 2);
+        Integer tipo = numero("1. Enfermero especialista\n2. Jefe de enfermería\nTipo", 1, 2);
+        if (tipo == null) return;
         String nombre = texto("Nombre completo del enfermero");
-        int cedula = cedula(), id = especialidad();
-        boolean turno = numero("1. Matutino\n2. Vespertino\nTurno", 1, 2) == 2;
+        if (nombre == null) return;
+        Integer cedula = cedula();
+        if (cedula == null) return;
+        Integer id = especialidad();
+        if (id == null) return;
+        Integer turnoOpc = numero("1. Matutino\n2. Vespertino\nTurno", 1, 2);
+        if (turnoOpc == null) return;
+        boolean turno = turnoOpc == 2;
         Enfermero enfermero = tipo == 1 ? new EnfermeroEspecialista(nombre, cedula, id) : new JefeEnfermeria(nombre, cedula, id);
         enfermero.setTurno(turno);
         if (!enfermero.registroEnSistema(hospital)) System.out.println("No se pudo registrar: máximo dos jefes por especialidad.");
@@ -173,17 +259,30 @@ public class Main {
 
     private static void registrarPaciente() {
         String nombre = texto("Apellidos y nombres del paciente");
-        int id = especialidad();
-        Paciente nuevo = id == 1 ? new PacienteGeneral(nombre, texto("Motivo de consulta")) : new PacienteEspecialidad(nombre, id);
+        if (nombre == null) return;
+        Integer id = especialidad();
+        if (id == null) return;
+        Paciente nuevo;
+        if (id == 1) {
+            String motivo = texto("Motivo de consulta");
+            if (motivo == null) return;
+            nuevo = new PacienteGeneral(nombre, motivo);
+        } else {
+            nuevo = new PacienteEspecialidad(nombre, id);
+        }
         if (nuevo.registroEnSistema(hospital)) { paciente = nuevo; verPaciente(nuevo); }
     }
 
     private static Paciente activo() {
-        if (paciente == null) throw new IllegalArgumentException("Selecciona un paciente con P o regístralo con 5.");
+        if (paciente == null) {
+            System.out.println("Selecciona un paciente con P o regístralo con 5.");
+            return null;
+        }
         return paciente;
     }
 
     private static JefeEnfermeria jefe() {
+        if (hospital == null) return null;
         List<JefeEnfermeria> jefes = new ArrayList<>();
         for (Enfermero enfermero : hospital.getEnfermeros()) if (enfermero instanceof JefeEnfermeria) jefes.add((JefeEnfermeria) enfermero);
         return elegir(jefes, "Jefe de enfermería");
@@ -191,10 +290,15 @@ public class Main {
 
     private static void tratar() {
         Paciente actual = activo();
-        if (actual.getEstado() != Paciente.Estado.EN_CONSULTA) throw new IllegalArgumentException("El paciente debe estar en consulta.");
+        if (actual == null) return;
+        if (actual.getEstado() != Paciente.Estado.EN_CONSULTA) {
+            System.out.println("El paciente debe estar en consulta.");
+            return;
+        }
         String indicacion = texto("Tratamiento indicado");
+        if (indicacion == null) return;
         hospital.interfaces.AtencionMedica atencion = actual.getMedico();
-        if (atencion.darTratamiento(actual)) { actual.setTratamiento(indicacion); informar(true); verPaciente(actual); }
+        if (atencion != null && atencion.darTratamiento(actual)) { actual.setTratamiento(indicacion); informar(true); verPaciente(actual); }
         else System.out.println("Sin enfermero compatible con cupo o falta un supervisor para autorizar el medicamento. El paciente sigue en consulta.");
     }
 

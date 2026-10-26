@@ -6,13 +6,17 @@ public class PacienteGeneral extends Paciente {
     /** Crea un paciente general con sus datos iniciales. */
     public PacienteGeneral(String nombre) { this(nombre, "Revisión general"); }
     /** Crea un paciente general con sus datos iniciales. */
-    public PacienteGeneral(String nombre, String motivo) { super(nombre); setMotivoConsulta(motivo); }
+    public PacienteGeneral(String nombre, String motivo) {
+        super(nombre);
+        this.motivoConsulta = (motivo != null && !motivo.isBlank()) ? motivo.trim() : "Revisión general";
+    }
     /** Obtiene el motivo de consulta. */
     public String getMotivoConsulta() { return motivoConsulta; }
     /** Actualiza el motivo de consulta. */
     public void setMotivoConsulta(String motivo) {
-        if (motivo == null || motivo.isBlank()) throw new IllegalArgumentException("Escribe el motivo de consulta.");
-        motivoConsulta = motivo.trim();
+        if (motivo != null && !motivo.isBlank()) {
+            motivoConsulta = motivo.trim();
+        }
     }
     @Override public int getEspecialidad() { return 1; }
     @Override protected Medico buscarMedico() { return getSistema().asignarPaciente(this); }

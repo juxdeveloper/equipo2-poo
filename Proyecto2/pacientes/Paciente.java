@@ -14,20 +14,24 @@ public abstract class Paciente {
     private boolean necesitaMedicamento = Math.random() < 0.5;
     private boolean medicamentoAutorizado;
     /** Crea un paciente en espera, con necesidad de medicamento aleatoria. */
-    public Paciente(String nombre) { setNombre(nombre); }
+    public Paciente(String nombre) {
+        this.nombre = (nombre != null && !nombre.isBlank()) ? nombre.trim() : "Paciente";
+    }
     /** Obtiene nombre. */
     public String getNombre() { return nombre; }
     /** Actualiza nombre. */
     public void setNombre(String nombre) {
-        if (nombre == null || nombre.isBlank()) throw new IllegalArgumentException("El nombre está vacío.");
-        this.nombre = nombre.trim();
+        if (nombre != null && !nombre.isBlank()) {
+            this.nombre = nombre.trim();
+        }
     }
     /** Obtiene tratamiento. */
     public String getTratamiento() { return tratamiento; }
     /** Actualiza tratamiento. */
     public void setTratamiento(String tratamiento) {
-        if (tratamiento == null || tratamiento.isBlank()) throw new IllegalArgumentException("El tratamiento está vacío.");
-        this.tratamiento = tratamiento.trim();
+        if (tratamiento != null && !tratamiento.isBlank()) {
+            this.tratamiento = tratamiento.trim();
+        }
     }
     /** Muestra el tratamiento indicado. */
     public void verTratamiento() { System.out.println(tratamiento == null ? "Sin tratamiento indicado." : tratamiento); }
@@ -35,40 +39,43 @@ public abstract class Paciente {
     public Estado getEstado() { return estado; }
     /** Actualiza estado. */
     public void setEstado(Estado estado) {
-        if (estado == null) throw new IllegalArgumentException("El estado no puede ser nulo.");
-        this.estado = estado;
+        if (estado != null) {
+            this.estado = estado;
+        }
     }
     /** Obtiene sistema. */
     public Sistema getSistema() { return sistema; }
     /** Actualiza sistema. */
     public void setSistema(Sistema sistema) {
-        if (sistema == null || this.sistema != null && this.sistema != sistema)
-            throw new IllegalArgumentException("El paciente ya pertenece a otro hospital o el hospital es nulo.");
-        this.sistema = sistema;
+        if (sistema != null && (this.sistema == null || this.sistema == sistema)) {
+            this.sistema = sistema;
+        }
     }
     /** Obtiene medico. */
     public Medico getMedico() { return medico; }
     /** Actualiza medico. */
     public void setMedico(Medico medico) {
-        if (medico == null || medico.getSistema() != sistema || medico.getEspecialidad() != getEspecialidad())
-            throw new IllegalArgumentException("Médico incompatible.");
-        this.medico = medico;
+        if (medico != null && medico.getSistema() == sistema && medico.getEspecialidad() == getEspecialidad()) {
+            this.medico = medico;
+        }
     }
     /** Obtiene enfermero. */
     public Enfermero getEnfermero() { return enfermero; }
     /** Actualiza enfermero. */
     public void setEnfermero(Enfermero enfermero) {
-        if (enfermero == null || enfermero instanceof JefeEnfermeria || enfermero.getSistema() != sistema
-                || enfermero.getEspecialidad() != getEspecialidad()) throw new IllegalArgumentException("Enfermero incompatible.");
-        this.enfermero = enfermero;
+        if (enfermero != null && !(enfermero instanceof JefeEnfermeria) && enfermero.getSistema() == sistema
+                && enfermero.getEspecialidad() == getEspecialidad()) {
+            this.enfermero = enfermero;
+        }
     }
     /** Indica si el paciente necesita medicamento controlado. */
     public boolean getNecesitaMedicamento() { return necesitaMedicamento; }
     /** Permite corregir el requerimiento antes de iniciar la atención. */
     public void setNecesitaMedicamento(boolean necesita) {
-        if (estado != Estado.EN_ESPERA) throw new IllegalArgumentException("El paciente ya inició su atención.");
-        necesitaMedicamento = necesita;
-        medicamentoAutorizado = false;
+        if (estado == Estado.EN_ESPERA) {
+            necesitaMedicamento = necesita;
+            medicamentoAutorizado = false;
+        }
     }
     /** Indica si el supervisor autorizó el medicamento. */
     public boolean getMedicamentoAutorizado() { return medicamentoAutorizado; }

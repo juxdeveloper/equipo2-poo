@@ -6,7 +6,6 @@ public class EnfermeroEspecialista extends Enfermero {
     /** Crea un enfermero especialista con sus datos iniciales. */
     public EnfermeroEspecialista(String nombre, int cedula, int especialidad) {
         super(nombre, cedula);
-        if (especialidad < 1 || especialidad > 99) throw new IllegalArgumentException("Especialidad inválida.");
         this.especialidad = especialidad;
     }
     @Override public int getEspecialidad() { return especialidad; }
