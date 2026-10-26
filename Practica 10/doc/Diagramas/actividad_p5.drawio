@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="uml" name="Práctica 5 · Flujo completo de los ejercicios">
+    <mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" value="&lt;b&gt;Práctica 5 · Flujo completo de los ejercicios&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=22;">
+          <mxGeometry x="30.0" y="10.0" width="1210.0" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="&lt;b&gt;Empleados&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=18;">
+          <mxGeometry x="30" y="75" width="520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eini" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#000000;">
+          <mxGeometry x="270" y="120" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" value="Leer nombre, apellido y salario del primer empleado" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="50" y="190" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" value="" edge="1" parent="1" source="eini" target="e0" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="Crear primer Empleado y validar salario con setSalarioMensual()" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="50" y="315" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="" edge="1" parent="1" source="e0" target="e1" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="Leer y crear segundo Empleado; validar su salario" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="50" y="440" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="" edge="1" parent="1" source="e1" target="e2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="Calcular salarios anuales (salario mensual × 12) y mostrarlos" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="50" y="565" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" value="" edge="1" parent="1" source="e2" target="e3" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="Aumentar 10 % los salarios mediante setSalarioMensual()" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="50" y="690" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" value="" edge="1" parent="1" source="e3" target="e4" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="Calcular y mostrar los nuevos salarios anuales; cerrar entrada" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="50" y="815" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" value="" edge="1" parent="1" source="e4" target="e5" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="efin" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#FFFFFF;strokeWidth=1.5;">
+          <mxGeometry x="268" y="955" width="27" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" value="" edge="1" parent="1" source="e5" target="efin" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t10" value="&lt;b&gt;Fecha&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=18;">
+          <mxGeometry x="720" y="75" width="520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fini" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#000000;">
+          <mxGeometry x="960" y="120" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="f0" value="Leer mes, día y año" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="740" y="190" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" value="" edge="1" parent="1" source="fini" target="f0" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" value="Construir Fecha(mes, dia, anio)" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="740" y="315" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" value="" edge="1" parent="1" source="f0" target="f1" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="Mostrar la fecha con mostrarFecha()" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="740" y="440" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge13" value="" edge="1" parent="1" source="f1" target="f2" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="Cerrar la entrada" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="740" y="565" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="edge14" value="" edge="1" parent="1" source="f2" target="f3" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ffin" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#FFFFFF;strokeWidth=1.5;">
+          <mxGeometry x="958" y="705" width="27" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="edge15" value="" edge="1" parent="1" source="f3" target="ffin" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      <mxCell id="efininner" value="" vertex="1" parent="efin" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;"><mxGeometry x="5" y="5" width="17.0" height="17.0" as="geometry" /></mxCell><mxCell id="ffininner" value="" vertex="1" parent="ffin" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;"><mxGeometry x="5" y="5" width="17.0" height="17.0" as="geometry" /></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
