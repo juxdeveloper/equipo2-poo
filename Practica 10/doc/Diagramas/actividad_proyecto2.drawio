@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" version="32.6.1">
+  <diagram id="uml" name="Proyecto2 · Flujo completo del sistema hospitalario">
+    <mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" value="&lt;b&gt;Proyecto2 · Flujo completo del sistema hospitalario&lt;/b&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;text;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=22;">
+          <mxGeometry x="280.0" y="25.0" width="1370.0" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="i" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#000000;">
+          <mxGeometry x="710" y="90" width="22" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" value="Mostrar hospital y paciente activos y el menú completo" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="400" y="170" width="650" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="leer" value="Leer opción" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="400" y="310" width="650" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="salir" value="¿Opción 0 o fin de entrada?" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rhombus;align=center;verticalAlign=middle;">
+          <mxGeometry x="520" y="450" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" value="" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;ellipse;fillColor=#FFFFFF;strokeWidth=1.5;">
+          <mxGeometry x="1280" y="490" width="27" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="guard" value="¿Falta hospital y la opción no es 1, H, D ni 9?" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rhombus;align=center;verticalAlign=middle;">
+          <mxGeometry x="520" y="650" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="avisar" value="Solicitar crear o seleccionar hospital" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="1120" y="665" width="530" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="valida" value="¿La opción pertenece al menú?" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rhombus;align=center;verticalAlign=middle;">
+          <mxGeometry x="520" y="850" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="error" value="Mostrar «Opción no válida»" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="1120" y="865" width="530" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="op" value="Ejecutar la opción seleccionada&lt;br&gt;1 / H / P / D: crear o seleccionar hospital, cambiar paciente o cargar demo&lt;br&gt;2–5: registrar especialidad, médico, enfermero o paciente&lt;br&gt;6 / 8: asignar paciente o iniciar consulta; comprobar registro, estado, especialidad y cupo&lt;br&gt;7: tratar paciente activo en consulta; buscar enfermero con cupo y autorización si requiere medicamento&lt;br&gt;Si se atiende: EN_TRATAMIENTO, guardar indicación y liberar consulta; si falla: conservar EN_CONSULTA&lt;br&gt;9–14: consultar hospitales, especialidades, personal, pacientes y tratamiento&lt;br&gt;15–18: ver equipo del jefe, cambiar turno o enfermero y autorizar medicamento&lt;br&gt;19–20: modificar nombre de hospital o paciente&lt;br&gt;En la captura: repetir datos inválidos; 0 cancela sin guardar" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="280" y="1070" width="900" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="volver" value="Mostrar resultado o datos de la operación; esperar Enter si hay entrada, limpiar y volver al menú" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Liberation Sans;fontSize=16;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;rounded=1;arcSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry x="400" y="1710" width="700" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" value="" edge="1" parent="1" source="i" target="menu" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" value="" edge="1" parent="1" source="menu" target="leer" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="" edge="1" parent="1" source="leer" target="salir" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="Sí" edge="1" parent="1" source="salir" target="fin" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" value="No" edge="1" parent="1" source="salir" target="guard" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" value="Sí" edge="1" parent="1" source="guard" target="avisar" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" value="No" edge="1" parent="1" source="guard" target="valida" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" value="No" edge="1" parent="1" source="valida" target="error" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" value="Sí" edge="1" parent="1" source="valida" target="op" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" value="" edge="1" parent="1" source="op" target="volver" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" value="" edge="1" parent="1" source="avisar" target="volver" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;exitX=1;exitY=0.5;entryX=1;entryY=0.3;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1780" y="705" /><mxPoint x="1780" y="1737" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="edge13" value="" edge="1" parent="1" source="error" target="volver" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;exitX=1;exitY=0.5;entryX=1;entryY=0.7;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1720" y="905" /><mxPoint x="1720" y="1773" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="edge14" value="" edge="1" parent="1" source="volver" target="menu" style="html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;strokeWidth=1;fontFamily=Liberation Sans;fontSize=16;labelBackgroundColor=#FFFFFF;endArrow=open;endFill=1;exitX=0;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="70" y="1755" /><mxPoint x="70" y="207" /></Array></mxGeometry>
+        </mxCell>
+      <mxCell id="fininner" value="" vertex="1" parent="fin" style="ellipse;html=1;fillColor=#000000;strokeColor=#000000;"><mxGeometry x="5" y="5" width="17.0" height="17.0" as="geometry" /></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
