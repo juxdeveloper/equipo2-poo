@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guion Práctica 9: UML</title>
+<style>
+  @page {
+    size: letter;
+    margin: 0.8in 0.2in 0.8in 0.2in;
+  }
+  body {
+    font-family: "Liberation Sans", sans-serif;
+    color: #000000;
+    font-size: 12pt;
+    line-height: 1.5;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0 0.2in;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18pt;
+    color: #77206D;
+    margin-top: 0;
+    margin-bottom: 24pt;
+    page-break-after: avoid;
+  }
+  .audio-block {
+    margin-bottom: 20pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  hr.separator {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 0 0 8pt 0;
+    width: 100%;
+  }
+  h2.audio-header {
+    font-size: 14pt;
+    font-weight: normal;
+    color: #0F4761;
+    margin: 0 0 6pt 0;
+    page-break-after: avoid;
+  }
+  p.locution {
+    margin: 0;
+    text-align: justify;
+  }
+</style>
+</head>
+<body>
+<h1>Guion Práctica 9: UML</h1>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 1 – HANNIEL</h2>
+  <p class="locution">Bienvenidos a nuestra presentación de la Práctica 9. Hoy unificamos el modelado formal de nuestras arquitecturas previas mediante el Lenguaje Unificado de Modelado en diagramas claros y rigurosos.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 2 – ALAN</h2>
+  <p class="locution">Iniciamos con la Práctica 5, donde modelamos el encapsulamiento básico. Representamos las clases Empleado y Fecha con atributos estrictamente privados y operaciones públicas de acceso y validación. Además, el diagrama de secuencia ilustra cómo la clase conductora gestiona las instancias, valida salarios mensuales mayores a cero y aplica el incremento anual de manera completamente ordenada.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 3 – HANNIEL</h2>
+  <p class="locution">El modelado estático nos permitió pasar de simples scripts a módulos cohesivos. Ahora analizaremos cómo evolucionó la organización del proyecto en paquetes bien delimitados y estructurados.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 4 – ZOÉ</h2>
+  <p class="locution">Para la Práctica 6 organizamos el código en paquetes estructurados, desde utilidades de análisis léxico hasta el sistema hospitalario. Modelamos la clase AnalizadorPalabras con su mapa asociativo de frecuencias y el contenedor hospitalario que agrega médicos, enfermeros y pacientes. El diagrama de paquetes sintetiza cómo cada componente se integra en un único archivo JAR distribuible sin conflictos.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 5 – HANNIEL</h2>
+  <p class="locution">Con una estructura modular consolidada, el siguiente paso fue modelar jerarquías geométricas donde la herencia profunda y la reutilización de atributos juegan un papel central y determinante.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 6 – LUIS</h2>
+  <p class="locution">En la Práctica 7 construimos una jerarquía profunda de cinco niveles sobre cuadriláteros. La superclase Cuadrilatero mantiene cuatro instancias de Punto por composición. A partir de ella se derivan Trapezoide, Paralelogramo, Rectángulo y Cuadrado, donde cada subclase refina el método calcularArea. El diagrama global documenta con precisión las generalizaciones y cómo se conserva la integridad geométrica.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 7 – HANNIEL</h2>
+  <p class="locution">La herencia de clases resolvió el modelado geométrico, pero cuando requerimos articular entidades heterogéneas recurrimos a contratos abstractos mediante interfaces y polimorfismo dinámico en tiempo de ejecución.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 8 – JOSEPH</h2>
+  <p class="locution">En la Práctica 8 introdujimos la interfaz HuellaCarbono, implementada por clases con naturalezas distintas como Edificio, Auto y Bicicleta. El diagrama de clases muestra estas realizaciones mediante líneas punteadas con flecha triangular vacía. Además, modelamos la interacción con la interfaz gráfica de inicio de sesión y la iteración polimórfica que recorre la lista general sin distinguir tipos.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 9 – HANNIEL</h2>
+  <p class="locution">Así logramos un diseño desacoplado y flexible. Para cerrar, veamos cómo estos cuatro hitos convergen en un marco metodológico integral para el diseño formal en ingeniería de software.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 10 – ALEX</h2>
+  <p class="locution">El diagrama comparativo final de la Práctica 9 resume esta evolución arquitectónica. Pasar de la encapsulación en Empleado a la modularidad en paquetes, la herencia en cuadriláteros y el polimorfismo por interfaz demuestra la versatilidad de UML para comunicar diseños técnicos robustos, trazables y fáciles de mantener a lo largo de cualquier ciclo de desarrollo.</p>
+</div>
+<div class="audio-block">
+  <hr class="separator">
+  <h2 class="audio-header">AUDIO 11 – HANNIEL</h2>
+  <p class="locution">Con estos diagramas completamos la documentación estandarizada de todo el curso, demostrando cómo la abstracción y el modelado guían el desarrollo en Java. Muchas gracias por su atención.</p>
+</div>
+</body>
+</html>
