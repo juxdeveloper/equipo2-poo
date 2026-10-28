@@ -4,63 +4,63 @@
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
     <mxCell id="title" value="DIAGRAMA DE CLASES — PRÁCTICA 5: ENCAPSULAMIENTO Y OBJETOS" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=22;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="40" y="20" width="920" height="40" as="geometry" />
+      <mxGeometry x="40" y="20" width="1020" height="40" as="geometry" />
     </mxCell>
 
     <!-- MainFecha -->
     <mxCell id="main_fecha" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;" vertex="1" parent="1">
-      <mxGeometry x="60" y="100" width="360" height="130" as="geometry" />
+      <mxGeometry x="60" y="100" width="420" height="150" as="geometry" />
     </mxCell>
     <mxCell id="main_fecha_h" value="MainFecha" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;" vertex="1" parent="main_fecha">
-      <mxGeometry x="0" y="0" width="360" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="420" height="40" as="geometry" />
     </mxCell>
     <mxCell id="main_fecha_a" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;align=left;spacingLeft=10;" vertex="1" parent="main_fecha">
-      <mxGeometry x="0" y="40" width="360" height="30" as="geometry" />
+      <mxGeometry x="0" y="40" width="420" height="35" as="geometry" />
     </mxCell>
     <mxCell id="main_fecha_o" value="+ MainFecha()&lt;br&gt;+ &lt;u&gt;main(args: String[])&lt;/u&gt;: void" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;align=left;spacingLeft=10;" vertex="1" parent="main_fecha">
-      <mxGeometry x="0" y="70" width="360" height="60" as="geometry" />
+      <mxGeometry x="0" y="75" width="420" height="75" as="geometry" />
     </mxCell>
 
     <!-- Fecha -->
     <mxCell id="fecha" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="60" y="310" width="360" height="230" as="geometry" />
+      <mxGeometry x="60" y="340" width="420" height="270" as="geometry" />
     </mxCell>
     <mxCell id="fecha_h" value="Fecha" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="fecha">
-      <mxGeometry x="0" y="0" width="360" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="420" height="40" as="geometry" />
     </mxCell>
     <mxCell id="fecha_a" value="- mes: int&lt;br&gt;- dia: int&lt;br&gt;- anio: int" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="fecha">
-      <mxGeometry x="0" y="40" width="360" height="70" as="geometry" />
+      <mxGeometry x="0" y="40" width="420" height="90" as="geometry" />
     </mxCell>
     <mxCell id="fecha_o" value="+ Fecha(mes: int, dia: int, anio: int)&lt;br&gt;+ setMes(mes: int): void&lt;br&gt;+ setDia(dia: int): void&lt;br&gt;+ setAnio(anio: int): void&lt;br&gt;+ mostrarFecha(): void" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="fecha">
-      <mxGeometry x="0" y="110" width="360" height="120" as="geometry" />
+      <mxGeometry x="0" y="130" width="420" height="140" as="geometry" />
     </mxCell>
 
     <!-- MainEmpleado -->
     <mxCell id="main_empleado" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;" vertex="1" parent="1">
-      <mxGeometry x="520" y="100" width="460" height="130" as="geometry" />
+      <mxGeometry x="560" y="100" width="520" height="150" as="geometry" />
     </mxCell>
     <mxCell id="main_empleado_h" value="MainEmpleado" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;" vertex="1" parent="main_empleado">
-      <mxGeometry x="0" y="0" width="460" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="520" height="40" as="geometry" />
     </mxCell>
     <mxCell id="main_empleado_a" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;align=left;spacingLeft=10;" vertex="1" parent="main_empleado">
-      <mxGeometry x="0" y="40" width="460" height="30" as="geometry" />
+      <mxGeometry x="0" y="40" width="520" height="35" as="geometry" />
     </mxCell>
     <mxCell id="main_empleado_o" value="+ MainEmpleado()&lt;br&gt;+ &lt;u&gt;main(args: String[])&lt;/u&gt;: void" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;align=left;spacingLeft=10;" vertex="1" parent="main_empleado">
-      <mxGeometry x="0" y="70" width="460" height="60" as="geometry" />
+      <mxGeometry x="0" y="75" width="520" height="75" as="geometry" />
     </mxCell>
 
     <!-- Empleado -->
     <mxCell id="empleado" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="520" y="310" width="460" height="260" as="geometry" />
+      <mxGeometry x="560" y="340" width="520" height="320" as="geometry" />
     </mxCell>
     <mxCell id="empleado_h" value="Empleado" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="empleado">
-      <mxGeometry x="0" y="0" width="460" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="520" height="40" as="geometry" />
     </mxCell>
     <mxCell id="empleado_a" value="- nombre: String&lt;br&gt;- apellido: String&lt;br&gt;- salarioMensual: double" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="empleado">
-      <mxGeometry x="0" y="40" width="460" height="70" as="geometry" />
+      <mxGeometry x="0" y="40" width="520" height="90" as="geometry" />
     </mxCell>
     <mxCell id="empleado_o" value="+ Empleado(nombre: String, apellido: String, salarioMensual: double)&lt;br&gt;+ getNombre(): String&lt;br&gt;+ setNombre(nombre: String): void&lt;br&gt;+ getApellido(): String&lt;br&gt;+ setApellido(apellido: String): void&lt;br&gt;+ getSalarioMensual(): double&lt;br&gt;+ setSalarioMensual(salarioMensual: double): void" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="empleado">
-      <mxGeometry x="0" y="110" width="460" height="150" as="geometry" />
+      <mxGeometry x="0" y="130" width="520" height="190" as="geometry" />
     </mxCell>
 
     <!-- Conexiones -->

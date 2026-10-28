@@ -4,175 +4,175 @@
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
     <mxCell id="title" value="DIAGRAMA DE CLASES — PROYECTO FASE 2: SISTEMA HOSPITALARIO Y ATENCIÓN MÉDICA" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=22;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="40" y="20" width="1900" height="40" as="geometry" />
-    </mxCell>
-
-    <!-- Interfaz AtencionMedica -->
-    <mxCell id="atencion" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;" vertex="1" parent="1">
-      <mxGeometry x="780" y="80" width="380" height="120" as="geometry" />
-    </mxCell>
-    <mxCell id="atencion_h" value="«interface»&lt;br&gt;AtencionMedica" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=1;" vertex="1" parent="atencion">
-      <mxGeometry x="0" y="0" width="380" height="48" as="geometry" />
-    </mxCell>
-    <mxCell id="atencion_a" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="atencion">
-      <mxGeometry x="0" y="48" width="380" height="24" as="geometry" />
-    </mxCell>
-    <mxCell id="atencion_o" value="+ &lt;i&gt;darTratamiento(paciente: Paciente)&lt;/i&gt;: boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="atencion">
-      <mxGeometry x="0" y="72" width="380" height="48" as="geometry" />
-    </mxCell>
-
-    <!-- Sistema -->
-    <mxCell id="sistema" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="60" y="240" width="440" height="320" as="geometry" />
-    </mxCell>
-    <mxCell id="sistema_h" value="Sistema" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="sistema">
-      <mxGeometry x="0" y="0" width="440" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="sistema_a" value="- nombreHospital: String&lt;br&gt;- noMedicos: int&lt;br&gt;- noEnfermeros: int&lt;br&gt;- noPacientes: int&lt;br&gt;- especialidades: Map&amp;lt;Integer, String&amp;gt;&lt;br&gt;- medicos: List&amp;lt;Medico&amp;gt;&lt;br&gt;- enfermeros: List&amp;lt;Enfermero&amp;gt;&lt;br&gt;- pacientes: List&amp;lt;Paciente&amp;gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="sistema">
-      <mxGeometry x="0" y="40" width="440" height="150" as="geometry" />
-    </mxCell>
-    <mxCell id="sistema_o" value="+ Sistema(nombre: String)&lt;br&gt;+ getNombreHospital(): String&lt;br&gt;+ setNombreHospital(nombre: String): void&lt;br&gt;+ getEspecialidades(): Map&amp;lt;Integer, String&amp;gt;&lt;br&gt;+ registroEspecialidad(id: int, nombre: String): boolean&lt;br&gt;+ registroMedico(medico: Medico): boolean&lt;br&gt;+ registroEnfermero(enfermero: Enfermero): boolean&lt;br&gt;+ registroPaciente(paciente: Paciente): boolean&lt;br&gt;+ asignarPaciente(paciente: Paciente): Medico" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="sistema">
-      <mxGeometry x="0" y="190" width="440" height="130" as="geometry" />
+      <mxGeometry x="40" y="20" width="1800" height="40" as="geometry" />
     </mxCell>
 
     <!-- Main -->
     <mxCell id="main_p2" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;" vertex="1" parent="1">
-      <mxGeometry x="60" y="80" width="440" height="130" as="geometry" />
+      <mxGeometry x="60" y="90" width="540" height="140" as="geometry" />
     </mxCell>
     <mxCell id="main_p2_h" value="Main" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#D5E8D4;strokeColor=#82B366;fontStyle=1;" vertex="1" parent="main_p2">
-      <mxGeometry x="0" y="0" width="440" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
     </mxCell>
     <mxCell id="main_p2_a" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;align=left;spacingLeft=10;" vertex="1" parent="main_p2">
-      <mxGeometry x="0" y="40" width="440" height="30" as="geometry" />
+      <mxGeometry x="0" y="40" width="540" height="30" as="geometry" />
     </mxCell>
     <mxCell id="main_p2_o" value="+ Main()&lt;br&gt;+ &lt;u&gt;main(args: String[])&lt;/u&gt;: void" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;align=left;spacingLeft=10;" vertex="1" parent="main_p2">
-      <mxGeometry x="0" y="70" width="440" height="60" as="geometry" />
+      <mxGeometry x="0" y="70" width="540" height="70" as="geometry" />
     </mxCell>
 
-    <!-- Paciente (Abstracta) -->
-    <mxCell id="pac" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;" vertex="1" parent="1">
-      <mxGeometry x="60" y="620" width="440" height="330" as="geometry" />
+    <!-- Interfaz AtencionMedica -->
+    <mxCell id="atencion" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;" vertex="1" parent="1">
+      <mxGeometry x="960" y="90" width="540" height="140" as="geometry" />
     </mxCell>
-    <mxCell id="pac_h" value="&lt;i&gt;Paciente&lt;/i&gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=3;" vertex="1" parent="pac">
-      <mxGeometry x="0" y="0" width="440" height="40" as="geometry" />
+    <mxCell id="atencion_h" value="«interface»&lt;br&gt;AtencionMedica" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=1;" vertex="1" parent="atencion">
+      <mxGeometry x="0" y="0" width="540" height="48" as="geometry" />
     </mxCell>
-    <mxCell id="pac_a" value="- nombre: String&lt;br&gt;- tratamiento: String&lt;br&gt;- estado: Estado&lt;br&gt;- sistema: Sistema&lt;br&gt;- medico: Medico&lt;br&gt;- enfermero: Enfermero&lt;br&gt;- necesitaMedicamento: boolean&lt;br&gt;- medicamentoAutorizado: boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="pac">
-      <mxGeometry x="0" y="40" width="440" height="150" as="geometry" />
+    <mxCell id="atencion_a" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="atencion">
+      <mxGeometry x="0" y="48" width="540" height="30" as="geometry" />
     </mxCell>
-    <mxCell id="pac_o" value="+ Paciente(nombre: String)&lt;br&gt;+ getNombre(): String&lt;br&gt;+ getEstado(): Estado&lt;br&gt;+ getNecesitaMedicamento(): boolean&lt;br&gt;+ getMedicamentoAutorizado(): boolean&lt;br&gt;+ autorizarMedicamento(jefe: JefeEnfermeria): boolean&lt;br&gt;+ &lt;i&gt;getEspecialidad()&lt;/i&gt;: int&lt;br&gt;+ solicitarConsulta(): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="pac">
-      <mxGeometry x="0" y="190" width="440" height="140" as="geometry" />
-    </mxCell>
-
-    <!-- PacienteGeneral -->
-    <mxCell id="pac_gen" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="60" y="1000" width="440" height="140" as="geometry" />
-    </mxCell>
-    <mxCell id="pac_gen_h" value="PacienteGeneral" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="pac_gen">
-      <mxGeometry x="0" y="0" width="440" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="pac_gen_a" value="- motivoConsulta: String" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="pac_gen">
-      <mxGeometry x="0" y="40" width="440" height="30" as="geometry" />
-    </mxCell>
-    <mxCell id="pac_gen_o" value="+ PacienteGeneral(nombre: String)&lt;br&gt;+ PacienteGeneral(nombre: String, motivo: String)&lt;br&gt;+ getEspecialidad(): int" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="pac_gen">
-      <mxGeometry x="0" y="70" width="440" height="70" as="geometry" />
+    <mxCell id="atencion_o" value="+ &lt;i&gt;darTratamiento(paciente: Paciente)&lt;/i&gt;: boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="atencion">
+      <mxGeometry x="0" y="78" width="540" height="62" as="geometry" />
     </mxCell>
 
-    <!-- PacienteEspecialidad -->
-    <mxCell id="pac_esp" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="60" y="1180" width="440" height="140" as="geometry" />
+    <!-- Sistema: height = 40 + 220 + 260 = 520 -->
+    <mxCell id="sistema" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="60" y="280" width="540" height="520" as="geometry" />
     </mxCell>
-    <mxCell id="pac_esp_h" value="PacienteEspecialidad" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="pac_esp">
-      <mxGeometry x="0" y="0" width="440" height="40" as="geometry" />
+    <mxCell id="sistema_h" value="Sistema" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="sistema">
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
     </mxCell>
-    <mxCell id="pac_esp_a" value="- especialidad: int {readOnly}" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="pac_esp">
-      <mxGeometry x="0" y="40" width="440" height="30" as="geometry" />
+    <mxCell id="sistema_a" value="- nombreHospital: String&lt;br&gt;- noMedicos: int&lt;br&gt;- noEnfermeros: int&lt;br&gt;- noPacientes: int&lt;br&gt;- especialidades: Map&amp;lt;Integer, String&amp;gt;&lt;br&gt;- medicos: List&amp;lt;Medico&amp;gt;&lt;br&gt;- enfermeros: List&amp;lt;Enfermero&amp;gt;&lt;br&gt;- pacientes: List&amp;lt;Paciente&amp;gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="sistema">
+      <mxGeometry x="0" y="40" width="540" height="220" as="geometry" />
     </mxCell>
-    <mxCell id="pac_esp_o" value="+ PacienteEspecialidad(nombre: String, esp: int)&lt;br&gt;+ getEspecialidad(): int&lt;br&gt;+ consultarEspecialidad(): String" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="pac_esp">
-      <mxGeometry x="0" y="70" width="440" height="70" as="geometry" />
+    <mxCell id="sistema_o" value="+ Sistema(nombre: String)&lt;br&gt;+ getNombreHospital(): String&lt;br&gt;+ setNombreHospital(nombre: String): void&lt;br&gt;+ getEspecialidades(): Map&amp;lt;Integer, String&amp;gt;&lt;br&gt;+ registroEspecialidad(id: int, nombre: String): boolean&lt;br&gt;+ registroMedico(medico: Medico): boolean&lt;br&gt;+ registroEnfermero(enfermero: Enfermero): boolean&lt;br&gt;+ registroPaciente(paciente: Paciente): boolean&lt;br&gt;+ asignarPaciente(paciente: Paciente): Medico" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="sistema">
+      <mxGeometry x="0" y="260" width="540" height="260" as="geometry" />
     </mxCell>
 
-    <!-- Medico (Abstracta) -->
+    <!-- Medico: height = 40 + 140 + 220 = 400 -->
     <mxCell id="med" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;" vertex="1" parent="1">
-      <mxGeometry x="580" y="270" width="440" height="290" as="geometry" />
+      <mxGeometry x="660" y="280" width="540" height="400" as="geometry" />
     </mxCell>
     <mxCell id="med_h" value="&lt;i&gt;Medico&lt;/i&gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=3;" vertex="1" parent="med">
-      <mxGeometry x="0" y="0" width="440" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
     </mxCell>
     <mxCell id="med_a" value="- nombre: String&lt;br&gt;- cedula: int {readOnly}&lt;br&gt;- sistema: Sistema&lt;br&gt;- enConsulta: Paciente&lt;br&gt;- pacientes: List&amp;lt;Paciente&amp;gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="med">
-      <mxGeometry x="0" y="40" width="440" height="100" as="geometry" />
+      <mxGeometry x="0" y="40" width="540" height="140" as="geometry" />
     </mxCell>
     <mxCell id="med_o" value="+ Medico(nombre: String, cedula: int)&lt;br&gt;+ getNombre(): String&lt;br&gt;+ getCedula(): int&lt;br&gt;+ addPaciente(paciente: Paciente): boolean&lt;br&gt;+ &lt;i&gt;getEspecialidad()&lt;/i&gt;: int&lt;br&gt;+ darConsulta(paciente: Paciente): boolean&lt;br&gt;+ darTratamiento(paciente: Paciente): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="med">
-      <mxGeometry x="0" y="140" width="440" height="150" as="geometry" />
+      <mxGeometry x="0" y="180" width="540" height="220" as="geometry" />
     </mxCell>
 
-    <!-- MedicoGeneral -->
-    <mxCell id="med_gen" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="580" y="630" width="440" height="140" as="geometry" />
-    </mxCell>
-    <mxCell id="med_gen_h" value="MedicoGeneral" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="med_gen">
-      <mxGeometry x="0" y="0" width="440" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="med_gen_a" value="- servicio: String {readOnly}" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="med_gen">
-      <mxGeometry x="0" y="40" width="440" height="30" as="geometry" />
-    </mxCell>
-    <mxCell id="med_gen_o" value="+ MedicoGeneral(nombre: String, cedula: int)&lt;br&gt;+ getEspecialidad(): int&lt;br&gt;+ darConsulta(paciente: Paciente): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="med_gen">
-      <mxGeometry x="0" y="70" width="440" height="70" as="geometry" />
-    </mxCell>
-
-    <!-- MedicoEspecialista -->
-    <mxCell id="med_esp" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="580" y="810" width="440" height="150" as="geometry" />
-    </mxCell>
-    <mxCell id="med_esp_h" value="MedicoEspecialista" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="med_esp">
-      <mxGeometry x="0" y="0" width="440" height="40" as="geometry" />
-    </mxCell>
-    <mxCell id="med_esp_a" value="- especialidad: int {readOnly}" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="med_esp">
-      <mxGeometry x="0" y="40" width="440" height="30" as="geometry" />
-    </mxCell>
-    <mxCell id="med_esp_o" value="+ MedicoEspecialista(nombre: String, ced: int, esp: int)&lt;br&gt;+ getEspecialidad(): int&lt;br&gt;+ consultarEspecialidad(): String&lt;br&gt;+ darConsulta(paciente: Paciente): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="med_esp">
-      <mxGeometry x="0" y="70" width="440" height="80" as="geometry" />
-    </mxCell>
-
-    <!-- Enfermero (Abstracta) -->
+    <!-- Enfermero: height = 40 + 140 + 220 = 400 -->
     <mxCell id="enf" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;" vertex="1" parent="1">
-      <mxGeometry x="1100" y="270" width="450" height="290" as="geometry" />
+      <mxGeometry x="1260" y="280" width="540" height="400" as="geometry" />
     </mxCell>
     <mxCell id="enf_h" value="&lt;i&gt;Enfermero&lt;/i&gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=3;" vertex="1" parent="enf">
-      <mxGeometry x="0" y="0" width="450" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
     </mxCell>
     <mxCell id="enf_a" value="- nombre: String&lt;br&gt;- cedula: int {readOnly}&lt;br&gt;- turno: boolean&lt;br&gt;- sistema: Sistema&lt;br&gt;- pacientes: List&amp;lt;Paciente&amp;gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="enf">
-      <mxGeometry x="0" y="40" width="450" height="100" as="geometry" />
+      <mxGeometry x="0" y="40" width="540" height="140" as="geometry" />
     </mxCell>
     <mxCell id="enf_o" value="+ Enfermero(nombre: String, cedula: int)&lt;br&gt;+ getNombre(): String&lt;br&gt;+ getCedula(): int&lt;br&gt;+ setTurno(turno: boolean): void&lt;br&gt;+ &lt;i&gt;getEspecialidad()&lt;/i&gt;: int&lt;br&gt;+ darTratamiento(paciente: Paciente): boolean&lt;br&gt;+ trasladarPaciente(p: Paciente, n: Enfermero, j: Jefe): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="enf">
-      <mxGeometry x="0" y="140" width="450" height="150" as="geometry" />
+      <mxGeometry x="0" y="180" width="540" height="220" as="geometry" />
     </mxCell>
 
-    <!-- EnfermeroEspecialista -->
+    <!-- Paciente: height = 40 + 220 + 220 = 480 -->
+    <mxCell id="pac" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;" vertex="1" parent="1">
+      <mxGeometry x="60" y="860" width="540" height="480" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_h" value="&lt;i&gt;Paciente&lt;/i&gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#E1D5E7;strokeColor=#9673A6;fontStyle=3;" vertex="1" parent="pac">
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_a" value="- nombre: String&lt;br&gt;- tratamiento: String&lt;br&gt;- estado: Estado&lt;br&gt;- sistema: Sistema&lt;br&gt;- medico: Medico&lt;br&gt;- enfermero: Enfermero&lt;br&gt;- necesitaMedicamento: boolean&lt;br&gt;- medicamentoAutorizado: boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="pac">
+      <mxGeometry x="0" y="40" width="540" height="220" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_o" value="+ Paciente(nombre: String)&lt;br&gt;+ getNombre(): String&lt;br&gt;+ getEstado(): Estado&lt;br&gt;+ getNecesitaMedicamento(): boolean&lt;br&gt;+ getMedicamentoAutorizado(): boolean&lt;br&gt;+ autorizarMedicamento(jefe: JefeEnfermeria): boolean&lt;br&gt;+ &lt;i&gt;getEspecialidad()&lt;/i&gt;: int&lt;br&gt;+ solicitarConsulta(): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#9673A6;align=left;spacingLeft=10;" vertex="1" parent="pac">
+      <mxGeometry x="0" y="260" width="540" height="220" as="geometry" />
+    </mxCell>
+
+    <!-- MedicoGeneral: height = 40 + 50 + 100 = 190 -->
+    <mxCell id="med_gen" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="660" y="740" width="540" height="190" as="geometry" />
+    </mxCell>
+    <mxCell id="med_gen_h" value="MedicoGeneral" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="med_gen">
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="med_gen_a" value="- servicio: String {readOnly}" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="med_gen">
+      <mxGeometry x="0" y="40" width="540" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="med_gen_o" value="+ MedicoGeneral(nombre: String, cedula: int)&lt;br&gt;+ getEspecialidad(): int&lt;br&gt;+ darConsulta(paciente: Paciente): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="med_gen">
+      <mxGeometry x="0" y="90" width="540" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- MedicoEspecialista: height = 40 + 50 + 120 = 210 -->
+    <mxCell id="med_esp" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="660" y="990" width="540" height="210" as="geometry" />
+    </mxCell>
+    <mxCell id="med_esp_h" value="MedicoEspecialista" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="med_esp">
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="med_esp_a" value="- especialidad: int {readOnly}" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="med_esp">
+      <mxGeometry x="0" y="40" width="540" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="med_esp_o" value="+ MedicoEspecialista(nombre: String, ced: int, esp: int)&lt;br&gt;+ getEspecialidad(): int&lt;br&gt;+ consultarEspecialidad(): String&lt;br&gt;+ darConsulta(paciente: Paciente): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="med_esp">
+      <mxGeometry x="0" y="90" width="540" height="120" as="geometry" />
+    </mxCell>
+
+    <!-- EnfermeroEspecialista: height = 40 + 50 + 100 = 190 -->
     <mxCell id="enf_esp" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="1100" y="630" width="450" height="140" as="geometry" />
+      <mxGeometry x="1260" y="740" width="540" height="190" as="geometry" />
     </mxCell>
     <mxCell id="enf_esp_h" value="EnfermeroEspecialista" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="enf_esp">
-      <mxGeometry x="0" y="0" width="450" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
     </mxCell>
     <mxCell id="enf_esp_a" value="- especialidad: int {readOnly}" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="enf_esp">
-      <mxGeometry x="0" y="40" width="450" height="30" as="geometry" />
+      <mxGeometry x="0" y="40" width="540" height="50" as="geometry" />
     </mxCell>
     <mxCell id="enf_esp_o" value="+ EnfermeroEspecialista(nombre: String, ced: int, esp: int)&lt;br&gt;+ getEspecialidad(): int&lt;br&gt;+ consultarEspecialidad(): String" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="enf_esp">
-      <mxGeometry x="0" y="70" width="450" height="70" as="geometry" />
+      <mxGeometry x="0" y="90" width="540" height="100" as="geometry" />
     </mxCell>
 
-    <!-- JefeEnfermeria -->
+    <!-- JefeEnfermeria: height = 40 + 50 + 150 = 240 -->
     <mxCell id="jefe" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
-      <mxGeometry x="1100" y="810" width="450" height="180" as="geometry" />
+      <mxGeometry x="1260" y="990" width="540" height="240" as="geometry" />
     </mxCell>
     <mxCell id="jefe_h" value="JefeEnfermeria" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="jefe">
-      <mxGeometry x="0" y="0" width="450" height="40" as="geometry" />
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
     </mxCell>
     <mxCell id="jefe_a" value="- areaEspecialidad: int {readOnly}" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="jefe">
-      <mxGeometry x="0" y="40" width="450" height="30" as="geometry" />
+      <mxGeometry x="0" y="40" width="540" height="50" as="geometry" />
     </mxCell>
     <mxCell id="jefe_o" value="+ JefeEnfermeria(nombre: String, ced: int, area: int)&lt;br&gt;+ getAreaEspecialidad(): int&lt;br&gt;+ supervisa(enfermero: Enfermero): boolean&lt;br&gt;+ cambiarTurno(e: Enfermero, turno: boolean): boolean&lt;br&gt;+ autorizarMedicamentos(paciente: Paciente): boolean" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="jefe">
-      <mxGeometry x="0" y="70" width="450" height="110" as="geometry" />
+      <mxGeometry x="0" y="90" width="540" height="150" as="geometry" />
+    </mxCell>
+
+    <!-- PacienteGeneral: height = 40 + 50 + 90 = 180 -->
+    <mxCell id="pac_gen" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="60" y="1400" width="540" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_gen_h" value="PacienteGeneral" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="pac_gen">
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_gen_a" value="- motivoConsulta: String" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="pac_gen">
+      <mxGeometry x="0" y="40" width="540" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_gen_o" value="+ PacienteGeneral(nombre: String)&lt;br&gt;+ PacienteGeneral(nombre: String, motivo: String)&lt;br&gt;+ getEspecialidad(): int" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="pac_gen">
+      <mxGeometry x="0" y="90" width="540" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- PacienteEspecialidad: height = 40 + 50 + 90 = 180 -->
+    <mxCell id="pac_esp" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="60" y="1640" width="540" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_esp_h" value="PacienteEspecialidad" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="pac_esp">
+      <mxGeometry x="0" y="0" width="540" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_esp_a" value="- especialidad: int {readOnly}" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="pac_esp">
+      <mxGeometry x="0" y="40" width="540" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="pac_esp_o" value="+ PacienteEspecialidad(nombre: String, esp: int)&lt;br&gt;+ getEspecialidad(): int&lt;br&gt;+ consultarEspecialidad(): String" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=10;" vertex="1" parent="pac_esp">
+      <mxGeometry x="0" y="90" width="540" height="90" as="geometry" />
     </mxCell>
 
     <!-- Realizaciones hacia AtencionMedica -->
@@ -183,7 +183,7 @@
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
 
-    <!-- Generalizaciones -->
+    <!-- Generalizaciones de Médicos -->
     <mxCell id="gen_med_g" value="" style="html=1;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;curved=0;endArrow=block;endFill=0;" edge="1" parent="1" source="med_gen" target="med">
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
@@ -191,6 +191,7 @@
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
 
+    <!-- Generalizaciones de Enfermeros -->
     <mxCell id="gen_enf_e" value="" style="html=1;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;curved=0;endArrow=block;endFill=0;" edge="1" parent="1" source="enf_esp" target="enf">
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
@@ -198,6 +199,7 @@
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
 
+    <!-- Generalizaciones de Pacientes -->
     <mxCell id="gen_pac_g" value="" style="html=1;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;curved=0;endArrow=block;endFill=0;" edge="1" parent="1" source="pac_gen" target="pac">
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
@@ -205,25 +207,31 @@
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
 
-    <!-- Asociaciones con Multiplicidades -->
+    <!-- Asociación Sistema a Medico (Horizontal en corredor limpio) -->
     <mxCell id="asoc_sis_med" value="" style="html=1;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;curved=0;startArrow=diamond;startFill=0;endArrow=none;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="sistema" target="med">
       <mxGeometry relative="1" as="geometry" />
     </mxCell>
     <mxCell id="m_sm1" value="1" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=#FFFFFF;" vertex="1" parent="1">
-      <mxGeometry x="505" y="370" width="25" height="25" as="geometry" />
+      <mxGeometry x="605" y="470" width="25" height="25" as="geometry" />
     </mxCell>
     <mxCell id="m_sm2" value="0..*" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=#FFFFFF;" vertex="1" parent="1">
-      <mxGeometry x="545" y="370" width="30" height="25" as="geometry" />
+      <mxGeometry x="630" y="470" width="30" height="25" as="geometry" />
     </mxCell>
 
+    <!-- Asociación Medico a Paciente (Corredor horizontal x=600 a 660, y=600) -->
     <mxCell id="asoc_med_pac" value="" style="html=1;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;curved=0;endArrow=none;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="med" target="pac">
-      <mxGeometry relative="1" as="geometry" />
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="630" y="620" />
+          <mxPoint x="630" y="920" />
+        </Array>
+      </mxGeometry>
     </mxCell>
     <mxCell id="m_mp1" value="0..1" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=#FFFFFF;" vertex="1" parent="1">
-      <mxGeometry x="545" y="520" width="30" height="25" as="geometry" />
+      <mxGeometry x="635" y="600" width="30" height="25" as="geometry" />
     </mxCell>
     <mxCell id="m_mp2" value="0..10" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=#FFFFFF;" vertex="1" parent="1">
-      <mxGeometry x="505" y="650" width="35" height="25" as="geometry" />
+      <mxGeometry x="605" y="900" width="35" height="25" as="geometry" />
     </mxCell>
   </root>
 </mxGraphModel>

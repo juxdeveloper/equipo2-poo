@@ -4,10 +4,10 @@
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
     <mxCell id="title" value="DIAGRAMA DE SECUENCIA — PRÁCTICA 8: RECORRIDO POLIMÓRFICO DE HUELLAS DE CARBONO" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=22;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="40" y="20" width="1080" height="40" as="geometry" />
+      <mxGeometry x="40" y="20" width="1200" height="40" as="geometry" />
     </mxCell>
 
-    <!-- Participantes -->
+    <!-- Encabezados participantes -->
     <mxCell id="usuario" value="Usuario" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;shape=umlActor;fillColor=#FFFFFF;strokeColor=#263445;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
       <mxGeometry x="60" y="80" width="40" height="60" as="geometry" />
     </mxCell>
@@ -15,94 +15,124 @@
       <mxGeometry x="200" y="90" width="160" height="45" as="geometry" />
     </mxCell>
     <mxCell id="edif" value="edificio:Edificio" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="430" y="185" width="180" height="45" as="geometry" />
+      <mxGeometry x="460" y="190" width="200" height="45" as="geometry" />
     </mxCell>
     <mxCell id="auto" value="auto:Auto" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="680" y="275" width="180" height="45" as="geometry" />
+      <mxGeometry x="740" y="280" width="200" height="45" as="geometry" />
     </mxCell>
     <mxCell id="bici" value="bici:Bicicleta" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="930" y="365" width="180" height="45" as="geometry" />
+      <mxGeometry x="1020" y="370" width="200" height="45" as="geometry" />
     </mxCell>
 
-    <!-- Lifelines -->
-    <mxCell id="u_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="79" y="760" width="2" height="2" as="geometry" /></mxCell>
-    <mxCell id="m_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="279" y="760" width="2" height="2" as="geometry" /></mxCell>
-    <mxCell id="e_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="519" y="760" width="2" height="2" as="geometry" /></mxCell>
-    <mxCell id="a_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="769" y="760" width="2" height="2" as="geometry" /></mxCell>
-    <mxCell id="b_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="1019" y="760" width="2" height="2" as="geometry" /></mxCell>
-
-    <mxCell id="ll_u" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="usuario" target="u_end"><mxGeometry relative="1" as="geometry" /></mxCell>
-    <mxCell id="ll_m" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="main" target="m_end"><mxGeometry relative="1" as="geometry" /></mxCell>
-    <mxCell id="ll_e" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="edif" target="e_end"><mxGeometry relative="1" as="geometry" /></mxCell>
-    <mxCell id="ll_a" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="auto" target="a_end"><mxGeometry relative="1" as="geometry" /></mxCell>
-    <mxCell id="ll_b" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="bici" target="b_end"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <!-- Líneas de vida -->
+    <mxCell id="ll_u" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="80" y="145" as="sourcePoint"/><mxPoint x="80" y="880" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="ll_m" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="280" y="135" as="sourcePoint"/><mxPoint x="280" y="880" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="ll_e" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="560" y="235" as="sourcePoint"/><mxPoint x="560" y="880" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="ll_a" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="840" y="325" as="sourcePoint"/><mxPoint x="840" y="880" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="ll_b" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="1120" y="415" as="sourcePoint"/><mxPoint x="1120" y="880" as="targetPoint"/></mxGeometry>
+    </mxCell>
 
     <!-- Activaciones -->
-    <mxCell id="act_u" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="72" y="150" width="16" height="580" as="geometry" /></mxCell>
-    <mxCell id="act_m" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="272" y="150" width="16" height="570" as="geometry" /></mxCell>
-    <mxCell id="act_e_init" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="512" y="230" width="16" height="35" as="geometry" /></mxCell>
-    <mxCell id="act_a_init" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="762" y="320" width="16" height="35" as="geometry" /></mxCell>
-    <mxCell id="act_b_init" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="1012" y="410" width="16" height="35" as="geometry" /></mxCell>
+    <mxCell id="act_u" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="72" y="150" width="16" height="700" as="geometry" />
+    </mxCell>
+    <mxCell id="act_m" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="272" y="150" width="16" height="690" as="geometry" />
+    </mxCell>
+    <mxCell id="act_e_calc" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="552" y="550" width="16" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="act_a_calc" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="832" y="650" width="16" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="act_b_calc" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="1112" y="750" width="16" height="50" as="geometry" />
+    </mxCell>
 
-    <!-- Cuadro Combinado Loop -->
+    <!-- Caja Loop -->
     <mxCell id="loop_box" value="loop [para cada HuellaCarbono en lista]" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=14;strokeWidth=1.5;rounded=0;fillColor=none;strokeColor=#263445;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;" vertex="1" parent="1">
-      <mxGeometry x="240" y="465" width="830" height="215" as="geometry" />
+      <mxGeometry x="230" y="510" width="940" height="300" as="geometry" />
     </mxCell>
 
-    <mxCell id="act_e_calc" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="512" y="490" width="16" height="40" as="geometry" /></mxCell>
-    <mxCell id="act_a_calc" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="762" y="555" width="16" height="40" as="geometry" /></mxCell>
-    <mxCell id="act_b_calc" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="1012" y="620" width="16" height="40" as="geometry" /></mxCell>
-
-    <!-- Mensajes -->
-    <mxCell id="msg1" value="1: main(args)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_u" target="act_m">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /></mxGeometry>
+    <!-- Mensajes horizontales -->
+    <!-- 1: main(args) y=160 -->
+    <mxCell id="m1" value="1: main(args)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="88" y="160" as="sourcePoint"/><mxPoint x="272" y="160" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
     </mxCell>
 
-    <mxCell id="msg2" value="2: «Constructor» Edificio(&quot;Facultad de Ingenieria&quot;, 2400.0, 0.40)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1">
-      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="205" as="sourcePoint"/><mxPoint x="430" y="205" as="targetPoint"/><mxPoint as="offset" y="-12" /></mxGeometry>
-    </mxCell>
-    <mxCell id="msg3" value="3: referencia edificio" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_e_init" target="act_m">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="512" y="255" as="sourcePoint"/><mxPoint x="288" y="255" as="targetPoint"/></mxGeometry>
+    <!-- 2: Constructor Edificio y=212 -->
+    <mxCell id="m2" value="2: «Constructor» Edificio(&quot;Facultad de Ingenieria&quot;, 2400.0, 0.40)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="212" as="sourcePoint"/><mxPoint x="460" y="212" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
     </mxCell>
 
-    <mxCell id="msg4" value="4: «Constructor» Auto(&quot;Sedan compacto&quot;, 480.0, 7.0, 2.31)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1">
-      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="295" as="sourcePoint"/><mxPoint x="680" y="295" as="targetPoint"/><mxPoint as="offset" y="-12" /></mxGeometry>
-    </mxCell>
-    <mxCell id="msg5" value="5: referencia auto" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_a_init" target="act_m">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="762" y="345" as="sourcePoint"/><mxPoint x="288" y="345" as="targetPoint"/></mxGeometry>
+    <!-- 3: retorno referencia edificio y=250 -->
+    <mxCell id="m3" value="3: referencia edificio" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="560" y="250" as="sourcePoint"/><mxPoint x="288" y="250" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
     </mxCell>
 
-    <mxCell id="msg6" value="6: «Constructor» Bicicleta(&quot;Urbana&quot;, 12.0)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1">
-      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="385" as="sourcePoint"/><mxPoint x="930" y="385" as="targetPoint"/><mxPoint as="offset" y="-12" /></mxGeometry>
-    </mxCell>
-    <mxCell id="msg7" value="7: referencia bicicleta" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_b_init" target="act_m">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="1012" y="435" as="sourcePoint"/><mxPoint x="288" y="435" as="targetPoint"/></mxGeometry>
+    <!-- 4: Constructor Auto y=302 -->
+    <mxCell id="m4" value="4: «Constructor» Auto(&quot;Sedan compacto&quot;, 480.0, 7.0, 2.31)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="302" as="sourcePoint"/><mxPoint x="740" y="302" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
     </mxCell>
 
-    <!-- Invocaciones Polimórficas -->
-    <mxCell id="msg8" value="8: getHuellaCarbono()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_m" target="act_e_calc">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="288" y="500" as="sourcePoint"/><mxPoint x="512" y="500" as="targetPoint"/></mxGeometry>
-    </mxCell>
-    <mxCell id="msg9" value="9: 960.00 kg CO2e" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_e_calc" target="act_m">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="512" y="520" as="sourcePoint"/><mxPoint x="288" y="520" as="targetPoint"/></mxGeometry>
+    <!-- 5: retorno referencia auto y=340 -->
+    <mxCell id="m5" value="5: referencia auto" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="840" y="340" as="sourcePoint"/><mxPoint x="288" y="340" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
     </mxCell>
 
-    <mxCell id="msg10" value="10: getHuellaCarbono()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_m" target="act_a_calc">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="288" y="565" as="sourcePoint"/><mxPoint x="762" y="565" as="targetPoint"/></mxGeometry>
-    </mxCell>
-    <mxCell id="msg11" value="11: 77.62 kg CO2e" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_a_calc" target="act_m">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="762" y="585" as="sourcePoint"/><mxPoint x="288" y="585" as="targetPoint"/></mxGeometry>
+    <!-- 6: Constructor Bicicleta y=392 -->
+    <mxCell id="m6" value="6: «Constructor» Bicicleta(&quot;Urbana&quot;, 12.0)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="392" as="sourcePoint"/><mxPoint x="1020" y="392" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
     </mxCell>
 
-    <mxCell id="msg12" value="12: getHuellaCarbono()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_m" target="act_b_calc">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="288" y="630" as="sourcePoint"/><mxPoint x="1012" y="630" as="targetPoint"/></mxGeometry>
-    </mxCell>
-    <mxCell id="msg13" value="13: 0.00 kg CO2e" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_b_calc" target="act_m">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="1012" y="650" as="sourcePoint"/><mxPoint x="288" y="650" as="targetPoint"/></mxGeometry>
+    <!-- 7: retorno referencia bicicleta y=430 -->
+    <mxCell id="m7" value="7: referencia bicicleta" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="1120" y="430" as="sourcePoint"/><mxPoint x="288" y="430" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
     </mxCell>
 
-    <mxCell id="msg14" value="14: fin de ejecución" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_m" target="act_u">
-      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="272" y="700" as="sourcePoint"/><mxPoint x="88" y="700" as="targetPoint"/></mxGeometry>
+    <!-- Invocaciones polimórficas -->
+    <!-- 8: getHuellaCarbono() y=560 -->
+    <mxCell id="m8" value="8: getHuellaCarbono()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="560" as="sourcePoint"/><mxPoint x="552" y="560" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
+    </mxCell>
+
+    <!-- 9: 960.00 kg CO2e y=585 -->
+    <mxCell id="m9" value="9: 960.00 kg CO2e" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="552" y="585" as="sourcePoint"/><mxPoint x="288" y="585" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
+    </mxCell>
+
+    <!-- 10: getHuellaCarbono() y=660 -->
+    <mxCell id="m10" value="10: getHuellaCarbono()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="660" as="sourcePoint"/><mxPoint x="832" y="660" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
+    </mxCell>
+
+    <!-- 11: 77.62 kg CO2e y=685 -->
+    <mxCell id="m11" value="11: 77.62 kg CO2e" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="832" y="685" as="sourcePoint"/><mxPoint x="288" y="685" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
+    </mxCell>
+
+    <!-- 12: getHuellaCarbono() y=760 -->
+    <mxCell id="m12" value="12: getHuellaCarbono()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="288" y="760" as="sourcePoint"/><mxPoint x="1112" y="760" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
+    </mxCell>
+
+    <!-- 13: 0.00 kg CO2e y=785 -->
+    <mxCell id="m13" value="13: 0.00 kg CO2e" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="1112" y="785" as="sourcePoint"/><mxPoint x="288" y="785" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
+    </mxCell>
+
+    <!-- 14: fin de ejecución y=835 -->
+    <mxCell id="m14" value="14: fin de ejecución" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="272" y="835" as="sourcePoint"/><mxPoint x="88" y="835" as="targetPoint"/><mxPoint x="0" y="-14" as="offset"/></mxGeometry>
     </mxCell>
   </root>
 </mxGraphModel>
