@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="title" value="DIAGRAMA DE SECUENCIA — PROYECTO FASE 2: ATENCIÓN, SUPERVISIÓN Y TRATAMIENTO" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=22;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1380" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Participantes -->
+    <mxCell id="usuario" value="Usuario" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;shape=umlActor;fillColor=#FFFFFF;strokeColor=#263445;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="60" y="80" width="40" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="sis" value="sistema:Sistema" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="180" y="90" width="180" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="pac" value="paciente:PacienteGeneral" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="420" y="90" width="220" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="med" value="medico:MedicoGeneral" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="700" y="90" width="210" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="jefe" value="jefe:JefeEnfermeria" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="970" y="90" width="200" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="enf" value="enfermero:EnfermeroEspecialista" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1230" y="90" width="240" height="45" as="geometry" />
+    </mxCell>
+
+    <!-- Lifelines -->
+    <mxCell id="u_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="79" y="800" width="2" height="2" as="geometry" /></mxCell>
+    <mxCell id="s_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="269" y="800" width="2" height="2" as="geometry" /></mxCell>
+    <mxCell id="p_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="529" y="800" width="2" height="2" as="geometry" /></mxCell>
+    <mxCell id="m_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="804" y="800" width="2" height="2" as="geometry" /></mxCell>
+    <mxCell id="j_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="1069" y="800" width="2" height="2" as="geometry" /></mxCell>
+    <mxCell id="e_end" value="" style="html=1;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="1349" y="800" width="2" height="2" as="geometry" /></mxCell>
+
+    <mxCell id="ll_u" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="usuario" target="u_end"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ll_s" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="sis" target="s_end"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ll_p" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="pac" target="p_end"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ll_m" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="med" target="m_end"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ll_j" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="jefe" target="j_end"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ll_e" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;edgeStyle=none;" edge="1" parent="1" source="enf" target="e_end"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- Activaciones -->
+    <mxCell id="act_u" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="72" y="150" width="16" height="620" as="geometry" /></mxCell>
+    <mxCell id="act_s" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="262" y="150" width="16" height="150" as="geometry" /></mxCell>
+    <mxCell id="act_p" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="522" y="320" width="16" height="420" as="geometry" /></mxCell>
+    <mxCell id="act_m" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="797" y="360" width="16" height="170" as="geometry" /></mxCell>
+    <mxCell id="act_j" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="1062" y="550" width="16" height="70" as="geometry" /></mxCell>
+    <mxCell id="act_e" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1"><mxGeometry x="1342" y="640" width="16" height="70" as="geometry" /></mxCell>
+
+    <!-- Mensajes -->
+    <mxCell id="msg1" value="1: registroPaciente(paciente)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_u" target="act_s">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="88" y="170" as="sourcePoint"/><mxPoint x="262" y="170" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="msg2" value="2: true (registrado)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_s" target="act_u">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="262" y="195" as="sourcePoint"/><mxPoint x="88" y="195" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+    <mxCell id="msg3" value="3: registroMedico(medico)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_u" target="act_s">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="88" y="235" as="sourcePoint"/><mxPoint x="262" y="235" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="msg4" value="4: true (asignado)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_s" target="act_u">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="262" y="260" as="sourcePoint"/><mxPoint x="88" y="260" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+    <mxCell id="msg5" value="5: solicitarConsulta()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_u" target="act_p">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="88" y="335" as="sourcePoint"/><mxPoint x="522" y="335" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+    <mxCell id="msg6" value="6: darConsulta(this)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_p" target="act_m">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="538" y="375" as="sourcePoint"/><mxPoint x="797" y="375" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="msg7" value="7: true (inicia consulta)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_m" target="act_p">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="797" y="405" as="sourcePoint"/><mxPoint x="538" y="405" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+    <mxCell id="msg8" value="8: darTratamiento(this)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_p" target="act_m">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="538" y="445" as="sourcePoint"/><mxPoint x="797" y="445" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="msg9" value="9: true (receta y asignación hospitalaria)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_m" target="act_p">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="797" y="490" as="sourcePoint"/><mxPoint x="538" y="490" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+    <!-- Supervisión por Jefe de Enfermería -->
+    <mxCell id="msg10" value="10: autorizarMedicamentos(paciente)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_p" target="act_j">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="538" y="565" as="sourcePoint"/><mxPoint x="1062" y="565" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="msg11" value="11: true (dosis autorizada)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_j" target="act_p">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="1062" y="595" as="sourcePoint"/><mxPoint x="538" y="595" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+    <!-- Administración por Enfermero -->
+    <mxCell id="msg12" value="12: darTratamiento(paciente)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;endArrow=block;endFill=1;" edge="1" parent="1" source="act_p" target="act_e">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="538" y="655" as="sourcePoint"/><mxPoint x="1342" y="655" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="msg13" value="13: true (tratamiento aplicado)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_e" target="act_p">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="1342" y="685" as="sourcePoint"/><mxPoint x="538" y="685" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+    <mxCell id="msg14" value="14: atención completada satisfactoriamente" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;rounded=0;strokeColor=#263445;edgeStyle=none;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="act_p" target="act_u">
+      <mxGeometry relative="1" as="geometry"><mxPoint as="offset" y="-12" /><mxPoint x="522" y="725" as="sourcePoint"/><mxPoint x="88" y="725" as="targetPoint"/></mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
