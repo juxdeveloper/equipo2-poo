@@ -1,0 +1,118 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{lmodern,microtype,graphicx,caption,pdfpages}
+\usepackage{amsmath,amssymb,booktabs,tabularx,longtable,xcolor,adjustbox}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\numberwithin{figure}{section}
+\newcommand{\figura}[3]{%
+  \begin{figure}[p]
+    \centering
+    \IfFileExists{#1}{%
+      \includegraphics[width=\linewidth,height=.75\textheight,keepaspectratio]{#1}%
+    }{%
+      \fbox{\rule{0pt}{1.5in}\rule{.9\linewidth}{0pt}}%
+    }
+    \caption{#2}\label{#3}
+  \end{figure}%
+}
+\begin{document}
+\ifdefined\PortadaPDF
+  \includepdf[pages=1,fitpaper=false,pagecommand={}]{\PortadaPDF}
+\else
+  \PackageError{reporte}{Falta definir PortadaPDF}{Inyecte la ruta privada de la portada convertida al compilar.}
+\fi
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+\subsection{Planteamiento del problema}
+El diseño de sistemas en la programación orientada a objetos demanda herramientas formales que permitan representar con precisión tanto la estructura interna de las clases como su comportamiento en tiempo de ejecución. En aplicaciones con arquitecturas modulares, jerarquías de herencia y contratos mediante interfaces, la ausencia de especificaciones visuales normalizadas dificulta el análisis de responsabilidades, la trazabilidad de interacciones y la verificación de requerimientos. Por ello, resulta indispensable elaborar modelos rigurosos que reflejen fielmente el código desarrollado en las etapas previas del curso, abarcando encapsulamiento, taxonomías polimórficas y flujos de coordinación hospitalaria.
+
+\subsection{Motivación}
+El Lenguaje Unificado de Modelado (UML) constituye el estándar internacional indiscutible en la ingeniería de software para abstraer, documentar y comunicar sistemas de cómputo. Desarrollar diagramas de clases y de secuencia fidedignos no solo afianza la comprensión teórica de conceptos cardinales como multiplicidad, ligadura dinámica y composición, sino que proporciona un mapa técnico indispensable para la auditoría y depuración de software. La consolidación de estos esquemas visuales permite garantizar la cohesión modular y clarificar el ciclo de vida de los objetos en escenarios de ejecución real.
+
+\subsection{Objetivos}
+El objetivo primordial de esta práctica consiste en elaborar diagramas UML normalizados de relaciones de clases y de interacción de secuencia para los proyectos desarrollados a lo largo del curso, excluyendo la práctica seis conforme a las indicaciones académicas. Específicamente, se modelan los sistemas correspondientes a la práctica cinco (encapsulamiento y tipos básicos), práctica siete (jerarquía de cuadriláteros), práctica ocho (interfaces y polimorfismo) y la segunda fase del proyecto integral (gestión hospitalaria), comprobando que cada elemento estructural y mensaje de control guarde total fidelidad con el código fuente.
+
+\section{Marco Teórico}
+El estándar UML \cite{omguml} define diagramas clasificados en dos grandes categorías: estructurales y de comportamiento. Dentro de los diagramas estructurales, el diagrama de clases modela el catálogo estático del sistema descomponiendo cada entidad en tres compartimentos normalizados: nombre del tipo, atributos con visibilidad y operaciones con parámetros y tipos de retorno \cite{boochuml}. Las visibilidades se denotan mediante símbolos estándar: público ($+$), privado ($-$), protegido ($\#$) y paquete ($\sim$). Asimismo, las relaciones entre clases capturan vínculos semánticos específicos: la asociación modela navegación bidireccional o unidireccional con multiplicidades en ambos extremos; la agregación y composición denotan relaciones de todo y parte, diferenciándose en que la composición implica pertenencia existencial exclusiva representada mediante un rombo relleno en el extremo del contenedor; la generalización expresa herencia mediante flecha con punta triangular cerrada; y la realización manifiesta la implementación de interfaces \cite{fowleruml}.
+
+Por su parte, los diagramas de interacción, y en particular los diagramas de secuencia, pertenecen a los diagramas de comportamiento y modelan el intercambio temporal de mensajes entre participantes \cite{pressmanse}. El tiempo avanza de arriba hacia abajo a lo largo de las líneas de vida verticales discontinuas asociadas a cada objeto o actor. Los rectángulos de activación o focos de control indican los períodos en que un objeto ejecuta un método. Los mensajes síncronos se grafican mediante flechas horizontales con punta triangular rellena hacia el receptor, las respuestas o valores devueltos mediante flechas discontinuas con punta abierta hacia el emisor, y los mensajes de instanciación con el estereotipo de constructor dirigidos hacia la cabecera del nuevo objeto ubicado a la altura de su creación.
+
+\clearpage
+\section{Desarrollo}
+\subsection{Práctica 5: Encapsulamiento y Manipulación de Objetos}
+En la práctica cinco se abordó el diseño elemental de clases mediante encapsulamiento estricto en las clases \texttt{Fecha} y \texttt{Empleado}. La figura~\ref{fig:clasespcinco} expone el diagrama de clases correspondiente, donde se aprecian atributos privados y métodos selectores y modificadores debidamente tipados. La clase \texttt{MainEmpleado} actúa como cliente que instancia dos objetos de tipo \texttt{Empleado} para calcular el salario anual y aplicar el incremento salarial establecido. La figura~\ref{fig:secpcinco} modela la secuencia de ejecución de este caso representativo, exhibiendo la llamada inicial de consola, la construcción sucesiva de ambas instancias a su altura respectiva y las consultas y modificaciones síncronas.
+
+\figura{../Diagramas/clases_p5.png}{Diagrama de clases UML de la práctica 5 (Fecha y Empleado).}{fig:clasespcinco}
+\figura{../Diagramas/secuencia_p5.png}{Diagrama de secuencia UML de la práctica 5 (Ejecución de MainEmpleado).}{fig:secpcinco}
+
+\clearpage
+\subsection{Práctica 7: Jerarquía de Herencia de Cuadriláteros}
+La práctica siete implementó una taxonomía geométrica en la que la superclase \texttt{Cuadrilatero} almacena cuatro vértices bidimensionales modelados mediante la clase \texttt{Punto}. En la figura~\ref{fig:clasespsiete} se ilustra la relación de composición fuerte entre \texttt{Cuadrilatero} y \texttt{Punto} con multiplicidad obligatoria de 1 a 4. Posteriormente, se despliega la cadena de generalización: \texttt{Trapezoide} hereda de \texttt{Cuadrilatero}, \texttt{Paralelogramo} extiende a \texttt{Trapezoide}, \texttt{Rectangulo} especializa a \texttt{Paralelogramo} y finalmente \texttt{Cuadrado} deriva de \texttt{Rectangulo}. La figura~\ref{fig:secpsiete} documenta el diagrama de secuencia donde la clase \texttt{Main} instancia los cuatro vértices requeridos, crea el objeto \texttt{Cuadrado} y solicita el cálculo de área, el cual realiza una delegación anidada sobre \texttt{getLado()} y \texttt{getLongitud()}.
+
+\figura{../Diagramas/clases_p7.png}{Diagrama de clases UML de la práctica 7 (Jerarquía de Cuadriláteros).}{fig:clasespsiete}
+\figura{../Diagramas/secuencia_p7.png}{Diagrama de secuencia UML de la práctica 7 (Instanciación y cálculo de área de Cuadrado).}{fig:secpsiete}
+
+\clearpage
+\subsection{Práctica 8: Interfaces y Polimorfismo de Emisiones}
+En la práctica ocho se exploró el desacoplamiento estructurado implementando la interfaz común \texttt{HuellaCarbono}, la cual define la firma polimórfica \texttt{getHuellaCarbono()}. Como se exhibe en la figura~\ref{fig:clasespocho}, las entidades \texttt{Edificio}, \texttt{Auto} y \texttt{Bicicleta} implementan este contrato formal. La figura~\ref{fig:secpocho} presenta el diagrama de secuencia donde se observa la construcción de los objetos y su agrupamiento en una colección homogénea, sobre la cual un fragmento combinado de ciclo (\texttt{loop}) efectúa llamadas polimórficas que resuelven dinámicamente el valor de emisiones propio de cada tipo de entidad.
+
+\figura{../Diagramas/clases_p8.png}{Diagrama de clases UML de la práctica 8 (Huella de carbono y ventana GUI).}{fig:clasespocho}
+\figura{../Diagramas/secuencia_p8.png}{Diagrama de secuencia UML de la práctica 8 (Recorrido polimórfico de emisiones).}{fig:secpocho}
+
+\clearpage
+\subsection{Proyecto Fase 2: Arquitectura del Sistema Hospitalario}
+La segunda fase del proyecto integral representó el reto arquitectónico más complejo, integrando roles clínicos y administrativos alrededor de la clase \texttt{Sistema}. La figura~\ref{fig:clasesproy} detalla la estructura global: la interfaz \texttt{AtencionMedica} es implementada por las clases abstractas \texttt{Medico} y \texttt{Enfermero}; la jerarquía médica se subdivide en \texttt{MedicoGeneral} y \texttt{MedicoEspecialista}, mientras que el personal de enfermería comprende \texttt{EnfermeroEspecialista} y el supervisor \texttt{JefeEnfermeria}. Los pacientes se modelan bajo la abstracción \texttt{Paciente}, extendida en \texttt{PacienteGeneral} y \texttt{PacienteEspecialidad}. Las relaciones de agregación y asociación plasman restricciones operativas exactas: el hospital coordina múltiples médicos y enfermeros; cada médico administra hasta diez pacientes, y cada enfermero asiste un máximo de tres pacientes.
+
+En la figura~\ref{fig:secproy} se sintetiza el diagrama de secuencia para un flujo de atención médica integral. El escenario abarca el registro de la persona en el catálogo del hospital, la solicitud y atención de la consulta médica, la prescripción y tratamiento inicial, la autorización de medicamentos controlados por el jefe de área y la aplicación final por el enfermero especialista.
+
+\figura{../Diagramas/clases_proyecto2.png}{Diagrama de clases UML del Proyecto Fase 2 (Sistema Hospitalario).}{fig:clasesproy}
+\figura{../Diagramas/secuencia_proyecto2.png}{Diagrama de secuencia UML del Proyecto Fase 2 (Flujo de atención y supervisión).}{fig:secproy}
+
+\clearpage
+\section{Resultados}
+La formulación de los ocho diagramas UML permitió constatar la total congruencia entre el diseño conceptual y las implementaciones de Java previamente estabilizadas. En la tabla~\ref{tab:resumen_modelos} se resume la cobertura alcanzada por cada esquema respecto a clases, miembros y participantes dinámicos.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Inventario técnico de los diagramas UML elaborados.}
+  \label{tab:resumen_modelos}
+  \begin{tabularx}{\linewidth}{@{} l l l X @{}}
+    \toprule
+    \textbf{Sistema} & \textbf{Diagramas} & \textbf{Categoría} & \textbf{Elementos clave} \\
+    \midrule
+    Práctica 5 & Clases y Secuencia & Encapsulamiento & 4 clases; llamadas y retornos síncronos \\
+    Práctica 7 & Clases y Secuencia & Herencia & Composición 1:4; 5 niveles de herencia \\
+    Práctica 8 & Clases y Secuencia & Interfaces & 1 interfaz; 3 realizaciones; ciclo loop \\
+    Proyecto 2 & Clases y Secuencia & Sistema integral & 12 clases; roles clínicos y supervisión \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Cada una de las figuras integradas en el documento cumple estrictamente con el estándar educativo acordado: geometría ortogonal sin curvaturas, tipografía proporcional legible superior a 10 puntos en impresión y anclaje exacto de extremos de conexión. Los diagramas de secuencia evidencian la temporalidad rigurosa del flujo de ejecución sin recurrir a invocaciones artificiales ni cruces improcedentes de líneas de vida.
+
+\section{Conclusiones}
+El desarrollo sistemático de diagramas UML de clases y secuencia para los sistemas implementados en el curso demostró la importancia crítica de contar con una representación gráfica formal antes y durante la codificación. Mediante los diagramas de clases fue posible validar que las responsabilidades estuvieran correctamente distribuidas, que los niveles de visibilidad protegieran el estado interno de los objetos y que las multiplicidades reflejaran con precisión las reglas de negocio del problema.
+
+Asimismo, los diagramas de secuencia permitieron contrastar la dinámica real de ejecución de cada programa con el flujo previsto, evidenciando cómo el polimorfismo y la delegación modular simplifican la arquitectura de control. En particular, la modelación de la fase dos del proyecto hospitalario exhibió cómo un esquema de interacción bien estructurado previene ambigüedades en la coordinación de múltiples roles y en la asignación de recursos limitados. En conjunto, estos entregables consolidan una metodología de ingeniería de software robusta, legible y académicamente verificable.
+
+\begin{thebibliography}{9}
+\bibitem{omguml}
+Object Management Group. \emph{Unified Modeling Language Specification (OMG UML), Version 2.5.1}. OMG Document Formal/2017-12-05, Needham, MA, 2017.
+
+\bibitem{boochuml}
+G.~Booch, J.~Rumbaugh y I.~Jacobson. \emph{The Unified Modeling Language User Guide}. 2.ª~ed., Addison-Wesley Professional, Boston, MA, 2005.
+
+\bibitem{fowleruml}
+M.~Fowler. \emph{UML Distilled: A Brief Guide to the Standard Object Modeling Language}. 3.ª~ed., Addison-Wesley, Boston, MA, 2004.
+
+\bibitem{pressmanse}
+R.~S.~Pressman y B.~R.~Maxim. \emph{Software Engineering: A Practitioner's Approach}. 9.ª~ed., McGraw-Hill Education, Nueva York, NY, 2020.
+\end{thebibliography}
+
+\end{document}
