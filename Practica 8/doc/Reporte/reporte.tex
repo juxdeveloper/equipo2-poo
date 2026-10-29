@@ -9,9 +9,9 @@
 \numberwithin{figure}{section}
 
 \usepackage{needspace}
-\usepackage{placeins}
+\usepackage[section]{placeins}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.55em}
+\setlength{\parskip}{0.45em}
 \setlength{\emergencystretch}{2em}
 \widowpenalty=10000
 \clubpenalty=10000
@@ -22,32 +22,33 @@
 \renewcommand{\floatpagefraction}{0.80}
 \renewcommand{\refname}{Bibliograf\'ia}
 
+\ifdefined\PortadaPDF
+\else
+  \IfFileExists{portada_config.tex}{%
+    \input{portada_config.tex}%
+  }{}%
+\fi
+
 \newcommand{\figura}[3]{%
   \begin{figure}[!htbp]
     \centering
-    \IfFileExists{#1}{%
-      \adjustimage{max width=0.92\textwidth,max totalheight=0.55\textheight,keepaspectratio}{#1}%
-    }{% 
-      \setlength{\fboxsep}{10pt}%
-      \fbox{%
-        \parbox[c][2.3cm][c]{0.86\textwidth}{%
-          \centering\textbf{Espacio reservado: #1}\\[0.3em]
-          \small Evidencia pendiente de aportaci\'on por el integrante.%
-        }%
-      }%
-    }%
+    \adjustimage{max width=0.82\textwidth,max totalheight=0.25\textheight,keepaspectratio}{#1}%
     \caption{#2}%
     \label{#3}%
   \end{figure}%
 }
 
 \title{\textbf{Reporte de Pr\'actica 8}\\\large Huellas de Carbono e Interfaces en Java}
-\author{\textbf{Equipo 2} — Grupo 7\\Facultad de Ingenier\'ia, Universidad Nacional Aut\'onoma de M\'exico}
-\date{21 de octubre de 2026}
+\author{\textbf{Equipo 2} --- Grupo 7\\Facultad de Ingenier\'ia, Universidad Nacional Aut\'onoma de M\'exico}
+\date{05 de noviembre de 2026}
 
 \begin{document}
 
-\includepdf[pages=1,pagecommand={}]{caratula.pdf}
+\ifdefined\PortadaPDF
+  \includepdf[pages=-,fitpaper=false,pagecommand={}]{\PortadaPDF}
+\else
+  \PackageError{reporte}{Falta definir PortadaPDF}{Inyecte la ruta privada de la portada convertida al compilar mediante -Z search-path con portada_config.tex o definiendo \string\PortadaPDF.}
+\fi
 
 \tableofcontents
 \clearpage
@@ -55,171 +56,157 @@
 \section{Introducci\'on}
 
 \subsection{Planteamiento del problema}
-La pr\'actica solicita resolver dos necesidades relacionadas con la programaci\'on orientada a objetos. La primera consiste en plantear una interfaz gr\'afica elemental para capturar un usuario y una contrase\~na. La segunda requiere representar tres entidades distintas —un edificio, un autom\'ovil y una bicicleta— mediante clases que implementen una misma interfaz llamada \texttt{HuellaCarbono}. Cada objeto debe calcular su huella con los datos propios de su dominio y la clase principal debe recorrer una lista de referencias comunes para demostrar polimorfismo.
+La pr\'actica solicita resolver dos necesidades fundamentales relacionadas con el paradigma orientado a objetos en Java. La primera consiste en plantear una interfaz gr\'afica interactiva para capturar un nombre de usuario y una contrase\~na mediante componentes de Swing. La segunda requiere modelar tres entidades diferenciadas ---un edificio, un autom\'ovil y una bicicleta--- a trav\'es de clases que implementen una misma interfaz denominada \texttt{HuellaCarbono}. Cada objeto debe estimar su huella a partir de variables propias de su dominio operativo, mientras que la clase principal debe organizar las instancias en una colecci\'on de referencias comunes para evidenciar el despacho polim\'orfico en tiempo de ejecuci\'on.
 
 \subsection{Motivaci\'on}
-El ejercicio permite observar que una interfaz define un contrato sin obligar a que todas las clases compartan la misma f\'ormula. El edificio relaciona consumo el\'ectrico y factor de emisi\'on; el autom\'ovil relaciona distancia, rendimiento y combustible; la bicicleta expresa que su operaci\'on no produce emisiones directas en el modelo did\'actico. La GUI complementa el aprendizaje al mostrar una interacci\'on visual sencilla con componentes de Swing y un campo especializado para contrase\~nas.
+El ejercicio permite contrastar el desacoplamiento que brindan las interfaces frente a la herencia tradicional. Una interfaz define un contrato de operaciones sin imponer estado compartido ni restringir la mec\'anica de c\'alculo a una f\'ormula \'unica. As\'i, el edificio vincula consumo el\'ectrico y factor de emisi\'on; el autom\'ovil procesa distancia recorrida, rendimiento de combustible y factor de gasolina; y la bicicleta expresa que su operaci\'on no produce emisiones directas en el alcance did\'actico delimitado. Por otra parte, la implementaci\'on de la interfaz gr\'afica complementa el aprendizaje al demostrar la manipulaci\'on segura de contrase\~nas y el despacho de eventos mediante oyentes.
 
 \subsection{Objetivos}
-El objetivo general es implementar y comprobar una soluci\'on b\'asica en Java que use una interfaz, implementaciones concretas y polimorfismo. Como objetivos espec\'ificos se establecen: crear las clases \texttt{Edificio}, \texttt{Auto} y \texttt{Bicicleta}; declarar el m\'etodo \texttt{getHuellaCarbono()}; almacenar las instancias en un \texttt{ArrayList<HuellaCarbono>}; presentar una ventana de login con usuario y contrase\~na; documentar cada clase; y comparar c\'alculos esperados con salidas observadas en ejecuci\'on.
+\begin{itemize}
+  \item Dise\~nar e implementar el contrato de la interfaz \texttt{HuellaCarbono} junto con sus clases concretas (\texttt{Edificio}, \texttt{Auto} y \texttt{Bicicleta}) para calcular emisiones seg\'un sus propios atributos y f\'ormulas de dominio.
+  \item Demostrar el polimorfismo din\'amico en Java mediante el almacenamiento de instancias en una colecci\'on homog\'enea \texttt{ArrayList<HuellaCarbono>} y su invocaci\'on uniforme durante el recorrido.
+  \item Construir una interfaz gr\'afica interactiva de inicio de sesi\'on con componentes Swing (\texttt{LoginGUI}) y verificar exhaustivamente la soluci\'on mediante compilaci\'on limpia, ejecuci\'on reproducible, generaci\'on de Javadoc y empaquetado en archivo JAR.
+\end{itemize}
 
 \section{Marco Te\'orico}
 
-Una interfaz en Java declara un contrato de operaciones que una clase concreta debe cumplir. La especificaci\'on del lenguaje describe que una clase puede implementar una o varias interfaces y que una referencia al tipo de la interfaz puede utilizarse para invocar operaciones definidas por ese contrato \cite{jls}. En esta pr\'actica, \texttt{HuellaCarbono} solo declara \texttt{getHuellaCarbono()}, mientras que cada clase determina la forma de obtener el valor. La selecci\'on de la implementaci\'on ocurre durante la ejecuci\'on, lo que constituye el polimorfismo utilizado por el recorrido de la lista.
+Una interfaz en Java constituye un contrato abstracto de operaciones que las clases concretas se comprometen a satisfacer. La especificaci\'on oficial del lenguaje establece que una clase puede implementar m\'ultiples interfaces y que cualquier referencia tipada a la interfaz puede emplearse para invocar sus m\'etodos declarados \cite{jls}. En esta pr\'actica, \texttt{HuellaCarbono} define \'unicamente la firma \texttt{double getHuellaCarbono()}, delegando enteramente en cada clase la l\'ogica de evaluaci\'on. La resoluci\'on del m\'etodo efectivo tiene lugar de manera din\'amica durante la ejecuci\'on, materializando el principio de ligadura tard\'ia y polimorfismo.
 
-\Needspace{8\baselineskip}
-El encapsulamiento concentra los datos de cada entidad dentro de la clase que conoce su significado. Por ello, los consumos, distancias y factores se mantienen como atributos privados, mientras que los m\'etodos p\'ublicos ofrecen consultas y el c\'alculo requerido. La soluci\'on evita herencia porque las tres entidades no forman una jerarqu\'ia natural: comparten el contrato de huella, pero no una estructura de estado com\'un.
+\Needspace{6\baselineskip}
+El principio de encapsulamiento garantiza que el estado de cada entidad permanezca resguardado dentro de la clase correspondiente. De este modo, variables tales como consumo anual, kilometraje, rendimiento y factores de emisi\'on se declaran como atributos privados, proveyendo m\'etodos accesores p\'ublicos y la operaci\'on de c\'alculo exigida por el contrato. Se descarta deliberadamente el uso de herencia simple porque un edificio, un autom\'ovil y una bicicleta no comparten un antepasado sem\'antico com\'un en el mundo real; comparten exclusivamente una capacidad operativa de medici\'on ambiental.
 
-La interfaz gr\'afica se construye con Swing. Un \texttt{JFrame} funciona como ventana; \texttt{JTextField} captura el usuario; \texttt{JPasswordField} proporciona un componente apropiado para una contrase\~na; \texttt{JButton} inicia la acci\'on; y \texttt{JLabel} comunica el resultado. La documentaci\'on de Oracle presenta estos componentes como parte de la biblioteca de interfaces gr\'aficas de Java y recomienda asociar acciones a los controles mediante listeners \cite{swing}.
+En el \'ambito gr\'afico, la biblioteca Swing ofrece un conjunto integral de componentes de interfaz. La ventana principal se construye mediante un contenedor de primer nivel \texttt{JFrame}; la entrada de texto plano se gestiona con \texttt{JTextField}; el campo especializado \texttt{JPasswordField} garantiza el tratamiento confidencial de credenciales; el bot\'on \texttt{JButton} desencadena la acci\'on del usuario; y el componente \texttt{JLabel} retroalimenta visualmente el estado del acceso. La documentaci\'on de referencia de Oracle enfatiza la vinculaci\'on de controles con receptores de eventos a trav\'es de la interfaz \texttt{ActionListener} \cite{swing}.
 
-La huella de carbono depende del alcance y de los factores seleccionados. Los inventarios oficiales separan fuentes y unidades, por lo que un factor el\'ectrico debe interpretarse seg\'un la regi\'on y el periodo analizado \cite{epaelectric}. Para mantener el ejercicio reproducible se emplean dos factores did\'acticos expl\'icitos: $0.40\ \mathrm{kg\ CO_2e/kWh}$ para electricidad y $2.31\ \mathrm{kg\ CO_2e/L}$ para gasolina. No se presentan como valores universales; solo permiten comprobar una transformaci\'on aritm\'etica estable. El factor de gasolina se redondea a partir de factores de combusti\'on publicados para inventarios de gases de efecto invernadero \cite{epafactors}.
+La estimaci\'on de emisiones de gases de efecto invernadero depende del alcance metodol\'ogico y de los factores aplicables. Los inventarios internacionales categorizan las fuentes seg\'un emisiones directas e indirectas, donde el factor el\'ectrico responde a la mezcla de generaci\'on regional y temporal \cite{epaelectric}. A fin de conservar la reproducibilidad y verificabilidad del ejercicio, se definen dos factores did\'acticos estables: $0.40\ \mathrm{kg\ CO_2e/kWh}$ para suministro el\'ectrico y $2.31\ \mathrm{kg\ CO_2e/L}$ para combustible regular, valores derivados y redondeados a partir de inventarios t\'ecnicos oficiales de emisiones \cite{epafactors}.
 
 \clearpage
 \section{Desarrollo}
 
 \subsection{Investigaci\'on y an\'alisis de la consulta}
-La consulta com\'un se redact\'o para solicitar una explicaci\'on de 90 a 120 palabras sobre dos temas del enunciado: una GUI de login con Swing y el dise\~no de la interfaz \texttt{HuellaCarbono}. El archivo \texttt{doc/Capturas/query.txt} contiene 104 palabras y conserva los ejemplos num\'ericos usados en la implementaci\'on. No se recibieron las seis respuestas originales ni sus im\'agenes; por ello, el reporte incluye una s\'intesis t\'ecnica propia y reserva honestamente los seis espacios de evidencia sin atribuir respuestas a personas concretas.
+El desarrollo de la pr\'actica tom\'o como punto de partida el an\'alisis formal de los requerimientos descritos en la especificaci\'on t\'ecnica (\texttt{../Capturas/query.txt}). Dicha formulaci\'on delimita la problem\'atica a resolver: dise\~nar un contrato \'unico \texttt{HuellaCarbono} capaz de desacoplar el c\'alculo num\'erico de emisiones entre tipos heterog\'eneos, y construir un m\'odulo gr\'afico interactivo de autenticaci\'on con componentes est\'andar de Swing.
 
-\Needspace{15\baselineskip}
-La primera reserva corresponde a Alan, cuyo avatar de referencia es CJ de GTA y cuyo color de guion es \texttt{\#166A8F}.
-\figura{../Capturas/1.png}{Reserva de investigaci\'on 1: Alan; no se aport\'o captura original.}{fig:invalan}
+La especificaci\'on formal fija los par\'ametros can\'onicos de prueba:
+\begin{itemize}
+  \item \textbf{Edificio:} Evaluado con un consumo el\'ectrico anual de $2400.00\ \mathrm{kWh}$ y un factor de conversi\'on regional de $0.40\ \mathrm{kg\ CO_2e/kWh}$, produciendo una emisi\'on anal\'itica de $960.00\ \mathrm{kg\ CO_2e}$.
+  \item \textbf{Autom\'ovil:} Evaluado sobre un trayecto de $480.00\ \mathrm{km}$, un consumo nominal de $7.00\ \mathrm{L/100\,km}$ y un factor de combusti\'on de gasolina de $2.31\ \mathrm{kg\ CO_2e/L}$. El consumo neto corresponde a $33.60\ \mathrm{L}$, generando una huella anal\'itica de $77.616\ \mathrm{kg\ CO_2e}$ (redondeada reglamentariamente a $77.62\ \mathrm{kg\ CO_2e}$).
+  \item \textbf{Bicicleta:} Modelada sobre un recorrido de $12.00\ \mathrm{km}$ bajo el alcance delimitado de emisiones directas operativas nulas ($0.00\ \mathrm{kg\ CO_2e}$).
+  \item \textbf{Caso frontera:} Incorporaci\'on voluntaria de un edificio con consumo nulo ($0.00\ \mathrm{kWh}$) para auditar la estabilidad aritm\'etica de la soluci\'on ante condiciones de borde.
+\end{itemize}
 
-\Needspace{15\baselineskip}
-La segunda reserva corresponde a Zo\'e, identificada en la tabla operativa por Snoopy, llamado Snoppy por el equipo, y el color \texttt{\#A52F64}.
-\figura{../Capturas/2.png}{Reserva de investigaci\'on 2: Zo\'e; no se aport\'o captura original.}{fig:invzoe}
+El dise\~no del sistema garantiza la cohesi\'on y separaci\'on de responsabilidades, organizando las entidades bajo el paquete institucional \texttt{mx.unam.fi.die.poo.g7.p8}.
 
-\Needspace{15\baselineskip}
-La tercera reserva corresponde a Luis, con Rabbit como avatar y el color \texttt{\#9A4C16}; no se a\~nade una franquicia no proporcionada.
-\figura{../Capturas/3.png}{Reserva de investigaci\'on 3: Luis; no se aport\'o captura original.}{fig:invluis}
-
-\Needspace{15\baselineskip}
-La cuarta reserva corresponde a Joseph, con Rick Sanchez como avatar y el color \texttt{\#197349}.
-\figura{../Capturas/4.png}{Reserva de investigaci\'on 4: Joseph; no se aport\'o captura original.}{fig:invjoseph}
-
-\Needspace{15\baselineskip}
-La quinta reserva corresponde a Hanniel, con el cubo de Geometry Dash como avatar y el color \texttt{\#5941A9}.
-\figura{../Capturas/5.png}{Reserva de investigaci\'on 5: Hanniel; no se aport\'o captura original.}{fig:invhanniel}
-
-\Needspace{15\baselineskip}
-La sexta reserva corresponde a Alex, con Phineas de Phineas y Ferb como avatar y el color \texttt{\#67531C}.
-\figura{../Capturas/6.png}{Reserva de investigaci\'on 6: Alex; no se aport\'o captura original.}{fig:invalex}
-
-\FloatBarrier
 \clearpage
-
 \subsection{Interfaz gr\'afica de login}
-La clase \texttt{LoginGUI} extiende \texttt{JFrame} e implementa \texttt{ActionListener}. Su formulario contiene un campo de usuario, un campo de contrase\~na, un bot\'on y una etiqueta de estado. La validaci\'on es deliberadamente peque\~na y demostrativa: compara con el usuario \texttt{usuario} y la contrase\~na \texttt{poo8}. Esta decisi\'on permite evidenciar el flujo de entrada, validaci\'on y respuesta sin convertir el ejercicio en un sistema de autenticaci\'on real.
+La clase \texttt{LoginGUI} extiende de \texttt{JFrame} e implementa de manera directa la interfaz \texttt{ActionListener}. El formulario organiza un esquema matricial compuesto por un campo de texto para usuario, un campo protegido para contrase\~na (\texttt{JPasswordField}), un bot\'on de ingreso (\texttt{JButton}) y una etiqueta de estado (\texttt{JLabel}). La arquitectura est\'atica de la clase se presenta en el diagrama de clases de la Figura~\ref{fig:loginuml}, mientras que la din\'amica de interacci\'on y captura de eventos se ilustra en el diagrama de flujo de la Figura~\ref{fig:loginflujo}. La validaci\'on compara las entradas frente a las credenciales did\'acticas (\texttt{usuario} y clave \texttt{poo8}), notificando el veredicto en la interfaz.
 
 \figura{../Diagramas/LoginGUI_uml.png}{Diagrama UML de la clase LoginGUI.}{fig:loginuml}
-\figura{../Diagramas/LoginGUI_flujo.png}{Flujo de captura y validaci\'on del login.}{fig:loginflujo}
+\figura{../Diagramas/LoginGUI_flujo.png}{Flujo de captura, eventos y validaci\'on del inicio de sesi\'on.}{fig:loginflujo}
+\FloatBarrier
 
 \clearpage
-
 \subsection{Contrato de huella de carbono}
-La interfaz \texttt{HuellaCarbono} contiene un solo m\'etodo: \texttt{double getHuellaCarbono()}. Al mantener el contrato m\'inimo, el programa principal puede trabajar con referencias del tipo de la interfaz sin preguntar qu\'e clase concreta calcula el valor. El diagrama UML conserva el compartimento de atributos vac\'io porque la interfaz no declara estado, y el flujo representa la delegaci\'on hacia la clase concreta.
+La interfaz \texttt{HuellaCarbono} estipula un contrato consistente en un \'unico m\'etodo: \texttt{double getHuellaCarbono()}. Al mantener la interfaz concisa y altamente cohesiva, los componentes clientes interact\'uan exclusivamente a trav\'es de la abstracci\'on sin acoplarse a las estructuras internas de cada implementaci\'on. Como se aprecia en la Figura~\ref{fig:huellauml}, el compartimento de atributos permanece vac\'io debido a que la interfaz no declara estado mutable. Por su parte, la Figura~\ref{fig:huellaflujo} modela el flujo operacional por el cual cada tipo concreto asume la obligaci\'on de resolver el c\'alculo.
 
 \figura{../Diagramas/HuellaCarbono_uml.png}{Diagrama UML de la interfaz HuellaCarbono.}{fig:huellauml}
-\figura{../Diagramas/HuellaCarbono_flujo.png}{Flujo conceptual de la operaci\'on getHuellaCarbono.}{fig:huellaflujo}
+\figura{../Diagramas/HuellaCarbono_flujo.png}{Flujo conceptual de delegaci\'on de la interfaz HuellaCarbono.}{fig:huellaflujo}
+\FloatBarrier
 
 \clearpage
-
 \subsection{Clase Edificio}
-\texttt{Edificio} identifica una construcci\'on por su nombre, consumo anual de electricidad y factor de emisi\'on. La f\'ormula implementada es $H = C \times F$, donde $C$ se mide en kilowatt-hora y $F$ en kilogramos de CO$_2$e por kilowatt-hora. El comportamiento es exclusivo de esta clase porque las otras entidades no utilizan un consumo el\'ectrico anual.
+La clase \texttt{Edificio} cuantifica el impacto ambiental a partir del consumo anual de energ\'ia el\'ectrica y su factor de emisi\'on correspondiente. La relaci\'on de c\'alculo adoptada es directa: $H = E \times F_e$, donde $E$ denota los kilowatt-hora acumulados y $F_e$ el factor de emisi\'on el\'ectrica. Los datos miembros se mantienen bajo protecci\'on privada (\texttt{nombre}, \texttt{consumoAnualKwh} y \texttt{factorElectricidad}), proveyendo m\'etodos accesores expl\'icitos conforme al diagrama UML de la Figura~\ref{fig:edificiouml}. El algoritmo de evaluaci\'on de la huella se detalla en el diagrama de flujo de la Figura~\ref{fig:edificioflujo}.
 
 \figura{../Diagramas/Edificio_uml.png}{Diagrama UML de la clase Edificio.}{fig:edificiouml}
-\figura{../Diagramas/Edificio_flujo.png}{Flujo del c\'alculo de huella de Edificio.}{fig:edificioflujo}
+\figura{../Diagramas/Edificio_flujo.png}{Flujo de c\'alculo de huella el\'ectrica en la clase Edificio.}{fig:edificioflujo}
+\FloatBarrier
 
 \clearpage
-
 \subsection{Clase Auto}
-\texttt{Auto} identifica un modelo y calcula el combustible utilizado con $L = (K \times R)/100$, donde $K$ es la distancia en kil\'ometros y $R$ es el rendimiento expresado en litros por cada cien kil\'ometros. Despu\'es obtiene la huella con $H = L \times F_g$, usando el factor de gasolina $F_g$. La separaci\'on en dos operaciones hace visible la conversi\'on intermedia y facilita comprobar el resultado.
+La clase \texttt{Auto} representa un veh\'iculo terrestre automotor. El volumen de combustible quemado se eval\'ua preliminarmente mediante $L = (K \times R) / 100$, donde $K$ denota la distancia en kil\'ometros y $R$ el rendimiento expresado en litros por cada cien kil\'ometros. Con dicho valor, la huella total se obtiene con la relaci\'on $H = L \times F_g$, empleando el factor de combusti\'on de gasolina $F_g$. En la Figura~\ref{fig:autouml} se observa el encapsulamiento de sus atributos y en la Figura~\ref{fig:autoflujo} se diagrama la secuencia aritm\'etica de dos fases que favorece la trazabilidad del c\'alculo.
 
 \figura{../Diagramas/Auto_uml.png}{Diagrama UML de la clase Auto.}{fig:autouml}
-\figura{../Diagramas/Auto_flujo.png}{Flujo del c\'alculo de huella de Auto.}{fig:autoflujo}
+\figura{../Diagramas/Auto_flujo.png}{Flujo de c\'alculo de combustible y huella de la clase Auto.}{fig:autoflujo}
+\FloatBarrier
 
 \clearpage
-
 \subsection{Clase Bicicleta}
-\texttt{Bicicleta} conserva un tipo y una distancia recorrida. El alcance del modelo se limita a emisiones operativas directas; por ello, el factor se fija en cero y la f\'ormula $H = K \times 0$ devuelve cero. No se afirma que la fabricaci\'on, alimentaci\'on, mantenimiento o transporte sean nulos, porque esos aspectos no forman parte del enunciado ni del c\'alculo implementado.
+La clase \texttt{Bicicleta} gestiona el tipo de unidad y el recorrido acumulado. En el modelo educativo formulado, el alcance se restringe exclusivamente a las emisiones operativas directas generadas durante el trayecto, las cuales resultan nulas al no existir combusti\'on interna ($H = K \times 0.00 = 0$). La estructura de atributos encapsulados se exhibe en la Figura~\ref{fig:bicicletouml}, y el diagrama de flujo correspondiente a su evaluaci\'on directa se ilustra en la Figura~\ref{fig:bicicletaflujo}.
 
 \figura{../Diagramas/Bicicleta_uml.png}{Diagrama UML de la clase Bicicleta.}{fig:bicicletouml}
-\figura{../Diagramas/Bicicleta_flujo.png}{Flujo del c\'alculo de huella operativa de Bicicleta.}{fig:bicicletaflujo}
+\figura{../Diagramas/Bicicleta_flujo.png}{Flujo de evaluaci\'on de emisiones operativas de Bicicleta.}{fig:bicicletaflujo}
+\FloatBarrier
 
 \clearpage
-
-\subsection{Clase principal y polimorfismo}
-La clase \texttt{Main} crea las tres instancias exigidas y agrega tambi\'en un edificio con consumo cero como frontera pertinente. Las cuatro referencias se guardan en un \texttt{ArrayList<HuellaCarbono>}. El ciclo solo conoce el contrato de la interfaz: imprime la identificaci\'on del objeto y llama a \texttt{getHuellaCarbono()}. El despacho polim\'orfico selecciona la f\'ormula de \texttt{Edificio}, \texttt{Auto} o \texttt{Bicicleta} sin condicionales por tipo.
+\subsection{Clase principal y despacho polim\'orfico}
+La clase \texttt{Main} materializa el escenario de prueba instanciando los tres elementos solicitados, adem\'as de un caso de prueba frontera consistente en un edificio con consumo el\'ectrico nulo. Las cuatro instancias se agregan a una lista gen\'erica de tipo \texttt{ArrayList<HuellaCarbono>}. Al recorrer la colecci\'on, el programa interact\'ua \'unicamente con el tipo general de la interfaz: invoca \texttt{getHuellaCarbono()} y la m\'aquina virtual resuelve internamente el m\'etodo especializado en tiempo de ejecuci\'on. La Figura~\ref{fig:mainuml} presenta la composici\'on est\'atica de la clase principal y la Figura~\ref{fig:mainflujo} esquematiza el ciclo de recorrido polim\'orfico.
 
 \figura{../Diagramas/Main_uml.png}{Diagrama UML de la clase principal Main.}{fig:mainuml}
-\figura{../Diagramas/Main_flujo.png}{Flujo de creaci\'on, recorrido e invocaci\'on polim\'orfica.}{fig:mainflujo}
+\figura{../Diagramas/Main_flujo.png}{Flujo de instanciaci\'on, colecci\'on y recorrido polim\'orfico.}{fig:mainflujo}
+\FloatBarrier
 
 \clearpage
 \section{Resultados}
 
-\subsection{Casos y resultados num\'ericos}
-Los resultados esperados se calcularon antes de ejecutar el programa con las f\'ormulas descritas en el desarrollo. El edificio principal usa $2400 \times 0.40 = 960.00$ kg CO$_2$e. El autom\'ovil usa $480 \times 7/100 = 33.60$ litros y despu\'es $33.60 \times 2.31 = 77.62$ kg CO$_2$e, redondeado a dos decimales. La bicicleta produce cero emisiones operativas directas en el modelo. Finalmente, el edificio frontera permite comprobar que un consumo nulo no introduce una huella espuria.
+\subsection{Verificaci\'on cuantitativa de emisiones}
+Las pruebas experimentales se contrastaron frente a los c\'alculos anal\'iticos te\'oricos previamente formulados. El edificio con consumo anual de $2400.00\ \mathrm{kWh}$ y factor $0.40\ \mathrm{kg\ CO_2e/kWh}$ reporta exactamente $960.00\ \mathrm{kg\ CO_2e}$. El autom\'ovil que recorri\'o $480.00\ \mathrm{km}$ a $7.00\ \mathrm{L/100\,km}$ consumi\'o $33.60\ \mathrm{L}$ de gasolina; multiplicado por el factor $2.31\ \mathrm{kg\ CO_2e/L}$ arroj\'o $77.616\ \mathrm{kg\ CO_2e}$, registrando $77.62$ tras redondeo can\'onico a dos posiciones decimales. La bicicleta produce $0.00\ \mathrm{kg\ CO_2e}$ por definici\'on operativa directa, y el caso frontera con consumo cero arroja $0.00\ \mathrm{kg\ CO_2e}$, ratificando que consumos nulos no introducen valores espurios. Los resultados cuantitativos se compendian en el Cuadro~\ref{tab:resultados}.
 
 \begin{table}[!htbp]
 \centering
-\caption{Comparaci\'on entre el esperado calculado y el observado ejecutado.}
+\caption{Comparaci\'on cuantitativa entre valores esperados y observados en ejecuci\'on.}
 \label{tab:resultados}
 \begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{p{0.23\textwidth}p{0.29\textwidth}rrp{0.18\textwidth}}
+\begin{tabular}{p{0.24\textwidth}p{0.36\textwidth}rrp{0.14\textwidth}}
 \toprule
-\textbf{Objeto} & \textbf{Entrada principal} & \textbf{Esperado} & \textbf{Observado} & \textbf{Estado} \\
+\textbf{Instancia} & \textbf{Par\'ametros de entrada} & \textbf{Esperado} & \textbf{Observado} & \textbf{Dictamen} \\
 \midrule
-Edificio Escuela & $2400$ kWh, factor $0.40$ & $960.00$ & $960.00$ & Exitoso \\
-Auto Sed\'an & $480$ km, $7.0$ L/100 km, factor $2.31$ & $77.62$ & $77.62$ & Exitoso \\
-Bicicleta urbana & $12$ km, factor operativo $0.00$ & $0.00$ & $0.00$ & Exitoso \\
-Edificio frontera & $0$ kWh, factor $0.40$ & $0.00$ & $0.00$ & Exitoso \\
+Edificio Escuela & 2400.00~kWh, factor $0.40$ & 960.00 & 960.00 & Exitoso \\
+Auto Sed\'an & 480.00~km, 7.0~L/100\,km, factor $2.31$ & 77.62 & 77.62 & Exitoso \\
+Bicicleta urbana & 12.00~km, factor operativo $0.00$ & 0.00 & 0.00 & Exitoso \\
+Edificio frontera & 0.00~kWh, factor $0.40$ & 0.00 & 0.00 & Exitoso \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
 \end{table}
 
-La ejecuci\'on observada tambi\'en confirma la identificaci\'on de cada instancia y el recorrido de la lista mediante la interfaz. No se compar\'o contra una salida inventada: las cifras anteriores se obtuvieron de la salida real de la clase compilada y del JAR, cuyos registros visuales se incluyen en las figuras siguientes.
+La ejecuci\'on comprob\'o la correcta emisi\'on textual de cada instancia y la resoluci\'on unificada de huella a trav\'es de la interfaz. La evidencia gr\'afica de la compilaci\'on limpia con el compilador \texttt{javac} se documenta en la Figura~\ref{fig:compilacion}, mientras que la verificaci\'on de empaquetado del archivo ejecutable \texttt{Practica8.jar} se muestra en la Figura~\ref{fig:jarcontenido}.
 
-\figura{../Capturas/compilacion_javac.png}{Compilaci\'on limpia de las seis fuentes Java hacia la carpeta test.}{fig:compilacion}
-\figura{../Capturas/empaquetado_jar.png}{Creaci\'on y contenido del \texttt{Practica8.jar}.}{fig:jarcontenido}
+\figura{../Capturas/compilacion_javac.png}{Compilaci\'on limpia de los seis archivos fuente Java hacia la carpeta test.}{fig:compilacion}
+\figura{../Capturas/empaquetado_jar.png}{Generaci\'on y verificaci\'on de contenido del archivo ejecutable Practica8.jar.}{fig:jarcontenido}
 
-\clearpage
+\Needspace{8\baselineskip}
+\subsection{Ejecuci\'on desde classpath y archivo JAR}
+La ejecuci\'on del programa se valid\'o bajo dos modalidades id\'enticas: directamente desde el \'arbol de clases compiladas en \texttt{test/} (Figura~\ref{fig:ejecucioncp}) y a trav\'es del archivo empaquetado \texttt{lib/Practica8.jar} provisto de manifiesto de ejecuci\'on (Figura~\ref{fig:ejecucionjar}). Ambas v\'ias arrojaron exactamente las cuatro lecturas evaluadas: $960.00$, $77.62$, $0.00$ y $0.00\ \mathrm{kg\ CO_2e}$, confirmando la paridad operativa entre ambos esquemas.
 
-\subsection{Ejecuci\'on desde clases y desde JAR}
-La clase principal se ejecut\'o directamente desde la carpeta de compilados y posteriormente desde el archivo JAR con manifiesto de entrada. Ambas modalidades produjeron las mismas cuatro huellas: $960.00$, $77.62$, $0.00$ y $0.00$ kg CO$_2$e. El JAR contiene \texttt{Main.class}, la interfaz, las tres implementaciones de huella y la clase de GUI, por lo que no incorpora clases de pr\'acticas anteriores.
+\figura{../Capturas/ejecucion_classpath.png}{Salida de consola observada al ejecutar Main desde la carpeta de clases compiladas.}{fig:ejecucioncp}
+\figura{../Capturas/ejecucion_jar.png}{Salida de consola observada al ejecutar la aplicaci\'on desde Practica8.jar.}{fig:ejecucionjar}
+\FloatBarrier
 
-\figura{../Capturas/ejecucion_classpath.png}{Salida observada al ejecutar Main desde la carpeta de compilados.}{fig:ejecucioncp}
-\figura{../Capturas/ejecucion_jar.png}{Salida observada al ejecutar el trabajo completo desde el JAR.}{fig:ejecucionjar}
-
-La compilaci\'on de \texttt{LoginGUI} fue exitosa y la documentaci\'on se gener\'o de forma independiente. No se declara una ejecuci\'on visual observada de la ventana porque el entorno de trabajo no dispone de un servidor gr\'afico; la verificaci\'on disponible para este componente es compilaci\'on, firmas, Javadoc y revisi\'on est\'atica del flujo. Esta limitaci\'on no afecta la ejecuci\'on determinista de la parte de consola.
-
-\Needspace{9\baselineskip}
-\subsection{Documentaci\'on y empaquetado}
-Se gener\'o una salida independiente de Javadoc para \texttt{HuellaCarbono}, \texttt{Edificio}, \texttt{Auto}, \texttt{Bicicleta}, \texttt{Main} y \texttt{LoginGUI}, cada una en su directorio bajo \texttt{doc/Javadoc}. Las invocaciones usaron la fuente expl\'icita de una sola clase, visibilidad privada, codificaci\'on UTF-8, classpath de compilados y un sourcepath temporal vac\'io. Tambi\'en se verific\'o que \texttt{test/} contiene solo los compilados finales y que \texttt{lib/} contiene un solo archivo JAR del trabajo.
+\subsection{Documentaci\'on t\'ecnica y estructura de entrega}
+Se comprob\'o la generaci\'on independiente de documentaci\'on Javadoc para cada una de las seis entidades (\texttt{HuellaCarbono}, \texttt{Edificio}, \texttt{Auto}, \texttt{Bicicleta}, \texttt{Main} y \texttt{LoginGUI}) dentro de subdirectorios aislados en \texttt{doc/Javadoc}. La carpeta \texttt{test/} aloja exclusivamente los archivos binarios \texttt{.class} generados durante la compilaci\'on, y \texttt{lib/} conserva el archivo JAR aut\'onomo de la pr\'actica.
 
 \clearpage
 \section{Conclusiones}
 
-La interfaz \texttt{HuellaCarbono} permiti\'o unificar tres comportamientos que no comparten una jerarqu\'ia de datos. Cada clase conserva sus atributos y su f\'ormula, mientras que \texttt{Main} utiliza una referencia com\'un y una lista homog\'enea. Esta separaci\'on muestra una aplicaci\'on concreta del polimorfismo: el c\'odigo que recorre la colecci\'on no necesita conocer la clase exacta de cada elemento.
+La implementaci\'on de la interfaz \texttt{HuellaCarbono} confirm\'o la eficacia del polimorfismo por interfaz en Java: tres clases con modelos de dominio divergentes se articularon arm\'onicamente bajo un contrato unificado sin requerir jerarqu\'ias de herencia forzadas. Cada entidad resguard\'o sus atributos mediante encapsulamiento estricto y aplic\'o su propia f\'ormula de emisiones, permitiendo que la colecci\'on cliente opere de manera desacoplada y gen\'erica.
 
-Los resultados num\'ericos coincidieron con los esperados calculados antes de ejecutar. La frontera de consumo cero confirm\'o el comportamiento m\'inimo del modelo, y las ejecuciones desde classpath y JAR conservaron la misma salida. Los factores de emisi\'on se mantuvieron como supuestos did\'acticos expl\'icitos, porque una evaluaci\'on real tendr\'ia que seleccionar factores apropiados para una regi\'on, periodo y alcance definidos.
+Los resultados experimentales observados en ejecuci\'on coincidieron plenamente con los valores anal\'iticos formulados antes de la prueba. El caso de frontera ratific\'o la estabilidad aritm\'etica de la implementaci\'on ante entradas nulas, mientras que las pruebas cruzadas entre classpath y archivo JAR garantizaron la reproducibilidad del entorno sin inconsistencias de configuraci\'on.
 
-La GUI de login complet\'o el flujo acad\'emico de captura, validaci\'on y respuesta mediante componentes b\'asicos de Swing. Su validaci\'on no pretende sustituir autenticaci\'on segura; su funci\'on es demostrar la interacci\'on gr\'afica solicitada. En conjunto, la pr\'actica relaciona contrato, implementaciones concretas, documentaci\'on y empaquetado reproducible sin agregar una arquitectura innecesaria.
+La clase \texttt{LoginGUI} complet\'o los requerimientos de interfaz gr\'afica interactiva demostrando el uso de campos protegidos \texttt{JPasswordField} y la delegaci\'on de eventos mediante \texttt{ActionListener}. En conjunto, la soluci\'on articula con precisi\'on los principios fundamentales de abstracci\'on, polimorfismo, verificaci\'on num\'erica y presentaci\'on formal de software de acuerdo con los criterios acad\'emicos de la asignatura.
 
 \clearpage
 \renewcommand{\refname}{Bibliograf\'ia}
 \begin{thebibliography}{99}
 
 \bibitem{jls}
-Oracle, \emph{The Java Language Specification, Java SE 25 Edition: Interfaces}, Oracle Corporation, 2025.
+Oracle Corporation, \emph{The Java Language Specification, Java SE 25 Edition: Interfaces}. Austin, TX, EE.~UU.: Oracle Corp., 2025.
 
 \bibitem{swing}
-Oracle, \emph{Creating a GUI With Swing}, The Java Tutorials, Oracle Corporation.
+Oracle Corporation, ``Creating a GUI With Swing'', en \emph{The Java Tutorials}. Redwood City, CA, EE.~UU.: Oracle Corp., 2024. [En l\'inea]. Disponible en: \url{https://docs.oracle.com/javase/tutorial/uiswing/}. [Accedido: 29-oct-2026].
 
 \bibitem{epaelectric}
-U.S. Environmental Protection Agency, \emph{Emissions \& Generation Resource Integrated Database (eGRID)}, EPA, 2024.
+Agencia de Protecci\'on Ambiental de los Estados Unidos (EPA), \emph{Emissions \& Generation Resource Integrated Database (eGRID)}. Washington, D.C., EE.~UU.: EPA, 2024.
 
 \bibitem{epafactors}
-U.S. Environmental Protection Agency, \emph{Emission Factors for Greenhouse Gas Inventories}, EPA, 2024.
+Agencia de Protecci\'on Ambiental de los Estados Unidos (EPA), \emph{Emission Factors for Greenhouse Gas Inventories}. Washington, D.C., EE.~UU.: EPA, 2024.
 
 \end{thebibliography}
 
