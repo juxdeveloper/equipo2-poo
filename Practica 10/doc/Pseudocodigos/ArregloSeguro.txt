@@ -1,0 +1,53 @@
+Algoritmo ProbarOrdenCatch
+    Entrada:
+        tamano: Entero (capacidad para inicializar el arreglo, o -999 para indicar referencia nula)
+        indice: Entero (posición destino de la asignación)
+        textoValor: Cadena de texto (representación textual del número entero)
+    Salida:
+        mensajeResultado: Cadena de texto (reporte del éxito o de la excepción capturada)
+
+    Inicio
+        Intentar
+            // 1. Configuración de la referencia del arreglo
+            Si tamano es igual a -999 Entonces
+                elementos <- nulo
+            Si no
+                elementos <- nuevo arreglo de enteros con capacidad tamano
+            Fin Si
+
+            // 2. Delegación de la conversión y almacenamiento
+            guardado <- almacenarEnIndice(indice, textoValor)
+
+            // 3. Generación del mensaje exitoso
+            mensajeResultado <- "Exito: valor " concatenado con guardado concatenado con " almacenado en indice " concatenado con indice
+            Retornar mensajeResultado
+
+        Capturar ArrayIndexOutOfBoundsException (específica de índice)
+            mensajeResultado <- "Capturada ArrayIndexOutOfBoundsException (especifica de indice): indice " concatenado con indice concatenado con " fuera de rango"
+            Retornar mensajeResultado
+
+        Capturar NegativeArraySizeException (específica de tamaño)
+            mensajeResultado <- "Capturada NegativeArraySizeException (especifica de tamano): tamano negativo " concatenado con tamano
+            Retornar mensajeResultado
+
+        Capturar NumberFormatException (específica de formato)
+            mensajeResultado <- "Capturada NumberFormatException (especifica de formato): texto invalido \"" concatenado con textoValor concatenado con "\""
+            Retornar mensajeResultado
+
+        Capturar NullPointerException (específica de referencia)
+            mensajeResultado <- "Capturada NullPointerException (especifica de referencia): arreglo nulo"
+            Retornar mensajeResultado
+
+        Capturar IndexOutOfBoundsException (intermedia de índice)
+            mensajeResultado <- "Capturada IndexOutOfBoundsException (intermedia de indice): " concatenado con mensajeError
+            Retornar mensajeResultado
+
+        Capturar RuntimeException (general de ejecución)
+            mensajeResultado <- "Capturada RuntimeException (general de ejecucion): " concatenado con mensajeError
+            Retornar mensajeResultado
+
+        Capturar Exception (superclase general de excepciones)
+            mensajeResultado <- "Capturada Exception (superclase general): " concatenado con mensajeError
+            Retornar mensajeResultado
+
+    Fin Algoritmo

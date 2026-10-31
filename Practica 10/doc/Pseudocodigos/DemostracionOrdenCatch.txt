@@ -1,0 +1,50 @@
+Algoritmo PrincipalDemostracionOrdenCatch
+    Entrada:
+        argumentos: Arreglo de cadenas (parámetros de línea de comandos, no requeridos)
+    Salida:
+        Ninguna (impresión directa en la consola estándar)
+
+    Inicio
+        // 1. Inicialización del lector de consola
+        crear lector de consola estándar
+
+        // 2. Lectura interactiva de los parámetros de usuario
+        Escribir "Tamano del arreglo: "
+        tamano <- leer entero desde lector
+
+        Escribir "Indice a escribir: "
+        indice <- leer entero desde lector
+
+        Escribir "Valor entero en texto: "
+        textoValor <- leer cadena desde lector
+
+        // 3. Instanciación del objeto coordinador de pruebas
+        demo <- nuevo DemostracionOrdenCatch con capacidad inicial 3
+
+        // 4. Encabezado de demostración
+        Escribir "=== Demostracion del orden de bloques catch con un arreglo ==="
+
+        // 5. Evaluación y despliegue del caso provisto por el usuario
+        resultadoUsuario <- demo.ejecutarCaso(tamano, indice, textoValor)
+        Escribir "Caso ingresado -> " concatenado con resultadoUsuario
+
+        // 6. Batería predefinida para verificar la jerarquía de excepciones
+        // Caso 1: Índice fuera de rango (específica de índice)
+        resultadoCaso1 <- demo.ejecutarCaso(3, 5, "10")
+        Escribir "Caso 1 (Indice fuera de rango) -> " concatenado con resultadoCaso1
+
+        // Caso 2: Tamaño negativo (específica de tamaño)
+        resultadoCaso2 <- demo.ejecutarCaso(-2, 0, "10")
+        Escribir "Caso 2 (Tamano negativo) -> " concatenado con resultadoCaso2
+
+        // Caso 3: Formato textual no numérico (específica de formato)
+        resultadoCaso3 <- demo.ejecutarCaso(3, 1, "abc")
+        Escribir "Caso 3 (Formato invalido) -> " concatenado con resultadoCaso3
+
+        // Caso 4: Arreglo nulo (específica de referencia)
+        resultadoCaso4 <- demo.ejecutarCaso(-999, 0, "10")
+        Escribir "Caso 4 (Arreglo nulo) -> " concatenado con resultadoCaso4
+
+        // 7. Liberación de recursos
+        cerrar lector de consola
+    Fin Algoritmo
