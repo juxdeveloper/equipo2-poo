@@ -1,0 +1,21 @@
+<mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="title" value="Diagrama de Clase — ArregloSeguro" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=22;fontStyle=1;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="640" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="c_as" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="40" y="80" width="640" height="230" as="geometry" />
+    </mxCell>
+    <mxCell id="c_as_h" value="ArregloSeguro" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="c_as">
+      <mxGeometry x="0" y="0" width="640" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="c_as_a" value="- elementos: int[]" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=15;" vertex="1" parent="c_as">
+      <mxGeometry x="0" y="45" width="640" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="c_as_o" value="+ ArregloSeguro(tamano: int)&lt;br&gt;+ almacenarEnIndice(indice: int, textoValor: String): int&lt;br&gt;+ probarOrdenCatch(tamano: int, indice: int, textoValor: String): String&lt;br&gt;+ obtenerTamano(): int" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=15;" vertex="1" parent="c_as">
+      <mxGeometry x="0" y="90" width="640" height="140" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
