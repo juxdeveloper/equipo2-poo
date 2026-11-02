@@ -1,0 +1,227 @@
+<mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <mxCell id="title" value="Diagrama de Secuencia UML — Ejecución de Casos y Captura Ordenada de Excepciones" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=22;fontStyle=1;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1500" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== PARTICIPANTES ==================== -->
+    <!-- Participante 1: Actor Usuario (center 100) -->
+    <mxCell id="u_actor" value="Usuario" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;fontStyle=1;strokeWidth=2;rounded=0;shape=umlActor;fillColor=#FFFFFF;strokeColor=#263445;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="80" y="70" width="40" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Participante 2: Clase DemostracionOrdenCatch (center 460) -->
+    <mxCell id="p_doc_class" value="DemostracionOrdenCatch" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="310" y="75" width="300" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Participante 3: Instancia demo:DemostracionOrdenCatch (center 930) -->
+    <mxCell id="p_demo_inst" value="demo:DemostracionOrdenCatch" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#D5E8D4;strokeColor=#82B366;spacingLeft=25;align=center;" vertex="1" parent="1">
+      <mxGeometry x="770" y="225" width="320" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Participante 4: Instancia evaluador:ArregloSeguro (center 1400) -->
+    <mxCell id="p_eval_inst" value="evaluador:ArregloSeguro" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;spacingLeft=25;align=center;" vertex="1" parent="1">
+      <mxGeometry x="1250" y="305" width="300" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Puntos terminales de Lifelines -->
+    <mxCell id="u_end" value="" style="opacity=0;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="99" y="1070" width="2" height="2" as="geometry" />
+    </mxCell>
+    <mxCell id="doc_end" value="" style="opacity=0;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="459" y="1070" width="2" height="2" as="geometry" />
+    </mxCell>
+    <mxCell id="demo_end" value="" style="opacity=0;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="929" y="1070" width="2" height="2" as="geometry" />
+    </mxCell>
+    <mxCell id="eval_end" value="" style="opacity=0;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="1399" y="1070" width="2" height="2" as="geometry" />
+    </mxCell>
+
+    <!-- Lifelines -->
+    <mxCell id="ll_u" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;curved=0;" edge="1" parent="1" source="u_actor" target="u_end">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="ll_doc" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;curved=0;" edge="1" parent="1" source="p_doc_class" target="doc_end">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="ll_demo" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;curved=0;" edge="1" parent="1" source="p_demo_inst" target="demo_end">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="ll_eval" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;curved=0;" edge="1" parent="1" source="p_eval_inst" target="eval_end">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== BLOQUE ALT ==================== -->
+    <mxCell id="alt_frame" value="" style="shape=rect;fillColor=none;strokeColor=#263445;strokeWidth=2;rounded=0;" vertex="1" parent="1">
+      <mxGeometry x="350" y="620" width="1170" height="360" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="alt_tag" value="alt" style="shape=rect;fillColor=#E1D5E7;strokeColor=#263445;strokeWidth=2;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;fontStyle=1;" vertex="1" parent="alt_frame">
+      <mxGeometry x="0" y="0" width="55" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Guard 1 ubicado en x=480..850 (corredor entre DOC y demo) -->
+    <mxCell id="alt_guard1" value="[Caso 1: Asignación válida en límite]&lt;br&gt;tamano = 3, indice = 2, textoValor = &quot;45&quot;" style="text;html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=14;fontStyle=1;strokeColor=none;fillColor=none;align=left;" vertex="1" parent="1">
+      <mxGeometry x="480" y="625" width="400" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- Línea divisoria discontinua del alt a y=800 -->
+    <mxCell id="alt_divider" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;curved=0;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="350" y="800" as="sourcePoint" />
+        <mxPoint x="1520" y="800" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Guard 2 ubicado en x=480..850 (corredor entre DOC y demo) -->
+    <mxCell id="alt_guard2" value="[Caso 2: Frontera fuera de rango]&lt;br&gt;tamano = 3, indice = -1, textoValor = &quot;25&quot;" style="text;html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=14;fontStyle=1;strokeColor=none;fillColor=none;align=left;" vertex="1" parent="1">
+      <mxGeometry x="480" y="805" width="400" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== ACTIVACIONES ==================== -->
+    <mxCell id="act_u" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="92" y="165" width="16" height="890" as="geometry" />
+    </mxCell>
+
+    <mxCell id="act_doc" value="" style="html=1;strokeWidth=2;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="452" y="165" width="16" height="870" as="geometry" />
+    </mxCell>
+
+    <mxCell id="act_demo_ctor" value="" style="html=1;strokeWidth=2;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="922" y="280" width="16" height="150" as="geometry" />
+    </mxCell>
+
+    <mxCell id="act_eval_ctor" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="1392" y="360" width="16" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="act_demo_call" value="" style="html=1;strokeWidth=2;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="922" y="460" width="16" height="520" as="geometry" />
+    </mxCell>
+
+    <mxCell id="act_eval_call" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="1392" y="505" width="16" height="440" as="geometry" />
+    </mxCell>
+
+    <mxCell id="act_eval_nested" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="1400" y="550" width="16" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== MENSAJES (edgeStyle=none para 100% rectitud horizontal) ==================== -->
+    <!-- 1: main(args) en y=180 -->
+    <!-- act_u exitY = (180-165)/890 = 0.0168539; act_doc entryY = (180-165)/870 = 0.0172414 -->
+    <mxCell id="msg1" value="1: main(args)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.0168539;entryX=0;entryY=0.0172414;" edge="1" parent="1" source="act_u" target="act_doc">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 2: «Constructor» DemostracionOrdenCatch(3) en y=250 -->
+    <!-- act_doc exitY = (250-165)/870 = 0.0977011; p_demo_inst entryY = 0.5 (y=250) -->
+    <mxCell id="msg2" value="2: «Constructor» DemostracionOrdenCatch(3)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.0977011;entryX=0;entryY=0.5;" edge="1" parent="1" source="act_doc" target="p_demo_inst">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 3: «Constructor» ArregloSeguro(3) en y=330 -->
+    <!-- act_demo_ctor exitY = (330-280)/150 = 0.3333333; p_eval_inst entryY = 0.5 (y=330) -->
+    <mxCell id="msg3" value="3: «Constructor» ArregloSeguro(3)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.3333333;entryX=0;entryY=0.5;" edge="1" parent="1" source="act_demo_ctor" target="p_eval_inst">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 4: referencia evaluador en y=380 -->
+    <!-- act_eval_ctor exitY = (380-360)/40 = 0.5; act_demo_ctor entryY = (380-280)/150 = 0.6666667 -->
+    <mxCell id="msg4" value="4: referencia evaluador" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=1;entryY=0.6666667;" edge="1" parent="1" source="act_eval_ctor" target="act_demo_ctor">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 5: referencia demo en y=420 -->
+    <!-- act_demo_ctor exitY = (420-280)/150 = 0.9333333; act_doc entryY = (420-165)/870 = 0.2931034 -->
+    <mxCell id="msg5" value="5: referencia demo" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.9333333;entryX=1;entryY=0.2931034;" edge="1" parent="1" source="act_demo_ctor" target="act_doc">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 6: ejecutarCaso(tamano, indice, textoValor) en y=475 -->
+    <!-- act_doc exitY = (475-165)/870 = 0.3563218; act_demo_call entryY = (475-460)/520 = 0.0288462 -->
+    <mxCell id="msg6" value="6: ejecutarCaso(tamano, indice, textoValor)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.3563218;entryX=0;entryY=0.0288462;" edge="1" parent="1" source="act_doc" target="act_demo_call">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 7: probarOrdenCatch(tamano, indice, textoValor) en y=520 -->
+    <!-- act_demo_call exitY = (520-460)/520 = 0.1153846; act_eval_call entryY = (520-505)/440 = 0.0340909 -->
+    <mxCell id="msg7" value="7: probarOrdenCatch(tamano, indice, textoValor)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.1153846;entryX=0;entryY=0.0340909;" edge="1" parent="1" source="act_demo_call" target="act_eval_call">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 8: almacenarEnIndice(indice, textoValor) - Autollamada con texto situado a la DERECHA del bucle -->
+    <mxCell id="msg8_edge" value="" style="html=1;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;curved=0;strokeColor=#263445;endArrow=block;endFill=1;" edge="1" parent="1" source="act_eval_call" target="act_eval_nested">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1450" y="550" />
+          <mxPoint x="1450" y="570" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <!-- Etiqueta 8 colocada a la derecha del bucle (x=1460, y=550), libre de colisiones con barras de activación -->
+    <mxCell id="lbl_msg8" value="8: almacenarEnIndice(indice, textoValor)" style="text;html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;fontStyle=0;strokeColor=none;fillColor=#FFFFFF;align=left;" vertex="1" parent="1">
+      <mxGeometry x="1460" y="547" width="310" height="25" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== MENSAJES DENTRO DEL ALT ==================== -->
+    <!-- Caso 1: 9a en y=685 -->
+    <!-- act_eval_call exitY = (685-505)/440 = 0.4090909; act_demo_call entryY = (685-460)/520 = 0.4326923 -->
+    <mxCell id="msg9a" value="9a: &quot;Exito: valor 45 almacenado en indice 2&quot;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.4090909;entryX=1;entryY=0.4326923;" edge="1" parent="1" source="act_eval_call" target="act_demo_call">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Caso 1: 10a en y=735 -->
+    <!-- act_demo_call exitY = (735-460)/520 = 0.5288462; act_doc entryY = (735-165)/870 = 0.6551724 -->
+    <mxCell id="msg10a" value="10a: &quot;Exito: valor 45 almacenado en indice 2&quot;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5288462;entryX=1;entryY=0.6551724;" edge="1" parent="1" source="act_demo_call" target="act_doc">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Caso 2: 9b en y=865 (dividido en 2 líneas para no desbordar el corredor) -->
+    <!-- act_eval_call exitY = (865-505)/440 = 0.8181818; act_demo_call entryY = (865-460)/520 = 0.7788462 -->
+    <mxCell id="msg9b" value="9b: &quot;Capturada ArrayIndexOutOfBoundsException:&lt;br&gt;(especifica de indice): indice -1 fuera de rango&quot;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=14;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.8181818;entryX=1;entryY=0.7788462;" edge="1" parent="1" source="act_eval_call" target="act_demo_call">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-18" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Caso 2: 10b en y=920 (dividido en 2 líneas, ancho ~340px en corredor de 470px, nunca toca barras) -->
+    <!-- act_demo_call exitY = (920-460)/520 = 0.8846154; act_doc entryY = (920-165)/870 = 0.8678161 -->
+    <mxCell id="msg10b" value="10b: &quot;Capturada ArrayIndexOutOfBoundsException:&lt;br&gt;(especifica de indice): indice -1 fuera de rango&quot;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=14;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.8846154;entryX=1;entryY=0.8678161;" edge="1" parent="1" source="act_demo_call" target="act_doc">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-18" as="offset" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 11: Muestra resultados en consola en y=1005 -->
+    <!-- act_doc exitY = (1005-165)/870 = 0.9655172; act_u entryY = (1005-165)/890 = 0.9438202 -->
+    <mxCell id="msg11" value="11: muestra resultados en consola" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;edgeStyle=none;curved=0;strokeColor=#263445;dashed=1;endArrow=open;endFill=0;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.9655172;entryX=1;entryY=0.9438202;" edge="1" parent="1" source="act_doc" target="act_u">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
