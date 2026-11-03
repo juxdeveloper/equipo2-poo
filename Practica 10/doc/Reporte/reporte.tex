@@ -1,0 +1,215 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{lmodern,microtype,graphicx,caption,pdfpages}
+\usepackage{amsmath,amssymb,booktabs,tabularx,longtable,xcolor,adjustbox}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\numberwithin{figure}{section}
+\newcommand{\figura}[3]{%
+  \begin{figure}[htbp]
+    \centering
+    \IfFileExists{#1}{%
+      \includegraphics[width=\linewidth,height=.78\textheight,keepaspectratio]{#1}%
+    }{%
+      \fbox{\rule{0pt}{1.5in}\rule{.9\linewidth}{0pt}}%
+    }
+    \caption{#2}\label{#3}
+  \end{figure}%
+}
+\begin{document}
+\ifdefined\PortadaPDF
+  \includepdf[pages=1,fitpaper=false,pagecommand={}]{\PortadaPDF}
+\else
+  \PackageError{reporte}{Falta definir PortadaPDF}{Inyecte la ruta privada de la portada convertida al compilar.}
+\fi
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+\subsection{Planteamiento del problema}
+En el desarrollo de software orientado a objetos sobre la plataforma Java, la ocurrencia de eventos anormales e imprevistos durante el tiempo de ejecución constituye una de las principales causas de degradación y terminación prematura de los sistemas computacionales. La arquitectura de Java clasifica dichas condiciones mediante una jerarquía formal en la que convergen fallos críticos e irrecuperables de la máquina virtual y excepciones derivadas de la lógica del programa, del procesamiento de datos en arreglos o de la interacción asíncrona con el usuario en interfaces gráficas. Sin embargo, surge el problema metodológico y técnico de estructurar los mecanismos de detección y recuperación de manera coherente, puesto que una especificación incorrecta o invertida en el orden de captura polimórfica de excepciones genera código inalcanzable y comportamientos ambiguos, mientras que la falta de previsión en componentes visuales compromete la estabilidad del hilo de despacho de eventos.
+
+\subsection{Motivación}
+La construcción de aplicaciones robustas, confiables y tolerantes a fallos requiere que el ingeniero de software comprenda con profundidad la semántica de la jerarquía de excepciones y aplique principios deterministas en el control de anomalías. En los entornos gráficos interactivos, la captura puntual y disciplinada de eventos erróneos previene el congelamiento de la interfaz de usuario y garantiza la integridad del estado del programa sin interrumpir la experiencia de interacción. Asimismo, el tratamiento riguroso de excepciones asociadas a estructuras fundamentales de almacenamiento, como los arreglos, mediante bloques jerárquicos ordenados de lo particular a lo general, asegura una gestión predecible de recursos y consolida las competencias prácticas necesarias para diseñar sistemas orientados a objetos con altos estándares de calidad.
+
+\subsection{Objetivos}
+El objetivo fundamental de esta práctica consiste en analizar, contrastar y documentar la arquitectura de manejo de excepciones en Java SE, caracterizando formalmente las clases constitutivas de la jerarquía \texttt{Error} y las excepciones más comunes en el desarrollo de interfaces gráficas mediante consultas estandarizadas a herramientas de inteligencia artificial generativa, así como validar experimentalmente el principio de especificidad en el ordenamiento de cláusulas \texttt{catch} sobre manipulaciones de arreglos, distinguiendo con precisión los límites entre fallos irrecuperables del sistema y condiciones excepcionales gestionables.
+
+\section{Marco Teórico}
+
+El tratamiento de excepciones en Java se fundamenta en un modelo de propagación tipada y control de flujo alternativo gobernado por clases que heredan de la raíz universal \texttt{java.lang.Throwable} \cite{gosling2023}. La especificación del lenguaje y de la máquina virtual organiza este árbol en dos ramas disjuntas principales: la clase \texttt{java.lang.Error} y la clase \texttt{java.lang.Exception}.
+
+\subsection{Jerarquía fundamental: Throwable, Error y Exception}
+La clase \texttt{Throwable} concentra la funcionalidad inherente a la captura del estado de los registros y de la pila de llamadas (\textit{stack trace}) en el instante preciso de la instanciación de la anomalía, permitiendo diagnosticar la secuencia de invocaciones activas. A partir de ella se derivan dos ramificaciones conceptualmente opuestas:
+\begin{itemize}
+  \item \textbf{La jerarquía \texttt{Error}:} Conforme a la definición de Lindholm et al. \cite{lindholm2023}, comprende anomalías graves originadas usualmente en el entorno del sistema operativo o en el funcionamiento interno de la Máquina Virtual de Java (JVM). Se trata de circunstancias catastróficas tales como el agotamiento de memoria física, la saturación del espacio de pila o la inconsistencia binaria de clases cargadas dinámicamente. Bloch \cite{bloch2018} señala taxativamente que las aplicaciones convencionales no deben intentar capturar ni recuperarse de instancias de \texttt{Error}, ya que no es posible garantizar la consistencia de los datos en memoria tras su detonación.
+  \item \textbf{La jerarquía \texttt{Exception}:} Abarca aquellas condiciones anómalas que un programa bien concebido puede razonablemente anticipar y manejar para restituir el flujo ordinario o culminar tareas de manera ordenada.
+\end{itemize}
+
+\subsection{Excepciones verificadas y no verificadas}
+Dentro de \texttt{Exception}, la plataforma establece una distinción determinante en tiempo de compilación entre excepciones verificadas (\textit{checked}) y no verificadas (\textit{unchecked}) \cite{oracleexceptions}:
+\begin{itemize}
+  \item \textbf{Excepciones verificadas:} Corresponden a todas las subclases de \texttt{Exception} salvo aquellas que descienden de \texttt{RuntimeException}. El compilador de Java impone de forma estricta la regla de declarar o capturar (\textit{catch-or-declare}), exigiendo que el método que pueda originarlas declare una cláusula \texttt{throws} o las procese explícitamente mediante un bloque \texttt{try-catch}.
+  \item \textbf{Excepciones no verificadas:} Engloban a \texttt{java.lang.RuntimeException} y sus descendientes, así como a todas las instancias de \texttt{Error}. Estas excepciones surgen primordialmente a raíz de defectos de programación, violaciones de contratos de algoritmos o manipulación impropia de tipos y referencias, por lo que el compilador no demanda su declaración obligatoria, delegando en el diseñador del software la responsabilidad de prevenirlas mediante comprobaciones previas.
+\end{itemize}
+
+\subsection{Excepciones en interfaces gráficas de usuario (GUI)}
+El desarrollo de interfaces gráficas en Java con las bibliotecas estándar Swing y AWT opera bajo un paradigma reactivo orientado a eventos, coordinado de manera asíncrona por un hilo especializado denominado \textit{Event Dispatch Thread} (EDT) \cite{oracleexceptions}. Una anomalía no controlada que ocurre en el contexto del despachador de eventos compromete la respuesta visual del componente afectado. Entre las excepciones más recurrentes en este ámbito destacan:
+\begin{enumerate}
+  \item \texttt{NullPointerException}: Invocación de operaciones sobre referencias nulas en componentes, oyentes de eventos o modelos de datos como \texttt{DefaultListModel} o \texttt{TableModel} que no han sido inicializados.
+  \item \texttt{IllegalArgumentException}: Provisión de argumentos con valores fuera de rango o incompatibles a administradores de esquemas de disposición (\textit{LayoutManagers}) o métodos de dimensionamiento.
+  \item \texttt{IllegalStateException}: Modificación de componentes visuales en un momento incompatible con su ciclo de vida o alteración del estado de la interfaz fuera del hilo EDT, vulnerando la restricción de confinamiento de hilo (\textit{thread confinement}).
+  \item \texttt{HeadlessException}: Intento de instanciar componentes visuales dependientes de teclado, ratón o monitor en plataformas de ejecución configuradas en modo \textit{headless} (servidores sin pantalla o entornos de integración continua).
+  \item \texttt{IndexOutOfBoundsException}: Consulta o selección de posiciones inexistentes en elementos estructurados con índices, tales como pestañas en \texttt{JTabbedPane}, filas en \texttt{JTable} o elementos en \texttt{JList}.
+  \item \texttt{NumberFormatException}: Subclase de \texttt{IllegalArgumentException} provocada al intentar convertir el texto capturado desde un control \texttt{JTextField} hacia un tipo numérico cuando el usuario introduce caracteres no numéricos o cadenas vacías.
+\end{enumerate}
+
+\subsection{Reglas de orden y especificidad de bloques catch}
+La especificación oficial de Java \cite{gosling2023} estipula que los bloques \texttt{catch} vinculados a una estructura \texttt{try} se evalúan secuencialmente de arriba hacia abajo. En virtud del principio de polimorfismo, una referencia de una superclase es capaz de enlazar cualquier objeto de sus subclases. Por consiguiente, si una cláusula \texttt{catch} que atrapa una superclase antecede a una cláusula que pretende capturar una subclase, esta última se vuelve inalcanzable. El compilador de Java detecta esta condición y rechaza el programa con un error de compilación por código inalcanzable (\textit{unreachable catch block}). De este modo, la regla canónica exige ordenar los bloques de captura en sentido estrictamente decreciente de especificidad: primero las subclases particulares y al final las superclases generalizadas.
+
+\section{Desarrollo}
+
+\subsection{Metodología de consulta a inteligencia artificial generativa}
+Para dar cumplimiento a los requerimientos de investigación técnica de los Ejercicios 1A y 1B, se redactó una consulta unificada de alta precisión técnica depositada en el repositorio bajo la ruta \texttt{Capturas/query.txt}. La consulta estipula una respuesta de 90 a 120 palabras, libre de prefacios o despedidas de cortesía, demandando la explicación estructurada de las clases de la jerarquía \texttt{Error} y de las excepciones características de Swing y AWT, acompañadas obligatoriamente de casos conceptuales representativos.
+
+En apego a los principios de honestidad documental y veracidad académica, se hace constar que en la fase preliminar de insumos no se incorporaron las capturas empíricas individuales correspondientes a los seis integrantes del equipo (Alan, Zoé, Luis, Joseph, Hanniel y Alex). En lugar de simular evidencia ficticia o forzar atribuciones hipotéticas a modelos de lenguaje, el reporte incorpora marcos de reserva formalmente delimitados mediante la macro institucional \texttt{\textbackslash figura}, declarando su carácter pendiente de entrega. En las figuras~\ref{fig:cap1}, \ref{fig:cap2}, \ref{fig:cap3}, \ref{fig:cap4}, \ref{fig:cap5} y~\ref{fig:cap6} se documentan los espacios reservados para las consultas correspondientes a cada integrante.
+
+\figura{../Capturas/1.png}{Consulta pendiente de Alan sobre jerarquía Error y excepciones en GUI.}{fig:cap1}
+
+\figura{../Capturas/2.png}{Consulta pendiente de Zoé sobre jerarquía Error y excepciones en GUI.}{fig:cap2}
+
+\figura{../Capturas/3.png}{Consulta pendiente de Luis sobre jerarquía Error y excepciones en GUI.}{fig:cap3}
+
+\figura{../Capturas/4.png}{Consulta pendiente de Joseph sobre jerarquía Error y excepciones en GUI.}{fig:cap4}
+
+\figura{../Capturas/5.png}{Consulta pendiente de Hanniel sobre jerarquía Error y excepciones en GUI.}{fig:cap5}
+
+\figura{../Capturas/6.png}{Consulta pendiente de Alex sobre jerarquía Error y excepciones en GUI.}{fig:cap6}
+
+\subsection{Síntesis académica del Ejercicio 1A: Clases de la jerarquía Error}
+A partir del análisis de las especificaciones de la plataforma Java \cite{gosling2023,lindholm2023}, se caracterizan a continuación las principales clases pertenecientes a la rama \texttt{java.lang.Error}:
+\begin{itemize}
+  \item \textbf{\texttt{VirtualMachineError}:} Clase abstracta base que agrupa los errores arrojados cuando la máquina virtual se encuentra en un estado degradado irrecuperable o ha agotado los recursos indispensables para continuar su ejecución.
+  \item \textbf{\texttt{OutOfMemoryError}:} Se detona cuando el recolector de basura (\textit{Garbage Collector}) no logra liberar memoria suficiente en el montículo (\textit{heap}) para satisfacer una solicitud de reserva de un nuevo objeto.
+  \item \textbf{\texttt{StackOverflowError}:} Emerge cuando una invocación recursiva sin condición de parada o una cadena desmedida de llamadas a métodos agota el espacio asignado a la pila de ejecución del hilo en curso.
+  \item \textbf{\texttt{LinkageError}:} Clase base que señaliza que una clase presenta una dependencia binaria rota respecto a otra que sufrió modificaciones incompatibles con posterioridad al proceso de compilación original.
+  \item \textbf{\texttt{ExceptionInInitializerError}:} Se produce de forma envolvente cuando ocurre una excepción no controlada dentro de un bloque de inicialización estático (\texttt{static \{...\}}) o durante la asignación inicial de un atributo estático.
+  \item \textbf{\texttt{NoClassDefFoundError}:} Ocurre cuando la JVM o un cargador de clases (\textit{ClassLoader}) procura cargar la definición de una clase que estaba presente en tiempo de compilación pero cuya definición en \textit{bytecode} ya no se localiza en tiempo de ejecución.
+  \item \textbf{\texttt{AssertionError}:} Se lanza cuando falla una comprobación lógica introducida mediante la palabra clave \texttt{assert}, indicando la transgresión de un invariante interno del programa.
+\end{itemize}
+
+\subsection{Síntesis académica del Ejercicio 1B: Excepciones comunes en GUI}
+En los entornos gráficos de Swing y AWT, los flujos interactivos detonan situaciones anómalas que demandan un tratamiento preventivo y correctivo en la capa de presentación:
+\begin{itemize}
+  \item \textbf{\texttt{NullPointerException}:} Ocurre al acceder a métodos de componentes visuales (como \texttt{setText} o \texttt{setVisible}) antes de completar su instanciación en el constructor o método de inicialización.
+  \item \textbf{\texttt{IllegalArgumentException}:} Se manifiesta al asignar valores incongruentes a propiedades de presentación, por ejemplo dimensiones con coordenadas negativas o porcentajes fuera de los rangos válidos.
+  \item \textbf{\texttt{IllegalStateException}:} Sucede cuando se altera la visibilidad o configuración de diálogos modales o ventanas en instantes prohibidos por el ciclo de renderizado, o al manipular componentes Swing fuera del hilo despachador EDT.
+  \item \textbf{\texttt{HeadlessException}:} Ocurre al invocar diálogos interactivos mediante clases auxiliares como \texttt{JOptionPane} en entornos de servidor o microservicios donde no existe un servidor gráfico ni pantalla configurada.
+  \item \textbf{\texttt{IndexOutOfBoundsException}:} Se produce al solicitar la remoción o lectura de una pestaña en \texttt{JTabbedPane} o una fila en \texttt{JTable} con un índice menor a cero o mayor o igual al total de elementos disponibles.
+  \item \textbf{\texttt{NumberFormatException}:} Se genera de forma ubicua cuando el usuario introduce cadenas alfanuméricas o vacías en campos de entrada numérica (\texttt{JTextField}), y la aplicación ejecuta parseos directos mediante \texttt{Integer.parseInt} sin validación previa.
+\end{itemize}
+
+\subsection{Arquitectura y clases de la solución (Ejercicio 2)}
+Para evidenciar experimentalmente la importancia del orden de bloques \texttt{catch} tomando como modelo un arreglo y sus excepciones operativas más comunes, la arquitectura del sistema se organizó en dos clases modulares:
+\begin{enumerate}
+  \item \textbf{Clase \texttt{ArregloSeguro}:} Encapsula un arreglo primitivo de enteros (\texttt{elementos: int[]}) y expone métodos de almacenamiento y verificación controlada. Protege el estado interno permitiendo parametrizar el dimensionamiento, la posición de escritura y la conversión desde cadenas de texto, registrando el comportamiento del evaluador jerárquico.
+  \item \textbf{Clase \texttt{DemostracionOrdenCatch}:} Clase controladora y punto de entrada que administra la interacción con el usuario a través de la consola estándar, orquestando tanto el caso ingresado como una batería integral de pruebas automatizadas para inducir sistemáticamente cada condición anómala.
+\end{enumerate}
+
+La relación estructural entre ambas clases corresponde a una relación de composición fuerte de cardinalidad uno a uno ($1$ a $1$), en la cual \texttt{DemostracionOrdenCatch} posee una instancia privada (\texttt{evaluador}) de tipo \texttt{Arreglo\-Seguro}. La instancia del evaluador nace dentro del constructor del coordinador y su ciclo de vida se encuentra supeditado a él, asegurando coherencia referencial y encapsulamiento. En la figura~\ref{fig:umlglobal} se detalla el diagrama de arquitectura global con la relación de composición ortogonal y sus multiplicidades explícitas. Asimismo, las especificaciones internas de cada entidad se presentan en las figuras~\ref{fig:umlarreglo} y~\ref{fig:umldemo}.
+
+\figura{../Diagramas/uml_global.png}{Diagrama de clases UML de arquitectura general mostrando la relación de composición entre DemostracionOrdenCatch y ArregloSeguro.}{fig:umlglobal}
+
+\figura{../Diagramas/uml_ArregloSeguro.png}{Diagrama de clase individual de ArregloSeguro detallando atributos privados y operaciones públicas.}{fig:umlarreglo}
+
+\figura{../Diagramas/uml_DemostracionOrdenCatch.png}{Diagrama de clase individual de DemostracionOrdenCatch con su atributo de composición y método principal.}{fig:umldemo}
+
+\subsection{Algoritmos, dinámica de ejecución y decisiones de flujo}
+El comportamiento dinámico se rige por la evaluación secuencial de tipos en tiempo de ejecución. En el método evaluador de \texttt{ArregloSeguro}, las operaciones de creación, conversión y acceso se encierran en una estructura de captura dispuesta de menor a mayor jerarquía:
+\begin{enumerate}
+  \item \textbf{Capturas específicas prioritarias:} Se evalúan primero \texttt{Array\-Index\-Out\-Of\-Bounds\-Exception} (para índices fuera de rango), \texttt{Negative\-Array\-Size\-Exception} (dimensiones negativas), \texttt{Number\-Format\-Exception} (entradas no convertibles) y \texttt{Null\-Pointer\-Exception} (referencias nulas).
+  \item \textbf{Capturas intermedias y genéricas:} Posteriormente se disponen las clases intermedias \texttt{Index\-Out\-Of\-Bounds\-Exception} y \texttt{Runtime\-Exception}, reservando al final \texttt{Exception} y \texttt{Throwable} como salvaguardas de contención general.
+\end{enumerate}
+
+Esta decisión de diseño asegura que cada eventualidad sea clasificada con su causa raíz más precisa. En la figura~\ref{fig:flujoarreglo} se representa el diagrama de flujo correspondiente a la lógica de decisión y captura en \texttt{ArregloSeguro}. Por su parte, la figura~\ref{fig:flujodemo} describe el flujo secuencial del método principal en \texttt{DemostracionOrdenCatch}, desde la lectura de parámetros hasta el reporte de resultados en consola. Finalmente, la figura~\ref{fig:secuencia} expone la colaboración temporal y el intercambio de mensajes entre el usuario, el despachador y el evaluador.
+
+\figura{../Diagramas/flujo_ArregloSeguro.png}{Diagrama de flujo del método probarOrdenCatch de la clase ArregloSeguro.}{fig:flujoarreglo}
+
+\figura{../Diagramas/flujo_DemostracionOrdenCatch.png}{Diagrama de flujo del método principal de la clase DemostracionOrdenCatch.}{fig:flujodemo}
+
+\figura{../Diagramas/secuencia_orden_catch.png}{Diagrama de secuencia de la interacción temporal y captura de excepciones.}{fig:secuencia}
+
+\clearpage
+\section{Resultados}
+
+La verificación empírica del sistema se efectuó mediante la ejecución de dos casos de prueba rigurosamente contrastados: un caso representativo en frontera válida y un caso frontera con violación de índice. En la tabla~\ref{tab:resultados} se resume la matriz de condiciones analizadas, contrastando las entradas suministradas, el comportamiento esperado calculado y lo observado en consola.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{3.8cm} >{\raggedright\arraybackslash}X c}
+\toprule
+\textbf{Caso de prueba} & \textbf{Entrada suministrada} & \textbf{Resultado observado / Excepción} & \textbf{Estado} \\
+\midrule
+Caso 1 (Representativo en límite válido) & Tamaño: 3, Índice: 2, Valor: "45" & Almacenamiento exitoso en índice 2 y ejecución de batería de pruebas automáticas & Aprobado \\
+Caso 2 (Frontera en índice negativo) & Tamaño: 3, Índice: -1, Valor: "25" & Captura específica de \texttt{Array\-Index\-Out\-Of\-Bounds\-Exception} sin tocar bloques generales & Aprobado \\
+Prueba automática 1 & Tamaño: 3, Índice: 5 & Captura determinista de \texttt{Array\-Index\-Out\-Of\-Bounds\-Exception} & Aprobado \\
+Prueba automática 2 & Tamaño: -2 & Captura puntual de \texttt{Negative\-Array\-Size\-Exception} & Aprobado \\
+Prueba automática 3 & Texto: "abc" & Intercepción de \texttt{Number\-Format\-Exception} & Aprobado \\
+Prueba automática 4 & Referencia nula & Detección de \texttt{Null\-Pointer\-Exception} & Aprobado \\
+\bottomrule
+\end{tabularx}
+\caption{Matriz de casos de prueba y condiciones evaluadas en el manejo de excepciones.}\label{tab:resultados}
+\end{table}
+
+Los resultados consolidados en la tabla~\ref{tab:resultados} corroboran la correspondencia biunívoca entre las condiciones anómalas inducidas y las cláusulas de captura configuradas en el bloque de manejo de contingencias. La totalidad de las pruebas alcanzaron el estado de aprobación sin desbordar el ámbito de ejecución previsto ni generar fallas no controladas en el hilo principal. A continuación se desglosan en detalle los dos escenarios de ejecución interactiva capturados durante las pruebas del sistema.
+
+\clearpage
+\subsection{Caso 1: Representativo (Éxito en límite válido de arreglo)}
+En el Caso 1 se evaluó la inserción en la posición extrema válida de un arreglo tridimensional ($N=3$, índice $2$). El comportamiento esperado calculado postulaba la correcta inserción del valor numérico $45$ en la posición máxima admisible sin disparar excepciones, seguido de la activación secuencial de las cuatro pruebas automáticas complementarias. El comportamiento observado coincidió con exactitud total caracter por caracter, finalizando con código de salida $0$. En la figura~\ref{fig:casovalido} se aprecia la captura de la consola ejecutada en el entorno de pruebas.
+
+\figura{../Capturas/ejecucion_caso_valido.png}{Captura de ejecución en consola del Caso 1 representativo demostrando inserción exitosa y capturas automáticas.}{fig:casovalido}
+
+\subsection{Caso 2: Frontera (Índice negativo fuera de rango)}
+En el Caso 2 se evaluó el comportamiento ante un índice frontera inválido consistente en un entero negativo ($-1$). El comportamiento esperado calculado exigía que la anomalía fuera interceptada de manera inmediata y unívoca por la cláusula específica \texttt{catch (ArrayIndexOutOfBoundsException e)}, impidiendo la propagación hacia \texttt{IndexOutOfBoundsException} o \texttt{Exception}. La salida observada en consola confirmó con exactitud dicha captura particular, conservando la estabilidad del proceso y ejecutando con normalidad los casos automáticos posteriores, tal como se documenta en la figura~\ref{fig:casofrontera}.
+
+\figura{../Capturas/ejecucion_caso_frontera.png}{Captura de ejecución en consola del Caso 2 frontera mostrando la intercepción por ArrayIndexOutOfBoundsException.}{fig:casofrontera}
+
+\clearpage
+\section{Conclusiones}
+
+El análisis de la arquitectura de excepciones en Java demuestra que el diseño orientado a objetos provee un mecanismo formal y tipado para separar la lógica de negocio habitual de las contingencias de tiempo de ejecución. La separación fundamental entre la jerarquía \texttt{Error} y la jerarquía \texttt{Exception} delimita con precisión la frontera entre las anomalías críticas del entorno de cómputo y la máquina virtual, cuya interrupción es ineludible, y aquellas circunstancias operativas recuperables que deben ser atendidas por el desarrollador para salvaguardar la disponibilidad del software.
+
+Por otra parte, la comprobación experimental de la regla de especificidad en las estructuras \texttt{try-catch} ratifica que el principio de sustitución de Liskov y el polimorfismo exigen un ordenamiento estricto de menor a mayor generalidad en los manejadores de eventos anómalos. La comprensión de este ordenamiento, unida a la prevención de excepciones típicas en interfaces gráficas asíncronas sobre el hilo despachador de eventos, constituye una competencia fundamental para concebir programas estables, predecibles y tolerantes a fallos en el paradigma de programación orientada a objetos.
+
+Finalmente, se constata que la robustez en la manipulación de estructuras de datos como los arreglos reside en combinar comprobaciones preventivas de invariantes con bloques de contingencia tipados. El uso prudente de excepciones no debe concebirse como sustituto del diseño por contrato ni del control algorítmico de precondiciones, sino como una barrera estructurada de contención que previene efectos secundarios indeseados y garantiza la resiliencia del sistema ante entradas no conformes.
+
+\begin{thebibliography}{9}
+
+\bibitem{gosling2023}
+Gosling, J., Joy, B., Steele, G., Bracha, G., Buckley, A., Smith, D., \& Bierman, G. (2023).
+\textit{The Java Language Specification, Java SE 21 Edition}.
+Oracle America, Inc.
+
+\bibitem{lindholm2023}
+Lindholm, T., Yellin, F., Bracha, G., Buckley, A., \& Smith, D. (2023).
+\textit{The Java Virtual Machine Specification, Java SE 21 Edition}.
+Oracle America, Inc.
+
+\bibitem{bloch2018}
+Bloch, J. (2018).
+\textit{Effective Java} (3.ª ed.).
+Addison-Wesley Professional.
+
+\bibitem{oracleexceptions}
+Oracle Corporation. (2022).
+\textit{Lesson: Exceptions. The Java Tutorials}.
+Oracle America, Inc.
+
+\end{thebibliography}
+
+\end{document}
