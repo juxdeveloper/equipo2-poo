@@ -8,15 +8,31 @@
 \usepackage{needspace}
 \usepackage[hidelinks]{hyperref}
 \numberwithin{figure}{section}
-\newcommand{\figura}[3]{%
-  \begin{figure}[htbp]
+% =============================================================================
+% PARÁMETROS DE CONTROL DE FLOTANTES PARA MAQUETACIÓN EDITORIAL TIPO LIBRO
+% =============================================================================
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.80}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{4}
+\setcounter{totalnumber}{6}
+
+% =============================================================================
+% MACRO UNIFICADA Y PROPORCIONAL PARA FIGURAS Y CAPTURAS
+% Permite parámetro opcional [#1] para sobreescribir altura si un diagrama
+% lo amerita (por defecto: 0.36\textheight, que garantiza 2 figuras simétricas por página).
+% =============================================================================
+\newcommand{\figura}[4][0.36\textheight]{%
+  \begin{figure}[!htbp]
     \centering
-    \IfFileExists{#1}{%
-      \includegraphics[width=\linewidth,height=.78\textheight,keepaspectratio]{#1}%
+    \IfFileExists{#2}{%
+      \includegraphics[width=\linewidth,height=#1,keepaspectratio]{#2}%
     }{%
       \fbox{\rule{0pt}{1.1in}\rule{.9\linewidth}{0pt}}%
     }
-    \caption{#2}\label{#3}
+    \caption{#3}\label{#4}
   \end{figure}%
 }
 \begin{document}
@@ -76,10 +92,10 @@ La especificación oficial de Java \cite{gosling2023} estipula que los bloques \
 \subsection{Investigación del Ejercicio 1A: Jerarquía Error en Java}
 Para el Ejercicio 1A, la consulta común depositada en el repositorio bajo la ruta \texttt{Capturas/query\_1A.txt} solicita una respuesta de 90 a 120 palabras, sin fórmulas de cortesía, explicando las clases principales de la jerarquía \texttt{Error} en Java (\texttt{Virtual\-Machine\-Error}, \texttt{Out\-Of\-Memory\-Error}, \texttt{Stack\-Overflow\-Error}, \texttt{Linkage\-Error}, \texttt{Exception\-In\-Initializer\-Error}, \texttt{No\-Class\-Def\-Found\-Error} y \texttt{Assertion\-Error}), detallando su criticidad en la JVM y conservando ejemplos conceptuales breves.
 
-En apego a los principios de honestidad documental, al no haberse incorporado en la etapa preliminar las capturas empíricas de los seis integrantes (Alan, Zoé, Luis, Joseph, Hanniel y Alex), se definen marcos de reserva formal mediante \texttt{\textbackslash figura}, declarando su estado pendiente de entrega. En las figuras~\ref{fig:cap1a1} a~\ref{fig:cap1a6} se presentan los espacios asignados a cada integrante para el Ejercicio 1A.
+Para el desarrollo experimental de esta sección, los seis integrantes del equipo ejecutaron consultas independientes recurriendo a dos de los principales ecosistemas de inteligencia artificial generativa: OpenAI ChatGPT (en modalidades de escritorio Web y aplicación móvil bajo iOS, implementadas por Alan, Zoé, Luis y Hanniel) y Google Gemini (en sus variantes Gemini 4 Argon y Gemini 3.6 Flash para Android, consultadas por Joseph y Alex). A través de la evidencia empírica documentada en las figuras~\ref{fig:cap1a1} a~\ref{fig:cap1a6}, se constató cómo las directivas formuladas condicionaron la granularidad técnica de las respuestas. Mientras que las consultas estándar obtuvieron revisiones taxonómicas tradicionales fundamentadas en la raíz \texttt{java.lang.Throwable}, las instrucciones que incorporaron restricciones de síntesis visual o brevedad rigurosa detonaron esquematizaciones estructurales en árbol y puntualizaciones axiomáticas sobre la naturaleza irrecuperable de dichas anomalías.
 
 \subsubsection{Síntesis académica de la jerarquía Error}
-A partir del análisis de las especificaciones de la plataforma Java \cite{gosling2023,lindholm2023}, se caracterizan a continuación las principales clases pertenecientes a la rama \texttt{java.lang.Error}:
+A partir del análisis de las respuestas empíricas y de las especificaciones canónicas de Java \cite{gosling2023,lindholm2023}, se caracterizan a continuación las principales clases pertenecientes a la rama \texttt{java.lang.Error}:
 \begin{itemize}
   \item \textbf{\texttt{VirtualMachineError}:} Clase abstracta base que agrupa los errores arrojados cuando la máquina virtual se encuentra en un estado degradado irrecuperable o ha agotado los recursos indispensables para continuar su ejecución.
   \item \textbf{\texttt{OutOfMemoryError}:} Se detona cuando el recolector de basura (\textit{Garbage Collector}) no logra liberar memoria suficiente en el montículo (\textit{heap}) para satisfacer una solicitud de reserva de un nuevo objeto.
@@ -90,25 +106,23 @@ A partir del análisis de las especificaciones de la plataforma Java \cite{gosli
   \item \textbf{\texttt{AssertionError}:} Se lanza cuando falla una comprobación lógica introducida mediante la palabra clave \texttt{assert}, indicando la transgresión de un invariante interno del programa.
 \end{itemize}
 
-\figura{../Capturas/1A_1.png}{Consulta pendiente de Alan sobre la jerarquía Error (Ejercicio 1A).}{fig:cap1a1}
-
-\figura{../Capturas/1A_2.png}{Consulta pendiente de Zoé sobre la jerarquía Error (Ejercicio 1A).}{fig:cap1a2}
-
-\figura{../Capturas/1A_3.png}{Consulta pendiente de Luis sobre la jerarquía Error (Ejercicio 1A).}{fig:cap1a3}
+El análisis comparativo entre ambos entornos de procesamiento de lenguaje natural revela una convergencia conceptual unánime con la especificación de la JVM \cite{gosling2023,lindholm2023}. Ambos modelos catalogaron a la jerarquía \texttt{Error} como una rama no verificada (\textit{unchecked}) orientada a fallas catastróficas del sistema operativo o del entorno de cómputo que escapan al control ordinario de la lógica de negocio, desaconsejando de manera unísona su intercepción mediante bloques \texttt{catch}. En las figuras~\ref{fig:cap1a1} a~\ref{fig:cap1a6} se presentan las evidencias directas de las consultas ejecutadas por Alan, Zoé, Luis, Joseph, Hanniel y Alex, validando empíricamente la solidez de las definiciones conceptuales obtenidas frente al estándar oficial de Java.
 
 \clearpage
-
-\figura{../Capturas/1A_4.png}{Consulta pendiente de Joseph sobre la jerarquía Error (Ejercicio 1A).}{fig:cap1a4}
-
-\figura{../Capturas/1A_5.png}{Consulta pendiente de Hanniel sobre la jerarquía Error (Ejercicio 1A).}{fig:cap1a5}
-
-\figura{../Capturas/1A_6.png}{Consulta pendiente de Alex sobre la jerarquía Error (Ejercicio 1A).}{fig:cap1a6}
-
+\figura{../Capturas/1A_1.png}{Consulta de Alan sobre la jerarquía Error en Java (Ejercicio 1A).}{fig:cap1a1}
+\figura{../Capturas/1A_2.png}{Consulta de Zoé sobre la jerarquía Error en Java (Ejercicio 1A).}{fig:cap1a2}
 \clearpage
+\figura{../Capturas/1A_3.png}{Consulta de Luis sobre la jerarquía Error en Java (Ejercicio 1A).}{fig:cap1a3}
+\figura{../Capturas/1A_4.png}{Consulta de Joseph sobre la jerarquía Error en Java (Ejercicio 1A).}{fig:cap1a4}
+\clearpage
+\figura{../Capturas/1A_5.png}{Consulta de Hanniel sobre la jerarquía Error en Java (Ejercicio 1A).}{fig:cap1a5}
+\figura{../Capturas/1A_6.png}{Consulta de Alex sobre la jerarquía Error en Java (Ejercicio 1A).}{fig:cap1a6}
+\clearpage
+
 \subsection{Investigación del Ejercicio 1B: Excepciones comunes en GUI en Java}
 {\sloppy Para el Ejercicio 1B, la consulta común depositada en el repositorio bajo la ruta \texttt{Capturas/query\_1B.txt} solicita una respuesta de 90 a 120 palabras, sin fórmulas de cortesía, explicando las excepciones más recurrentes al programar interfaces gráficas de usuario (GUI) en Java con Swing y AWT: \texttt{Null\-Pointer\-Exception}, \texttt{Illegal\-Argument\-Exception}, \texttt{Illegal\-State\-Exception}, \texttt{Headless\-Exception}, \texttt{Index\-Out\-Of\-Bounds\-Exception} y \texttt{Number\-Format\-Exception}, indicando su contexto de interacción y conservando ejemplos breves de código obligatorios.\par}
 
-Asimismo, al no disponer de las capturas empíricas originales, se disponen marcos de reserva formal que declaran su carácter pendiente. En las figuras~\ref{fig:cap1b1} a~\ref{fig:cap1b6} se asignan los espacios reservados para Alan, Zoé, Luis, Joseph, Hanniel y Alex para el Ejercicio 1B.
+La verificación empírica del Ejercicio~1B se fundamentó en la contrastación de las consultas efectuadas por los seis integrantes del equipo utilizando diversas plataformas: OpenAI ChatGPT (empleado por Alan, Zoé y Luis en sus modalidades web y móvil), Google Gemini (utilizado por Joseph en su versión Gemini 4 Argon y por Alex en Gemini 3.6 Flash) y Anthropic Claude (empleado por Hanniel). A nivel metodológico, se observó una marcada diferenciación en las estrategias de inducción: mientras Alan, Zoé y Luis recurrieron a consultas directas del temario, Hanniel y Joseph adoptaron técnicas de encadenamiento conversacional solicitando estructuras sintéticas y visuales, y Alex impuso restricciones cuantitativas de longitud (\textit{``en 100 palabras''}). A pesar de estas diferencias en la formulación de los \textit{prompts}, las respuestas convergieron de forma consistente en la identificación de anomalías operativas críticas, como la ausencia de periféricos gráficos en entornos de servidor (\texttt{HeadlessException}) y la falta de inicialización previa de referencias en la jerarquía de contención (\texttt{NullPointerException}).
 
 \subsubsection{Síntesis académica de excepciones en interfaces gráficas}
 En los entornos gráficos de Swing y AWT, los flujos interactivos detonan situaciones anómalas que demandan un tratamiento preventivo y correctivo en la capa de presentación:
@@ -121,20 +135,17 @@ En los entornos gráficos de Swing y AWT, los flujos interactivos detonan situac
   \item \textbf{\texttt{NumberFormatException}:} Se genera de forma ubicua cuando el usuario introduce cadenas alfanuméricas o vacías en campos de entrada numérica (\texttt{JTextField}), y la aplicación ejecuta parseos directos mediante \texttt{Integer.parseInt} sin validación previa.
 \end{itemize}
 
-\figura{../Capturas/1B_1.png}{Consulta pendiente de Alan sobre excepciones en GUI (Ejercicio 1B).}{fig:cap1b1}
-
-\figura{../Capturas/1B_2.png}{Consulta pendiente de Zoé sobre excepciones en GUI (Ejercicio 1B).}{fig:cap1b2}
-
-\figura{../Capturas/1B_3.png}{Consulta pendiente de Luis sobre excepciones en GUI (Ejercicio 1B).}{fig:cap1b3}
+{\sloppy En el plano del rigor arquitectónico, los modelos profundizaron en la naturaleza concurrente de las interfaces de usuario en Java, advirtiendo explícitamente que la violación del hilo despachador de eventos (\textit{Event Dispatch Thread} o EDT) detona \texttt{IllegalStateException} si se actualiza la interfaz gráfica fuera del método \texttt{SwingUtilities}.\allowbreak\texttt{invokeLater()}. Asimismo, se caracterizó el origen de \texttt{NumberFormatException} como una vulnerabilidad ubicua provocada por la falta de saneamiento de cadenas en campos de texto (\texttt{JTextField}), y se contextualizó \texttt{IllegalArgumentException} frente a especificaciones espaciales anómalas en los gestores de diseño. En las figuras~\ref{fig:cap1b1} a~\ref{fig:cap1b6} se presentan las evidencias documentales capturadas por cada estudiante, las cuales validan la transversalidad del manejo preventivo de excepciones en la capa de presentación.\par}
 
 \clearpage
-
-\figura{../Capturas/1B_4.png}{Consulta pendiente de Joseph sobre excepciones en GUI (Ejercicio 1B).}{fig:cap1b4}
-
-\figura{../Capturas/1B_5.png}{Consulta pendiente de Hanniel sobre excepciones en GUI (Ejercicio 1B).}{fig:cap1b5}
-
-\figura{../Capturas/1B_6.png}{Consulta pendiente de Alex sobre excepciones en GUI (Ejercicio 1B).}{fig:cap1b6}
-
+\figura{../Capturas/1B_1.png}{Consulta de Alan sobre excepciones comunes en GUI en Java (Ejercicio 1B).}{fig:cap1b1}
+\figura{../Capturas/1B_2.png}{Consulta de Zoé sobre excepciones comunes en GUI en Java (Ejercicio 1B).}{fig:cap1b2}
+\clearpage
+\figura{../Capturas/1B_3.png}{Consulta de Luis sobre excepciones comunes en GUI en Java (Ejercicio 1B).}{fig:cap1b3}
+\figura{../Capturas/1B_4.png}{Consulta de Joseph sobre excepciones comunes en GUI en Java (Ejercicio 1B).}{fig:cap1b4}
+\clearpage
+\figura{../Capturas/1B_5.png}{Consulta de Hanniel sobre excepciones comunes en GUI en Java (Ejercicio 1B).}{fig:cap1b5}
+\figura{../Capturas/1B_6.png}{Consulta de Alex sobre excepciones comunes en GUI en Java (Ejercicio 1B).}{fig:cap1b6}
 \clearpage
 
 \subsection{Arquitectura y clases de la solución (Ejercicio 2)}
