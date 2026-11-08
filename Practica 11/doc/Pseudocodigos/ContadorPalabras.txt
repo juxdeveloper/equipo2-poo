@@ -1,0 +1,62 @@
+Algoritmo CargarArchivo
+    Entrada:
+        archivoSeleccionado: Descriptor de archivo (File que se desea leer y procesar)
+    Salida:
+        Ninguna (actualiza el estado interno de la instancia con archivo, contenido y totalPalabras)
+    Excepciones:
+        IllegalArgumentException: Cuando el archivo es nulo o no posee extensión .txt
+        FileNotFoundException: Cuando el archivo indicado no existe en el sistema
+        IOException: Cuando la ruta no corresponde a un archivo regular o falla la lectura
+
+    Inicio
+        // 1. Validación de parámetro no nulo
+        Si archivoSeleccionado es igual a nulo Entonces
+            Lanzar IllegalArgumentException("El archivo seleccionado no puede ser nulo.")
+        Fin Si
+
+        // 2. Validación de extensión requerida .txt (insensible a mayúsculas/minúsculas)
+        nombreArchivo <- obtenerNombre(archivoSeleccionado) en minúsculas
+        Si NO (nombreArchivo termina con ".txt") Entonces
+            Lanzar IllegalArgumentException("El archivo debe contar con extension .txt: " concatenado con obtenerNombre(archivoSeleccionado))
+        Fin Si
+
+        // 3. Validación de existencia física en el sistema de archivos
+        Si NO existeEnDisco(archivoSeleccionado) Entonces
+            Lanzar FileNotFoundException("El archivo especificado no existe: " concatenado con obtenerRuta(archivoSeleccionado))
+        Fin Si
+
+        // 4. Validación de que corresponda a un archivo regular
+        Si NO esArchivoRegular(archivoSeleccionado) Entonces
+            Lanzar IOException("La ruta indicada no corresponde a un archivo regular: " concatenado con obtenerRuta(archivoSeleccionado))
+        Fin Si
+
+        // 5. Lectura completa del contenido bajo codificación UTF-8
+        textoLeido <- leerCadenaCompleta(obtenerRuta(archivoSeleccionado), Codificacion_UTF_8)
+
+        // 6. Actualización coherente del estado del objeto
+        esteObjeto.archivo <- archivoSeleccionado
+        esteObjeto.contenido <- textoLeido
+        esteObjeto.totalPalabras <- invocar contarPalabras(textoLeido)
+    Fin Algoritmo
+
+
+Algoritmo ContarPalabras
+    Entrada:
+        texto: Cadena de texto (secuencia de caracteres a ser analizada)
+    Salida:
+        conteo: Entero (número total de palabras delimitadas por espacios en blanco)
+
+    Inicio
+        // 1. Validación de cadena nula o vacía
+        Si texto es igual a nulo O longitud(texto con espacios extremos eliminados) es igual a 0 Entonces
+            Retornar 0
+        Fin Si
+
+        // 2. División de la cadena mediante expresión regular para secuencias de espacios
+        textoLimpio <- eliminarEspaciosExtremos(texto)
+        tokens <- dividirCadena(textoLimpio, patronEspaciosEnBlancoUnoOMas)
+
+        // 3. Retorno de la cantidad de elementos resultantes
+        conteo <- cantidadElementos(tokens)
+        Retornar conteo
+    Fin Algoritmo

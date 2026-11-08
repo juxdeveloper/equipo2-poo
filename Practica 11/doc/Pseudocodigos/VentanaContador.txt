@@ -1,0 +1,92 @@
+Algoritmo InicializarComponentes
+    Entrada:
+        Ninguna (opera sobre la instancia de VentanaContador que hereda de JFrame)
+    Salida:
+        Ninguna (configura la disposición gráfica, componentes interactivos y propiedades de la ventana)
+
+    Inicio
+        // 1. Configuración del administrador de diseño principal
+        establecerEsquema(nuevo BorderLayout con espaciado horizontal de 10 y vertical de 10)
+
+        // 2. Construcción y enlace del botón de carga de archivo
+        esteObjeto.botonCargar <- nuevo JButton con texto "Cargar archivo .txt"
+        establecerFuente(esteObjeto.botonCargar, "SansSerif", Negrita, 13)
+        asociarAccion(esteObjeto.botonCargar, evento -> invocar seleccionarYCargarArchivo())
+
+        panelSuperior <- nuevo JPanel con diseño por defecto
+        establecerBorde(panelSuperior, margenVacio(arriba: 10, izquierda: 10, abajo: 5, derecha: 10))
+        agregarAContenedor(panelSuperior, esteObjeto.botonCargar)
+        agregarAEstaVentana(panelSuperior, ZonaNorte)
+
+        // 3. Construcción del área de texto no editable y panel de desplazamiento
+        esteObjeto.areaTexto <- nuevo JTextArea con 18 filas y 50 columnas
+        establecerEditable(esteObjeto.areaTexto, Falso)
+        establecerAjusteDeLinea(esteObjeto.areaTexto, Verdadero)
+        establecerAjustePorPalabra(esteObjeto.areaTexto, Verdadero)
+        establecerFuente(esteObjeto.areaTexto, "Monospaced", Normal, 13)
+
+        esteObjeto.panelDesplazamiento <- nuevo JScrollPane envolviendo esteObjeto.areaTexto
+        establecerPoliticaBarras(esteObjeto.panelDesplazamiento, Vertical: SegunSeNecesite, Horizontal: SegunSeNecesite)
+
+        panelCentral <- nuevo JPanel con diseño BorderLayout
+        establecerBorde(panelCentral, margenVacio(arriba: 0, izquierda: 10, abajo: 0, derecha: 10))
+        agregarAContenedor(panelCentral, esteObjeto.panelDesplazamiento, ZonaCentro)
+        agregarAEstaVentana(panelCentral, ZonaCentro)
+
+        // 4. Construcción de la etiqueta de conteo total de palabras
+        esteObjeto.etiquetaTotal <- nuevo JLabel con texto "Total de palabras: 0"
+        establecerFuente(esteObjeto.etiquetaTotal, "SansSerif", Negrita, 14)
+
+        panelInferior <- nuevo JPanel con diseño por defecto
+        establecerBorde(panelInferior, margenVacio(arriba: 5, izquierda: 10, abajo: 10, derecha: 10))
+        agregarAContenedor(panelInferior, esteObjeto.etiquetaTotal)
+        agregarAEstaVentana(panelInferior, ZonaSur)
+
+        // 5. Ajuste final de dimensiones y posicionamiento de la ventana
+        establecerOperacionCierre(JFrame_SALIR_AL_CERRAR)
+        empaquetarComponentes()
+        centrarEnPantalla()
+    Fin Algoritmo
+
+
+Algoritmo ProcesarArchivo
+    Entrada:
+        archivo: Descriptor de archivo (File que se enviará al modelo para su procesamiento)
+    Salida:
+        Ninguna (actualiza el área de texto y la etiqueta con los datos leídos o muestra error)
+
+    Inicio
+        // 1. Verificación de guardia para descriptor nulo
+        Si archivo es igual a nulo Entonces
+            Retornar
+        Fin Si
+
+        // 2. Bloque de protección frente a excepciones de lectura o formato
+        Intentar
+            // 2.1 Delegación de carga y conteo al modelo
+            esteObjeto.contador.cargarArchivo(archivo)
+
+            // 2.2 Actualización del área de texto con el contenido leído
+            Si esteObjeto.areaTexto no es nulo Entonces
+                esteObjeto.areaTexto.setText(esteObjeto.contador.getContenido())
+                establecerPosicionCursor(esteObjeto.areaTexto, 0)
+            Fin Si
+
+            // 2.3 Actualización de la etiqueta con el total de palabras computado
+            Si esteObjeto.etiquetaTotal no es nulo Entonces
+                textoEtiqueta <- "Total de palabras: " concatenado con esteObjeto.contador.getTotalPalabras()
+                esteObjeto.etiquetaTotal.setText(textoEtiqueta)
+            Fin Si
+
+        Capturar IOException O IllegalArgumentException (excepcionCapturada)
+            // 2.4 Notificación de error al usuario mediante GUI o consola según el entorno
+            Si NO entornoEsHeadless() Entonces
+                mostrarDialogoMensaje(estaVentana,
+                    "Error al cargar el archivo:\n" concatenado con obtenerMensaje(excepcionCapturada),
+                    "Error de Lectura",
+                    TipoMensajeError)
+            Si no
+                escribirEnFlujoError("Error al procesar el archivo: " concatenado con obtenerMensaje(excepcionCapturada))
+            Fin Si
+        Fin Intentar
+    Fin Algoritmo
