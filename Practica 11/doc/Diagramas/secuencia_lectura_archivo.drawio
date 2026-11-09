@@ -1,0 +1,173 @@
+<mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="title" value="Diagrama de Secuencia UML — Carga, Conteo y Despliegue de Archivo en GUI" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=22;fontStyle=1;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1050" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="u_actor" value="Usuario" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;fontStyle=1;strokeWidth=2;rounded=0;shape=umlActor;fillColor=#FFFFFF;strokeColor=#263445;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+      <mxGeometry x="80" y="70" width="40" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="p_vc" value="ventana:VentanaContador" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="320" y="75" width="280" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="p_cp" value="contador:ContadorPalabras" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="780" y="75" width="280" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="u_end" value="" style="opacity=0;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="99" y="880" width="2" height="2" as="geometry" />
+    </mxCell>
+    <mxCell id="vc_end" value="" style="opacity=0;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="459" y="880" width="2" height="2" as="geometry" />
+    </mxCell>
+    <mxCell id="cp_end" value="" style="opacity=0;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="919" y="880" width="2" height="2" as="geometry" />
+    </mxCell>
+    <mxCell id="ll_u" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;curved=0;" edge="1" parent="1" source="u_actor" target="u_end">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="ll_vc" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;curved=0;" edge="1" parent="1" source="p_vc" target="vc_end">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="ll_cp" value="" style="strokeColor=#263445;strokeWidth=1.5;dashed=1;endArrow=none;curved=0;" edge="1" parent="1" source="p_cp" target="cp_end">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="act_u" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="92" y="170" width="16" height="650" as="geometry" />
+    </mxCell>
+    <mxCell id="act_vc" value="" style="html=1;strokeWidth=2;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="452" y="170" width="16" height="650" as="geometry" />
+    </mxCell>
+    <mxCell id="act_vc_sel" value="" style="html=1;strokeWidth=2;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="460" y="215" width="16" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="act_vc_proc" value="" style="html=1;strokeWidth=2;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="460" y="270" width="16" height="510" as="geometry" />
+    </mxCell>
+    <mxCell id="act_cp_load" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="912" y="330" width="16" height="130" as="geometry" />
+    </mxCell>
+    <mxCell id="act_cp_count" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="920" y="370" width="16" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="act_cp_cont" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="912" y="505" width="16" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="act_cp_tot" value="" style="html=1;strokeWidth=2;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="912" y="605" width="16" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="act_vc_gui" value="" style="html=1;strokeWidth=2;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="460" y="700" width="16" height="55" as="geometry" />
+    </mxCell>
+    <mxCell id="m1" value="1: clic en botonCargar" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=none;rounded=0;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="108" y="185" as="sourcePoint" />
+        <mxPoint x="452" y="185" as="targetPoint" />
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m2" value="2: seleccionarYCargarArchivo()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="468" y="215" as="sourcePoint" />
+        <mxPoint x="476" y="240" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="540" y="215" />
+          <mxPoint x="540" y="240" />
+        </Array>
+        <mxPoint x="15" y="-12" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m3" value="3: procesarArchivo(archivo)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="468" y="270" as="sourcePoint" />
+        <mxPoint x="476" y="295" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="540" y="270" />
+          <mxPoint x="540" y="295" />
+        </Array>
+        <mxPoint x="15" y="-12" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m4" value="4: cargarArchivo(archivo)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=none;rounded=0;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="476" y="330" as="sourcePoint" />
+        <mxPoint x="912" y="330" as="targetPoint" />
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m5" value="5: contarPalabras(texto)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="928" y="370" as="sourcePoint" />
+        <mxPoint x="936" y="395" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="1000" y="370" />
+          <mxPoint x="1000" y="395" />
+        </Array>
+        <mxPoint x="15" y="-12" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m6" value="6: totalPalabras: int" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;curved=0;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="1000" y="405" as="sourcePoint" />
+        <mxPoint x="928" y="420" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="1000" y="420" />
+        </Array>
+        <mxPoint x="15" y="-12" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m7" value="7: retorno void (carga completada)" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=none;rounded=0;curved=0;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="912" y="460" as="sourcePoint" />
+        <mxPoint x="476" y="460" as="targetPoint" />
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m8" value="8: getContenido()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=none;rounded=0;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="476" y="505" as="sourcePoint" />
+        <mxPoint x="912" y="505" as="targetPoint" />
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m9" value="9: contenido: String" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=none;rounded=0;curved=0;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="912" y="560" as="sourcePoint" />
+        <mxPoint x="476" y="560" as="targetPoint" />
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m10" value="10: getTotalPalabras()" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=none;rounded=0;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="476" y="605" as="sourcePoint" />
+        <mxPoint x="912" y="605" as="targetPoint" />
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m11" value="11: totalPalabras: int" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=none;rounded=0;curved=0;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="912" y="660" as="sourcePoint" />
+        <mxPoint x="476" y="660" as="targetPoint" />
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m12" value="12: actualizar areaTexto y etiquetaTotal" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="468" y="700" as="sourcePoint" />
+        <mxPoint x="476" y="725" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="550" y="700" />
+          <mxPoint x="550" y="725" />
+        </Array>
+        <mxPoint x="15" y="-12" as="offset" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="m13" value="13: visualización actualizada de contenido y conteo" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=15;strokeColor=#263445;strokeWidth=2;edgeStyle=none;rounded=0;curved=0;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="452" y="780" as="sourcePoint" />
+        <mxPoint x="108" y="780" as="targetPoint" />
+        <mxPoint x="0" y="-14" as="offset" />
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
