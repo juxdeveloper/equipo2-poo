@@ -1,0 +1,60 @@
+<mxGraphModel grid="1" gridSize="10" page="0" background="#FFFFFF">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="title" value="Diagrama de Clases UML — Arquitectura Global con Composición y Herencia" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=22;fontStyle=1;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1340" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="c_jf" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="210" y="80" width="240" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="c_jf_h" value="JFrame" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="c_jf">
+      <mxGeometry x="0" y="0" width="240" height="35" as="geometry" />
+    </mxCell>
+    <mxCell id="c_jf_a" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="c_jf">
+      <mxGeometry x="0" y="35" width="240" height="15" as="geometry" />
+    </mxCell>
+    <mxCell id="c_jf_o" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="c_jf">
+      <mxGeometry x="0" y="50" width="240" height="15" as="geometry" />
+    </mxCell>
+    <mxCell id="c_vc" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;" vertex="1" parent="1">
+      <mxGeometry x="40" y="200" width="580" height="415" as="geometry" />
+    </mxCell>
+    <mxCell id="c_vc_h" value="VentanaContador" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="c_vc">
+      <mxGeometry x="0" y="0" width="580" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="c_vc_a" value="- contador: ContadorPalabras&lt;br&gt;- areaTexto: JTextArea&lt;br&gt;- etiquetaTotal: JLabel&lt;br&gt;- botonCargar: JButton&lt;br&gt;- panelDesplazamiento: JScrollPane" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;align=left;spacingLeft=15;" vertex="1" parent="c_vc">
+      <mxGeometry x="0" y="45" width="580" height="130" as="geometry" />
+    </mxCell>
+    <mxCell id="c_vc_o" value="+ VentanaContador()&lt;br&gt;+ inicializarComponentes(): void&lt;br&gt;+ seleccionarYCargarArchivo(): void&lt;br&gt;+ procesarArchivo(archivo: File): void&lt;br&gt;+ getContador(): ContadorPalabras&lt;br&gt;+ getAreaTexto(): JTextArea&lt;br&gt;+ getEtiquetaTotal(): JLabel&lt;br&gt;+ getBotonCargar(): JButton&lt;br&gt;+ getPanelDesplazamiento(): JScrollPane&lt;br&gt;&lt;u&gt;+ main(args: String[]): void&lt;/u&gt;" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#82B366;align=left;spacingLeft=15;" vertex="1" parent="c_vc">
+      <mxGeometry x="0" y="175" width="580" height="240" as="geometry" />
+    </mxCell>
+    <mxCell id="c_cp" value="" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;" vertex="1" parent="1">
+      <mxGeometry x="840" y="247" width="540" height="320" as="geometry" />
+    </mxCell>
+    <mxCell id="c_cp_h" value="ContadorPalabras" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=18;fontStyle=1;strokeWidth=2;rounded=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="c_cp">
+      <mxGeometry x="0" y="0" width="540" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="c_cp_a" value="- archivo: File&lt;br&gt;- contenido: String&lt;br&gt;- totalPalabras: int" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=15;" vertex="1" parent="c_cp">
+      <mxGeometry x="0" y="45" width="540" height="85" as="geometry" />
+    </mxCell>
+    <mxCell id="c_cp_o" value="+ ContadorPalabras()&lt;br&gt;+ ContadorPalabras(archivo: File)&lt;br&gt;+ cargarArchivo(archivoSeleccionado: File): void&lt;br&gt;+ contarPalabras(texto: String): int&lt;br&gt;+ getArchivo(): File&lt;br&gt;+ getContenido(): String&lt;br&gt;+ getTotalPalabras(): int" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;strokeWidth=2;rounded=0;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;spacingLeft=15;" vertex="1" parent="c_cp">
+      <mxGeometry x="0" y="130" width="540" height="190" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_herencia_global" value="" style="html=1;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;curved=0;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="c_vc" target="c_jf">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="rel_comp" value="" style="html=1;strokeColor=#263445;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=0;curved=0;startArrow=diamondThin;startFill=1;startSize=14;endArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_vc" target="c_cp">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="mult_vc" value="1" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;fontStyle=1;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;align=center;" vertex="1" parent="1">
+      <mxGeometry x="635" y="375" width="30" height="25" as="geometry" />
+    </mxCell>
+    <mxCell id="lbl_rel" value="- contador" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;fontStyle=0;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;align=center;" vertex="1" parent="1">
+      <mxGeometry x="690" y="415" width="100" height="25" as="geometry" />
+    </mxCell>
+    <mxCell id="mult_cp" value="1" style="html=1;fontFamily=Liberation Sans;fontColor=#263445;fontSize=16;fontStyle=1;strokeWidth=2;rounded=0;text;strokeColor=none;fillColor=none;align=center;" vertex="1" parent="1">
+      <mxGeometry x="795" y="375" width="30" height="25" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
