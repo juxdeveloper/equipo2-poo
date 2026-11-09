@@ -1,0 +1,261 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{lmodern,microtype,graphicx,caption,pdfpages}
+\usepackage{amsmath,amssymb,booktabs,tabularx,longtable,xcolor,adjustbox}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\numberwithin{figure}{section}
+
+\newcommand{\figura}[3]{%
+  \begin{figure}[htbp]
+    \centering
+    \IfFileExists{#1}{%
+      \includegraphics[width=\linewidth,height=.78\textheight,keepaspectratio]{#1}%
+    }{%
+      \fbox{\rule{0pt}{1.1in}\rule{.9\linewidth}{0pt}}%
+    }
+    \caption{#2}\label{#3}
+  \end{figure}%
+}
+
+\begin{document}
+\ifdefined\PortadaPDF
+  \includepdf[pages=1,fitpaper=false,pagecommand={}]{\PortadaPDF}
+\else
+  \PackageError{reporte}{Falta definir PortadaPDF}{Inyecte la ruta privada de la portada convertida al compilar.}
+\fi
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+\subsection{Planteamiento del problema}
+En el desarrollo contemporáneo de aplicaciones de escritorio sobre la plataforma Java, la interacción gráfica demanda controles visuales intuitivos integrados armónicamente con flujos de entrada y salida hacia el almacenamiento secundario. La construcción de un sistema para inspeccionar documentos de texto plano plantea el problema de aislar estrictamente la capa de presentación de la lógica algorítmica de análisis textual. El empleo de componentes multilínea en bibliotecas como Swing sin contenedores especializados propicia la pérdida de visibilidad ante desbordamientos de contenido, mientras que la lectura de archivos sin validaciones defensivas de extensión, existencia y codificación estándar ocasiona excepciones no controladas o cómputos erróneos en la cuantificación léxica. Por consiguiente, se requiere formular una solución modular, tipada y resiliente que resuelva con rigor la carga y el procesamiento de archivos de texto.
+
+\subsection{Motivación}
+El paradigma de programación orientada a objetos brinda principios esenciales de encapsulamiento y delegación para gobernar la complejidad del diseño visual y de la persistencia de datos. Contrastar técnicamente marcos consolidados como Swing frente a alternativas modernas como JavaFX, junto con el dominio de operaciones atómicas sobre el sistema de archivos mediante la API Java NIO.2, consolida competencias fundamentales en el estudiante de ingeniería de software. La implementación de un contador de palabras interactivo permite ejercitar la separación Modelo-Vista, el confinamiento seguro de eventos en hilos especializados y la normalización léxica mediante expresiones regulares, garantizando que el software permanezca íntegro y determinista ante entradas arbitrarias del usuario o pruebas automatizadas por terminal.
+
+\subsection{Objetivos}
+El objetivo principal de esta práctica consiste en diseñar, implementar, verificar y documentar una aplicación con interfaz gráfica en Java basada en Swing, acompañada de un análisis comparativo frente a JavaFX, para la lectura de archivos con extensión \texttt{.txt} y la cuantificación precisa de las palabras contenidas. De manera específica, se busca materializar la separación arquitectónica entre la clase de dominio (\texttt{ContadorPalabras}) y la interfaz gráfica (\texttt{VentanaContador}); verificar el comportamiento del sistema mediante casos de prueba representativos y de frontera; comprobar su empaquetado autónomo en un archivo JAR ejecutable; y documentar la investigación conceptual asistida por herramientas de inteligencia artificial generativa.
+
+\clearpage
+\section{Marco Teórico}
+
+\subsection{Cuadros de texto en interfaces gráficas: Swing versus JavaFX}
+La plataforma Java provee dos bibliotecas primordiales para la construcción de interfaces de usuario de escritorio: la biblioteca histórica Swing, ubicada en el paquete \texttt{javax.\-swing}, y la plataforma moderna JavaFX, estructurada bajo el paquete \texttt{javafx.\-scene.\-control} \cite{gosling2023,oracleswing}. La administración y visualización de cadenas de texto plano manifiesta discrepancias arquitectónicas determinantes entre ambos marcos de desarrollo.
+
+En el ecosistema Swing, la gestión textual se bifurca entre \texttt{JTextField} para una sola línea y \texttt{JTextArea} para secuencias multilínea. Una particularidad nodal de \texttt{JTextArea} reside en que actúa como un componente ligero enfocado únicamente en manipular el modelo de documento (\texttt{Document}), careciendo intrínsecamente de barras de desplazamiento o mecanismos de visualización virtualizada \cite{oracleswing}. Si el volumen textual excede los límites espaciales del componente en pantalla, los caracteres sobrantes quedan ocultos. Para proveer capacidades de navegación, la arquitectura de Swing exige envolver explícitamente a \texttt{JTextArea} en un contenedor decorador: la clase \texttt{JScrollPane}. Este último gestiona un área de visualización (\textit{viewport}) y proyecta condicionalmente barras verticales y horizontales según políticas como \texttt{VERTICAL\_SCROLLBAR\_AS\_NEEDED}.
+
+Asimismo, Swing se basa en primitivas gráficas ligeras dibujadas por software en la CPU mediante llamadas 2D sobre AWT, sujetándose al principio de confinamiento de hilo en el Hilo de Despacho de Eventos (\textit{Event Dispatch Thread}, EDT). Toda modificación visual debe canalizarse asíncronamente mediante la instrucción \texttt{SwingUtilities}.\allowbreak\texttt{invokeLater} para impedir anomalías de sincronización \cite{oracleswing}.
+
+Por el contrario, JavaFX introduce controles autónomos dentro de la jerarquía \texttt{TextInputControl}, tales como \texttt{TextField} y \texttt{TextArea}. El control \texttt{TextArea} de JavaFX incorpora de manera nativa e integrada en su propio contenedor visual (\textit{skin}) barras de desplazamiento y ajuste automático de línea (\textit{line wrap}), prescindiendo por completo de envoltorios externos como \texttt{ScrollPane} para el uso general \cite{openjavafx}.
+
+A nivel arquitectónico, JavaFX estructura sus interfaces sobre un Grafo de Escena (\textit{Scene Graph}) procesado con aceleración por hardware en la GPU mediante el motor Prism (DirectX, OpenGL o Metal) \cite{openjavafx}. Asimismo, JavaFX incorpora el enlace reactivo de propiedades (\textit{Property Binding}), donde controles como \texttt{TextArea} exponen propiedades observables como \texttt{textProperty()}, lo que permite sincronizar modelos de datos y vistas de forma declarativa sin requerir escuchadores manuales de bajo nivel (\texttt{DocumentListener}). La apariencia se desacopla mediante hojas de estilo JavaFX CSS y definiciones FXML, orquestando las mutaciones de la escena en el \textit{JavaFX Application Thread} mediante la instrucción \texttt{Platform}.\allowbreak\texttt{runLater}.
+
+\subsection{Manejo de archivos y flujos de entrada/salida en Java NIO.2}
+El acceso a los recursos de almacenamiento secundario en Java transitó desde las primitivas clásicas de flujo basadas en \texttt{java.io.File} y \texttt{BufferedReader} hacia la moderna API de entrada y salida sin bloqueo NIO.2, incorporada en el paquete \texttt{java.nio.file} \cite{oraclejavaio}.
+
+La API NIO.2 estructura el acceso al sistema de archivos mediante la interfaz \texttt{Path} y la clase de utilidades \texttt{Files}. En particular, la operación atómica provista por \texttt{Files.\-readString} asegura la apertura, transferencia completa de bytes y cierre infalible del canal de lectura, previniendo fugas de descriptores de archivos incluso ante excepciones de entrada y salida (\texttt{IOException}) \cite{oraclejavaio}.
+
+Asimismo, la especificación explícita de la codificación resulta indispensable para evitar inconsistencias entre plataformas. El empleo mandatorio de la constante \texttt{Standard\-Charsets.\-UTF\_8} asegura la lectura homogénea de signos ortográficos, acentos diacríticos y caracteres Unicode, garantizando que el análisis léxico opere sobre representaciones deterministas \cite{gosling2023}.
+
+\subsection{Separación arquitectónica entre lógica de dominio e interfaz visual}
+El diseño orientado a objetos postula el aislamiento estricto de las reglas de negocio respecto a los mecanismos de presentación gráfica \cite{bloch2018}. Bajo el patrón arquitectónico Modelo-Vista, el modelo de datos encapsula la validación de archivos, la lectura de bytes y los algoritmos de descomposición textual sin incluir dependencias hacia componentes gráficos como botones, etiquetas o ventanas.
+
+Esta disciplina confiere portabilidad absoluta al modelo, permitiendo reutilizar la clase de análisis en entornos de terminal, pruebas unitarias automatizadas o microservicios. A su vez, delimita con claridad la gestión de fallos: el modelo señala contingencias mediante excepciones tipadas (\texttt{IllegalArgumentException}, \texttt{FileNotFoundException}, \texttt{IOException}), mientras que la vista se restringe a capturarlas y ofrecer retroalimentación comprensible al usuario sin corromper el estado del sistema.
+
+\clearpage
+\section{Desarrollo}
+
+\subsection{Investigación comparativa: Espacio de cuadro de texto en Swing y JavaFX}
+En atención al Ejercicio 1, se definió una consulta estandarizada preservada en el repositorio bajo \texttt{Capturas/query.txt}. Dicha consulta demanda una extensión acotada entre 90 y 120 palabras, omitiendo introducciones y despedidas, orientada a contrastar la gestión de cuadros de texto, concurrencia, enlace reactivo y estilización entre Swing y JavaFX.
+
+A partir del análisis técnico efectuado, se sintetizan en la tabla~\ref{tab:comparativa_gui} las divergencias fundamentales entre ambos paradigmas gráficos de la plataforma Java.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\linewidth}{>{\bfseries\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+Criterio Técnico & Swing (\texttt{javax.\-swing}) & JavaFX (\texttt{javafx.\-scene.\-control}) \\
+\midrule
+Componente de texto monolínea & \texttt{JTextField} con modelo \texttt{Document}. & \texttt{TextField} con texto guía y formateadores. \\
+Componente multilínea & \texttt{JTextArea} sin barras de desplazamiento propias. & \texttt{TextArea} con desplazamiento nativo e integrado. \\
+Soporte de desplazamiento & Exige envoltura manual obligatoria en \texttt{JScrollPane}. & Integrado de fábrica dentro del propio skin visual. \\
+Enlace de datos y reactividad & Oyentes clásicos (\texttt{DocumentListener}, \texttt{CaretListener}). & Enlace reactivo automático mediante \textit{Property Binding}. \\
+Arquitectura de presentación & Jerarquía de componentes ligeros sobre AWT. & Grafo de Escena (\textit{Scene Graph}) de nodos transformables. \\
+Motor de renderizado & Procesamiento por software en CPU vía \texttt{Graphics2D}. & Aceleración por hardware en GPU vía motor Prism. \\
+Estilización y diseño & \textit{Look and Feel} (\texttt{UIManager}) y código imperativo. & Hojas de estilo JavaFX CSS (\texttt{-fx-*}) y marcado FXML. \\
+Hilo principal de eventos & \textit{Event Dispatch Thread} (\texttt{SwingUtilities}.\allowbreak\texttt{invokeLater}). & \textit{JavaFX App.\ Thread} (\texttt{Platform}.\allowbreak\texttt{runLater}). \\
+\bottomrule
+\end{tabularx}
+\caption{Matriz comparativa sistemática entre los entornos gráficos Swing y JavaFX.}\label{tab:comparativa_gui}
+\end{table}
+
+\clearpage
+\subsection{Declaración de capturas de investigación empírica}
+En cumplimiento del principio de honestidad documental, se declara que los seis miembros del equipo de trabajo no disponen en la etapa preliminar de las capturas individuales derivadas de la consulta formulada a las herramientas de inteligencia artificial. En apego a las directrices de rol, se disponen a continuación los marcos de reserva formal mediante la macro \texttt{\textbackslash figura}, documentando su estado pendiente de entrega.
+
+En la figura~\ref{fig:ia1} se reserva el espacio correspondiente a la consulta de Alan. En la figura~\ref{fig:ia2} se reserva la consulta de Zoé, y en la figura~\ref{fig:ia3} la de Luis. Por su parte, en las figuras~\ref{fig:ia4}, \ref{fig:ia5} y~\ref{fig:ia6} se asignan los marcos de reserva para Joseph, Hanniel y Alex, respectivamente.
+
+\figura{../Capturas/1.png}{Consulta IA - Alan (Pendiente)}{fig:ia1}
+
+\figura{../Capturas/2.png}{Consulta IA - Zoé (Pendiente)}{fig:ia2}
+
+\figura{../Capturas/3.png}{Consulta IA - Luis (Pendiente)}{fig:ia3}
+
+\clearpage
+
+\figura{../Capturas/4.png}{Consulta IA - Joseph (Pendiente)}{fig:ia4}
+
+\figura{../Capturas/5.png}{Consulta IA - Hanniel (Pendiente)}{fig:ia5}
+
+\figura{../Capturas/6.png}{Consulta IA - Alex (Pendiente)}{fig:ia6}
+
+\clearpage
+\subsection{Arquitectura del software y especificación de clases (Ejercicio 2)}
+Para resolver la lectura interactiva de archivos de texto plano y el cómputo riguroso de palabras conforme al Ejercicio 2, el sistema se estructuró en dos entidades orientadas a objetos con funciones disjuntas:
+
+\subsubsection{Clase ContadorPalabras (Lógica de Dominio y Modelo)}
+La clase \texttt{ContadorPalabras} constituye el modelo puro del sistema, careciendo de vínculos con paquetes de interfaz gráfica. Su estado interno reúne tres atributos privados: el descriptor \texttt{archivo} de tipo \texttt{File}, la cadena \texttt{contenido} de tipo \texttt{String} para conservar el texto leído, y la variable entera \texttt{totalPalabras} para registrar el total cuantificado.
+
+Su diseño algorítmico comprende los siguientes elementos:
+\begin{itemize}
+  \item \textbf{Constructores:} Provee un constructor por defecto que inicializa el modelo en estado nulo o vacío (cero palabras y cadena vacía), y un constructor sobrecargado parametrizado que recibe un descriptor \texttt{File} e invoca de inmediato a la rutina de carga y validación.
+  \item \textbf{Método \texttt{cargarArchivo(File archivoSeleccionado)}:} Ejecuta una secuencia exhaustiva de comprobaciones previas:
+    \begin{enumerate}
+      \item Verifica que la referencia del archivo no sea nula, arrojando una excepción \texttt{Illegal\-Argument\-Exception} si se transgrede la precondición.
+      \item Normaliza el nombre del archivo a minúsculas mediante \texttt{toLowerCase()} y corrobora que termine estrictamente en el sufijo \texttt{.txt}, disparando \texttt{Illegal\-Argument\-Exception} ante extensiones ajenas.
+      \item Comprueba la presencia física del archivo en el sistema de almacenamiento mediante \texttt{exists()}, arrojando \texttt{FileNotFound\-Exception} ante rutas no encontradas.
+      \item Valida que la ruta corresponda a un archivo regular mediante \texttt{isFile()}, lanzando \texttt{IOException} ante fallos de tipificación.
+      \item Realiza la lectura atómica del fichero completo mediante \texttt{Files.\-readString} bajo la codificación estándar \texttt{Standard\-Charsets.\-UTF\_8}, asigna el contenido al atributo de instancia y despacha el cálculo de palabras.
+    \end{enumerate}
+  \item \textbf{Método \texttt{contarPalabras(String texto)}:} Implementa el algoritmo de tokenización léxica. Si la cadena recibida es nula o carece de caracteres útiles tras la aplicación de \texttt{trim()}, retorna cero de inmediato. Si contiene texto, remueve espacios en los bordes y segmenta el contenido aplicando la expresión regular \verb|\s+| (\textit{whitespace matching}), la cual colapsa secuencias continuas de espacios en blanco, tabulaciones y saltos de línea (\verb|\n|, \verb|\r|). La cantidad de elementos del arreglo resultante equivale de forma exacta al total de palabras computadas.
+  \item \textbf{Métodos de acceso:} Expone métodos de lectura (\texttt{getArchivo}, \texttt{getContenido} y \texttt{getTotalPalabras}), asegurando el encapsulamiento del estado interno.
+\end{itemize}
+
+\subsubsection{Clase VentanaContador (Interfaz Gráfica y Controlador)}
+La clase \texttt{VentanaContador} hereda de \texttt{JFrame}, funcionando como vista interactiva y despachador de eventos de usuario. Encapsula una referencia al modelo \texttt{ContadorPalabras} y gobierna los componentes de la interfaz: el botón \texttt{botonCargar} de tipo \texttt{JButton}, el área de texto \texttt{areaTexto} de tipo \texttt{JTextArea}, la etiqueta informativa \texttt{etiquetaTotal} de tipo \texttt{JLabel} y el contenedor con barras de desplazamiento \texttt{panelDesplazamiento} de tipo \texttt{JScrollPane}.
+
+Las decisiones técnicas de diseño implementadas comprenden:
+\begin{itemize}
+  \item \textbf{Disposición gráfica (\textit{Layout}):} Se emplea un esquema \texttt{BorderLayout}. En la zona norte (\texttt{NORTH}) se aloja el botón de carga dentro de un panel superior; en la zona central (\texttt{CENTER}) se instala el \texttt{JScrollPane} que contiene al \texttt{JTextArea}; y en la zona sur (\texttt{SOUTH}) se presenta la etiqueta con el recuento de palabras.
+  \item \textbf{Configuración del área de texto:} Para garantizar una adecuada presentación visual, el área de texto se configura en modo de solo lectura (\texttt{set\-Editable(false)}), se activa el corte de línea (\texttt{set\-Line\-Wrap(true)}) con ajuste por palabras completas (\texttt{set\-Wrap\-Style\-Word(true)}) y se establece una tipografía monoespaciada uniforme.
+  \item \textbf{Selector de archivos (\texttt{JFileChooser}):} La pulsación del botón activa un cuadro de diálogo interactivo provisto de un filtro \texttt{FileNameExtensionFilter} exclusivo para la extensión \texttt{.txt}, inhabilitando el filtro comodín de todos los archivos (\texttt{setAccept\-All\-File\-Filter\-Used(false)}) para restringir la selección a documentos válidos.
+  \item \textbf{Manejo de excepciones y compatibilidad Headless:} Al confirmar la selección, el método \texttt{procesarArchivo(File)} delega la operación al modelo dentro de un bloque \texttt{try-catch} que intercepta \texttt{IOException} e \texttt{Illegal\-Argument\-Exception}. Si el sistema opera en un entorno gráfico físico, proyecta una alerta con \texttt{JOptionPane.showMessageDialog}. Mediante la consulta a \texttt{GraphicsEnvironment.isHeadless()}, el programa permite además la ejecución automatizada de pruebas sin levantar componentes visuales incompatibles.
+  \item \textbf{Método principal (\texttt{main}):} Incorpora soporte dual para ejecución en modo CLI (si se reciben argumentos con la ruta de un archivo) y modo gráfico interactivo gobernado en el hilo EDT mediante \texttt{SwingUtilities}.\allowbreak\texttt{invokeLater}.
+\end{itemize}
+
+\clearpage
+\subsection{Relaciones estructurales y diagramas UML}
+La arquitectura de clases se fundamenta en una relación de composición dirigida de cardinalidad uno a uno ($1$ a $1$), en la cual \texttt{VentanaContador} posee e inicializa una instancia privada de \texttt{ContadorPalabras}. El modelo mantiene independencia absoluta respecto a los artefactos visuales de Swing.
+
+En la figura~\ref{fig:umlglobal} se detalla el diagrama UML global de clases que exhibe la arquitectura completa del software. Asimismo, en la figura~\ref{fig:umlcontador} se presenta el diagrama de clase individual correspondiente a \texttt{ContadorPalabras}, mientras que en la figura~\ref{fig:umlventana} se ilustra la especificación interna de \texttt{VentanaContador}.
+
+\figura{../Diagramas/uml_global.png}{Diagrama UML global de clases}{fig:umlglobal}
+
+\clearpage
+
+\figura{../Diagramas/uml_ContadorPalabras.png}{Diagrama UML de ContadorPalabras}{fig:umlcontador}
+
+\figura{../Diagramas/uml_VentanaContador.png}{Diagrama UML de VentanaContador}{fig:umlventana}
+
+\clearpage
+\subsection{Dinámica algorítmica y diagramas de comportamiento}
+El comportamiento dinámico del sistema se organiza a través de flujos estructurados de control y validación. En la figura~\ref{fig:flujocontador} se representa el diagrama de flujo correspondiente al método \texttt{cargarArchivo} de la clase \texttt{ContadorPalabras}, detallando la secuencia de comprobaciones defensivas de nulidad, extensión, existencia física y lectura atómica bajo codificación UTF-8.
+
+Por su parte, en la figura~\ref{fig:flujoventana} se documenta el diagrama de flujo de la operación \texttt{procesarArchivo} en \texttt{VentanaContador}, evidenciando la delegación hacia el modelo, la actualización simultánea del área de texto y la etiqueta, y la captura controlada de excepciones.
+
+Finalmente, en la figura~\ref{fig:secuencia} se formaliza el diagrama de secuencia que modela el intercambio temporal de mensajes entre el usuario, el despachador de eventos de \texttt{VentanaContador}, el selector interactivo \texttt{JFileChooser} y la clase \texttt{ContadorPalabras}.
+
+\figura{../Diagramas/flujo_ContadorPalabras.png}{Diagrama de flujo de cargarArchivo}{fig:flujocontador}
+
+\clearpage
+
+\figura{../Diagramas/flujo_VentanaContador.png}{Diagrama de flujo de procesarArchivo}{fig:flujoventana}
+
+\clearpage
+
+\figura{../Diagramas/secuencia_lectura_archivo.png}{Diagrama de secuencia de lectura y actualización}{fig:secuencia}
+
+\clearpage
+\section{Resultados}
+
+La comprobación experimental del sistema se realizó aplicando una batería rigurosa de pruebas sobre el paquete ejecutable generado, contrastando analíticamente los valores esperados frente a los observados en tiempo de ejecución. En la tabla~\ref{tab:resultados_pruebas} se sintetiza la matriz de casos analizados, detallando las entradas proporcionadas, el comportamiento observado y el veredicto funcional alcanzado.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{3.8cm} >{\raggedright\arraybackslash}X c}
+\toprule
+\textbf{Caso de Prueba} & \textbf{Entrada Suministrada} & \textbf{Comportamiento Observado / Conteo} & \textbf{Estado} \\
+\midrule
+Caso 1 (Válido) \newline (\texttt{caso\_\allowbreak valido.txt}) & Archivo estructurado en dos párrafos con puntuación y acentos ortográficos regulares. & Código de salida 0. Lectura atómica UTF-8 íntegra. Conteo exacto de 39 palabras delimitadas por espacios y saltos. & Aprobado \\
+\midrule
+Caso 2 (Frontera) \newline (\texttt{caso\_\allowbreak frontera.txt}) & Archivo con espacios continuos múltiples, tabulaciones (\texttt{\textbackslash t}), saltos repetidos, símbolos (¡!, ¿? \%) y acentos (á, ó, ü, ñ). & Código de salida 0. Colapso determinista de espacios y tabuladores por expresión regular \texttt{\textbackslash s+}. Conteo exacto de 19 palabras. & Aprobado \\
+\bottomrule
+\end{tabularx}
+\caption{Matriz de casos de prueba y verificación experimental del sistema.}\label{tab:resultados_pruebas}
+\end{table}
+
+\subsection{Caso 1: Representativo (Texto estructurado en español)}
+El caso representativo analizó la lectura del archivo \texttt{pruebas/\allowbreak caso\_valido.txt}, cuyo contenido aborda conceptos de programación orientada a objetos organizados en párrafos convencionales. El comportamiento esperado calculado analíticamente preveía el cómputo de 39 palabras bajo codificación UTF-8.
+
+La ejecución observada confirmó con exactitud dicha predicción, reportando 39 palabras sin alteraciones y finalizando con código de salida 0. En la figura~\ref{fig:ejecucionvalida} se exhibe la captura de consola con la evidencia correspondiente.
+
+\figura{../Capturas/ejecucion_caso_valido.png}{Ejecución del caso de prueba válido en terminal}{fig:ejecucionvalida}
+
+\clearpage
+\subsection{Caso 2: Frontera (Espaciados múltiples, tabuladores y caracteres especiales)}
+El caso frontera evaluó la robustez del algoritmo mediante el fichero \texttt{pruebas/\allowbreak caso\_frontera.txt}, el cual contiene secuencias complejas compuestas por bloques continuos de espaciado en blanco, tabulaciones reiteradas (\texttt{\textbackslash t}), líneas vacías intermedias, signos de admiración e interrogación invertidos (¡!, ¿?), porcentajes ($100\%$) y términos con vocales acentuadas, diéresis y la letra eñe (\textit{águila, camión, pingüino, año}).
+
+El cálculo analítico postulaba que la expresión regular \verb|\s+| debía agrupar cualquier secuencia continua de espacios o tabuladores en un único separador sin originar tokens nulos, arrojando un total exacto de 19 palabras. La ejecución práctica corroboró plenamente dicho comportamiento, preservando la codificación diacrítica y cuantificando las 19 palabras de forma precisa, según se evidencia en la figura~\ref{fig:ejecucionfrontera}.
+
+\figura{../Capturas/ejecucion_caso_frontera.png}{Ejecución del caso de prueba frontera en terminal}{fig:ejecucionfrontera}
+
+\subsection{Verificación de empaquetado en archivo JAR autónomo}
+La fase de verificación culminó con la validación del binario empaquetado \texttt{lib/\allowbreak practica11.jar}. El archivo de manifiesto \texttt{MANIFEST.MF} definió a \texttt{VentanaContador} como punto de entrada a través de la directiva \texttt{Main-Class: VentanaContador}. Se verificó la portabilidad del componente ejecutando en terminal el comando \texttt{java -jar lib/practica11.jar pruebas/caso\_valido.txt}, confirmando que el paquete autónomo resuelve con éxito tanto el procesamiento reproducible por consola como la inicialización en modo interactivo.
+
+\clearpage
+\section{Conclusiones}
+
+La realización de la presente práctica ratifica que la separación rigurosa entre la lógica de dominio y la capa de presentación constituye un principio indispensable para la ingeniería de software orientada a objetos. Al encapsular la validación de archivos, la lectura física y el procesamiento léxico en una clase de modelo independiente como \texttt{ContadorPalabras}, se asegura la portabilidad y reusabilidad del componente algorítmico, facultando su comprobación sistemática en entornos de terminal desasistidos y posibilitando la evolución tecnológica de la interfaz gráfica sin alterar el núcleo operativo.
+
+Por otra parte, el análisis comparativo entre las bibliotecas gráficas en Java evidencia la transición desde esquemas tradicionales basados en componentes ligeros renderizados por software en la CPU bajo el Event Dispatch Thread, como en Swing, hacia plataformas contemporáneas como JavaFX fundamentadas en Grafos de Escena acelerados por hardware en la GPU y enlaces reactivos de propiedades (\textit{Property Binding}). Comprender la necesidad de envolver componentes como \texttt{JTextArea} dentro de decoradores como \texttt{JScrollPane} permite interiorizar los principios de diseño por composición frente a la herencia en la construcción de interfaces robustas.
+
+Finalmente, el empleo de flujos contemporáneos mediante Java NIO.2 y el método \texttt{Files.readString} pone de relieve la trascendencia de gobernar explícitamente la codificación de caracteres en el estándar UTF-8. Dicha disciplina, complementada con el colapso determinista de espacios y tabuladores arbitrarios a través de expresiones regulares, dota al software de resiliencia frente a contingencias del sistema operativo o entradas complejas en la frontera del dominio de cómputo.
+
+\begin{thebibliography}{9}
+
+\bibitem{gosling2023}
+Gosling, J., Joy, B., Steele, G., Bracha, G., Buckley, A., Smith, D., \& Bierman, G. (2023).
+\textit{The Java Language Specification, Java SE 21 Edition}.
+Oracle America, Inc.
+
+\bibitem{oracleswing}
+Oracle Corporation. (2022).
+\textit{Using Swing Components: Text Component Features and Concurrency in Swing}.
+The Java Tutorials, Oracle America, Inc.
+
+\bibitem{openjavafx}
+OpenJFX Community. (2023).
+\textit{JavaFX Controls, Architecture and Scene Graph Documentation}.
+Eclipse Foundation \& Oracle Corporation.
+
+\bibitem{oraclejavaio}
+Oracle Corporation. (2023).
+\textit{Java Platform, Standard Edition Version 21 API Specification: Package java.nio.file}.
+Oracle America, Inc.
+
+\bibitem{bloch2018}
+Bloch, J. (2018).
+\textit{Effective Java} (3.ª ed.).
+Addison-Wesley Professional.
+
+\end{thebibliography}
+
+\end{document}
