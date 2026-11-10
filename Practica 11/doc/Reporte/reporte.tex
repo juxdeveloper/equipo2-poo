@@ -97,24 +97,30 @@ Hilo principal de eventos & \textit{Event Dispatch Thread} (\texttt{SwingUtiliti
 \end{table}
 
 \clearpage
-\subsection{Declaración de capturas de investigación empírica}
-En cumplimiento del principio de honestidad documental, se declara que los seis miembros del equipo de trabajo no disponen en la etapa preliminar de las capturas individuales derivadas de la consulta formulada a las herramientas de inteligencia artificial. En apego a las directrices de rol, se disponen a continuación los marcos de reserva formal mediante la macro \texttt{\textbackslash figura}, documentando su estado pendiente de entrega.
+\subsection{Evidencias de capturas de investigación empírica}
+A continuación se presentan las seis evidencias individuales obtenidas por los integrantes del equipo al ejecutar la consulta comparativa estandarizada en herramientas de inteligencia artificial, contrastando la gestión de cuadros de texto en Swing y JavaFX.
 
-En la figura~\ref{fig:ia1} se reserva el espacio correspondiente a la consulta de Alan. En la figura~\ref{fig:ia2} se reserva la consulta de Zoé, y en la figura~\ref{fig:ia3} la de Luis. Por su parte, en las figuras~\ref{fig:ia4}, \ref{fig:ia5} y~\ref{fig:ia6} se asignan los marcos de reserva para Joseph, Hanniel y Alex, respectivamente.
+En la figura~\ref{fig:ia1} se muestra la consulta realizada por Alan; en la figura~\ref{fig:ia2}, la de Zoé; y en la figura~\ref{fig:ia3}, la de Luis. Por su parte, en las figuras~\ref{fig:ia4}, \ref{fig:ia5} y~\ref{fig:ia6} se integran las respuestas obtenidas por Joseph, Hanniel y Alex, respectivamente.
 
-\figura{../Capturas/1.png}{Consulta IA - Alan (Pendiente)}{fig:ia1}
+\figura{../Capturas/1.png}{Consulta de investigación en IA realizada por Alan.}{fig:ia1}
 
-\figura{../Capturas/2.png}{Consulta IA - Zoé (Pendiente)}{fig:ia2}
-
-\figura{../Capturas/3.png}{Consulta IA - Luis (Pendiente)}{fig:ia3}
+\figura{../Capturas/2.png}{Consulta de investigación en IA realizada por Zoé.}{fig:ia2}
 
 \clearpage
 
-\figura{../Capturas/4.png}{Consulta IA - Joseph (Pendiente)}{fig:ia4}
+\figura{../Capturas/3.png}{Consulta de investigación en IA realizada por Luis.}{fig:ia3}
 
-\figura{../Capturas/5.png}{Consulta IA - Hanniel (Pendiente)}{fig:ia5}
+\clearpage
 
-\figura{../Capturas/6.png}{Consulta IA - Alex (Pendiente)}{fig:ia6}
+\figura{../Capturas/4.png}{Consulta de investigación en IA realizada por Joseph.}{fig:ia4}
+
+\clearpage
+
+\figura{../Capturas/5.png}{Consulta de investigación en IA realizada por Hanniel.}{fig:ia5}
+
+\clearpage
+
+\figura{../Capturas/6.png}{Consulta de investigación en IA realizada por Alex.}{fig:ia6}
 
 \clearpage
 \subsection{Arquitectura del software y especificación de clases (Ejercicio 2)}
@@ -205,20 +211,47 @@ Caso 2 (Frontera) \newline (\texttt{caso\_\allowbreak frontera.txt}) & Archivo c
 \subsection{Caso 1: Representativo (Texto estructurado en español)}
 El caso representativo analizó la lectura del archivo \texttt{pruebas/\allowbreak caso\_valido.txt}, cuyo contenido aborda conceptos de programación orientada a objetos organizados en párrafos convencionales. El comportamiento esperado calculado analíticamente preveía el cómputo de 39 palabras bajo codificación UTF-8.
 
-La ejecución observada confirmó con exactitud dicha predicción, reportando 39 palabras sin alteraciones y finalizando con código de salida 0. En la figura~\ref{fig:ejecucionvalida} se exhibe la captura de consola con la evidencia correspondiente.
+La ejecución observada confirmó con exactitud dicha predicción, reportando 39 palabras sin alteraciones y finalizando con código de salida 0. En la figura~\ref{fig:ejecucionvalida} se exhibe la captura de consola con la evidencia correspondiente. Asimismo, la ejecución interactiva en la interfaz gráfica corrobora la visualización íntegra del texto en el área desplazable \texttt{JTextArea} y el cómputo reactivo de la etiqueta \texttt{JLabel}, según se evidencia en la figura~\ref{fig:guivalido}.
 
 \figura{../Capturas/ejecucion_caso_valido.png}{Ejecución del caso de prueba válido en terminal}{fig:ejecucionvalida}
+
+\clearpage
+
+\figura{../Capturas/captura_gui_caso_valido.png}{Visualización del caso representativo en la interfaz gráfica con 39 palabras}{fig:guivalido}
 
 \clearpage
 \subsection{Caso 2: Frontera (Espaciados múltiples, tabuladores y caracteres especiales)}
 El caso frontera evaluó la robustez del algoritmo mediante el fichero \texttt{pruebas/\allowbreak caso\_frontera.txt}, el cual contiene secuencias complejas compuestas por bloques continuos de espaciado en blanco, tabulaciones reiteradas (\texttt{\textbackslash t}), líneas vacías intermedias, signos de admiración e interrogación invertidos (¡!, ¿?), porcentajes ($100\%$) y términos con vocales acentuadas, diéresis y la letra eñe (\textit{águila, camión, pingüino, año}).
 
-El cálculo analítico postulaba que la expresión regular \verb|\s+| debía agrupar cualquier secuencia continua de espacios o tabuladores en un único separador sin originar tokens nulos, arrojando un total exacto de 19 palabras. La ejecución práctica corroboró plenamente dicho comportamiento, preservando la codificación diacrítica y cuantificando las 19 palabras de forma precisa, según se evidencia en la figura~\ref{fig:ejecucionfrontera}.
+El cálculo analítico postulaba que la expresión regular \verb|\s+| debía agrupar cualquier secuencia continua de espacios o tabuladores en un único separador sin originar tokens nulos, arrojando un total exacto de 19 palabras. La ejecución práctica corroboró plenamente dicho comportamiento, preservando la codificación diacrítica y cuantificando las 19 palabras de forma precisa, según se evidencia en la captura de consola de la figura~\ref{fig:ejecucionfrontera}. De manera análoga, en la modalidad gráfica la interfaz procesa de forma fidedigna el fichero frontera preservando la disposición de tabulaciones y caracteres especiales sin desbordar el contenedor, tal como se aprecia en la figura~\ref{fig:guifrontera}.
 
 \figura{../Capturas/ejecucion_caso_frontera.png}{Ejecución del caso de prueba frontera en terminal}{fig:ejecucionfrontera}
 
+\clearpage
+
+\figura{../Capturas/captura_gui_caso_frontera.png}{Visualización del caso frontera en la interfaz gráfica con 19 palabras}{fig:guifrontera}
+
+\clearpage
+\subsection{Verificación del estado inicial de la interfaz gráfica de usuario}
+Previo a la invocación del diálogo selector de ficheros \texttt{JFileChooser}, la aplicación inicializa la ventana \texttt{VentanaContador} en un estado neutro y consistente. El área de texto permanece limpia sin contenidos residuales, el botón de carga se encuentra habilitado para la interacción del usuario y la etiqueta inferior fija el marcador en cero palabras. En la figura~\ref{fig:guiinicial} se presenta la captura de la ventana en dicho estado basal.
+
+\figura{../Capturas/captura_gui_inicial.png}{Estado inicial de la interfaz gráfica VentanaContador}{fig:guiinicial}
+
+\clearpage
 \subsection{Verificación de empaquetado en archivo JAR autónomo}
-La fase de verificación culminó con la validación del binario empaquetado \texttt{lib/\allowbreak practica11.jar}. El archivo de manifiesto \texttt{MANIFEST.MF} definió a \texttt{VentanaContador} como punto de entrada a través de la directiva \texttt{Main-Class: VentanaContador}. Se verificó la portabilidad del componente ejecutando en terminal el comando \texttt{java -jar lib/practica11.jar pruebas/caso\_valido.txt}, confirmando que el paquete autónomo resuelve con éxito tanto el procesamiento reproducible por consola como la inicialización en modo interactivo.
+La fase de verificación experimental culminó con la validación del binario empaquetado \texttt{lib/\allowbreak practica11.jar}. La construcción del empaquetado autónomo se realizó mediante la herramienta nativa \texttt{jar} del OpenJDK, configurando el descriptor de manifiesto \texttt{META-INF/\allowbreak MANIFEST.MF} con la directiva obligatoria:
+\begin{center}
+\texttt{Main-Class: VentanaContador}
+\end{center}
+Dicha directiva faculta la invocación directa del software a través de la máquina virtual de Java mediante la instrucción \texttt{java -jar}, prescindiendo de la especificación manual del cargador de clases en el parámetro de \textit{classpath}.
+
+Para corroborar la portabilidad y determinismo del componente binario, se ejecutó en terminal el comando de validación:
+\begin{center}
+\texttt{java -jar lib/practica11.jar pruebas/caso\_valido.txt}
+\end{center}
+comprobando que el paquete autónomo resuelve con éxito tanto el procesamiento reproducible por consola (emitiendo en la salida estándar el reporte formateado con 39 palabras contabilizadas y finalizando con código de salida 0) como la inicialización reactiva de la interfaz visual \texttt{VentanaContador} en entornos provistos de servidor gráfico.
+
+Asimismo, se verificó la integridad del archivo JAR mediante la inspección exhaustiva de su tabla de contenidos (\texttt{jar -tf lib/practica11.jar}), constatando la inclusión exclusiva de las clases finales compiladas \texttt{Contador\-Palabras.\-class} y \texttt{Ventana\-Contador.\-class}, junto con el árbol de metadatos del manifiesto. De este modo, se garantiza un artefacto autónomo, ligero y desprovisto de dependencias externas no estándar.
 
 \clearpage
 \section{Conclusiones}
